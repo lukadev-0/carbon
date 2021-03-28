@@ -19,12 +19,16 @@ for (const file of commandFiles) {
 	client.commands.set(parse(`${commandsLocation}/${file}`).name, command)
 }
 
-client.on('ready', () => {
+client.on('ready', async () => {
 	require('./slashcreator')
 	console.log(`Logged in as ${client.user.tag}`)
 	client.user.setActivity('https://daimond113.com', {
 		type: 'WATCHING',
 	})
+	const reactionRoleChannel = await client.channels.fetch(
+		process.env.REACTION_ROLE_CHANNEL
+	)
+	reactionRoleChannel.messages.fetch()
 })
 
 client.ws.on('INTERACTION_CREATE', (int) => {
