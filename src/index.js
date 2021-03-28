@@ -13,6 +13,7 @@ const { hasBadWords, hasLinks } = require('./filter')
 const createWelcomeImage = require('./createWelcomeImage')
 const { handleHelpChannels } = require('./handleHelpChannels')
 const reactionRoles = require('./reactionRoles')
+const { chathistory } = require('./chathistory')
 
 for (const file of commandFiles) {
 	const command = require(`${commandsLocation}/${file}`)
@@ -84,9 +85,17 @@ client.on('message', (message) => {
 	handleHelpChannels(message)
 })
 
-client.on('messageUpdate', (_, message) => {
+client.on('messageUpdate', (message, messageNew) => {
 	if (message.author.bot) return
 	filter(message)
+	if (message.content !== messageNew.content) {
+		chathistory(message, messageNew)
+	}
+})
+
+client.on('messageDelete', (message) => {
+	if (message.author.bot) return
+	chathistory(message)
 })
 
 const server = require('express')()
