@@ -7,7 +7,7 @@ const client = require('./client')
  */
 
 module.exports.chathistory = async (message, newMsg) => {
-	const logs = await client.channels.fetch('808703042143649874')
+	const logs = await client.channels.fetch(process.env.CHAT_HISTORY);
 	const embed = new MessageEmbed().setAuthor(
 		message.author.tag,
 		message.author.displayAvatarURL({
