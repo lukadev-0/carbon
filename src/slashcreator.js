@@ -1,7 +1,7 @@
 const slash = require('@daimond113/discord-slash-commands')
 const discordClient = require('./client')
 const client = new slash(process.env.TOKEN, discordClient.user.id)
-const guildid = '799341812686127134'
+const guildid = process.env.GUILD;
 
 client
 	.createCommand(
