@@ -1,4 +1,3 @@
-require('dotenv').config()
 require('./ExtendedMessage') // inline replies
 const { Collection, Message } = require('discord.js')
 const client = require('./client')
