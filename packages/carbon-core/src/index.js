@@ -1,6 +1,6 @@
 require('dotenv').config()
 require('./ExtendedMessage') // inline replies
-const { Collection } = require('discord.js')
+const { Collection, Message } = require('discord.js')
 const client = require('./client')
 client.commands = new Collection()
 const { join, parse } = require('path')
@@ -61,8 +61,8 @@ function filter(message) {
 		return message
 			.delete()
 			.then(() =>
-				channel.send(
-					`<@${author.id}>\n:x: You have sent a blacklisted link!\nIf that is not the case please report a issue at\n<https://github.com/daimond113/carbon/issues>`
+				message.author.send(
+					`:x: You have sent a blacklisted link!\nIf that is not the case please report a issue at\n<https://github.com/daimond113/carbon/issues>`
 				)
 			)
 			.catch((e) => console.log(e.message))
@@ -71,8 +71,8 @@ function filter(message) {
 		return message
 			.delete()
 			.then(() =>
-				channel.send(
-					`<@${author.id}>\n:x: I've detected a bad word in your message!\nPlease do not try to use bad words.\nFeel like this is an issue? Report it on <https://github.com/daimond113/carbon/issues>`
+				message.author.send(
+					`:x: I've detected a bad word in your message!\nPlease do not try to use bad words.\nFeel like this is an issue? Report it on <https://github.com/daimond113/carbon/issues>`
 				)
 			)
 			.catch((e) => console.log(e.message))
