@@ -72,7 +72,6 @@ async function handleMessage(message) {
 }
 
 function closeChannel(channel) {
-	console.log('Closing channel')
 
 	const channelInfo = channels.get(channel.id)
 
