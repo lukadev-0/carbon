@@ -4,7 +4,7 @@ const { post, update } = require('../interactionHandler')
 
 module.exports = async (int) => {
 	await post(int, 'Closing your channel...')
-	const channel = client.channels.fetch(int.channel_id)
+	const channel = await client.channels.fetch(int.channel_id)
 	console.log(getChannelOwner(channel), int.member.user.id)
 	console.log(getChannelOwner(channel) === int.member.user.id)
 	if (getChannelOwner(channel) === int.member.user.id) {
