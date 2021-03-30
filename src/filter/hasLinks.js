@@ -28,5 +28,5 @@ module.exports = function hasLinks(message) {
 		return true;
 	const urls = content.match(/(https?:\/\/[^\s]+)/gi);
 	if (urls)
-		return !urls.every(url => WHITELIST.includes(url.replace(/(^\w+:|^)\/\//, "")));
+		return !urls.every(url => WHITELIST.includes(new URL(url).hostname));
 }
