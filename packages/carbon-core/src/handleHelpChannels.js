@@ -12,7 +12,7 @@ const channels = new Collection()
 async function handleMessage(message) {
 	const { author, channel, member, guild } = message
 	if (!HELP_CATEGORIES.has(channel.parentID)) return
-	const COOLDOWN_ROLE = await guild.roles.fetch(COOLDOWN_ID)
+
 	try {
 		if (channels.has(channel.id)) {
 			// Channel is claimed
@@ -40,8 +40,7 @@ async function handleMessage(message) {
 				.setTitle('Channel Claimed')
 				.setDescription(`This channel has been claimed\nSay "/close" to close.`)
 				.setFooter(
-					`Automatically closes after ${
-						Number(HELP_INACTIVITY_TIME) / 60000
+					`Automatically closes after ${Number(HELP_INACTIVITY_TIME) / 60000
 					} minutes of inactivity`
 				)
 
@@ -63,7 +62,7 @@ async function handleMessage(message) {
 			})
 
 			message.pin().catch(console.log)
-			member.roles.add(COOLDOWN_ROLE)
+			member.roles.add(COOLDOWN_ID)
 		}
 	} catch (e) {
 		channel
@@ -73,7 +72,10 @@ async function handleMessage(message) {
 }
 
 function closeChannel(channel) {
+	console.log('Closing channel')
+
 	const channelInfo = channels.get(channel.id)
+
 	if (!channelInfo) return
 
 	const { infoMessage, originalMessage } = channelInfo
@@ -93,7 +95,7 @@ function closeChannel(channel) {
 			description: 'Send a message to claim this channel',
 		},
 	})
-	originalMessage.member.roles.remove(COOLDOWN_ROLE)
+	originalMessage.member.roles.remove(COOLDOWN_ID)
 }
 
 function getChannelOwner(channel) {
