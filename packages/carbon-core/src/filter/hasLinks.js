@@ -1,5 +1,20 @@
 const WHITELIST = [
-	"marsron.github.io",
+	"github.io",
+  "daimond113.com",
+  "youtube.com",
+  "imgur.com",
+  "tenor.com",
+  "roblox.com",
+  "reactjs.org",
+  "create-react-app.dev",
+  "nextjs.org",
+  "expressjs.org",
+  "nodejs.org",
+  "deno.land",
+  "npmjs.com",
+  "github.com",
+  "material-ui.com",
+  "typescriptlang.org"
 ];
 
 const BLACKLIST = [
