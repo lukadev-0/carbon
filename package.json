@@ -25,7 +25,7 @@
 		"canvas": "^2.7.0",
 		"discord.js": "^12.5.1",
 		"express": "^4.17.1",
-		"owofire": "^1.0.1",
+		"owofire": "^1.0.2",
 		"quote.js": "^2.0.0",
 		"ytdl-core": "^4.5.0",
 		"ytsr": "^3.3.1"
