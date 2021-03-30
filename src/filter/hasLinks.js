@@ -1,20 +1,21 @@
 const WHITELIST = [
 	"github.io",
-  "daimond113.com",
-  "youtube.com",
-  "imgur.com",
-  "tenor.com",
-  "roblox.com",
-  "reactjs.org",
-  "create-react-app.dev",
-  "nextjs.org",
-  "expressjs.org",
-  "nodejs.org",
-  "deno.land",
-  "npmjs.com",
-  "github.com",
-  "material-ui.com",
-  "typescriptlang.org"
+	"cdn.discord.com",
+	"daimond113.com",
+	"youtube.com",
+	"imgur.com",
+	"tenor.com",
+	"roblox.com",
+	"reactjs.org",
+	"create-react-app.dev",
+	"nextjs.org",
+	"expressjs.org",
+	"nodejs.org",
+	"deno.land",
+	"npmjs.com",
+	"github.com",
+	"material-ui.com",
+	"typescriptlang.org",
 ];
 
 const BLACKLIST = [
@@ -41,7 +42,9 @@ module.exports = function hasLinks(message) {
 		return false;
 	if (regexes.some(regex => regex.test(content.replace(/\s/g, ""))))
 		return true;
-	const urls = content.match(/(https?:\/\/[^\s]+)/gi);
+	const urls = content.match(/(https?:\/\/\S+)/gi);
 	if (urls)
-		return !urls.every(url => WHITELIST.includes(new URL(url).hostname));
+		return !urls
+			.map(url => new URL(url).hostname)
+			.every(url => WHITELIST.some(wlUrl => url.includes(wlUrl)));
 }
