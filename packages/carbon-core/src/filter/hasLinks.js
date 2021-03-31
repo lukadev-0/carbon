@@ -30,21 +30,17 @@ const BLACKLIST = [
 	"twitter.com",
 	"soundcloud.com",
 	"snd.sc",
-];
-
-const regexes = BLACKLIST.map(domain =>
-	new RegExp(`(.+\\.)?${domain.replace(".", "\\.").replace("/", "\\/")}`, "i")
-);
+].map(domain => new RegExp(`(.+\\.)?${domain.replace(".", "\\.").replace("/", "\\/")}`, "i"));
 
 module.exports = function hasLinks(message) {
 	const { member: { roles }, content } = message;
-	if (roles.cache.some(role => role.name.match(/moderator|owner/gi))) 
+	if (roles.cache.some(role => role.name.match(/moderator|owner/i))) 
 		return false;
-	if (regexes.some(regex => regex.test(content.replace(/\s/g, ""))))
+	if (BLACKLIST.some(regex => regex.test(content.replace(/\s/g, ""))))
 		return true;
 	const urls = content.match(/(https?:\/\/\S+)/gi);
 	if (urls)
 		return !urls
 			.map(url => new URL(url).hostname)
-			.every(url => WHITELIST.some(wlUrl => url.includes(wlUrl)));
+			.every(url => WHITELIST.some(wlUrl => url.match(/\w+\.\w+$/i)[0] === wlUrl));
 }
