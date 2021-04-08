@@ -16,6 +16,7 @@ const WHITELIST = [
 	"github.com",
 	"material-ui.com",
 	"typescriptlang.org",
+  "vercel.app"
 ];
 
 const BLACKLIST = [
