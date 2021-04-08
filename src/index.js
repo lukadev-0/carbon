@@ -51,10 +51,11 @@ client.on('guildMemberAdd', async (member) => {
     .then(async (channel) => channel.send(await createWelcomeImage(member)))
 })
 
-function filter(message) {
-  const { author, channel, content } = message
+function filter(content, message) {
+  const { author, channel, member: { roles } } = message
 
   if (author.bot) return
+  if (roles.cache.some(role => role.name.match(/moderator|owner/gi))) return false;
 
   if (hasLinks(message))
     return message
@@ -79,14 +80,14 @@ function filter(message) {
 
 client.on('message', (message) => {
   if (message.author.bot) return
-  filter(message)
+  filter(message, message)
 
   handleHelpChannels(message)
 })
 
 client.on('messageUpdate', (message, messageNew) => {
   if (message.author.bot) return
-  filter(message)
+  filter(messageNew, message)
   if (message.content !== messageNew.content) {
     chathistory(message, messageNew)
   }

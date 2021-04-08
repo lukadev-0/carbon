@@ -38,9 +38,7 @@ const regexes = BLACKLIST.map(domain =>
 );
 
 module.exports = function hasLinks(message) {
-	const { member: { roles }, content } = message;
-	if (roles.cache.some(role => role.name.match(/moderator|owner/gi))) 
-		return false;
+	const { content } = message;
 	if (regexes.some(regex => regex.test(content.replace(/\s/g, ""))))
 		return true;
 	const urls = content.match(/(https?:\/\/\S+)/gi);
