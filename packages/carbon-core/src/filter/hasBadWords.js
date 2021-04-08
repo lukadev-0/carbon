@@ -4,7 +4,9 @@ require("node-fetch")("https://raw.githubusercontent.com/mogade/badwords/master/
 	.then(data => regExArray = data.split("\n"))
 
 module.exports = function hasBadWords(content) {
+	const contentWithNoWhitespace = content.replace(/\s/, '')
+
 	return regExArray.some(str =>
-		content.match(new RegExp(str, "gi"))
+		contentWithNoWhitespace.match(new RegExp(str, "gi"))
 	);
 }
