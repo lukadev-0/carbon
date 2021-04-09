@@ -1,5 +1,5 @@
 let regExArray = [];
-require("node-fetch")("https://raw.githubusercontent.com/mogade/badwords/master/en.txt")
+require("node-fetch")("https://raw.githubusercontent.com/daimond113/badwords/master/en.txt")
   .then(res => res.text())
   .then(data => regExArray = data.split("\n"))
 
