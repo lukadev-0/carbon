@@ -1,49 +1,49 @@
 const WHITELIST = [
-	"github.io",
-	"cdn.discord.com",
-	"daimond113.com",
-	"youtube.com",
-	"imgur.com",
-	"tenor.com",
-	"roblox.com",
-	"reactjs.org",
-	"create-react-app.dev",
-	"nextjs.org",
-	"expressjs.org",
-	"nodejs.org",
-	"deno.land",
-	"npmjs.com",
-	"github.com",
-	"material-ui.com",
-	"typescriptlang.org",
-  "vercel.app"
-];
+	'github.io',
+	'cdn.discord.com',
+	'daimond113.com',
+	'youtube.com',
+	'imgur.com',
+	'tenor.com',
+	'roblox.com',
+	'reactjs.org',
+	'create-react-app.dev',
+	'nextjs.org',
+	'expressjs.org',
+	'nodejs.org',
+	'deno.land',
+	'npmjs.com',
+	'github.com',
+	'material-ui.com',
+	'typescriptlang.org',
+	'vercel.app',
+]
 
 const BLACKLIST = [
-	"discord.gg",
-	"discord.io",
-	"discord.me",
-	"discord.li",
-	"discord.com/invite/",
-	"discordapp.com/invite/",
-	"invite.gg",
-	"dis.gd",
-	"twitter.com",
-	"soundcloud.com",
-	"snd.sc",
-];
+	'discord.gg',
+	'discord.io',
+	'discord.me',
+	'discord.li',
+	'discord.com/invite/',
+	'discordapp.com/invite/',
+	'invite.gg',
+	'dis.gd',
+	'twitter.com',
+	'soundcloud.com',
+	'snd.sc',
+]
 
-const regexes = BLACKLIST.map(domain =>
-	new RegExp(`(.+\\.)?${domain.replace(".", "\\.").replace("/", "\\/")}`, "i")
-);
+const regexes = BLACKLIST.map(
+	(domain) =>
+		new RegExp(`(.+\\.)?${domain.replace('.', '\\.').replace('/', '\\/')}`, 'i')
+)
 
-module.exports = function hasLinks(message) {
-	const { content } = message;
-	if (regexes.some(regex => regex.test(content.replace(/\s/g, ""))))
-		return true;
-	const urls = content.match(/(https?:\/\/\S+)/gi);
+module.exports = function hasLinks(content) {
+	if (regexes.some((regex) => regex.test(content.replace(/\s/g, ''))))
+		return true
+	const urls = content.match(/(https?:\/\/\S+)/gi)
 	if (urls)
 		return !urls
-			.map(url => new URL(url).hostname)
-			.every(url => WHITELIST.some(wlUrl => url.includes(wlUrl)));
+			.map((url) => new URL(url).hostname)
+			.every((url) => WHITELIST.some((wlUrl) => url.includes(wlUrl)))
 }

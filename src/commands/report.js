@@ -1,35 +1,70 @@
-const client = require('../client.js')
-const { update, post } = require('../interactionHandler.js')
+const { SlashCommand } = require('discord-interactive-core')
+const client = require('../client')
+const Interaction = require('discord-interactive-core/src/Interaction')
 
-module.exports = async (int) => {
-	await post(int, 'Reporting...')
-	try {
-		const options = int.data.options
-		const toReport = options[0].value
-		const reason = options[1].value
-		const reportChannel = await client.channels.fetch('808703338404249620')
-		const guild = await client.guilds.fetch(int.guild_id)
-		const user = await guild.members.fetch(toReport)
-		if (int.member.user.id === toReport) {
-			return update(int, 'You cannot report yourself')
-		}
-		if (
-			user.roles.cache.some((role) =>
-				role.name.toLowerCase().match(/moderator|owner/gi)
+module.exports = class Report extends SlashCommand {
+	constructor(manager) {
+		super(manager, {
+			name: 'report',
+			description: 'Report a user for breaking the rules.',
+			options: [
+				{
+					name: 'User',
+					description: 'User to report',
+					type: 6,
+					required: true,
+				},
+				{
+					name: 'Reason',
+					description: 'Report reason',
+					type: 3,
+					required: true,
+				},
+			],
+		})
+	}
+	/**
+	 *
+	 * @param {Interaction} ctx
+	 */
+	async run(ctx) {
+		await ctx.showLoadingIndicator(false)
+		try {
+			const options = ctx.data.options
+			const toReport = options[0].value
+			const reason = options[1].value
+			const reportChannel = await client.channels.fetch(
+				process.env.REPORT_CHANNEL
 			)
-		) {
-			return update(int, 'You cannot report a moderator or the owner.')
+			const guild = await client.guilds.fetch(ctx.guild_id)
+			const user = await guild.members.fetch(toReport)
+			if (ctx.member.user.id === toReport) {
+				return await ctx.respond({
+					content: 'You cannot report yourself',
+				})
+			}
+			if (
+				user.roles.cache.some((role) => role.name.match(/moderator|owner/gi))
+			) {
+				return await ctx.respond({
+					content: 'You cannot report a moderator or the owner.',
+				})
+			}
+			await ctx.respond({
+				content:
+					'Reporting...\nFun fact: abusing this command will get you banned',
+			})
+			await ctx.respond({
+				content: `<@${ctx.member.user.id}>, successfuly reported <@${toReport}>`,
+			})
+			reportChannel.send(
+				`<@${ctx.member.user.id}> has reported <@${toReport}> for "${reason}"`
+			)
+		} catch (erro) {
+			console.log(erro)
+			ctx.respond({
+				content: 'Your report has failed',
+			})
 		}
-		await update(
-			int,
-			'Reporting...\nFun fact: abusing this command will get you banned'
-		)
-		update(int, `<@${int.member.user.id}>, successfuly reported <@${toReport}>`)
-		reportChannel.send(
-			`<@${int.member.user.id}> has reported <@${toReport}> for "${reason}"`
-		)
-	} catch (erro) {
-		console.log(erro)
-		update(int, 'Your report has failed!')
 	}
 }
