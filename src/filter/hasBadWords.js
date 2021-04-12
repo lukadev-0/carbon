@@ -1,14 +1,12 @@
 let regExArray = []
-require('node-fetch')(
-	'https://raw.githubusercontent.com/daimond113/badwords/master/en.txt'
-)
-	.then((res) => res.text())
-	.then((data) => (regExArray = data.split('\n')))
+require('axios').default
+	.get('https://raw.githubusercontent.com/daimond113/badwords/master/en.txt')
+	.then((res) => (regExArray = res.data
+		.split('\n')
+		.map(regex => new RegExp(regex, 'gi'))
+	))
 
 module.exports = function hasBadWords(content) {
-	const contentWithNoWhitespace = content.replace(/\s/g, '')
-
-	return regExArray.some((str) =>
-		contentWithNoWhitespace.match(new RegExp(str, 'gi'))
-	)
+	const noWhitespace = content.replace(/\s+/g, '') // Using "+" is more performant
+	return regExArray.some((regex) => regex.test(noWhitespace))
 }
