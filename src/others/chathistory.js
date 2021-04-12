@@ -1,5 +1,5 @@
 const { MessageEmbed, Message } = require('discord.js')
-const client = require('./client')
+const client = require('../client')
 
 /**
  * @param {Message} message
@@ -7,7 +7,7 @@ const client = require('./client')
  */
 
 module.exports.chathistory = async (message, newMsg) => {
-	const logs = await client.channels.fetch(process.env.CHAT_HISTORY);
+	const logs = await client.channels.fetch(process.env.CHAT_HISTORY)
 	const embed = new MessageEmbed().setAuthor(
 		message.author.tag,
 		message.author.displayAvatarURL({

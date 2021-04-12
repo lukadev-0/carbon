@@ -1,29 +1,56 @@
+const { SlashCommand } = require('discord-interactive-core')
+const Interaction = require('discord-interactive-core/src/Interaction')
 const { MessageEmbed } = require('discord.js')
 const client = require('../client')
-const { post, update } = require('../interactionHandler')
 
-module.exports = async (int) => {
-	await post(int, 'Suggesting...')
-	try {
-		const member = await client.users.fetch(int.member.user.id)
-		const channel = await client.channels.fetch('808741885975068682')
-		const embed = new MessageEmbed()
-			.setTitle('Suggestion')
-			.setAuthor(
-				member.tag,
-				member.displayAvatarURL({
-					format: 'png',
-					dynamic: true,
-					size: 4096,
-				})
+module.exports = class Suggest extends SlashCommand {
+	constructor(manager) {
+		super(manager, {
+			name: 'suggest',
+			description: 'Suggest something',
+			options: [
+				{
+					name: 'Suggestion',
+					description: 'Your suggestion',
+					type: 3,
+					required: true,
+				},
+			],
+		})
+	}
+	/**
+	 *
+	 * @param {Interaction} ctx
+	 */
+	async run(ctx) {
+		await ctx.showLoadingIndicator(false)
+		try {
+			const member = await client.users.fetch(ctx.member.user.id)
+			const channel = await client.channels.fetch(
+				process.env.SUGGESTION_CHANNEL
 			)
-			.setColor('GREEN')
-			.setDescription(int.data.options[0].value)
-			.setFooter(member.id)
-		await channel.send(embed)
-		update(int, 'Successfuly send the suggestion')
-	} catch (erro) {
-		console.log(erro)
-		post(int, 'Your suggestion has failed!')
+			const embed = new MessageEmbed()
+				.setTitle('Suggestion')
+				.setAuthor(
+					member.tag,
+					member.displayAvatarURL({
+						format: 'png',
+						dynamic: true,
+						size: 4096,
+					})
+				)
+				.setColor('GREEN')
+				.setDescription(ctx.data.options[0].value)
+				.setFooter(member.id)
+			await channel.send(embed)
+			await ctx.respond({
+				content: 'Successfuly send the suggestion',
+			})
+		} catch (erro) {
+			console.log(erro)
+			await ctx.respond({
+				content: 'Your suggestion has failed!',
+			})
+		}
 	}
 }

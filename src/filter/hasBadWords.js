@@ -1,10 +1,14 @@
-let regExArray = [];
-require("node-fetch")("https://raw.githubusercontent.com/mogade/badwords/master/en.txt")
-	.then(res => res.text())
-	.then(data => regExArray = data.split("\n"))
+let regExArray = []
+require('node-fetch')(
+	'https://raw.githubusercontent.com/daimond113/badwords/master/en.txt'
+)
+	.then((res) => res.text())
+	.then((data) => (regExArray = data.split('\n')))
 
 module.exports = function hasBadWords(content) {
-	return regExArray.some(str =>
-		content.match(new RegExp(str, "gi"))
-	);
+	const contentWithNoWhitespace = content.replace(/\s/g, '')
+
+	return regExArray.some((str) =>
+		contentWithNoWhitespace.match(new RegExp(str, 'gi'))
+	)
 }

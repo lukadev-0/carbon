@@ -1,44 +1,95 @@
+const { SlashCommand } = require('discord-interactive-core')
+const Interaction = require('discord-interactive-core/src/Interaction')
+const { MessageEmbed } = require('discord.js')
 const client = require('../client')
-const { MessageEmbed, Message } = require('discord.js')
-const { update, post } = require('../interactionHandler')
 
-module.exports = async (int) => {
-	await post(int, 'Responding...')
-	const guild = await client.guilds.fetch(int.guild_id)
-	const user = await guild.members.fetch(int.member.user.id)
-	if (
-		user.roles.cache.some((role) =>
-			role.name.toLowerCase().match(/moderator|owner/gi)
-		)
-	) {
-		const channel = await client.channels.fetch('808741885975068682')
-		const message = await channel.messages.fetch(int.data.options[0].value)
-		const embeds = await message.embeds
-		const embed = embeds[0]
-		embed.addField(
-			`${user.user.tag}: ${int.data.options[1].value}`,
-			int.data.options[2].value,
-			false
-		)
-		await message.edit(embed)
-
-		update(int, 'Successfuly responded')
-		const toDM = await client.users.fetch(embed.footer.text)
-		const embed2 = new MessageEmbed()
-			.setColor('GREEN')
-			.setAuthor(
-				user.user.tag,
-				user.user.displayAvatarURL({ format: 'png', dynamic: true, size: 4096 })
-			)
-			.setTitle('Responded to your suggestion')
-			.setDescription(
-				`Replied with: \n${int.data.options[2].value}\n[Go to suggestion](https://discord.com/channels/${int.guild_id}/${message.channel.id}/${message.id})`
-			)
-			.addField('Status: ', int.data.options[1].value)
-		toDM.send(embed2).catch((erro) => {
-			console.log(erro.message)
+module.exports = class RespondToSuggestion extends SlashCommand {
+	constructor(manager) {
+		super(manager, {
+			name: 'respondtosuggestion',
+			description: 'Respond to a suggestion',
+			options: [
+				{
+					name: 'MessageID',
+					description: 'Message ID of the suggestion',
+					type: 3,
+					required: true,
+				},
+				{
+					name: 'Implemented',
+					description: 'Is this suggestion implemented?',
+					type: 3,
+					required: true,
+					choices: [
+						{
+							name: 'Considered',
+							value: 'Considered',
+						},
+						{
+							name: 'Accepted',
+							value: 'Accepted',
+						},
+						{
+							name: 'Denied',
+							value: 'Denied',
+						},
+					],
+				},
+				{
+					name: 'Comment',
+					description: 'A comment on this suggestion',
+					type: 3,
+					required: true,
+				},
+			],
 		})
-	} else {
-		update(int, "You're not a moderator or the owner!")
+	}
+	/**
+	 *
+	 * @param {Interaction} ctx
+	 */
+	async run(ctx) {
+		await ctx.showLoadingIndicator(false)
+		const guild = await client.guilds.fetch(ctx.guild_id)
+		const user = await guild.members.fetch(ctx.member.user.id)
+		if (user.roles.cache.some((role) => role.name.match(/moderator|owner/gi))) {
+			const channel = await client.channels.fetch(
+				process.env.SUGGESTION_CHANNEL
+			)
+			const message = await channel.messages.fetch(ctx.data.options[0].value)
+			const embeds = await message.embeds
+			const embed = embeds[0]
+			embed.addField(
+				`${user.user.tag}: ${ctx.data.options[1].value}`,
+				ctx.data.options[2].value,
+				false
+			)
+			await message.edit(embed)
+
+			await ctx.respond({
+				content: 'Successfuly responded',
+			})
+			const toDM = await client.users.fetch(embed.footer.text)
+			const embed2 = new MessageEmbed()
+				.setColor('GREEN')
+				.setAuthor(
+					user.user.tag,
+					user.user.displayAvatarURL({
+						format: 'png',
+						dynamic: true,
+						size: 4096,
+					})
+				)
+				.setTitle('Responded to your suggestion')
+				.setDescription(
+					`Replied with: \n${ctx.data.options[2].value}\n[Go to suggestion](https://discord.com/channels/${ctx.guild_id}/${message.channel.id}/${message.id})`
+				)
+				.addField('Status: ', ctx.data.options[1].value)
+			toDM.send(embed2).catch((erro) => {
+				console.log(erro.message)
+			})
+		} else {
+			update(int, "You're not a moderator or the owner!")
+		}
 	}
 }

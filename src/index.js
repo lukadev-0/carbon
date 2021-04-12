@@ -1,100 +1,95 @@
-require('./ExtendedMessage') // inline replies
-const { Collection, Message } = require('discord.js')
+require('./others/ExtendedMessage') // inline replies
+const { Collection } = require('discord.js')
 const client = require('./client')
 client.commands = new Collection()
-const { join, parse } = require('path')
-const { readdirSync } = require('fs')
-const commandsLocation = join(__dirname, 'commands')
-const commandFiles = readdirSync(commandsLocation).filter((file) =>
-  file.endsWith('.js')
-)
 const { hasBadWords, hasLinks } = require('./filter')
-const createWelcomeImage = require('./createWelcomeImage')
-const { handleHelpChannels } = require('./handleHelpChannels')
-const reactionRoles = require('./reactionRoles')
-const { chathistory } = require('./chathistory')
-
-for (const file of commandFiles) {
-  const command = require(`${commandsLocation}/${file}`)
-  client.commands.set(parse(`${commandsLocation}/${file}`).name, command)
-}
+const createWelcomeImage = require('./others/createWelcomeImage')
+const { handleHelpChannels } = require('./others/handleHelpChannels')
+const reactionRoles = require('./others/reactionRoles')
+const { chathistory } = require('./others/chathistory')
 
 client.on('ready', async () => {
-  require('./slashcreator')
-  console.log(`Logged in as ${client.user.tag}`)
-  client.user.setActivity('https://daimond113.com', {
-    type: 'WATCHING',
-  })
-  const reactionRoleChannel = await client.channels.fetch(
-    process.env.REACTION_ROLE_CHANNEL
-  )
-  reactionRoleChannel.messages.fetch()
-})
-
-client.ws.on('INTERACTION_CREATE', (int) => {
-  client.commands.get(int.data.name.toLowerCase())(int)
+	require('./others/slashcreator')
+	console.log(`Logged in as ${client.user.tag}`)
+	client.user.setActivity('https://daimond113.com', {
+		type: 'WATCHING',
+	})
+	const reactionRoleChannel = await client.channels.fetch(
+		process.env.REACTION_ROLE_CHANNEL
+	)
+	reactionRoleChannel.messages.fetch()
 })
 
 client.on('messageReactionAdd', (reaction, user) => {
-  if (user.bot) return
-  reactionRoles(reaction, user, false)
+	if (user.bot) return
+	reactionRoles(reaction, user, false)
 })
 
 client.on('messageReactionRemove', (reaction, user) => {
-  if (user.bot) return
-  reactionRoles(reaction, user, true)
+	if (user.bot) return
+	reactionRoles(reaction, user, true)
 })
 
 client.on('guildMemberAdd', async (member) => {
-  client.channels
-    .fetch(process.env.WELCOME_CHANNEL)
-    .then(async (channel) => channel.send(await createWelcomeImage(member)))
+	client.channels
+		.fetch(process.env.WELCOME_CHANNEL)
+		.then(async (channel) => channel.send(await createWelcomeImage(member)))
 })
 
 function filter(message) {
-  const { author, channel, content } = message
+	const {
+		author,
+		member: { roles },
+		content,
+	} = message
 
-  if (author.bot) return
+	if (author.bot) return
+	if (roles.cache.some((role) => role.name.match(/moderator|owner/gi)))
+		return false
 
-  if (hasLinks(message))
-    return message
-      .delete()
-      .then(() =>
-        message.author.send(
-          `:x: You have sent a blacklisted link!\nIf that is not the case please report a issue at\n<https://github.com/daimond113/carbon/issues>`
-        ).catch((e) => console.log(e.message))
-      )
-      .catch((e) => console.log(e.message))
+	if (hasLinks(content))
+		return message
+			.delete()
+			.then(() =>
+				message.author
+					.send(
+						`:x: You have sent a blacklisted link!\nIf that is not the case please report a issue at\n<https://github.com/daimond113/carbon/issues>`
+					)
+					.catch((e) => console.log(e.message))
+			)
+			.catch((e) => console.log(e.message))
 
-  if (hasBadWords(content))
-    return message
-      .delete()
-      .then(() =>
-        message.author.send(
-          `:x: I've detected a bad word in your message!\nPlease do not try to use bad words.\nFeel like this is an issue? Report it on <https://github.com/daimond113/carbon/issues>`
-        ).catch((e) => console.log(e.message))
-      )
-      .catch((e) => console.log(e.message))
+	if (hasBadWords(content))
+		return message
+			.delete()
+			.then(() =>
+				message.author
+					.send(
+						`:x: I've detected a bad word in your message!\nPlease do not try to use bad words.\nFeel like this is an issue? Report it on <https://github.com/daimond113/carbon/issues>`
+					)
+					.catch((e) => console.log(e.message))
+			)
+			.catch((e) => console.log(e.message))
 }
 
 client.on('message', (message) => {
-  if (message.author.bot) return
-  filter(message)
+	if (message.author.bot) return
+	filter(message)
 
-  handleHelpChannels(message)
+	handleHelpChannels(message)
 })
 
 client.on('messageUpdate', (message, messageNew) => {
-  if (message.author.bot) return
-  filter(message)
-  if (message.content !== messageNew.content) {
-    chathistory(message, messageNew)
-  }
+	if (message.author.bot) return
+	filter(messageNew)
+	if (message.content !== messageNew.content) {
+		chathistory(message, messageNew)
+	}
 })
 
 client.on('messageDelete', (message) => {
-  if (message.author.bot) return
-  chathistory(message)
+	if (message.author.bot) return
+	chathistory(message)
 })
 
 const server = require('express')()
