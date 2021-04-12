@@ -1,6 +1,8 @@
 const WHITELIST = [
+
 	'github.io',
 	'cdn.discord.com',
+	'cdn.discordapp.com',
 	'daimond113.com',
 	'youtube.com',
 	'imgur.com',
@@ -17,9 +19,11 @@ const WHITELIST = [
 	'material-ui.com',
 	'typescriptlang.org',
 	'vercel.app',
+
 ]
 
 const BLACKLIST = [
+
 	'discord.gg',
 	'discord.io',
 	'discord.me',
@@ -31,15 +35,14 @@ const BLACKLIST = [
 	'twitter.com',
 	'soundcloud.com',
 	'snd.sc',
-]
 
-const regexes = BLACKLIST.map(
-	(domain) =>
-		new RegExp(`(.+\\.)?${domain.replace('.', '\\.').replace('/', '\\/')}`, 'i')
+].map((domain) =>
+	new RegExp(`(.+\\.)?${domain.replace('.', '\\.').replace('/', '\\/')}`, 'i')
 )
 
 module.exports = function hasLinks(content) {
-	if (regexes.some((regex) => regex.test(content.replace(/\s/g, ''))))
+	const testStr = content.replace(/\s+/g, '') // Using "+" is more performant
+	if (BLACKLIST.some((regex) => regex.test(testStr)))
 		return true
 	const urls = content.match(/(https?:\/\/\S+)/gi)
 	if (urls)
