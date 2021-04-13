@@ -5,7 +5,7 @@ const { Message } = require('discord.js')
 /**
  * @param {Message} message
  */
-module.exports = function filter(message) {
+module.exports = exports = function filter(message) {
 	// check if message is in a guild channel (has member property)
 	if (!message.member) return
 
