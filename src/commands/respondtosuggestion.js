@@ -89,7 +89,9 @@ module.exports = class RespondToSuggestion extends SlashCommand {
 				console.log(erro.message)
 			})
 		} else {
-			update(int, "You're not a moderator or the owner!")
+			ctx.respond({
+        content: "You're not a moderator or the owner!"
+      })
 		}
 	}
 }
