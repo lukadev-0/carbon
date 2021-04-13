@@ -25,6 +25,9 @@ module.exports = class Owofy extends SlashCommand {
 		await ctx.showLoadingIndicator(false)
 		await ctx.respond({
 			content: owofire(ctx.data.options[0].value),
+			allowed_mentions: {
+   				parse: []
+  			}
 		})
 	}
 }
