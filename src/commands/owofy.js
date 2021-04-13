@@ -1,6 +1,7 @@
 const owofire = require('owofire')
 const { SlashCommand } = require('discord-interactive-core')
 const Interaction = require('discord-interactive-core/src/Interaction')
+const filter = require('../filter')
 
 module.exports = class Owofy extends SlashCommand {
 	constructor(manager) {
@@ -23,8 +24,17 @@ module.exports = class Owofy extends SlashCommand {
 	 */
 	async run(ctx) {
 		await ctx.showLoadingIndicator(false)
+
+		const content = owofire(ctx.data.options[0].value)
+
+		if (filter.isBad(content)) {
+			return ctx.respond({
+				content: ':x: Your message has been filtered'
+			})
+		}
+
 		await ctx.respond({
-			content: owofire(ctx.data.options[0].value),
+			content
 		})
 	}
 }
