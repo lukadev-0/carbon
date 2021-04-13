@@ -2,7 +2,7 @@ require('./others/ExtendedMessage') // inline replies
 const { Collection } = require('discord.js')
 const client = require('./client')
 client.commands = new Collection()
-const { hasBadWords, hasLinks } = require('./filter')
+const filter = require('./filter')
 const createWelcomeImage = require('./others/createWelcomeImage')
 const { handleHelpChannels } = require('./others/handleHelpChannels')
 const reactionRoles = require('./others/reactionRoles')
@@ -35,42 +35,6 @@ client.on('guildMemberAdd', async (member) => {
 		.fetch(process.env.WELCOME_CHANNEL)
 		.then(async (channel) => channel.send(await createWelcomeImage(member)))
 })
-
-function filter(message) {
-	const {
-		author,
-		member: { roles },
-		content,
-	} = message
-
-	if (author.bot) return
-	if (roles.cache.some((role) => role.name.match(/moderator|owner/gi)))
-		return false
-
-	if (hasLinks(content))
-		return message
-			.delete()
-			.then(() =>
-				message.author
-					.send(
-						`:x: You have sent a blacklisted link!\nIf that is not the case please report a issue at\n<https://github.com/daimond113/carbon/issues>`
-					)
-					.catch((e) => console.log(e.message))
-			)
-			.catch((e) => console.log(e.message))
-
-	if (hasBadWords(content))
-		return message
-			.delete()
-			.then(() =>
-				message.author
-					.send(
-						`:x: I've detected a bad word in your message!\nPlease do not try to use bad words.\nFeel like this is an issue? Report it on <https://github.com/daimond113/carbon/issues>`
-					)
-					.catch((e) => console.log(e.message))
-			)
-			.catch((e) => console.log(e.message))
-}
 
 client.on('message', (message) => {
 	if (message.author.bot) return
