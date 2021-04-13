@@ -34,6 +34,9 @@ module.exports = class Owofy extends SlashCommand {
 		}
 
 		await ctx.respond({
+			allowed_mentions: {
+   				parse: []
+  			},
 			content
 		})
 	}
