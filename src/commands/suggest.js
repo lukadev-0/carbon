@@ -2,6 +2,7 @@ const { SlashCommand } = require('discord-interactive-core')
 const Interaction = require('discord-interactive-core/src/Interaction')
 const { MessageEmbed } = require('discord.js')
 const client = require('../client')
+const filter = require('../filter')
 
 module.exports = class Suggest extends SlashCommand {
 	constructor(manager) {
@@ -23,6 +24,12 @@ module.exports = class Suggest extends SlashCommand {
 	 * @param {Interaction} ctx
 	 */
 	async run(ctx) {
+		if (filter.isBad(ctx.data.options[0].value)) {
+			return ctx.respond({
+				content: ':x: Your message has been filtered'
+			})
+		}
+
 		await ctx.showLoadingIndicator(false)
 		try {
 			const member = await client.users.fetch(ctx.member.user.id)
