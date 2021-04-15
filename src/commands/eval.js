@@ -44,7 +44,9 @@ module.exports = class Eval extends SlashCommand {
 				await ctx.respond({ content: `\`\`\`js\n${code}\`\`\`` })
 			}
 		} catch (err) {
-			await update(int, 'An error has occured!')
+			await ctx.respond({
+        content: 'An error has occured!'
+      })
 			for (const code of Util.splitMessage(clean(err))) {
 				await ctx.respond({ content: `\`\`\`js\n${code}\`\`\`` })
 			}
