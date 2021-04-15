@@ -27,6 +27,8 @@
 		"express": "^4.17.1",
 		"owofire": "^1.0.4",
 		"quote.js": "^2.0.0",
+		"request": "^2.88.2",
+		"request-promise": "^4.2.6",
 		"ytdl-core": "^4.5.0",
 		"ytsr": "^3.4.1"
 	},

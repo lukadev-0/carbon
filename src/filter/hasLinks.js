@@ -1,3 +1,5 @@
+const request = require('request-promise')
+
 const WHITELIST = [
 	'github.io',
 	'cdn.discord.com',
@@ -18,6 +20,7 @@ const WHITELIST = [
 	'material-ui.com',
 	'typescriptlang.org',
 	'vercel.app',
+	'bit.ly',
 ]
 
 const BLACKLIST = [
@@ -37,12 +40,21 @@ const BLACKLIST = [
 		new RegExp(`(.+\\.)?${domain.replace('.', '\\.').replace('/', '\\/')}`, 'i')
 )
 
-module.exports = function hasLinks(content) {
+module.exports = async function hasLinks(content) {
 	const testStr = content.replace(/\s+/g, '') // Using "+" is more performant
 	if (BLACKLIST.some((regex) => regex.test(testStr))) return true
 	const urls = content.match(/(https?:\/\/\S+)/gi)
-	if (urls)
-		return !urls
-			.map((url) => new URL(url).hostname)
-			.every((url) => WHITELIST.some((wlUrl) => url.includes(wlUrl)))
+	if (urls) {
+		for (const url of urls) {
+			const response = await request(url, {
+				maxRedirects: Infinity,
+				resolveWithFullResponse: true,
+			})
+			const matched = !WHITELIST.some((wlUrl) => {
+				return response.request.uri.href.includes(wlUrl)
+			})
+			if (matched) return true
+		}
+	}
+	return false
 }

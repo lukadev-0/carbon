@@ -5,7 +5,7 @@ const { Message } = require('discord.js')
 /**
  * @param {Message} message
  */
-module.exports = exports = function filter(message) {
+module.exports = exports = async function filter(message) {
 	// check if message is in a guild channel (has member property)
 	if (!message.member) return
 
@@ -18,8 +18,7 @@ module.exports = exports = function filter(message) {
 	if (author.bot) return
 	if (roles.cache.some((role) => role.name.match(/moderator|owner/gi)))
 		return false
-
-	if (hasLinks(content))
+	if (await hasLinks(content))
 		return message
 			.delete()
 			.then(() =>
@@ -44,4 +43,4 @@ module.exports = exports = function filter(message) {
 			.catch((e) => console.log(e.message))
 }
 
-exports.isBad = s => hasLinks(s) || hasBadWords(s)
+exports.isBad = (s) => hasLinks(s) || hasBadWords(s)

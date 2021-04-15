@@ -36,16 +36,16 @@ client.on('guildMemberAdd', async (member) => {
 		.then(async (channel) => channel.send(await createWelcomeImage(member)))
 })
 
-client.on('message', (message) => {
+client.on('message', async (message) => {
 	if (message.author.bot) return
-	filter(message)
+	await filter(message)
 
 	handleHelpChannels(message)
 })
 
-client.on('messageUpdate', (message, messageNew) => {
+client.on('messageUpdate', async (message, messageNew) => {
 	if (message.author.bot) return
-	filter(messageNew)
+	await filter(messageNew)
 	if (message.content !== messageNew.content) {
 		chathistory(message, messageNew)
 	}
