@@ -32,7 +32,7 @@ readdirSync(commandsLocation).forEach(async (file) => {
 	if (file.endsWith('.js')) {
 		const command = await import(join(commandsLocation, file))
 
-		interactive.commands.guild(GUILD!).register(command)
+		interactive.commands.guild(GUILD!).register(command.default)
 	}
 })
 
