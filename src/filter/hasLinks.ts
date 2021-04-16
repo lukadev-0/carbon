@@ -1,4 +1,4 @@
-const request = require('request-promise')
+import axios from 'axios'
 
 const WHITELIST = [
 	'github.io',
@@ -40,21 +40,27 @@ const BLACKLIST = [
 		new RegExp(`(.+\\.)?${domain.replace('.', '\\.').replace('/', '\\/')}`, 'i')
 )
 
-module.exports = async function hasLinks(content) {
+export async function hasLinks(content: string) {
 	const testStr = content.replace(/\s+/g, '') // Using "+" is more performant
+
 	if (BLACKLIST.some((regex) => regex.test(testStr))) return true
+
 	const urls = content.match(/(https?:\/\/\S+)/gi)
+
 	if (urls) {
 		for (const url of urls) {
-			const response = await request(url, {
+			const response = await axios.head(url, {
 				maxRedirects: Infinity,
-				resolveWithFullResponse: true,
+				timeout: 5000
 			})
-			const matched = !WHITELIST.some((wlUrl) => {
-				return response.request.uri.href.includes(wlUrl)
-			})
+
+			const matched = !WHITELIST.some((wlUrl) => (
+				response.request.host.toLowerCase() === wlUrl
+			))
+
 			if (matched) return true
 		}
 	}
+
 	return false
 }
