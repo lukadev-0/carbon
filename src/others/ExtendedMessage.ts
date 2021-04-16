@@ -1,10 +1,10 @@
 const { APIMessage, Structures } = require('discord.js')
 
 class Message extends Structures.get('Message') {
-	async reply(content, options) {
+	async reply(content: any, options: any): Promise<any> {
 		const mentionRepliedUser =
 			typeof ((options || content || {}).allowedMentions || {}).repliedUser ===
-			'undefined'
+				'undefined'
 				? true
 				: (options || content).allowedMentions.repliedUser
 		delete ((options || content || {}).allowedMentions || {}).repliedUser
@@ -33,7 +33,7 @@ class Message extends Structures.get('Message') {
 			return Promise.all(
 				apiMessage
 					.split()
-					.map((x) => {
+					.map((x: any) => {
 						x.data.allowed_mentions = apiMessage.data.allowed_mentions
 						return x
 					})
@@ -44,7 +44,7 @@ class Message extends Structures.get('Message') {
 		const { data, files } = await apiMessage.resolveFiles()
 		return this.client.api.channels[this.channel.id].messages
 			.post({ data, files })
-			.then((d) => this.client.actions.MessageCreate.handle(d).message)
+			.then((d: any) => this.client.actions.MessageCreate.handle(d).message)
 			.catch(console.log)
 	}
 }
