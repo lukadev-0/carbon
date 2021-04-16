@@ -1,10 +1,10 @@
-const { SlashCommand } = require('discord-interactive-core')
-const Interaction = require('discord-interactive-core/src/Interaction')
-const { MessageEmbed } = require('discord.js')
-const client = require('../client')
+import { CommandManager, SlashCommand } from 'discord-interactive-core'
+import Interaction from 'discord-interactive-core/types/Interaction'
+import { MessageEmbed, TextChannel } from 'discord.js'
+import { client } from '../client'
 
-module.exports = class RespondToSuggestion extends SlashCommand {
-	constructor(manager) {
+export default class RespondToSuggestion extends SlashCommand {
+	constructor(manager: CommandManager) {
 		super(manager, {
 			name: 'respondtosuggestion',
 			description: 'Respond to a suggestion',
@@ -48,15 +48,15 @@ module.exports = class RespondToSuggestion extends SlashCommand {
 	 *
 	 * @param {Interaction} ctx
 	 */
-	async run(ctx) {
+	async run(ctx: Interaction) {
 		await ctx.showLoadingIndicator(false)
 		const guild = await client.guilds.fetch(ctx.guild_id)
 		const user = await guild.members.fetch(ctx.member.user.id)
-		if (user.roles.cache.some((role) => role.name.match(/moderator|owner/gi))) {
+		if (user.roles.cache.some((role) => Boolean(role.name.match(/moderator|owner/gi)))) {
 			const channel = await client.channels.fetch(
-				process.env.SUGGESTION_CHANNEL
+				process.env.SUGGESTION_CHANNEL!
 			)
-			const message = await channel.messages.fetch(ctx.data.options[0].value)
+			const message = await (channel as TextChannel).messages.fetch(ctx.data.options[0].value)
 			const embeds = await message.embeds
 			const embed = embeds[0]
 			embed.addField(
@@ -69,7 +69,7 @@ module.exports = class RespondToSuggestion extends SlashCommand {
 			await ctx.respond({
 				content: 'Successfuly responded',
 			})
-			const toDM = await client.users.fetch(embed.footer.text)
+			const toDM = await client.users.fetch(embed.footer!.text!)
 			const embed2 = new MessageEmbed()
 				.setColor('GREEN')
 				.setAuthor(
@@ -90,8 +90,8 @@ module.exports = class RespondToSuggestion extends SlashCommand {
 			})
 		} else {
 			ctx.respond({
-        content: "You're not a moderator or the owner!"
-      })
+				content: "You're not a moderator or the owner!"
+			})
 		}
 	}
 }

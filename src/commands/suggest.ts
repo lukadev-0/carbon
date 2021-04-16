@@ -1,11 +1,11 @@
-const { SlashCommand } = require('discord-interactive-core')
-const Interaction = require('discord-interactive-core/src/Interaction')
-const { MessageEmbed } = require('discord.js')
-const client = require('../client')
-const filter = require('../filter')
+import { CommandManager, SlashCommand } from 'discord-interactive-core'
+import Interaction from 'discord-interactive-core/types/Interaction'
+import { MessageEmbed, TextChannel } from 'discord.js'
+import { client } from '../client'
+import { isBad } from '../filter'
 
-module.exports = class Suggest extends SlashCommand {
-	constructor(manager) {
+export default class Suggest extends SlashCommand {
+	constructor(manager: CommandManager) {
 		super(manager, {
 			name: 'suggest',
 			description: 'Suggest something',
@@ -23,8 +23,8 @@ module.exports = class Suggest extends SlashCommand {
 	 *
 	 * @param {Interaction} ctx
 	 */
-	async run(ctx) {
-		if (filter.isBad(ctx.data.options[0].value)) {
+	async run(ctx: Interaction) {
+		if (isBad(ctx.data.options[0].value)) {
 			return ctx.respond({
 				content: ':x: Your message has been filtered'
 			})
@@ -34,7 +34,7 @@ module.exports = class Suggest extends SlashCommand {
 		try {
 			const member = await client.users.fetch(ctx.member.user.id)
 			const channel = await client.channels.fetch(
-				process.env.SUGGESTION_CHANNEL
+				process.env.SUGGESTION_CHANNEL!
 			)
 			const embed = new MessageEmbed()
 				.setTitle('Suggestion')
@@ -49,7 +49,7 @@ module.exports = class Suggest extends SlashCommand {
 				.setColor('GREEN')
 				.setDescription(ctx.data.options[0].value)
 				.setFooter(member.id)
-			await channel.send(embed)
+			await (channel as TextChannel).send(embed)
 			await ctx.respond({
 				content: 'Successfuly send the suggestion',
 			})

@@ -1,10 +1,10 @@
-const owofire = require('owofire')
-const { SlashCommand } = require('discord-interactive-core')
-const Interaction = require('discord-interactive-core/src/Interaction')
-const filter = require('../filter')
+import owofire from 'owofire'
+import { CommandManager, SlashCommand } from 'discord-interactive-core'
+import Interaction from 'discord-interactive-core/types/Interaction'
+import { isBad } from '../filter'
 
-module.exports = class Owofy extends SlashCommand {
-	constructor(manager) {
+export default class Owofy extends SlashCommand {
+	constructor(manager: CommandManager) {
 		super(manager, {
 			name: 'owofy',
 			description: 'Owofy some text',
@@ -18,16 +18,13 @@ module.exports = class Owofy extends SlashCommand {
 			],
 		})
 	}
-	/**
-	 *
-	 * @param {Interaction} ctx
-	 */
-	async run(ctx) {
+
+	async run(ctx: Interaction) {
 		await ctx.showLoadingIndicator(false)
 
 		const content = owofire(ctx.data.options[0].value)
 
-		if (filter.isBad(content)) {
+		if (isBad(content)) {
 			return ctx.respond({
 				content: ':x: Your message has been filtered'
 			})
@@ -35,8 +32,8 @@ module.exports = class Owofy extends SlashCommand {
 
 		await ctx.respond({
 			allowed_mentions: {
-   				parse: []
-  			},
+				parse: []
+			},
 			content
 		})
 	}

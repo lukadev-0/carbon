@@ -1,27 +1,25 @@
 const quotejs = require('quote.js')
-const { registerFont, createCanvas } = require('canvas')
-const { join } = require('path')
-const { MessageAttachment } = require('discord.js')
-const { SlashCommand } = require('discord-interactive-core')
-const Interaction = require('discord-interactive-core/src/Interaction')
-const client = require('../client')
+
+import { registerFont, createCanvas } from 'canvas'
+import { join } from 'path'
+import { MessageAttachment, TextChannel } from 'discord.js'
+import { CommandManager, SlashCommand } from 'discord-interactive-core'
+import Interaction from 'discord-interactive-core/types/Interaction'
+import { client } from '../client'
 
 registerFont(join(process.cwd(), 'src', 'assets', 'font.ttf'), {
 	family: 'Old Standard TT',
 })
 
-module.exports = class RandomQuote extends SlashCommand {
-	constructor(manager) {
+export default class RandomQuote extends SlashCommand {
+	constructor(manager: CommandManager) {
 		super(manager, {
 			name: 'randomquote',
 			description: 'Get a random quote!',
 		})
 	}
-	/**
-	 *
-	 * @param {Interaction} int
-	 */
-	async run(int) {
+
+	async run(int: Interaction) {
 		await int.showLoadingIndicator(false)
 		const randomQuote = quotejs(1, { authorIsKnown: true })
 		const canvas = createCanvas(1000, 300)
@@ -44,7 +42,7 @@ module.exports = class RandomQuote extends SlashCommand {
 		)
 		const msg = new MessageAttachment(canvas.toBuffer())
 		const channel = await client.channels.fetch(int.channel_id)
-		const message = await channel.send(msg)
+		const message = await (channel as TextChannel).send(msg)
 		await int.respond({
 			content: 'Here is the quote!',
 		})

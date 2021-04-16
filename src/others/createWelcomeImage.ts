@@ -1,5 +1,5 @@
-const { createCanvas, registerFont, loadImage } = require('canvas')
-const { MessageAttachment } = require('discord.js')
+import { createCanvas, registerFont, loadImage } from 'canvas'
+import { GuildMember, MessageAttachment } from 'discord.js'
 
 registerFont(
 	require('path').join(process.cwd(), 'src/assets/Roboto-Bold.ttf'),
@@ -8,7 +8,7 @@ registerFont(
 	}
 )
 
-module.exports = async function createWelcomeImage(member) {
+export async function createWelcomeImage(member: GuildMember) {
 	const { displayName, guild, user } = member
 
 	const userAvatarImage = await loadImage(
@@ -43,11 +43,11 @@ module.exports = async function createWelcomeImage(member) {
 	ctx.clip()
 
 	const s = canvas.height / 2 - 150
-	ctx.drawImage(userAvatarImage, s, s, 150 * 2, 150 * 2)
+	ctx.drawImage(userAvatarImage, s - 50, s, 150 * 2, 150 * 2)
 
 	ctx.restore()
 
-	const x = canvas.height - 50
+	const x = canvas.height - 100
 
 	ctx.textBaseline = 'top'
 	ctx.fillStyle = 'white'
@@ -61,9 +61,9 @@ module.exports = async function createWelcomeImage(member) {
 	ctx.font = '30px Roboto'
 	ctx.fillText(
 		`Welcome to ${guild.name}!\n\n` +
-			'We hope you will have a great\n' +
-			'experience here and meet lots of\n' +
-			'other programmers',
+		'We hope you will have a great\n' +
+		'experience here and meet lots of\n' +
+		'other programmers',
 		x,
 		s + 78,
 		canvas.width

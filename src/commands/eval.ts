@@ -1,17 +1,10 @@
-const { inspect } = require('util')
-const { Util } = require('discord.js')
-const { SlashCommand } = require('discord-interactive-core')
-const client = require('../client')
-const Interaction = require('discord-interactive-core/src/Interaction')
+import { inspect } from 'util'
+import { Util } from 'discord.js'
+import { CommandManager, SlashCommand } from 'discord-interactive-core'
+import Interaction from 'discord-interactive-core/types/Interaction'
 
-const zwsp = String.fromCharCode(8203)
-const clean = (text) =>
-	typeof text === 'string'
-		? text.replace(/`/g, '`' + zwsp).replace(/@/g, '@' + zwsp)
-		: text
-
-module.exports = class Eval extends SlashCommand {
-	constructor(manager) {
+export default class Eval extends SlashCommand {
+	constructor(manager: CommandManager) {
 		super(manager, {
 			name: 'eval',
 			description: 'Run code (CREATOR ONLY)',
@@ -29,25 +22,32 @@ module.exports = class Eval extends SlashCommand {
 	 *
 	 * @param {Interaction} ctx
 	 */
-	async run(ctx) {
+	async run(ctx: Interaction) {
 		await ctx.showLoadingIndicator(false)
+
 		if (ctx.member.user.id !== process.env.OWNER_ID)
 			return ctx.respond({ content: "You're not the owner!" })
 
 		try {
 			let evaled = eval(ctx.data.options[0].value)
+
 			if (typeof evaled !== 'string') evaled = inspect(evaled)
+
 			await ctx.respond({
 				content: 'Successfully evaluated',
 			})
+
 			for (const code of Util.splitMessage(evaled)) {
 				await ctx.respond({ content: `\`\`\`js\n${code}\`\`\`` })
 			}
 		} catch (err) {
 			await ctx.respond({
-        content: 'An error has occured!'
-      })
-			for (const code of Util.splitMessage(clean(err))) {
+				content: 'An error has occured!'
+			})
+
+			const error = err.message.replace('`', '`' + String.fromCharCode(8203))
+
+			for (const code of Util.splitMessage(error)) {
 				await ctx.respond({ content: `\`\`\`js\n${code}\`\`\`` })
 			}
 		}

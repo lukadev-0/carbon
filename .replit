@@ -1,2 +1,2 @@
 language = "bash"
-run = "npm i && npm start"
+run = "npm i --only=prod && npm run build && npm start"
