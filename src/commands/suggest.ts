@@ -24,7 +24,7 @@ export default class Suggest extends SlashCommand {
 	 * @param {Interaction} ctx
 	 */
 	async run(ctx: Interaction) {
-		if (isBad(ctx.data.options[0].value)) {
+		if (await isBad(ctx.data.options[0].value)) {
 			return ctx.respond({
 				content: ':x: Your message has been filtered'
 			})
