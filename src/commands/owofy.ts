@@ -24,7 +24,7 @@ export default class Owofy extends SlashCommand {
 
 		const content = owofire(ctx.data.options[0].value)
 
-		if (isBad(content)) {
+		if (await isBad(content)) {
 			return ctx.respond({
 				content: ':x: Your message has been filtered'
 			})
