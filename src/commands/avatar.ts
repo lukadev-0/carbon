@@ -1,10 +1,10 @@
-const { MessageEmbed } = require('discord.js')
-const { SlashCommand } = require('discord-interactive-core')
-const client = require('../client')
-const Interaction = require('discord-interactive-core/src/Interaction')
+import { MessageEmbed } from 'discord.js'
+import { SlashCommand, CommandManager } from 'discord-interactive-core'
+import { client } from '../client'
+import Interaction from 'discord-interactive-core/types/Interaction'
 
-module.exports = class Avatar extends SlashCommand {
-	constructor(manager) {
+export default class Avatar extends SlashCommand {
+	constructor(manager: CommandManager) {
 		super(manager, {
 			name: 'avatar',
 			description: "Get someone's avatar!",
@@ -18,13 +18,12 @@ module.exports = class Avatar extends SlashCommand {
 			],
 		})
 	}
-	/**
-	 *
-	 * @param {Interaction} ctx
-	 */
-	async run(ctx) {
+
+	async run(ctx: Interaction) {
 		await ctx.showLoadingIndicator(false)
+
 		const user = await client.users.fetch(ctx.data.options[0].value)
+
 		const json = new MessageEmbed()
 			.setTitle(`${user.username}'s avatar!`)
 			.setColor('RANDOM')
@@ -32,6 +31,7 @@ module.exports = class Avatar extends SlashCommand {
 				user.displayAvatarURL({ format: 'png', dynamic: true, size: 4096 })
 			)
 			.toJSON()
+
 		await ctx.respond({
 			content: 'Got the avatar!',
 			embeds: [json],

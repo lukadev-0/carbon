@@ -1,13 +1,13 @@
-const { SlashCommand } = require('discord-interactive-core')
-const Interaction = require('discord-interactive-core/src/Interaction')
-const client = require('../client')
-const ytsr = require('ytsr')
-const ytdl = require('ytdl-core')
-const { MessageEmbed } = require('discord.js')
-let dispatcher
+import { CommandManager, SlashCommand } from 'discord-interactive-core'
+import Interaction from 'discord-interactive-core/types/Interaction'
+import { client } from '../client'
+import ytsr from 'ytsr'
+import ytdl from 'ytdl-core'
+import { MessageEmbed, StreamDispatcher, TextChannel } from 'discord.js'
+let dispatcher: StreamDispatcher | null
 
-module.exports = class Music extends SlashCommand {
-	constructor(manager) {
+export default class Music extends SlashCommand {
+	constructor(manager: CommandManager) {
 		super(manager, {
 			name: 'music',
 			description: 'Play music',
@@ -45,11 +45,8 @@ module.exports = class Music extends SlashCommand {
 			],
 		})
 	}
-	/**
-	 *
-	 * @param {Interaction} ctx
-	 */
-	async run(ctx) {
+
+	async run(ctx: Interaction) {
 		await ctx.showLoadingIndicator(false)
 		const channel = await client.channels.fetch(ctx.channel_id)
 		switch (ctx.data.options[0].value) {
@@ -64,23 +61,31 @@ module.exports = class Music extends SlashCommand {
 				}
 				const connection = await member.voice.channel.join()
 				const toSearch = ctx.data.options[1]
-				const url = await ytsr(toSearch.value, {
+
+				const filters = await ytsr.getFilters(toSearch.value)
+				const filter = filters.get('Type')!.get('Video')!
+
+				const results = await ytsr(filter.url!, {
 					safeSearch: false,
 					limit: 1,
-					nextpageRef: `https://www.youtube.com/results?search_query=${toSearch.value}&sp=EgIQAQ%253D%253D`,
 				})
-				const items = url.items[0]
-				dispatcher = connection.play(ytdl(items.url))
+
+				const item = results.items[0] as ytsr.Video
+
+				dispatcher = connection.play(ytdl(item.url))
+
 				const embed = new MessageEmbed()
-					.setAuthor(items.author.name, items.author.bestAvatar.url)
-					.setTitle(items.title)
-					.setURL(items.url)
-					.setThumbnail(items.thumbnails[0].url)
-					.setDescription(items.description)
+					.setAuthor(item.author!.name, item.author!.bestAvatar.url ?? undefined)
+					.setTitle(item.title)
+					.setURL(item.url)
+					.setThumbnail(item.thumbnails[0].url!)
+					.setDescription(item.description)
 					.setColor('RED')
+
 				await ctx.respond({
 					embeds: [embed.toJSON()],
 				})
+
 				break
 			case 'pause':
 				if (dispatcher) {
@@ -97,7 +102,7 @@ module.exports = class Music extends SlashCommand {
 			case 'disconnect':
 				if (dispatcher) {
 					dispatcher.end()
-					channel.guild.me.voice.connection.disconnect()
+						; (channel as TextChannel).guild.me!.voice.connection!.disconnect()
 					dispatcher = null
 					await ctx.respond({
 						content: 'Disconnected!',

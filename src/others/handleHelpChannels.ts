@@ -15,7 +15,7 @@ interface HelpSession {
 }
 
 const HELP_CATEGORIES = new Set([CATEGORY_FREE_ID, CATEGORY_TAKEN_ID])
-const channels = new Collection<Snowflake, HelpSession>()
+export const sessions = new Collection<Snowflake, HelpSession>()
 
 export async function handleMessage(message: Message) {
 	const { author, channel, member } = message
@@ -28,8 +28,8 @@ export async function handleMessage(message: Message) {
 
 	try {
 		// Check if channel is already claimed
-		if (channels.has(channel.id)) {
-			const session = channels.get(channel.id)!
+		if (sessions.has(channel.id)) {
+			const session = sessions.get(channel.id)!
 
 			if (!session.timeout) return
 
@@ -43,7 +43,7 @@ export async function handleMessage(message: Message) {
 				initMessage: message
 			}
 
-			channels.set(channel.id, session)
+			sessions.set(channel.id, session)
 
 			const embed = new MessageEmbed()
 				.setAuthor(
@@ -72,7 +72,7 @@ export async function handleMessage(message: Message) {
 			await member!.roles.add(COOLDOWN_ID!)
 		}
 	} catch (e) {
-		channels.delete(channel.id)
+		sessions.delete(channel.id)
 
 		channel
 			.send(':x: An error occurred```' + e.message + '```', { split: true })
@@ -89,10 +89,10 @@ function setSessionTimeout(session: HelpSession) {
 	)
 }
 
-async function closeSession(session: HelpSession) {
+export async function closeSession(session: HelpSession) {
 	const { infoMessage, initMessage, channel } = session
 
-	channels.delete(channel.id)
+	sessions.delete(channel.id)
 
 	if (!initMessage.deleted) await initMessage.unpin()
 

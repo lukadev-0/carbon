@@ -1,9 +1,11 @@
-const { SlashCommand } = require('discord-interactive-core')
-const client = require('../client')
-const Interaction = require('discord-interactive-core/src/Interaction')
+import { CommandManager } from "discord-interactive-core"
+import { SlashCommand } from 'discord-interactive-core'
+import { client } from '../client'
+import Interaction from 'discord-interactive-core/types/Interaction'
+import { TextChannel } from "discord.js"
 
-module.exports = class Report extends SlashCommand {
-	constructor(manager) {
+export default class Report extends SlashCommand {
+	constructor(manager: CommandManager) {
 		super(manager, {
 			name: 'report',
 			description: 'Report a user for breaking the rules.',
@@ -23,19 +25,16 @@ module.exports = class Report extends SlashCommand {
 			],
 		})
 	}
-	/**
-	 *
-	 * @param {Interaction} ctx
-	 */
-	async run(ctx) {
+
+	async run(ctx: Interaction) {
 		await ctx.showLoadingIndicator(false)
 		try {
 			const options = ctx.data.options
 			const toReport = options[0].value
 			const reason = options[1].value
 			const reportChannel = await client.channels.fetch(
-				process.env.REPORT_CHANNEL
-			)
+				process.env.REPORT_CHANNEL!
+			) as TextChannel
 			const guild = await client.guilds.fetch(ctx.guild_id)
 			const user = await guild.members.fetch(toReport)
 			if (ctx.member.user.id === toReport) {
@@ -44,7 +43,7 @@ module.exports = class Report extends SlashCommand {
 				})
 			}
 			if (
-				user.roles.cache.some((role) => role.name.match(/moderator|owner/gi))
+				user.roles.cache.some((role) => Boolean(role.name.match(/moderator|owner/gi)))
 			) {
 				return await ctx.respond({
 					content: 'You cannot report a moderator or the owner.',
