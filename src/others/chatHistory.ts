@@ -33,10 +33,13 @@ export async function chatHistory(message: Message, newMsg?: Message) {
 			},
 			...newMsg ? [{  // Only add this field if newMsg is defined
 				name: 'To',
-				value: truncate(message.content, 1024)
-			}] : []
+				value: truncate(newMsg.content, 1024)
+			}] : [],
+			{
+				name: 'Message Link',
+				value: message.url
+			}
 		])
-		.setFooter(`[Go to message](${message.url})`)
 
 	logs.send(embed)
 }
