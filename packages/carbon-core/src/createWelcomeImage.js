@@ -37,7 +37,7 @@ module.exports = async function createWelcomeImage(member) {
 	ctx.fillRect(0, 0, canvas.width, canvas.height)
 
 	ctx.beginPath()
-	ctx.arc(canvas.height / 2, canvas.height / 2, 150, 0, Math.PI * 2)
+	ctx.arc(canvas.height / 2 - 50, canvas.height / 2, 150, 0, Math.PI * 2)
 	ctx.save()
 
 	ctx.clip()
