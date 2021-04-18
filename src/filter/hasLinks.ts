@@ -23,28 +23,7 @@ const WHITELIST = [
 	'bit.ly',
 ]
 
-const BLACKLIST = [
-	'discord.gg',
-	'discord.io',
-	'discord.me',
-	'discord.li',
-	'discord.com/invite/',
-	'discordapp.com/invite/',
-	'invite.gg',
-	'dis.gd',
-	'twitter.com',
-	'soundcloud.com',
-	'snd.sc',
-].map(
-	(domain) =>
-		new RegExp(`(.+\\.)?${domain.replace('.', '\\.').replace('/', '\\/')}`, 'i')
-)
-
 export async function hasLinks(content: string) {
-	const testStr = content.replace(/\s+/g, '') // Using "+" is more performant
-
-	if (BLACKLIST.some((regex) => regex.test(testStr))) return true
-
 	const urls = content.match(/(https?:\/\/\S+)/gi)
 
 	if (urls) {

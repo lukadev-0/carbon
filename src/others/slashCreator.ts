@@ -1,4 +1,4 @@
-import { Client as Interactive, Integration, SlashCommand } from 'discord-interactive-core'
+import { Client as Interactive, Integration } from 'discord-interactive-core'
 import { readdirSync } from 'fs'
 import { join } from 'path'
 import { client } from '../client'
@@ -31,7 +31,6 @@ const commandsLocation = join(__dirname, '../commands')
 readdirSync(commandsLocation).forEach(async (file) => {
 	if (file.endsWith('.js')) {
 		const command = await import(join(commandsLocation, file))
-
 		interactive.commands.guild(GUILD!).register(command.default)
 	}
 })

@@ -1,46 +1,44 @@
 import { CommandManager, SlashCommand } from 'discord-interactive-core'
 import Interaction from 'discord-interactive-core/types/Interaction'
 import { client } from '../client'
+import { MessageEmbed, StreamDispatcher, VoiceConnection } from 'discord.js'
 import ytsr from 'ytsr'
 import ytdl from 'ytdl-core'
-import { MessageEmbed, StreamDispatcher, TextChannel } from 'discord.js'
 let dispatcher: StreamDispatcher | null
-
+let connection: VoiceConnection | null
 export default class Music extends SlashCommand {
 	constructor(manager: CommandManager) {
 		super(manager, {
 			name: 'music',
-			description: 'Play music',
+			description: 'Music commands',
 			options: [
 				{
-					name: 'Command',
-					description: 'Command to use',
-					type: 3,
-					required: true,
-					choices: [
+					name: 'play',
+					description: 'Play music',
+					type: 1,
+					options: [
 						{
-							name: 'Play',
-							value: 'play',
-						},
-						{
-							name: 'Pause',
-							value: 'pause',
-						},
-						{
-							name: 'Disconnect',
-							value: 'disconnect',
-						},
-						{
-							name: 'Resume',
-							value: 'resume',
+							name: 'name',
+							description: 'Name of the song to play',
+							type: 3,
+							required: true,
 						},
 					],
 				},
 				{
-					name: 'toplay',
-					description: 'A video title to play (ONLY VALID IN THE PLAY COMMAND)',
-					type: 3,
-					required: true,
+					name: 'pause',
+					description: "Pause what's playing",
+					type: 1,
+				},
+				{
+					name: 'resume',
+					description: 'Resume what was playing',
+					type: 1,
+				},
+				{
+					name: 'disconnect',
+					description: 'Disconnect me from the voice channel',
+					type: 1,
 				},
 			],
 		})
@@ -48,85 +46,86 @@ export default class Music extends SlashCommand {
 
 	async run(ctx: Interaction) {
 		await ctx.showLoadingIndicator(false)
-		const channel = await client.channels.fetch(ctx.channel_id)
-		switch (ctx.data.options[0].value) {
-			case 'play':
-				const guild = await client.guilds.fetch(ctx.guild_id)
-				const member = await guild.members.fetch(ctx.member.user.id)
-				if (!member.voice.channel) {
+		try {
+			const options = ctx.data.options[0]
+			const member = await (
+				await client.guilds.fetch(ctx.guild_id)
+			).members.fetch(ctx.member.user.id)
+			switch (options.name) {
+				case 'play':
+					const v = options?.options[0].value
+					if (!member.voice.channel) {
+						await ctx.respond({
+							content: 'Please join a voice channel first!',
+						})
+						return
+					}
+					connection = await member.voice.channel.join()
+					const filter = (await ytsr.getFilters(v)).get('Type')!.get('Video')!
+
+					const results = await ytsr(filter.url!, {
+						safeSearch: false,
+						limit: 1,
+					})
+					const item = results.items[0] as ytsr.Video
 					await ctx.respond({
-						content: 'Please join a voice channel first!',
+						embeds: [
+							new MessageEmbed()
+								.setAuthor(
+									item.author!.name,
+									item.author!.bestAvatar.url ?? undefined
+								)
+								.setTitle(item.title)
+								.setURL(item.url)
+								.setThumbnail(item.thumbnails[0].url!)
+								.setDescription(item.description ?? 'No description.')
+								.setColor('RED')
+								.toJSON(),
+						],
 					})
-					return
-				}
-				const connection = await member.voice.channel.join()
-				const toSearch = ctx.data.options[1]
-
-				const filters = await ytsr.getFilters(toSearch.value)
-				const filter = filters.get('Type')!.get('Video')!
-
-				const results = await ytsr(filter.url!, {
-					safeSearch: false,
-					limit: 1,
-				})
-
-				const item = results.items[0] as ytsr.Video
-
-				dispatcher = connection.play(ytdl(item.url))
-
-				const embed = new MessageEmbed()
-					.setAuthor(item.author!.name, item.author!.bestAvatar.url ?? undefined)
-					.setTitle(item.title)
-					.setURL(item.url)
-					.setThumbnail(item.thumbnails[0].url!)
-					.setDescription(item.description)
-					.setColor('RED')
-
-				await ctx.respond({
-					embeds: [embed.toJSON()],
-				})
-
-				break
-			case 'pause':
-				if (dispatcher) {
-					dispatcher.pause()
-					await ctx.respond({
-						content: 'Paused!',
-					})
-				} else {
-					await ctx.respond({
-						content: "Nothing's playing right now!",
-					})
-				}
-				break
-			case 'disconnect':
-				if (dispatcher) {
-					dispatcher.end()
-						; (channel as TextChannel).guild.me!.voice.connection!.disconnect()
-					dispatcher = null
-					await ctx.respond({
-						content: 'Disconnected!',
-					})
-				} else {
-					await ctx.respond({
-						content: 'I am not in a voice channel!',
-					})
-				}
-				break
-			case 'resume':
-				if (dispatcher) {
-					dispatcher.resume()
-					ctx.respond({
-						content: 'Resumed!',
-					})
-				} else {
-					ctx.respond({
-						content: "Nothing's paused!",
-					})
-				}
-				break
-			default:
-				break
+					dispatcher = connection.play(ytdl(item.url))
+					break
+				case 'pause':
+					if (member.voice.channel) {
+						dispatcher?.pause()
+						ctx.respond({
+							content: 'Paused!',
+						})
+					} else {
+						ctx.respond({
+							content: "You're not in a voice channel!",
+						})
+					}
+					break
+				case 'resume':
+					if (member.voice.channel) {
+						dispatcher?.resume()
+						ctx.respond({
+							content: 'Resumed!',
+						})
+					} else {
+						ctx.respond({
+							content: "You're not in a voice channel!",
+						})
+					}
+					break
+				case 'disconnect':
+					if (member.voice.channel) {
+						connection?.disconnect()
+						ctx.respond({
+							content: 'Disconnected!',
+						})
+					} else {
+						ctx.respond({
+							content: "You're not in a voice channel!",
+						})
+					}
+					break
+				default:
+					break
+			}
+		} catch (e) {
+			console.log(e)
 		}
 	}
 }
