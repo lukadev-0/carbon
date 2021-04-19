@@ -30,14 +30,14 @@ export async function hasLinks(content: string) {
 		for (const url of urls) {
 			const response = await axios.head(url, {
 				maxRedirects: Infinity,
-				timeout: 5000
+				timeout: 5000,
 			})
 
-			const matched = !WHITELIST.some((wlUrl) => (
-				new RegExp(`^(.+\.)?${wlUrl}$`)
-					.test(response.request.host.toLowerCase())
-			))
-
+			const matched = !WHITELIST.some((wlUrl) => {
+				new RegExp(`^(.+\.)?${wlUrl}$`).test(
+					response.request.host.toLowerCase()
+				)
+			})
 			if (matched) return true
 		}
 	}

@@ -4,7 +4,7 @@ class Message extends Structures.get('Message') {
 	async reply(content: any, options: any): Promise<any> {
 		const mentionRepliedUser =
 			typeof ((options || content || {}).allowedMentions || {}).repliedUser ===
-				'undefined'
+			'undefined'
 				? true
 				: (options || content).allowedMentions.repliedUser
 		delete ((options || content || {}).allowedMentions || {}).repliedUser
