@@ -29,6 +29,8 @@ export default class Eval extends SlashCommand {
 			return ctx.respond({ content: "You're not the owner!" })
 
 		try {
+      // inject variables
+      const client = require('../client')
 			let evaled = eval(ctx.data.options[0].value)
 
 			if (typeof evaled !== 'string') evaled = inspect(evaled)
