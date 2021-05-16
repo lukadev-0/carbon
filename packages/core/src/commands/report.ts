@@ -32,7 +32,7 @@ export default {
     ],
 } as ApplicationCommandData
 
-export async function run(int: CommandInteraction) {
+export async function run(int: CommandInteraction): Promise<void> {
     try {
         const reportChannel = (await client.channels.fetch(
             variables.REPORT_CHANNEL

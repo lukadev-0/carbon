@@ -1,12 +1,10 @@
 import {
     ApplicationCommandData,
     CommandInteraction,
-    GuildMember,
     MessageEmbed,
     TextChannel,
 } from 'discord.js'
 import { client } from '../client'
-import overrideRegex from '../others/overrideRegex'
 import variables from '../variables'
 
 export default {
@@ -49,7 +47,7 @@ export default {
     ],
 } as ApplicationCommandData
 
-export async function run(int: CommandInteraction) {
+export async function run(int: CommandInteraction): Promise<void> {
     const channel = await client.channels.fetch(variables.SUGGESTION_CHANNEL)
     const message = await (channel as TextChannel).messages.fetch(
         int.options[0].value as string
@@ -87,7 +85,7 @@ export async function run(int: CommandInteraction) {
                 value: int.options[2].value,
             }
         )
-    toDM.send(embed2).catch((erro) => {
+    toDM.send(embed2).catch((erro: { message: string }) => {
         console.log(erro.message)
     })
 }

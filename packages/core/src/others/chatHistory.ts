@@ -8,7 +8,7 @@ function truncate(string: string, length: number) {
     return string.length > length ? string.slice(0, length - 3) + '...' : string
 }
 
-export async function chatHistory(message: Message, newMsg?: Message) {
+export async function chatHistory(message: Message, newMsg?: Message): Promise<void> {
     const logs = (await client.channels.fetch(CHAT_HISTORY)) as TextChannel
 
     const embed = new MessageEmbed()
@@ -33,12 +33,12 @@ export async function chatHistory(message: Message, newMsg?: Message) {
             },
             ...(newMsg
                 ? [
-                      {
-                          // Only add this field if newMsg is defined
-                          name: 'To',
-                          value: truncate(newMsg.content, 1024),
-                      },
-                  ]
+                    {
+                        // Only add this field if newMsg is defined
+                        name: 'To',
+                        value: truncate(newMsg.content, 1024),
+                    },
+                ]
                 : []),
             {
                 name: 'Message Link',

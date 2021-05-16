@@ -1,0 +1,13 @@
+name: Tests
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install modules
+        run: npx lerna bootstrap
+      - name: Run tests
+        run: npx lerna run test
+      - name: Code style checks
+        run: npm run lint

@@ -18,7 +18,7 @@ export default {
     ],
 } as ApplicationCommandOption
 
-export async function run(int: CommandInteraction) {
+export async function run(int: CommandInteraction): Promise<void> {
     try {
         const img = await get(
             Math.round(Math.random()) === 0 ? 'Image' : 'Video',
@@ -26,14 +26,14 @@ export async function run(int: CommandInteraction) {
             false
         )
 
-        const Embed = new MessageEmbed()
+        const embed = new MessageEmbed()
             .setAuthor(img.author)
             .setTitle(img.title)
             .setURL(img.url)
             .setColor('RANDOM')
             .setImage(img.media)
 
-        await int.editReply(Embed)
+        await int.editReply(embed)
     } catch (err) {
         await int.editReply(`\`\`\`js\n${err.message}\`\`\``)
     }

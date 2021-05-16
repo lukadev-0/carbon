@@ -3,7 +3,6 @@ import {
     CommandInteraction,
     MessageEmbed,
     TextChannel,
-    User,
 } from 'discord.js'
 import { client } from '../client'
 import { isBad } from '../filter'
@@ -22,7 +21,7 @@ export default {
     ],
 } as ApplicationCommandData
 
-export async function run(int: CommandInteraction) {
+export async function run(int: CommandInteraction): Promise<void> {
     if (await isBad(int.options[0].value as string))
         return int.editReply(':x: Your message has been filtered!')
     try {

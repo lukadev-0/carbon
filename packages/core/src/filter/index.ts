@@ -3,7 +3,7 @@ import { hasBadWords } from './hasBadWords'
 import { Message } from 'discord.js'
 import overrideRegex from '../others/overrideRegex'
 
-export async function filter(message: Message) {
+export async function filter(message: Message): Promise<void | Message> {
     // check if message is in a guild channel (has member property)
     if (!message.member) return
 
@@ -47,6 +47,6 @@ export async function filter(message: Message) {
             .catch((e) => console.log(e.message))
 }
 
-export async function isBad(content: string) {
+export async function isBad(content: string): Promise<boolean> {
     return (await hasLinks(content)) || hasBadWords(content)
 }

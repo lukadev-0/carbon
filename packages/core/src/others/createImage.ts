@@ -2,6 +2,7 @@ import { createCanvas, registerFont, loadImage } from 'canvas'
 import { GuildMember, MessageAttachment } from 'discord.js'
 
 registerFont(
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
     require('path').join(process.cwd(), 'src/assets/Roboto-Bold.ttf'),
     {
         family: 'Roboto',
@@ -11,7 +12,7 @@ registerFont(
 export default async function createWelcomeImage(
     member: GuildMember,
     welcome = true
-) {
+): Promise<MessageAttachment> {
     const { displayName, guild, user } = member
     const text = welcome
         ? `Welcome to ${guild.name}!\n\n` +

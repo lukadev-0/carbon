@@ -15,7 +15,7 @@ export default {
     ],
 } as ApplicationCommandData
 
-export async function run(int: CommandInteraction) {
+export async function run(int: CommandInteraction): Promise<void> {
     const content = int.options[0].value as string
     if (await isBad(content))
         return int.editReply(':x: Your message has been filtered')

@@ -1,8 +1,10 @@
+import { ApplicationCommandData, CommandInteraction } from 'discord.js'
 import { promises } from 'fs'
 import { join } from 'path'
 import { client } from '../client'
 import variables from '../variables'
 interface CommandFunctions {
+    // eslint-disable-next-line @typescript-eslint/ban-types
     [key: string]: Function
 }
 const commandFunctions: CommandFunctions = {}
@@ -24,7 +26,7 @@ const commandsLocation = join(__dirname, '../commands')
     ).commands.set(allCommands)
     for (const p of ownerOnly) {
         await setCommands
-            .find((c) => c.name === p)
+            .find((c: ApplicationCommandData) => c.name === p)
             ?.setPermissions([
                 {
                     id: variables.OWNER_ID,
@@ -35,7 +37,7 @@ const commandsLocation = join(__dirname, '../commands')
     }
 })()
 
-client.on('interaction', async (interaction) => {
+client.on('interaction', async (interaction: CommandInteraction) => {
     if (!interaction.isCommand()) return
     await interaction.defer(false)
     commandFunctions[interaction.commandName](interaction)

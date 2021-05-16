@@ -1,4 +1,4 @@
-import { MessageReaction, User } from 'discord.js'
+import { GuildMember, MessageReaction, User } from 'discord.js'
 import variables from '../variables'
 const { REACTION_ROLE_CHANNEL } = variables
 
@@ -10,7 +10,7 @@ export async function handleReaction(
     reaction: MessageReaction,
     user: User,
     action: 'add' | 'delete'
-) {
+): Promise<GuildMember | undefined> {
     const {
         message: { guild, channel },
         emoji,

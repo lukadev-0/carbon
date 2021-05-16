@@ -11,7 +11,7 @@ export default {
     description: 'Close your help channel',
 } as ApplicationCommandData
 
-export async function run(int: CommandInteraction) {
+export async function run(int: CommandInteraction): Promise<void> {
     const member = int.member as GuildMember
     const session = sessions.get(int.channelID as string)
 

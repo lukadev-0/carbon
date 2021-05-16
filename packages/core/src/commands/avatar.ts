@@ -18,7 +18,7 @@ export default {
     ],
 } as ApplicationCommandData
 
-export async function run(int: CommandInteraction) {
+export async function run(int: CommandInteraction): Promise<void> {
     const member = await client.users.fetch(int.options[0].value as string)
     const avatar = member.displayAvatarURL({
         size: 4096,

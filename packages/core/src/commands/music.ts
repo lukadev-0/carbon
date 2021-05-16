@@ -60,7 +60,7 @@ function truncate(string: string, length: number) {
     return string.length > length ? string.slice(0, length - 3) + '...' : string
 }
 
-export async function run(int: CommandInteraction) {
+export async function run(int: CommandInteraction): Promise<void> {
     const connection = await (int.member as GuildMember).voice.channel?.join()
 
     if (!connection) {

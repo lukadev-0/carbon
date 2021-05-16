@@ -23,7 +23,7 @@ const WHITELIST = [
     'bit.ly',
 ]
 
-export async function hasLinks(content: string) {
+export async function hasLinks(content: string): Promise<boolean> {
     const urls = content.match(/(https?:\/\/\S+)/gi)
 
     if (urls) {

@@ -26,7 +26,7 @@ function toDotNotation(object: Record<string, unknown>, prefix: string) {
 export class CarbonMongoDB implements CarbonDB {
     constructor(public collection: Collection) {}
 
-    async updateModule(guildId: Snowflake, modules: CarbonDBModuleRecord) {
+    async updateModule(guildId: Snowflake, modules: CarbonDBModuleRecord): Promise<void> {
         await this.collection.updateOne(
             {
                 _id: guildId,
@@ -37,7 +37,7 @@ export class CarbonMongoDB implements CarbonDB {
         )
     }
 
-    async removeModule(guildId: Snowflake, name: string) {
+    async removeModule(guildId: Snowflake, name: string): Promise<void> {
         await this.collection.updateOne(
             {
                 _id: guildId,
@@ -48,14 +48,14 @@ export class CarbonMongoDB implements CarbonDB {
         )
     }
 
-    async createGuild(guildId: Snowflake, data: CarbonDBGuild) {
+    async createGuild(guildId: Snowflake, data: CarbonDBGuild): Promise<void> {
         await this.collection.insertOne({
             _id: guildId,
             ...data,
         })
     }
 
-    async deleteGuild(guildId: Snowflake) {
+    async deleteGuild(guildId: Snowflake): Promise<void> {
         await this.collection.deleteOne({
             _id: guildId,
         })

@@ -5,6 +5,7 @@ import {
     MessageAttachment,
 } from 'discord.js'
 import { join } from 'path'
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const quote = require('quote.js')
 
 registerFont(join(process.cwd(), 'src', 'assets', 'font.ttf'), {
@@ -16,7 +17,7 @@ export default {
     description: 'Get a random quote',
 } as ApplicationCommandData
 
-export async function run(int: CommandInteraction) {
+export async function run(int: CommandInteraction): Promise<void> {
     const randomQuote = quote(1, { authorIsKnown: true })
     const canvas = createCanvas(1000, 300)
     const ctx = canvas.getContext('2d')

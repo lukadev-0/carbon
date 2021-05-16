@@ -24,7 +24,7 @@ interface HelpSession {
 const HELP_CATEGORIES = new Set([CATEGORY_FREE_ID, CATEGORY_TAKEN_ID])
 export const sessions = new Collection<Snowflake, HelpSession>()
 
-export async function handleMessage(message: Message) {
+export async function handleMessage(message: Message): Promise<void> {
     const { author, channel, member } = message
 
     if (channel.type !== 'text') return
@@ -98,7 +98,7 @@ function setSessionTimeout(session: HelpSession) {
     )
 }
 
-export async function closeSession(session: HelpSession) {
+export async function closeSession(session: HelpSession): Promise<void> {
     const { infoMessage, initMessage, channel } = session
 
     sessions.delete(channel.id)
