@@ -10,7 +10,7 @@ function toDotNotation(object: Record<string, unknown>, prefix: string) {
 
         const newKey = `${prefix ? `${prefix}.` : ''}${key}`
 
-        if (value && typeof value === 'object') {
+        if (Object.prototype.toString.call(value) === '[object Object]') {
             result = {
                 ...result,
                 ...toDotNotation(value as Record<string, unknown>, newKey),
