@@ -12,7 +12,7 @@ jobs:
           git config --global url."https://github.com/".insteadOf
           ssh://git@github.com/
       - name: Install modules
-        run: >
+        run: |
           npm i
           npx lerna bootstrap
       - name: Run tests
