@@ -16,6 +16,6 @@ jobs:
           npm i
           npx lerna bootstrap
       - name: Run tests
-        run: npx lerna run test
+        run: npm run test
       - name: Code style checks
         run: npm run lint
