@@ -13,7 +13,7 @@
         "plugin:@typescript-eslint/recommended"
 	],
 	"rules": {
-		"no-extra-semi": "error",
+		"semi": ["error", "never"],
 		"space-before-function-paren": ["error", {
 			"anonymous": "never",
 			"named": "never",
@@ -46,6 +46,5 @@
 			4,
 			{ "SwitchCase": 1 }
 		]
-	},
-	"ignorePatterns": ["**/*.ttf"]
+	}
 }

@@ -1,4 +1,4 @@
-import { Snowflake } from 'discord.js'
+import { Snowflake } from "discord.js"
 
 /**
  * A module
@@ -37,7 +37,10 @@ export interface CarbonDB {
      * @param guildId the id of the guild
      * @param name the name of the module to update
      */
-    removeModule(guildId: Snowflake, name: string): Promise<void>
+    removeModule(
+        guildId: Snowflake,
+        modules: CarbonDBModuleRecord
+    ): Promise<void>
 
     /**
      * create guild
