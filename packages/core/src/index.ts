@@ -1,16 +1,16 @@
-import "./others/server" // Web server
+import './others/server' // Web server
 
-import { TextChannel, Message, User, GuildMember } from "discord.js"
-import { client } from "./client"
-import { filter } from "./filter"
-import createImage from "./others/createImage"
-import { handleMessage as handleHelpMessage } from "./others/handleHelpChannels"
-import { handleReaction } from "./others/reactionRoles"
-import { chatHistory } from "./others/chatHistory"
-import variables from "./variables"
+import { TextChannel, Message, User, GuildMember } from 'discord.js'
+import { client } from './client'
+import { filter } from './filter'
+import createImage from './others/createImage'
+import { handleMessage as handleHelpMessage } from './others/handleHelpChannels'
+import { handleReaction } from './others/reactionRoles'
+import { chatHistory } from './others/chatHistory'
+import variables from './variables'
 
-client.on("ready", async () => {
-    await import("./others/slashCreator")
+client.on('ready', async () => {
+    await import('./others/slashCreator')
 
     console.log(`Logged in as ${client.user!.tag}`)
 
@@ -25,19 +25,19 @@ client.on("ready", async () => {
     reactionRoleChannel.messages.fetch()
 })
 
-client.on("messageReactionAdd", (reaction, user) => {
+client.on('messageReactionAdd', (reaction, user) => {
     if (user.bot) return
 
-    handleReaction(reaction, user as User, "add")
+    handleReaction(reaction, user as User, 'add')
 })
 
-client.on("messageReactionRemove", (reaction, user) => {
+client.on('messageReactionRemove', (reaction, user) => {
     if (user.bot) return
 
-    handleReaction(reaction, user as User, "delete")
+    handleReaction(reaction, user as User, 'delete')
 })
 
-client.on("guildMemberAdd", (member) => {
+client.on('guildMemberAdd', (member) => {
     client.channels
         .fetch(variables.WELCOME_CHANNEL)
         .then(async (channel) =>
@@ -45,7 +45,7 @@ client.on("guildMemberAdd", (member) => {
         )
 })
 
-client.on("guildMemberRemove", (member) => {
+client.on('guildMemberRemove', (member) => {
     client.channels
         .fetch(variables.GOODBYE_CHANNEL)
         .then(async (channel) =>
@@ -55,7 +55,7 @@ client.on("guildMemberRemove", (member) => {
         )
 })
 
-client.on("message", async (message) => {
+client.on('message', async (message) => {
     if (message.author.bot) return
 
     await filter(message)
@@ -63,7 +63,7 @@ client.on("message", async (message) => {
     handleHelpMessage(message)
 })
 
-client.on("messageUpdate", async (message, messageNew) => {
+client.on('messageUpdate', async (message, messageNew) => {
     if (message.author?.bot) return
 
     await filter(messageNew as Message)
@@ -73,7 +73,7 @@ client.on("messageUpdate", async (message, messageNew) => {
     }
 })
 
-client.on("messageDelete", (message) => {
+client.on('messageDelete', (message) => {
     if (message.author?.bot) return
 
     chatHistory(message as Message)

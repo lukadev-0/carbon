@@ -19,7 +19,7 @@ export default async function createWelcomeImage(
           'We hope you will have a great\n' +
           'experience here and meet lots of\n' +
           'other programmers'
-        : `Goodbye!\n` + 'Hope to see you again\n' + 'here!'
+        : 'Goodbye!\n' + 'Hope to see you again\n' + 'here!'
 
     const userAvatarImage = await loadImage(
         user.displayAvatarURL({ format: 'png', size: 4096 })

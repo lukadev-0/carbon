@@ -22,5 +22,5 @@ export class CarbonClient extends Client {
 }
 
 export const client = new Client({
-    intents: ["DIRECT_MESSAGES", "GUILDS", "GUILD_INTEGRATIONS", "GUILD_MEMBERS", "GUILD_MESSAGES", "GUILD_VOICE_STATES"]
+    intents: ['DIRECT_MESSAGES', 'GUILDS', 'GUILD_INTEGRATIONS', 'GUILD_MEMBERS', 'GUILD_MESSAGES', 'GUILD_VOICE_STATES']
 }) // temporary as a new'd CarbonClient isnt exported yet
