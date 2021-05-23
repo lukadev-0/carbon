@@ -8,5 +8,5 @@ Structures.extend(
             constructor(client: CarbonClient, data: GuildCreateOptions) {
                 super(client, data)
             }
-        }
+        },
 )

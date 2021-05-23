@@ -35,8 +35,8 @@ export async function hasLinks(content: string): Promise<boolean> {
 
             const matched = !WHITELIST.some((wlUrl) =>
                 new RegExp(`.?${wlUrl}$`).test(
-                    response.request.host.toLowerCase()
-                )
+                    response.request.host.toLowerCase(),
+                ),
             )
             if (matched) return true
         }

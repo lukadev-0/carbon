@@ -29,6 +29,6 @@ export async function run(int: CommandInteraction): Promise<void> {
         new MessageEmbed()
             .setTitle(`${member.username}'s avatar!`)
             .setColor('RANDOM')
-            .setImage(avatar)
+            .setImage(avatar),
     )
 }

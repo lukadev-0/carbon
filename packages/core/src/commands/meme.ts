@@ -23,7 +23,7 @@ export async function run(int: CommandInteraction): Promise<void> {
         const img = await get(
             Math.round(Math.random()) === 0 ? 'Image' : 'Video',
             int.options[0].value as string,
-            false
+            false,
         )
 
         const embed = new MessageEmbed()

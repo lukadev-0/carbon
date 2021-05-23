@@ -33,7 +33,7 @@ export class CarbonMongoDB implements CarbonDB {
             },
             {
                 $set: toDotNotation(modules, 'modules'),
-            }
+            },
         )
     }
 
@@ -44,7 +44,7 @@ export class CarbonMongoDB implements CarbonDB {
             },
             {
                 $unset: { [`modules.${name}`]: '' },
-            }
+            },
         )
     }
 

@@ -7,7 +7,7 @@ export const promise = axios
         (res) =>
             (regExArray = res.data
                 .split('\n')
-                .map((regex: string) => new RegExp(regex, 'gi')))
+                .map((regex: string) => new RegExp(regex, 'gi'))),
     )
 
 export function hasBadWords(content: string): boolean {

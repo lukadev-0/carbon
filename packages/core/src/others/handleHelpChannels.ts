@@ -55,16 +55,16 @@ export async function handleMessage(message: Message): Promise<void> {
             const embed = new MessageEmbed()
                 .setAuthor(
                     member!.displayName,
-                    author.displayAvatarURL({ dynamic: true })
+                    author.displayAvatarURL({ dynamic: true }),
                 )
                 .setTitle('Channel Claimed')
                 .setDescription(
-                    'This channel has been claimed\n' + 'Use "/close" to close.'
+                    'This channel has been claimed\n' + 'Use "/close" to close.',
                 )
                 .setFooter(
                     `Automatically closes after ${
                         Number(HELP_INACTIVITY_TIME) / 60000
-                    } minutes of inactivity`
+                    } minutes of inactivity`,
                 )
 
             const infoMessage = await message.reply(embed)
@@ -94,7 +94,7 @@ function setSessionTimeout(session: HelpSession) {
 
     session.timeout = setTimeout(
         () => closeSession(session),
-        Number(HELP_INACTIVITY_TIME)
+        Number(HELP_INACTIVITY_TIME),
     )
 }
 

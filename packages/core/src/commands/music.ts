@@ -90,7 +90,7 @@ async function play(int: CommandInteraction, connection: VoiceConnection) {
     queues.set(int.guildID!, queue)
 
     const video = await searchForVideo(
-        int.options[0].options![0].value as string
+        int.options[0].options![0].value as string,
     )
 
     const item = {
@@ -108,7 +108,7 @@ async function play(int: CommandInteraction, connection: VoiceConnection) {
     }
 
     const embed = generateEmbed(video).setFooter(
-        existingSongPlaying ? 'Added to Queue' : 'Now Playing'
+        existingSongPlaying ? 'Added to Queue' : 'Now Playing',
     )
 
     int.editReply(embed)
@@ -127,11 +127,11 @@ async function skip(int: CommandInteraction, connection: VoiceConnection) {
     if (
         queue.current.requested !== int.user.id &&
         !(int.member as GuildMember).roles.cache.some((role) =>
-            Boolean(role.name.match(overrideRegex))
+            Boolean(role.name.match(overrideRegex)),
         )
     )
         return int.editReply(
-            ':x: You must be the requester of this song to skip it'
+            ':x: You must be the requester of this song to skip it',
         )
 
     nextSong(connection, queue.current, queue)
@@ -148,7 +148,7 @@ async function queue(int: CommandInteraction) {
         `:arrow_forward: ${queue.current?.title}` +
         queue.items.reduce(
             (acc, item) => `${acc}\n:black_small_square: ${item.title}`,
-            ''
+            '',
         )
 
     const split = Util.splitMessage(queueString, {
@@ -176,7 +176,7 @@ async function queue(int: CommandInteraction) {
 async function setCurrentInQueue(
     connection: VoiceConnection,
     queue: Queue,
-    item: QueueItem
+    item: QueueItem,
 ) {
     queue.current = item
 
@@ -196,7 +196,7 @@ async function setCurrentInQueue(
 function nextSong(
     connection: VoiceConnection,
     current: QueueItem,
-    queue: Queue
+    queue: Queue,
 ) {
     current.stream?.destroy()
     delete current.stream
@@ -222,7 +222,7 @@ function generateEmbed(video: ytsr.Video) {
         .setAuthor(
             video.author?.name ?? 'Unknown Author',
             video.author?.bestAvatar.url ?? undefined,
-            video.author?.url
+            video.author?.url,
         )
         .setTitle(video.title)
         .setDescription(video.description && truncate(video.description, 50))

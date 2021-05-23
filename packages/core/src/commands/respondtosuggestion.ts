@@ -50,13 +50,13 @@ export default {
 export async function run(int: CommandInteraction): Promise<void> {
     const channel = await client.channels.fetch(variables.SUGGESTION_CHANNEL)
     const message = await (channel as TextChannel).messages.fetch(
-        int.options[0].value as string
+        int.options[0].value as string,
     )
     const embed = message.embeds[0]
     embed.addField(
         `${int.user.tag}: ${int.options[1].value}`,
         int.options[2].value,
-        false
+        false,
     )
     await message.edit(embed)
     await int.editReply('Successfully responded!')
@@ -69,11 +69,11 @@ export async function run(int: CommandInteraction): Promise<void> {
                 format: 'png',
                 dynamic: true,
                 size: 4096,
-            })
+            }),
         )
         .setTitle(`${int.user.username} responded to your suggestion`)
         .setDescription(
-            `[Go to suggestion](https://discord.com/channels/${int.guildID}/${message.channel.id}/${message.id})`
+            `[Go to suggestion](https://discord.com/channels/${int.guildID}/${message.channel.id}/${message.id})`,
         )
         .addFields(
             {
@@ -83,7 +83,7 @@ export async function run(int: CommandInteraction): Promise<void> {
             {
                 name: 'Reply',
                 value: int.options[2].value,
-            }
+            },
         )
     toDM.send(embed2).catch((erro: { message: string }) => {
         console.log(erro.message)
