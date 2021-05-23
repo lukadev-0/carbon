@@ -46,6 +46,7 @@
 			4,
 			{ "SwitchCase": 1 }
 		],
-		"quotes": ["error", "single", { "avoidEscape": true }]
+		"quotes": ["error", "single", { "avoidEscape": true }],
+		"comma-dangle": ["error", "always-multiline"]
 	}
 }

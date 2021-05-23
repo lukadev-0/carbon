@@ -1,44 +1,42 @@
-import { ApplicationCommandData, CommandInteraction } from 'discord.js'
-import { promises } from 'fs'
+import { ApplicationCommandData, Interaction } from 'discord.js'
+import { readdir } from 'fs/promises'
 import { join } from 'path'
-import { client } from '../client'
-import variables from '../variables'
-interface CommandFunctions {
-    // eslint-disable-next-line @typescript-eslint/ban-types
-    [key: string]: Function
+import { CarbonClient } from '../client'
+
+interface CommandModule extends ApplicationCommandData {
+    run: (interaction: Interaction) => void
 }
-const commandFunctions: CommandFunctions = {}
-const ownerOnly: string[] = ['eval', 'respondtosuggestion']
-const { readdir } = promises
 
-const commandsLocation = join(__dirname, '../commands')
+type Commands = Record<string, CommandModule>
 
-;(async () => {
-    const commands = await readdir(commandsLocation)
-    const allCommands = []
-    for (const c of commands) {
-        const imported = await import(join(commandsLocation, c))
-        commandFunctions[imported.default.name] = imported.run
-        allCommands.push(imported.default)
+const commands: Commands = {}
+
+const commandsDir = join(__dirname, 'commands')
+
+export async function createSlashCommands(client: CarbonClient): Promise<void> {
+    client.on('interaction', async (interaction) => {
+        if (!interaction.isCommand()) return
+        await interaction.defer(false)
+        commands[interaction.commandName].run(interaction)
+    })
+
+    const commandModules = await readdir(commandsDir)
+
+    for (const name of commandModules) {
+        const module = await import(join(commandsDir, name))
+
+        commands[module.default.name] = {
+            ...module.default,
+            ...module,
+        }
     }
-    const setCommands = await (
-        await client.guilds.fetch(variables.GUILD)
-    ).commands.set(allCommands)
-    for (const p of ownerOnly) {
-        await setCommands
-            .find((c: ApplicationCommandData) => c.name === p)
-            ?.setPermissions([
-                {
-                    id: variables.OWNER_ID,
-                    type: 'USER',
-                    permission: true,
-                },
-            ])
-    }
-})()
 
-client.on('interaction', async (interaction: CommandInteraction) => {
-    if (!interaction.isCommand()) return
-    await interaction.defer(false)
-    commandFunctions[interaction.commandName](interaction)
-})
+    await client.application?.commands.set(
+        Object.values(commands).map((command) => ({
+            name: command.name,
+            description: command.description,
+            options: command.options,
+            defaultPermission: true,
+        }))
+    )
+}
