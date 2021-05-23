@@ -1,5 +1,5 @@
 import {
-    ApplicationCommandOption,
+    ApplicationCommandData,
     CommandInteraction,
     MessageEmbed,
 } from 'discord.js'
@@ -8,6 +8,7 @@ import { get } from 'reddit-grabber'
 export default {
     name: 'meme',
     description: 'Get a meme from reddit',
+    module: 'others_meme',
     options: [
         {
             name: 'subreddit',
@@ -16,7 +17,7 @@ export default {
             required: true,
         },
     ],
-} as ApplicationCommandOption
+} as ApplicationCommandData
 
 export async function run(int: CommandInteraction): Promise<void> {
     try {

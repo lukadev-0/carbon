@@ -10,7 +10,7 @@ import variables from '../variables'
 export default {
     name: 'respondtosuggestion',
     description: 'Respond to a suggestion',
-    defaultPermission: false,
+    module: 'suggestions',
     options: [
         {
             name: 'messageid',

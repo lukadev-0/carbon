@@ -15,6 +15,7 @@ registerFont(join(process.cwd(), 'src', 'assets', 'font.ttf'), {
 export default {
     name: 'randomquote',
     description: 'Get a random quote',
+    module: 'others_randomquote',
 } as ApplicationCommandData
 
 export async function run(int: CommandInteraction): Promise<void> {

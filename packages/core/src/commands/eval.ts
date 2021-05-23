@@ -5,6 +5,7 @@ export default {
     name: 'eval',
     description: 'Run code',
     defaultPermission: false,
+    module: 'others_eval',
     options: [
         {
             name: 'code',

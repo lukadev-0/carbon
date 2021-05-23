@@ -8,6 +8,7 @@ import { client } from '../client'
 export default {
     name: 'avatar',
     description: "Get someone's avatar!",
+    module: 'others_avatar',
     options: [
         {
             name: 'user',

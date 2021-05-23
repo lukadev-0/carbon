@@ -9,6 +9,7 @@ import overrideRegex from '../others/overrideRegex'
 export default {
     name: 'close',
     description: 'Close your help channel',
+    module: 'help',
 } as ApplicationCommandData
 
 export async function run(int: CommandInteraction): Promise<void> {

@@ -11,6 +11,7 @@ import variables from '../variables'
 export default {
     name: 'suggest',
     description: 'Suggest something',
+    module: 'suggestions',
     options: [
         {
             name: 'suggestion',

@@ -1,12 +1,18 @@
-import { GuildCreateOptions, Structures } from 'discord.js'
+import { Structures } from 'discord.js'
 import { CarbonClient } from '../client'
+import { GuildConfig } from '../others/GuildConfig'
+
+declare module 'discord.js' {
+    interface Guild {
+        config: GuildConfig
+        client: CarbonClient
+    }
+}
 
 Structures.extend(
     'Guild',
     (Guild) =>
         class CarbonGuild extends Guild {
-            constructor(client: CarbonClient, data: GuildCreateOptions) {
-                super(client, data)
-            }
+            config: GuildConfig = new GuildConfig(this)
         },
 )

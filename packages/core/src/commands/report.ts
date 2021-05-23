@@ -16,6 +16,7 @@ function truncate(string: string, length: number) {
 export default {
     name: 'report',
     description: 'Report a user for breaking the rules.',
+    module: 'report',
     options: [
         {
             name: 'user',

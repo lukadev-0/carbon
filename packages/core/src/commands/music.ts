@@ -29,6 +29,7 @@ const queues = new Map<Snowflake, Queue>()
 export default {
     name: 'music',
     description: 'Music commands',
+    module: 'music',
     options: [
         {
             name: 'play',
