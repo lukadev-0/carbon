@@ -1,4 +1,4 @@
-import { ApplicationCommandData } from 'discord.js'
+import { ApplicationCommandData, CommandInteraction } from 'discord.js'
 import { promises } from 'fs'
 import { join } from 'path'
 import { client } from '../client'
@@ -37,7 +37,7 @@ const commandsLocation = join(__dirname, '../commands')
     }
 })()
 
-client.on('interaction', async (interaction) => {
+client.on('interaction', async (interaction: CommandInteraction) => {
     if (!interaction.isCommand()) return
     await interaction.defer(false)
     commandFunctions[interaction.commandName](interaction)
