@@ -5,7 +5,6 @@ import { isBad } from '../filter'
 export default {
     name: 'owofy',
     description: 'OwOfy your text',
-    module: 'others_owofy',
     options: [
         {
             name: 'text',

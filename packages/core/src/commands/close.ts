@@ -9,7 +9,6 @@ import overrideRegex from '../others/overrideRegex'
 export default {
     name: 'close',
     description: 'Close your help channel',
-    module: 'help',
 } as ApplicationCommandData
 
 export async function run(int: CommandInteraction): Promise<void> {
@@ -18,7 +17,7 @@ export async function run(int: CommandInteraction): Promise<void> {
 
     if (!session)
         return int.editReply(
-            'Failed to get the session, are you sure this is a help channel?',
+            'Failed to get the session, are you sure this is a help channel?'
         )
 
     if (
@@ -31,6 +30,6 @@ export async function run(int: CommandInteraction): Promise<void> {
     }
 
     return int.editReply(
-        ':x: Failed to close channel. You can only close help channels that you own.',
+        ':x: Failed to close channel. You can only close help channels that you own.'
     )
 }

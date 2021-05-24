@@ -6,12 +6,12 @@ registerFont(
     require('path').join(process.cwd(), 'src/assets/Roboto-Bold.ttf'),
     {
         family: 'Roboto',
-    },
+    }
 )
 
 export default async function createWelcomeImage(
     member: GuildMember,
-    welcome = true,
+    welcome = true
 ): Promise<MessageAttachment> {
     const { displayName, guild, user } = member
     const text = welcome
@@ -19,10 +19,10 @@ export default async function createWelcomeImage(
           'We hope you will have a great\n' +
           'experience here and meet lots of\n' +
           'other programmers'
-        : 'Goodbye!\n' + 'Hope to see you again\n' + 'here!'
+        : `Goodbye!\n` + 'Hope to see you again\n' + 'here!'
 
     const userAvatarImage = await loadImage(
-        user.displayAvatarURL({ format: 'png', size: 4096 }),
+        user.displayAvatarURL({ format: 'png', size: 4096 })
     )
 
     const canvas = createCanvas(1000, 500)
@@ -34,7 +34,7 @@ export default async function createWelcomeImage(
         0,
         0,
         canvas.height,
-        350,
+        350
     )
 
     gradient.addColorStop(0, '#220000')

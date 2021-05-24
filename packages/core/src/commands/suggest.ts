@@ -11,7 +11,6 @@ import variables from '../variables'
 export default {
     name: 'suggest',
     description: 'Suggest something',
-    module: 'suggestions',
     options: [
         {
             name: 'suggestion',
@@ -28,7 +27,7 @@ export async function run(int: CommandInteraction): Promise<void> {
     try {
         const member = int.user
         const channel = await client.channels.fetch(
-            variables.SUGGESTION_CHANNEL,
+            variables.SUGGESTION_CHANNEL
         )
         const embed = new MessageEmbed()
             .setTitle('Suggestion')
@@ -38,7 +37,7 @@ export async function run(int: CommandInteraction): Promise<void> {
                     format: 'png',
                     dynamic: true,
                     size: 4096,
-                }),
+                })
             )
             .setColor('GREEN')
             .setDescription(int.options[0].value)

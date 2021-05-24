@@ -16,7 +16,7 @@ export async function filter(message: Message): Promise<void | Message> {
     if (author.bot) return
 
     const override = roles.cache.some((role) =>
-        Boolean(role.name.match(overrideRegex)),
+        Boolean(role.name.match(overrideRegex))
     )
 
     if (override) return
@@ -28,8 +28,8 @@ export async function filter(message: Message): Promise<void | Message> {
                 message.author.send(
                     ':x: You have sent a blacklisted link!\n' +
                         'If that is not the case please report a issue at\n' +
-                        '<https://github.com/daimond113/carbon/issues>',
-                ),
+                        '<https://github.com/daimond113/carbon/issues>'
+                )
             )
             .catch((e) => console.error(e))
 
@@ -41,8 +41,8 @@ export async function filter(message: Message): Promise<void | Message> {
                     ":x: I've detected a bad word in your message!\n" +
                         'Please do not try to use bad words.\n' +
                         'Feel like this is an issue?' +
-                        'Report it on <https://github.com/daimond113/carbon/issues>',
-                ),
+                        'Report it on <https://github.com/daimond113/carbon/issues>'
+                )
             )
             .catch((e) => console.log(e.message))
 }

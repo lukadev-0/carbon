@@ -18,7 +18,7 @@ export async function chatHistory(message: Message, newMsg?: Message): Promise<v
                 format: 'png',
                 dynamic: true,
                 size: 4096,
-            }),
+            })
         )
         .setTitle(message.deleted ? 'Message deleted' : 'Message edited')
         .setColor('GREEN')

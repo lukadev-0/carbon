@@ -9,7 +9,7 @@ const roleIds = {
 export async function handleReaction(
     reaction: MessageReaction,
     user: User,
-    action: 'add' | 'delete',
+    action: 'add' | 'delete'
 ): Promise<GuildMember | undefined> {
     const {
         message: { guild, channel },

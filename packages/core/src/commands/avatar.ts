@@ -8,7 +8,6 @@ import { client } from '../client'
 export default {
     name: 'avatar',
     description: "Get someone's avatar!",
-    module: 'others_avatar',
     options: [
         {
             name: 'user',
@@ -30,6 +29,6 @@ export async function run(int: CommandInteraction): Promise<void> {
         new MessageEmbed()
             .setTitle(`${member.username}'s avatar!`)
             .setColor('RANDOM')
-            .setImage(avatar),
+            .setImage(avatar)
     )
 }

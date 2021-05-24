@@ -15,7 +15,6 @@ registerFont(join(process.cwd(), 'src', 'assets', 'font.ttf'), {
 export default {
     name: 'randomquote',
     description: 'Get a random quote',
-    module: 'others_randomquote',
 } as ApplicationCommandData
 
 export async function run(int: CommandInteraction): Promise<void> {
@@ -30,13 +29,13 @@ export async function run(int: CommandInteraction): Promise<void> {
         `"${randomQuote[0].q}"`,
         0,
         canvas.height / 2.5,
-        canvas.width - 5,
+        canvas.width - 5
     )
     ctx.fillText(
         `-${randomQuote[0].a}`,
         canvas.width / 1.4,
         canvas.height / 1.8,
-        canvas.width / 1.4,
+        canvas.width / 1.4
     )
     int.editReply("Here's the quote!")
     int.webhook.send(new MessageAttachment(canvas.toBuffer()))

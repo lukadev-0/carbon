@@ -1,5 +1,5 @@
 import {
-    ApplicationCommandData,
+    ApplicationCommandOption,
     CommandInteraction,
     MessageEmbed,
 } from 'discord.js'
@@ -8,7 +8,6 @@ import { get } from 'reddit-grabber'
 export default {
     name: 'meme',
     description: 'Get a meme from reddit',
-    module: 'others_meme',
     options: [
         {
             name: 'subreddit',
@@ -17,14 +16,14 @@ export default {
             required: true,
         },
     ],
-} as ApplicationCommandData
+} as ApplicationCommandOption
 
 export async function run(int: CommandInteraction): Promise<void> {
     try {
         const img = await get(
             Math.round(Math.random()) === 0 ? 'Image' : 'Video',
             int.options[0].value as string,
-            false,
+            false
         )
 
         const embed = new MessageEmbed()

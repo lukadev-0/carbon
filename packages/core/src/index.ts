@@ -19,7 +19,7 @@ client.on('ready', async () => {
     })
 
     const reactionRoleChannel = (await client.channels.fetch(
-        variables.REACTION_ROLE_CHANNEL,
+        variables.REACTION_ROLE_CHANNEL
     )) as TextChannel
 
     reactionRoleChannel.messages.fetch()
@@ -41,7 +41,7 @@ client.on('guildMemberAdd', (member) => {
     client.channels
         .fetch(variables.WELCOME_CHANNEL)
         .then(async (channel) =>
-            (channel as TextChannel).send(await createImage(member)),
+            (channel as TextChannel).send(await createImage(member))
         )
 })
 
@@ -50,8 +50,8 @@ client.on('guildMemberRemove', (member) => {
         .fetch(variables.GOODBYE_CHANNEL)
         .then(async (channel) =>
             (channel as TextChannel).send(
-                await createImage(member as GuildMember, false),
-            ),
+                await createImage(member as GuildMember, false)
+            )
         )
 })
 
