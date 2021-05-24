@@ -2,7 +2,7 @@ import { MessageEmbed, ApplicationCommandData, Interaction } from 'discord.js'
 import { readdir } from 'fs/promises'
 import { join } from 'path'
 import { CarbonClient } from '../client'
-import { customEmojis } from './customEmojis'
+import { emojis } from '../constants/emojis'
 
 class CarbonInteraction extends Interaction {
     moduleData: unknown
@@ -25,7 +25,7 @@ export async function createSlashCommands(client: CarbonClient): Promise<void> {
             return interaction.reply(
                 new MessageEmbed()
                     .setColor(0xff0000)
-                    .setTitle(`${customEmojis.error} No DM's`)
+                    .setTitle(`${emojis.error} No DM's`)
                     .setDescription("Carbon can't be used in DM's."),
             )
 
@@ -38,7 +38,7 @@ export async function createSlashCommands(client: CarbonClient): Promise<void> {
             return interaction.reply(
                 new MessageEmbed()
                     .setColor(0xff0000)
-                    .setTitle(`${customEmojis.error} Not enabled`)
+                    .setTitle(`${emojis.error} Not enabled`)
                     .setDescription('This command is not enabled.'),
             )
 
