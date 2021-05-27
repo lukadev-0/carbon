@@ -1,0 +1,11 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"baseBranches": ["lukadev", "new"],
+	"packageRules": [
+		{
+			"matchPackagePatterns": ["jest"],
+			"groupName": "jest"
+		}
+	],
+	"labels": ["dependencies"]
+}

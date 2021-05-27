@@ -15,5 +15,9 @@
     "build": "lerna run build",
     "dev": "lerna run dev --parallel",
     "lint": "lerna run lint"
+  },
+  "engines": {
+    "node": "14.x",
+    "npm": "7.x"
   }
 }
