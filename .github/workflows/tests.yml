@@ -1,7 +1,23 @@
 name: Tests
 on: [push, pull_request]
 jobs:
-  build:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: Reconfigure git to use HTTP authentication
+        run: >
+          git config --global url."https://github.com/".insteadOf
+          ssh://git@github.com/
+      - name: Install modules
+        run: |
+          npm i
+          npx lerna bootstrap
+      - name: Run ESLint
+        run: npm run lint
+  tests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -17,5 +33,3 @@ jobs:
           npx lerna bootstrap
       - name: Run tests
         run: npm run test
-      - name: Code style checks
-        run: npm run lint
