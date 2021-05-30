@@ -29,7 +29,9 @@ export async function createSlashCommands(client: CarbonClient): Promise<void> {
                     .setDescription("Carbon can't be used in DM's."),
             )
 
-        await interaction.defer(false)
+        await interaction.defer({
+            ephemeral: false,
+        })
 
         const command = commands[interaction.commandName]
         const moduleData = await interaction.guild.config.get(command.module)
