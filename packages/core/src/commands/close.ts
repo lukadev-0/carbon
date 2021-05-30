@@ -1,18 +1,15 @@
 import {
-    ApplicationCommandData,
-    CommandInteraction,
     GuildMember,
 } from 'discord.js'
+import BaseCommand from '../others/BaseCommand'
 import { closeSession, sessions } from '../others/handleHelpChannels'
 import overrideRegex from '../others/overrideRegex'
 
-export default {
+export default new BaseCommand({
     name: 'close',
     description: 'Close your help channel',
     module: 'help',
-} as ApplicationCommandData
-
-export async function run(int: CommandInteraction): Promise<void> {
+}, async function(int) {
     const member = int.member as GuildMember
     const session = sessions.get(int.channelID as string)
 
@@ -33,4 +30,4 @@ export async function run(int: CommandInteraction): Promise<void> {
     return int.editReply(
         ':x: Failed to close channel. You can only close help channels that you own.',
     )
-}
+})

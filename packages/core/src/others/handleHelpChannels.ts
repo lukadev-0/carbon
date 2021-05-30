@@ -21,7 +21,7 @@ interface HelpSession {
     infoMessage?: Message
 }
 
-const HELP_CATEGORIES = new Set([CATEGORY_FREE_ID, CATEGORY_TAKEN_ID])
+const HELP_CATEGORIES = new Set([ CATEGORY_FREE_ID, CATEGORY_TAKEN_ID ])
 export const sessions = new Collection<Snowflake, HelpSession>()
 
 export async function handleMessage(message: Message): Promise<void> {

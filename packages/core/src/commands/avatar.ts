@@ -1,11 +1,8 @@
-import {
-    ApplicationCommandData,
-    CommandInteraction,
-    MessageEmbed,
-} from 'discord.js'
+import { MessageEmbed } from 'discord.js'
 import { client } from '../client'
+import BaseCommand from '../others/BaseCommand'
 
-export default {
+export default new BaseCommand({
     name: 'avatar',
     description: "Get someone's avatar!",
     module: 'others_avatar',
@@ -17,9 +14,7 @@ export default {
             required: true,
         },
     ],
-} as ApplicationCommandData
-
-export async function run(int: CommandInteraction): Promise<void> {
+}, async function(int) {
     const member = await client.users.fetch(int.options[0].value as string)
     const avatar = member.displayAvatarURL({
         size: 4096,
@@ -32,4 +27,4 @@ export async function run(int: CommandInteraction): Promise<void> {
             .setColor('RANDOM')
             .setImage(avatar),
     )
-}
+})

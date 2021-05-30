@@ -13,9 +13,7 @@ test('it returns true if there is a other link', async () => {
 })
 
 test("it returns true if the link's a redirect to other non whitelisted link", async () =>
-    expect(await hasLinks('https://tinyurl.com/discordinviteforjest')).toBe(
-        true
-    ))
+    expect(await hasLinks('https://tinyurl.com/discordinviteforjest')).toBe(true))
 
 test("it returns false if the link's a redirect to other whitelisted link", async () =>
     expect(await hasLinks('https://tinyurl.com/githublinkforjest')).toBe(false))
