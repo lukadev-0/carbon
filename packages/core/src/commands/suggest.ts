@@ -1,14 +1,14 @@
 import {
-    ApplicationCommandData,
-    CommandInteraction,
     MessageEmbed,
     TextChannel,
 } from 'discord.js'
 import { client } from '../client'
+import { error as CarbonErrorEmoji } from '../constants/emojis'
 import { isBad } from '../filter'
+import BaseCommand from '../others/BaseCommand'
 import variables from '../variables'
 
-export default {
+export default new BaseCommand({
     name: 'suggest',
     description: 'Suggest something',
     module: 'suggestions',
@@ -20,12 +20,9 @@ export default {
             required: true,
         },
     ],
-} as ApplicationCommandData
-
-export async function run(int: CommandInteraction): Promise<void> {
-    if (await isBad(int.options[0].value as string))
-        return int.editReply(':x: Your message has been filtered!')
-    try {
+    run: async function(int) {
+        if (await isBad(int.options[0].value as string))
+            return int.editReply(`${CarbonErrorEmoji} Your message has been filtered!`)
         const member = int.user
         const channel = await client.channels.fetch(
             variables.SUGGESTION_CHANNEL,
@@ -41,11 +38,9 @@ export async function run(int: CommandInteraction): Promise<void> {
                 }),
             )
             .setColor('GREEN')
-            .setDescription(int.options[0].value)
+            .setDescription(int.options[0].value as string)
             .setFooter(member.id)
         await (channel as TextChannel).send(embed)
         await int.editReply('Suggestion sent!')
-    } catch (e) {
-        await int.editReply(`Your suggestion has failed, ${e.message}`)
-    }
-}
+    },
+})

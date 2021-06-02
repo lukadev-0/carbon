@@ -1,11 +1,9 @@
 import {
-    ApplicationCommandData,
-    CommandInteraction,
     GuildMember,
     MessageEmbed,
     TextChannel,
 } from 'discord.js'
-import { client } from '../client'
+import BaseCommand from '../others/BaseCommand'
 import overrideRegex from '../others/overrideRegex'
 import variables from '../variables'
 
@@ -13,7 +11,7 @@ function truncate(string: string, length: number) {
     return string.length > length ? string.slice(0, length - 3) + '...' : string
 }
 
-export default {
+export default new BaseCommand({
     name: 'report',
     description: 'Report a user for breaking the rules.',
     module: 'report',
@@ -31,14 +29,11 @@ export default {
             required: true,
         },
     ],
-} as ApplicationCommandData
-
-export async function run(int: CommandInteraction): Promise<void> {
-    try {
-        const reportChannel = (await client.channels.fetch(
+    run: async function(int) {
+        const reportChannel = (await int.client.channels.fetch(
             variables.REPORT_CHANNEL,
         )) as TextChannel
-        const user: GuildMember = int.options[0].member
+        const user = int.options[0].member as GuildMember
         if (int.user.id === user.id) {
             return await int.editReply('You cannot report yourself.')
         }
@@ -75,7 +70,5 @@ export async function run(int: CommandInteraction): Promise<void> {
                 ),
         )
         int.editReply('Successfully reported!')
-    } catch (e) {
-        int.editReply(`Your report has failed, ${e.message}`)
-    }
-}
+    },
+})

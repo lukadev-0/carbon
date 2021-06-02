@@ -1,11 +1,17 @@
 import { ApplicationCommandData, CommandInteraction } from 'discord.js'
 
-interface CarbonCommandData extends ApplicationCommandData {
+export interface CarbonCommandData extends ApplicationCommandData {
     module: string
+    run: Run
 }
 
-type Run = (int: CommandInteraction) => Promise<void>
+export interface CarbonInteraction extends CommandInteraction {
+    moduleData: unknown
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type Run = (int: CarbonInteraction) => Promise<any>
 
 export default class BaseCommand {
-    constructor(public options: CarbonCommandData, public run: Run) {}
+    constructor(public options: CarbonCommandData) {}
 }

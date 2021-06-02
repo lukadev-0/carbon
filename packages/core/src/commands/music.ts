@@ -1,5 +1,4 @@
 import {
-    ApplicationCommandData,
     CommandInteraction,
     GuildMember,
     MessageEmbed,
@@ -12,6 +11,8 @@ import ytsr from 'ytsr'
 import ytdl from 'ytdl-core-discord'
 import { Readable } from 'stream'
 import overrideRegex from '../others/overrideRegex'
+import BaseCommand from '../others/BaseCommand'
+import { error as CarbonErrorEmoji } from '../constants/emojis'
 
 interface QueueItem extends ytsr.Video {
     channel: TextChannel
@@ -26,58 +27,59 @@ interface Queue {
 
 const queues = new Map<Snowflake, Queue>()
 
-export default {
-    name: 'music',
-    description: 'Music commands',
-    module: 'music',
-    options: [
-        {
-            name: 'play',
-            description: 'Play music',
-            type: 'SUB_COMMAND',
-            options: [
-                {
-                    name: 'name',
-                    description: 'Name of the song you want to play',
-                    type: 'STRING',
-                    required: true,
-                },
-            ],
+export default new BaseCommand(
+    {
+        name: 'music',
+        description: 'Music commands',
+        module: 'music',
+        options: [
+            {
+                name: 'play',
+                description: 'Play music',
+                type: 'SUB_COMMAND',
+                options: [
+                    {
+                        name: 'name',
+                        description: 'Name of the song you want to play',
+                        type: 'STRING',
+                        required: true,
+                    },
+                ],
+            },
+            {
+                name: 'skip',
+                description: 'Skip your own song',
+                type: 'SUB_COMMAND',
+            },
+            {
+                name: 'queue',
+                description: 'Get the queue',
+                type: 'SUB_COMMAND',
+            },
+        ],
+        run: async function(int) {
+            const connection = await (int.member as GuildMember).voice.channel?.join()
+
+            if (!connection) {
+                return int.editReply(`${CarbonErrorEmoji} You need to be in a voice channel`)
+            }
+        
+            await connection.voice?.setDeaf(true)
+        
+            switch (int.options[0].name) {
+                case 'play':
+                    return play(int, connection)
+                case 'skip':
+                    return skip(int, connection)
+                case 'queue':
+                    return queue(int)
+            }
         },
-        {
-            name: 'skip',
-            description: 'Skip your own song',
-            type: 'SUB_COMMAND',
-        },
-        {
-            name: 'queue',
-            description: 'Get the queue',
-            type: 'SUB_COMMAND',
-        },
-    ],
-} as ApplicationCommandData
+    },
+)
 
 function truncate(string: string, length: number) {
     return string.length > length ? string.slice(0, length - 3) + '...' : string
-}
-
-export async function run(int: CommandInteraction): Promise<void> {
-    const connection = await (int.member as GuildMember).voice.channel?.join()
-
-    if (!connection) {
-        return int.editReply(':x: You need to be in a voice channel')
-    }
-
-    await connection.voice?.setDeaf(true)
-
-    switch (int.options[0].name) {
-        case 'play':
-            return play(int, connection)
-        case 'skip':
-            return skip(int, connection)
-        case 'queue':
-            return queue(int)
-    }
 }
 
 async function play(int: CommandInteraction, connection: VoiceConnection) {
@@ -156,7 +158,7 @@ async function queue(int: CommandInteraction) {
         maxLength: 2048,
     })
 
-    const first = split.shift()
+    const first = split.shift() as string
     const embed = new MessageEmbed()
         .setTitle(`Queue ${split.length ? `(1/${split.length + 1})` : ''}`)
         .setDescription(first)
@@ -226,7 +228,7 @@ function generateEmbed(video: ytsr.Video) {
             video.author?.url,
         )
         .setTitle(video.title)
-        .setDescription(video.description && truncate(video.description, 50))
+        .setDescription(video.description ? truncate(video.description, 150) : '')
         .setThumbnail(video.bestThumbnail.url ?? '')
         .setURL(video.url)
 }

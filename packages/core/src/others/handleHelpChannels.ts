@@ -31,7 +31,7 @@ export async function handleMessage(message: Message): Promise<void> {
 
     const textChannel = channel as TextChannel
 
-    if (!HELP_CATEGORIES.has(textChannel.parentID ?? '')) return
+    if (!HELP_CATEGORIES.has(textChannel.parentID ?? '' as Snowflake)) return
 
     try {
         // Check if channel is already claimed

@@ -1,5 +1,5 @@
 import { createCanvas, registerFont, loadImage } from 'canvas'
-import { GuildMember, MessageAttachment } from 'discord.js'
+import { GuildMember, MessageAttachment, PartialGuildMember } from 'discord.js'
 
 registerFont(
     // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -10,7 +10,7 @@ registerFont(
 )
 
 export default async function createWelcomeImage(
-    member: GuildMember,
+    member: GuildMember | PartialGuildMember,
     welcome = true,
 ): Promise<MessageAttachment> {
     const { displayName, guild, user } = member
@@ -21,9 +21,9 @@ export default async function createWelcomeImage(
           'other programmers'
         : 'Goodbye!\n' + 'Hope to see you again\n' + 'here!'
 
-    const userAvatarImage = await loadImage(
+    const userAvatarImage = user ? await loadImage(
         user.displayAvatarURL({ format: 'png', size: 4096 }),
-    )
+    ) : null
 
     const canvas = createCanvas(1000, 500)
     const ctx = canvas.getContext('2d')
@@ -53,7 +53,7 @@ export default async function createWelcomeImage(
     ctx.clip()
 
     const s = canvas.height / 2 - 150
-    ctx.drawImage(userAvatarImage, s - 50, s, 150 * 2, 150 * 2)
+    userAvatarImage ? ctx.drawImage(userAvatarImage, s - 50, s, 150 * 2, 150 * 2) : null
 
     ctx.restore()
 

@@ -1,31 +1,30 @@
-import { MessageEmbed, ApplicationCommandData, Interaction } from 'discord.js'
+import { MessageEmbed, GuildMember, CommandInteraction, Client } from 'discord.js'
 import { readdir } from 'fs/promises'
 import { join } from 'path'
-import { CarbonClient } from '../client'
-import { emojis } from '../constants/emojis'
+import { error as CarbonErrorEmoji } from '../constants/emojis'
+import BaseCommand, { CarbonInteraction } from './BaseCommand'
+import ErrorEmbed from './ErrorEmbed'
 
-class CarbonInteraction extends Interaction {
-    moduleData: unknown
-}
-interface CommandModule extends ApplicationCommandData {
-    run: (interaction: CarbonInteraction) => void
-    module: string
-}
-
-type Commands = Record<string, CommandModule>
+type Commands = Record<string, BaseCommand>
 
 const commands: Commands = {}
 
-const commandsDir = join(__dirname, 'commands')
+const commandsDir = join(__dirname, '..', 'commands')
 
-export async function createSlashCommands(client: CarbonClient): Promise<void> {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function isCarbonInteraction(int: CommandInteraction): int is CarbonInteraction {
+    return true
+}
+
+export async function createSlashCommands(client: Client): Promise<void> {
     client.on('interaction', async (interaction) => {
         if (!interaction.isCommand()) return
+        if (!isCarbonInteraction(interaction)) return
         if (!interaction.guild)
             return interaction.reply(
                 new MessageEmbed()
                     .setColor(0xff0000)
-                    .setTitle(`${emojis.error} No DM's`)
+                    .setTitle(`${CarbonErrorEmoji} No DM's`)
                     .setDescription("Carbon can't be used in DM's."),
             )
 
@@ -33,23 +32,36 @@ export async function createSlashCommands(client: CarbonClient): Promise<void> {
             ephemeral: false,
         })
 
-        const command = commands[interaction.commandName]
-        const moduleData = await interaction.guild.config.get(command.module)
+        const command = commands[interaction.commandName].options
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        /*const moduleData = await interaction.guild.config.get(command.module)
 
         if (!moduleData)
             return interaction.reply(
                 new MessageEmbed()
                     .setColor(0xff0000)
-                    .setTitle(`${emojis.error} Not enabled`)
+                    .setTitle(`${CarbonErrorEmoji} Not enabled`)
                     .setDescription('This command is not enabled.'),
             )
 
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            ;(interaction as any).moduleData = moduleData
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        interaction.moduleData = moduleData*/
 
-        commands[interaction.commandName].run(
-            interaction as unknown as CarbonInteraction,
-        )
+        if (!(interaction.member instanceof GuildMember)) {
+            interaction.editReply(ErrorEmbed('Couldn\'t get the guild member.'))
+            return
+        }
+        try {
+            await command.run(
+                interaction,
+            )
+        }
+        
+        catch (e) {
+            interaction.editReply(
+                ErrorEmbed(`${e.message}\n${e.stack}` || "Couldn't get the error message"),
+            )
+        }
     })
 
     const commandModules = await readdir(commandsDir)
@@ -57,18 +69,17 @@ export async function createSlashCommands(client: CarbonClient): Promise<void> {
     for (const name of commandModules) {
         const module = await import(join(commandsDir, name))
 
-        commands[module.default.name] = {
+        commands[module.default.options.name] = {
             ...module.default,
-            ...module,
         }
     }
 
     await client.application?.commands.set(
         Object.values(commands).map((command) => ({
-            name: command.name,
-            description: command.description,
-            options: command.options,
-            defaultPermission: true,
+            name: command.options.name,
+            description: command.options.description,
+            options: command.options.options,
+            defaultPermission: command.options.defaultPermission ?? true,
         }))
     )
 }

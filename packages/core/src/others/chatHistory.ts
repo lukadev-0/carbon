@@ -25,7 +25,7 @@ export async function chatHistory(message: Message, newMsg?: Message): Promise<v
         .addFields([
             {
                 name: 'Sender',
-                value: message.author,
+                value: message.author.toString(),
             },
             {
                 name: newMsg ? 'From' : 'Content',

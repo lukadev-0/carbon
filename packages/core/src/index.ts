@@ -1,6 +1,6 @@
 import './others/server' // Web server
 
-import { TextChannel, Message, User, GuildMember } from 'discord.js'
+import { TextChannel, Message, User } from 'discord.js'
 import { client } from './client'
 import { filter } from './filter'
 import createImage from './others/createImage'
@@ -8,9 +8,11 @@ import { handleMessage as handleHelpMessage } from './others/handleHelpChannels'
 import { handleReaction } from './others/reactionRoles'
 import { chatHistory } from './others/chatHistory'
 import variables from './variables'
+import { createSlashCommands } from './others/slashCreator'
 
 client.on('ready', async () => {
     await import('./others/slashCreator')
+    await import('./extensions/guild')
 
     console.log(`Logged in as ${client.user!.tag}`)
 
@@ -23,6 +25,8 @@ client.on('ready', async () => {
     )) as TextChannel
 
     reactionRoleChannel.messages.fetch()
+
+    createSlashCommands(client)
 })
 
 client.on('messageReactionAdd', (reaction, user) => {
@@ -45,12 +49,12 @@ client.on('guildMemberAdd', (member) => {
         )
 })
 
-client.on('guildMemberRemove', (member) => {
+client.on('guildMemberRemove', (partial) => {
     client.channels
         .fetch(variables.GOODBYE_CHANNEL)
         .then(async (channel) =>
             (channel as TextChannel).send(
-                await createImage(member as GuildMember, false),
+                await createImage(partial, false),
             ),
         )
 })

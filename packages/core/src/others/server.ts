@@ -1,6 +1,6 @@
 import express from 'express'
 import variables from '../variables'
-const { SERVER_URL } = variables
+const { REDIRECT_SERVER_URL: SERVER_URL } = variables
 
 const app = express()
 

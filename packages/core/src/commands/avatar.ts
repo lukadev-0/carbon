@@ -1,4 +1,4 @@
-import { MessageEmbed } from 'discord.js'
+import { MessageEmbed, Snowflake } from 'discord.js'
 import { client } from '../client'
 import BaseCommand from '../others/BaseCommand'
 
@@ -14,17 +14,18 @@ export default new BaseCommand({
             required: true,
         },
     ],
-}, async function(int) {
-    const member = await client.users.fetch(int.options[0].value as string)
-    const avatar = member.displayAvatarURL({
-        size: 4096,
-        dynamic: true,
-        format: 'png',
-    })
-    int.editReply(
-        new MessageEmbed()
-            .setTitle(`${member.username}'s avatar!`)
-            .setColor('RANDOM')
-            .setImage(avatar),
-    )
+    run: async function(int) {
+        const member = await client.users.fetch(int.options[0].value as Snowflake)
+        const avatar = member.displayAvatarURL({
+            size: 4096,
+            dynamic: true,
+            format: 'png',
+        })
+        int.editReply(
+            new MessageEmbed()
+                .setTitle(`${member.username}'s avatar!`)
+                .setColor('RANDOM')
+                .setImage(avatar),
+        )
+    },
 })

@@ -1,11 +1,8 @@
-import {
-    ApplicationCommandData,
-    CommandInteraction,
-    MessageEmbed,
-} from 'discord.js'
+import { MessageEmbed } from 'discord.js'
+import BaseCommand from '../others/BaseCommand'
 import { get } from 'reddit-grabber'
 
-export default {
+export default new BaseCommand({
     name: 'meme',
     description: 'Get a meme from reddit',
     module: 'others_meme',
@@ -17,10 +14,7 @@ export default {
             required: true,
         },
     ],
-} as ApplicationCommandData
-
-export async function run(int: CommandInteraction): Promise<void> {
-    try {
+    run: async function(int) {
         const img = await get(
             Math.round(Math.random()) === 0 ? 'Image' : 'Video',
             int.options[0].value as string,
@@ -35,7 +29,5 @@ export async function run(int: CommandInteraction): Promise<void> {
             .setImage(img.media)
 
         await int.editReply(embed)
-    } catch (err) {
-        await int.editReply(`\`\`\`js\n${err.message}\`\`\``)
-    }
-}
+    },
+})
