@@ -14,7 +14,7 @@ jobs:
       - name: Install modules
         run: |
           npm i
-          npx lerna bootstrap
+          npm run bootstrap
       - name: Run ESLint
         run: npm run lint
   tests:
@@ -30,6 +30,6 @@ jobs:
       - name: Install modules
         run: |
           npm i
-          npx lerna bootstrap
+          npm run bootstrap
       - name: Run tests
         run: npm run test

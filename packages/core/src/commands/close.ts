@@ -1,4 +1,5 @@
 import { GuildMember, Snowflake } from 'discord.js'
+import { error as CarbonErrorEmoji } from '../constants/emojis'
 import BaseCommand from '../others/BaseCommand'
 import { closeSession, sessions } from '../others/handleHelpChannels'
 import overrideRegex from '../others/overrideRegex'
@@ -13,7 +14,7 @@ export default new BaseCommand({
     
         if (!session)
             return int.editReply(
-                'Failed to get the session, are you sure this is a help channel?',
+                `${CarbonErrorEmoji} Failed to get the session, are you sure this is a help channel?`,
             )
     
         if (
@@ -26,7 +27,7 @@ export default new BaseCommand({
         }
     
         return int.editReply(
-            ':x: Failed to close channel. You can only close help channels that you own.',
+            `${CarbonErrorEmoji} Failed to close channel. You can only close help channels that you own.`,
         )
     },
 })
