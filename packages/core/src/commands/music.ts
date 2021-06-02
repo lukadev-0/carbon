@@ -1,17 +1,20 @@
 import {
-    CommandInteraction,
     GuildMember,
     MessageEmbed,
     Snowflake,
     TextChannel,
     VoiceConnection,
     Util,
+    MessageActionRow,
+    MessageButton,
+    Message,
+    MessageComponentInteraction,
 } from 'discord.js'
 import ytsr from 'ytsr'
 import ytdl from 'ytdl-core-discord'
 import { Readable } from 'stream'
 import overrideRegex from '../others/overrideRegex'
-import BaseCommand from '../others/BaseCommand'
+import BaseCommand, { CarbonInteraction } from '../others/BaseCommand'
 import { error as CarbonErrorEmoji } from '../constants/emojis'
 
 interface QueueItem extends ytsr.Video {
@@ -47,13 +50,8 @@ export default new BaseCommand(
                 ],
             },
             {
-                name: 'skip',
-                description: 'Skip your own song',
-                type: 'SUB_COMMAND',
-            },
-            {
-                name: 'queue',
-                description: 'Get the queue',
+                name: 'options',
+                description: 'Show options',
                 type: 'SUB_COMMAND',
             },
         ],
@@ -69,10 +67,8 @@ export default new BaseCommand(
             switch (int.options[0].name) {
                 case 'play':
                     return play(int, connection)
-                case 'skip':
-                    return skip(int, connection)
-                case 'queue':
-                    return queue(int)
+                case 'options': 
+                    return options(int, connection)
             }
         },
     },
@@ -82,7 +78,7 @@ function truncate(string: string, length: number) {
     return string.length > length ? string.slice(0, length - 3) + '...' : string
 }
 
-async function play(int: CommandInteraction, connection: VoiceConnection) {
+async function play(int: CarbonInteraction, connection: VoiceConnection) {
     const queue =
         queues.get(int.guildID!) ??
         ({
@@ -117,7 +113,7 @@ async function play(int: CommandInteraction, connection: VoiceConnection) {
     int.editReply(embed)
 }
 
-async function skip(int: CommandInteraction, connection: VoiceConnection) {
+async function skip(int: MessageComponentInteraction, connection: VoiceConnection) {
     const queue =
         queues.get(int.guildID!) ??
         ({
@@ -125,7 +121,7 @@ async function skip(int: CommandInteraction, connection: VoiceConnection) {
             items: [],
         } as Queue)
 
-    if (!queue.current) return int.editReply(':x: There is no song to skip')
+    if (!queue.current) return int.editReply(`${CarbonErrorEmoji} There is no song to skip`)
 
     if (
         queue.current.requested !== int.user.id &&
@@ -134,7 +130,7 @@ async function skip(int: CommandInteraction, connection: VoiceConnection) {
         )
     )
         return int.editReply(
-            ':x: You must be the requester of this song to skip it',
+            `${CarbonErrorEmoji} You must be the requester of this song to skip it`,
         )
 
     nextSong(connection, queue.current, queue)
@@ -142,7 +138,7 @@ async function skip(int: CommandInteraction, connection: VoiceConnection) {
     return int.editReply(':fast_forward: Skipped!')
 }
 
-async function queue(int: CommandInteraction) {
+async function queue(int: MessageComponentInteraction) {
     const queue = queues.get(int.guildID!)
 
     if (!queue?.current) return int.editReply('No queue')
@@ -173,6 +169,39 @@ async function queue(int: CommandInteraction) {
             .setColor('#2f3136')
 
         await int.webhook.send(embed)
+    })
+}
+
+async function options(int: CarbonInteraction, connection: VoiceConnection) {
+    const buttons = {
+        queue,
+        skip,
+    }
+    const actionRow = new MessageActionRow()
+    for (const buttonFunction of Object.values(buttons)) {
+        actionRow
+            .addComponents(
+                new MessageButton()
+                    .setCustomID(buttonFunction.name)
+                    .setStyle('PRIMARY')
+                    .setLabel(`${buttonFunction.name.charAt(0).toUpperCase()}${buttonFunction.name.slice(1)}`),
+            )
+    }
+    let message = await int.editReply('These are the options, you\'re able to click them for the next 30s', {
+        components: [ actionRow ],
+    }) 
+    if (!(message instanceof Message)) message = await (int.channel as TextChannel).messages.fetch(message.id)
+    const filter = (filterInt: MessageComponentInteraction) => filterInt.member?.user.id === int.member?.user.id
+    const collector = message.createMessageComponentInteractionCollector(filter, { time: 30000 })
+    collector.on('collect', async (int) => {
+        if (!int.isMessageComponent()) return
+        await int.defer(false)
+        await buttons[int.customID as keyof typeof buttons](int, connection)
+    })
+    collector.on('end', () => {
+        int.editReply('Use this command to use the buttons again!', {
+            components: [],
+        })
     })
 }
 

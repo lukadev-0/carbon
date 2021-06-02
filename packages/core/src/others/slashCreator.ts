@@ -1,4 +1,4 @@
-import { MessageEmbed, GuildMember, CommandInteraction, Client } from 'discord.js'
+import { MessageEmbed, GuildMember, CommandInteraction, Client, MessageComponentInteraction } from 'discord.js'
 import { readdir } from 'fs/promises'
 import { join } from 'path'
 import { error as CarbonErrorEmoji } from '../constants/emojis'
@@ -12,13 +12,18 @@ const commands: Commands = {}
 const commandsDir = join(__dirname, '..', 'commands')
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-function isCarbonInteraction(int: CommandInteraction): int is CarbonInteraction {
+function isCarbonInteraction(int: CommandInteraction | MessageComponentInteraction): int is CarbonInteraction {
     return true
 }
 
 export async function createSlashCommands(client: Client): Promise<void> {
     client.on('interaction', async (interaction) => {
         if (!interaction.isCommand()) return
+
+        await interaction.defer({
+            ephemeral: false,
+        })
+
         if (!isCarbonInteraction(interaction)) return
         if (!interaction.guild)
             return interaction.reply(
@@ -27,10 +32,6 @@ export async function createSlashCommands(client: Client): Promise<void> {
                     .setTitle(`${CarbonErrorEmoji} No DM's`)
                     .setDescription("Carbon can't be used in DM's."),
             )
-
-        await interaction.defer({
-            ephemeral: false,
-        })
 
         const command = commands[interaction.commandName].options
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -55,12 +56,14 @@ export async function createSlashCommands(client: Client): Promise<void> {
             await command.run(
                 interaction,
             )
+            return
         }
         
         catch (e) {
             interaction.editReply(
                 ErrorEmbed(`${e.message}\n${e.stack}` || "Couldn't get the error message"),
             )
+            return
         }
     })
 

@@ -1,4 +1,4 @@
-import './others/server' // Web server
+//import './others/server' // Web server
 
 import { TextChannel, Message, User } from 'discord.js'
 import { client } from './client'
