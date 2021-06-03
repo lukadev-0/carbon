@@ -56,6 +56,7 @@ export default new BaseCommand(
             },
         ],
         run: async function(int) {
+            const optionName = int.options.get('play')?.value as string
             const connection = await (int.member as GuildMember).voice.channel?.join()
 
             if (!connection) {
@@ -64,7 +65,7 @@ export default new BaseCommand(
         
             await connection.voice?.setDeaf(true)
         
-            switch (int.options[0].name) {
+            switch (optionName) {
                 case 'play':
                     return play(int, connection)
                 case 'options': 
@@ -79,6 +80,7 @@ function truncate(string: string, length: number) {
 }
 
 async function play(int: CarbonInteraction, connection: VoiceConnection) {
+    const videoName = int.options.get('play')?.options?.get('name')?.value as unknown as string
     const queue =
         queues.get(int.guildID!) ??
         ({
@@ -89,7 +91,7 @@ async function play(int: CarbonInteraction, connection: VoiceConnection) {
     queues.set(int.guildID!, queue)
 
     const video = await searchForVideo(
-        int.options[0].options![0].value as string,
+        videoName,
     )
 
     const item = {

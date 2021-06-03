@@ -21,7 +21,8 @@ export default new BaseCommand({
         },
     ],
     run: async function(int) {
-        if (await isBad(int.options[0].value as string))
+        const content = int.options.get('suggestion')?.value as string
+        if (await isBad(content))
             return int.editReply(`${CarbonErrorEmoji} Your message has been filtered!`)
         const member = int.user
         const channel = await client.channels.fetch(
@@ -38,7 +39,7 @@ export default new BaseCommand({
                 }),
             )
             .setColor('GREEN')
-            .setDescription(int.options[0].value as string)
+            .setDescription(content)
             .setFooter(member.id)
         await (channel as TextChannel).send(embed)
         await int.editReply('Suggestion sent!')

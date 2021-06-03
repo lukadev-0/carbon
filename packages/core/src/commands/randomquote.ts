@@ -5,7 +5,7 @@ import {
 import { join } from 'path'
 import BaseCommand from '../others/BaseCommand'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const quote = require('quote.js') // done because of the lack of types
+const quote = require('quote.js') // done because of the lack of typings
 
 registerFont(join(process.cwd(), 'src', 'assets', 'font.ttf'), {
     family: 'Old Standard TT',

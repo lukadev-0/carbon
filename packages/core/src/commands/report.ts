@@ -30,10 +30,10 @@ export default new BaseCommand({
         },
     ],
     run: async function(int) {
+        const user = int.options.get('user')?.member as GuildMember
         const reportChannel = (await int.client.channels.fetch(
             variables.REPORT_CHANNEL,
         )) as TextChannel
-        const user = int.options[0].member as GuildMember
         if (int.user.id === user.id) {
             return await int.editReply('You cannot report yourself.')
         }
@@ -47,7 +47,7 @@ export default new BaseCommand({
             )
         }
         int.editReply(
-            'While we report here is a fun fact:\nAbusing this command will get you banned',
+            'While we report, here is a fun fact:\nAbusing this command will get you banned.',
         )
         reportChannel.send(
             new MessageEmbed()
@@ -66,7 +66,7 @@ export default new BaseCommand({
                 )
                 .addField(
                     'Reason',
-                    truncate(int.options[1].value as string, 1024),
+                    truncate(int.options.get('reason')?.value as string, 1024),
                 ),
         )
         int.editReply('Successfully reported!')

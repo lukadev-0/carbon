@@ -15,9 +15,10 @@ export default new BaseCommand({
         },
     ],
     run: async function(int) {
+        const subreddit = int.options.get('subreddit')?.value as string
         const img = await get(
             Math.round(Math.random()) === 0 ? 'Image' : 'Video',
-            int.options[0].value as string,
+            subreddit,
             false,
         )
 

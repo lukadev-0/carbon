@@ -9,7 +9,7 @@ export default new BaseCommand({
     description: 'Close your help channel',
     module: 'help',
     run: async function(int) {
-        const member = int.member as GuildMember
+        const member = int.member as GuildMember // Command handler ensures it isn't non GuildMember
         const session = sessions.get(int.channelID as Snowflake)
     
         if (!session)

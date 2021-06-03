@@ -48,14 +48,17 @@ export default new BaseCommand({
         },
     ],
     run: async function(int) {
+        const messageId = int.options.get('messageid')?.value as Snowflake
+        const implemented = int.options.get('implemented')?.value as string
+        const comment = int.options.get('comment')?.value as string
         const channel = await client.channels.fetch(SUGGESTION_CHANNEL)
         const message = await (channel as TextChannel).messages.fetch(
-            int.options[0].value as Snowflake,
+            messageId,
         )
         const embed = message.embeds[0]
         embed.addField(
-            `${int.user.tag}: ${int.options[1].value}`,
-            int.options[2].value as string,
+            `${int.user.tag}: ${implemented}`,
+            comment,
             false,
         )
         await message.edit(embed)
@@ -79,11 +82,11 @@ export default new BaseCommand({
                 [
                     {
                         name: 'Status',
-                        value: int.options[1].value as string,
+                        value: implemented,
                     },
                     {
                         name: 'Reply',
-                        value: int.options[2].value as string,
+                        value: comment,
                     },
                 ],
             )

@@ -17,7 +17,8 @@ export default new BaseCommand(
             },
         ],
         run: async function(int) {
-            const evaled = inspect(eval(int.options[0].value as string)).replace(
+            const code = int.options.get('code')?.value as string
+            const evaled = inspect(eval(code)).replace(
                     process.env.TOKEN!,
                     '--removed--',
             )

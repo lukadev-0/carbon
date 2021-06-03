@@ -17,7 +17,7 @@ export default new BaseCommand(
             },
         ],
         run: async function(int) {
-            const content = int.options[0].value as string
+            const content = int.options.get('text')?.value as string
             if (await isBad(content))
                 return int.editReply(`${CarbonErrorEmoji} Your message has been filtered`)
             const owofied = owofire(content)
