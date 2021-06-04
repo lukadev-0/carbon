@@ -25,7 +25,7 @@
         "@discordjs/opus": "^0.5.0",
         "axios": "^0.21.1",
         "canvas": "^2.8.0",
-        "discord.js": "github:monbrey/discord.js#message-components",
+        "discord.js": "github:discordjs/discord.js",
         "express": "^4.17.1",
         "owofire": "^1.0.4",
         "quote.js": "^2.0.0",
