@@ -1,1 +1,1 @@
-# @carbon-js/commands
+# @carbon-js/interactions

@@ -27,15 +27,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:packages/core"
       },
       {
-        "name": "@carbon-js/commands",
+        "name": "@carbon-js/interactions",
         "reference": "workspace:packages/interactions"
       }
     ],
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$)",
     "fallbackExclusionList": [
-      ["@carbon-js/commands", ["workspace:packages/interactions"]],
       ["@carbon-js/core", ["workspace:packages/core"]],
+      ["@carbon-js/interactions", ["workspace:packages/interactions"]],
       ["@carbon-js/workspace", ["workspace:."]]
     ],
     "fallbackPool": [
@@ -833,18 +833,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["@carbon-js/commands", [
-        ["workspace:packages/interactions", {
-          "packageLocation": "./packages/interactions/",
-          "packageDependencies": [
-            ["@carbon-js/commands", "workspace:packages/interactions"],
-            ["@carbon-js/core", "workspace:packages/core"],
-            ["@types/jest", "npm:26.0.23"],
-            ["typescript", "patch:typescript@npm%3A4.3.2#builtin<compat/typescript>::version=4.3.2&hash=ddfc1b"]
-          ],
-          "linkType": "SOFT",
-        }]
-      ]],
       ["@carbon-js/core", [
         ["workspace:packages/core", {
           "packageLocation": "./packages/core/",
@@ -854,6 +842,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["discord.js", "npm:13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930"],
             ["jest", "virtual:d7dc930c3b33cf53f185045b2fe39efc8ab7dd551363ddbf07758299d0bddb875ff804b6cae3e09247aecafe85c8dd50b71e47a8f7636cc4607186da1a4fdc94#npm:27.0.4"],
             ["ts-jest", "virtual:d7dc930c3b33cf53f185045b2fe39efc8ab7dd551363ddbf07758299d0bddb875ff804b6cae3e09247aecafe85c8dd50b71e47a8f7636cc4607186da1a4fdc94#npm:27.0.2"],
+            ["typescript", "patch:typescript@npm%3A4.3.2#builtin<compat/typescript>::version=4.3.2&hash=ddfc1b"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@carbon-js/interactions", [
+        ["workspace:packages/interactions", {
+          "packageLocation": "./packages/interactions/",
+          "packageDependencies": [
+            ["@carbon-js/interactions", "workspace:packages/interactions"],
+            ["@carbon-js/core", "workspace:packages/core"],
+            ["@types/jest", "npm:26.0.23"],
             ["typescript", "patch:typescript@npm%3A4.3.2#builtin<compat/typescript>::version=4.3.2&hash=ddfc1b"]
           ],
           "linkType": "SOFT",

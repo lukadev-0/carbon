@@ -410,16 +410,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@carbon-js/commands@workspace:packages/interactions":
-  version: 0.0.0-use.local
-  resolution: "@carbon-js/commands@workspace:packages/interactions"
-  dependencies:
-    "@carbon-js/core": "workspace:packages/core"
-    "@types/jest": ^26.0.23
-    typescript: ^4.3.2
-  languageName: unknown
-  linkType: soft
-
 "@carbon-js/core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@carbon-js/core@workspace:packages/core"
@@ -428,6 +418,16 @@ __metadata:
     discord.js: dev
     jest: ^27.0.4
     ts-jest: ^27.0.2
+    typescript: ^4.3.2
+  languageName: unknown
+  linkType: soft
+
+"@carbon-js/interactions@workspace:packages/interactions":
+  version: 0.0.0-use.local
+  resolution: "@carbon-js/interactions@workspace:packages/interactions"
+  dependencies:
+    "@carbon-js/core": "workspace:packages/core"
+    "@types/jest": ^26.0.23
     typescript: ^4.3.2
   languageName: unknown
   linkType: soft

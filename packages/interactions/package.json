@@ -1,5 +1,5 @@
 {
-  "name": "@carbon-js/commands",
+  "name": "@carbon-js/interactions",
   "version": "0.0.0",
   "license": "MIT",
   "main": "dist/index",
