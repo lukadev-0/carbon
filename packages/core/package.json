@@ -1,0 +1,26 @@
+{
+  "name": "@carbon-js/core",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "dist/index",
+  "types": "dist/index",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CO-org/carbon.git"
+  },
+  "scripts": {
+    "build": "yarn clean && yarn compile",
+    "clean": "rm -rf ./dist",
+    "compile": "tsc -p tsconfig.build.json"
+  },
+  "bugs": {
+    "url": "https://github.com/CO-org/carbon/issues"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "typescript": "^4.3.2"
+  }
+}
