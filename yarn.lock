@@ -401,9 +401,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@carbon-js/commands@workspace:packages/commands":
+"@carbon-js/commands@workspace:packages/interactions":
   version: 0.0.0-use.local
-  resolution: "@carbon-js/commands@workspace:packages/commands"
+  resolution: "@carbon-js/commands@workspace:packages/interactions"
   dependencies:
     "@carbon-js/core": "workspace:packages/core"
     "@types/jest": ^26.0.23

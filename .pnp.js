@@ -23,18 +23,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:."
       },
       {
-        "name": "@carbon-js/commands",
-        "reference": "workspace:packages/commands"
-      },
-      {
         "name": "@carbon-js/core",
         "reference": "workspace:packages/core"
+      },
+      {
+        "name": "@carbon-js/commands",
+        "reference": "workspace:packages/interactions"
       }
     ],
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$)",
     "fallbackExclusionList": [
-      ["@carbon-js/commands", ["workspace:packages/commands"]],
+      ["@carbon-js/commands", ["workspace:packages/interactions"]],
       ["@carbon-js/core", ["workspace:packages/core"]],
       ["@carbon-js/workspace", ["workspace:."]]
     ],
@@ -816,10 +816,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@carbon-js/commands", [
-        ["workspace:packages/commands", {
-          "packageLocation": "./packages/commands/",
+        ["workspace:packages/interactions", {
+          "packageLocation": "./packages/interactions/",
           "packageDependencies": [
-            ["@carbon-js/commands", "workspace:packages/commands"],
+            ["@carbon-js/commands", "workspace:packages/interactions"],
             ["@carbon-js/core", "workspace:packages/core"],
             ["@types/jest", "npm:26.0.23"],
             ["typescript", "patch:typescript@npm%3A4.3.2#builtin<compat/typescript>::version=4.3.2&hash=ddfc1b"]
