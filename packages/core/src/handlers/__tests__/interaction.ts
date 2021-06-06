@@ -8,16 +8,16 @@ jest.mock('../interaction/command')
 jest.mock('discord.js')
 
 const client = new Client({
-  intents: []
+    intents: [],
 })
 
 test('it detects command interactions', () => {
-  const mockInteraction = mocked(new CommandInteraction(client, {}), true)
-  const mockedHandleCommandInteraction = mocked(handleCommandInteraction)
+    const mockInteraction = mocked(new CommandInteraction(client, {}), true)
+    const mockedHandleCommandInteraction = mocked(handleCommandInteraction)
 
-  mockInteraction.isCommand.mockReturnValue(true)
+    mockInteraction.isCommand.mockReturnValue(true)
 
-  handleInteraction(mockInteraction)
+    handleInteraction(mockInteraction)
 
-  expect(mockedHandleCommandInteraction.mock.calls).toHaveLength(1)
+    expect(mockedHandleCommandInteraction.mock.calls).toHaveLength(1)
 })

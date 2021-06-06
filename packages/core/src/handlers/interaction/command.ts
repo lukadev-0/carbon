@@ -1,5 +1,6 @@
 import { CommandInteraction } from 'discord.js'
 
-export function handleCommandInteraction(interaction: CommandInteraction) {
+// eslint-disable-next-line
+export function handleCommandInteraction(interaction: CommandInteraction): void {
   
 }
