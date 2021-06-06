@@ -1,1 +1,1 @@
-# core
+# @carbon-js/core
