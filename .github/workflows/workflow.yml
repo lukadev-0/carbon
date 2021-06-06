@@ -11,7 +11,7 @@ jobs:
       - name: Install yarn
         run: npm i -g yarn
       - name: Run yarn
-        run: yarn
+        run: yarn install --check-cache
       - name: Run ESLint
         run: yarn lint
   tests:
@@ -24,6 +24,6 @@ jobs:
       - name: Install yarn
         run: npm i -g yarn
       - name: Run yarn
-        run: yarn
+        run: yarn install --check-cache
       - name: Run tests
         run: yarn test
