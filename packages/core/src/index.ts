@@ -1,7 +1,7 @@
-export function hi() {
-  return 'lol'
+export function hi(): string {
+    return 'lol'
 }
 
 export function lol<T>(arg: T): T {
-  return arg
+    return arg
 }

@@ -1,5 +1,5 @@
-import { commands } from "../index"
+import { commands } from '../index'
 
 test('it returns lol yes', () => {
-  expect(commands()).toBe('lol yes')
+    expect(commands()).toBe('lol yes')
 })

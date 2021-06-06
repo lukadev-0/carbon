@@ -1,5 +1,5 @@
 import { hi, lol } from '@carbon-js/core'
 
-export function commands() {
-  return lol(hi() + ' yes')
+export function commands(): string {
+    return lol(hi() + ' yes')
 }
