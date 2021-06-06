@@ -1,0 +1,23 @@
+name: Tests
+on: [push, pull_request]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install yarn
+        run: npm i -g yarn
+      - name: Run yarn
+        run: yarn
+      - name: Run ESLint
+        run: yarn lint
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install yarn
+        run: npm i -g yarn
+      - name: Run yarn
+        run: yarn
+      - name: Run tests
+        run: yarn test
