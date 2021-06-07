@@ -1,5 +1,6 @@
 import * as discord from 'discord.js'
 import { handleInteraction } from './handlers/interaction'
+import { logger } from './logger'
 
 export class Client extends discord.Client {
     constructor(options: discord.ClientOptions) {
@@ -8,3 +9,12 @@ export class Client extends discord.Client {
         this.on('interaction', handleInteraction)
     }
 }
+
+export const client = new Client({
+    intents: [ discord.Intents.ALL ], //temporary
+})
+
+client.on('ready', () => {logger.info(`Logged in as ${client.user!.tag}!`)})
+client.on('debug', m => {logger.debug(m)})
+client.on('warn', m => {logger.warn(m)})
+client.on('error', m => {logger.error(m)})
