@@ -29,5 +29,9 @@
   },
   "dependencies": {
     "discord.js": "dev"
-  }
+  },
+  "engines": {
+		"node": "14.x",
+		"yarn": "2.x"
+	}
 }
