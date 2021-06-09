@@ -7,9 +7,7 @@ import { Client } from '../../client'
 jest.mock('../interaction/command')
 jest.mock('discord.js')
 
-const client = new Client({
-    intents: [],
-})
+const client = Client._mock()
 
 test('it detects command interactions', () => {
     const mockInteraction = mocked(new CommandInteraction(client, {}), true)

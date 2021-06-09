@@ -7,4 +7,15 @@ export class Client extends discord.Client {
 
         this.on('interaction', handleInteraction)
     }
+
+    /**
+     * Creates a mock client
+     * @internal
+     */
+    static _mock(options?: Partial<discord.ClientOptions>): Client {
+        return new this({
+            intents: [],
+            ...options,
+        })
+    }
 }
