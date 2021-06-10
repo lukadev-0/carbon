@@ -5,5 +5,7 @@
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+log
 
 packages/*/dist
+packages/*/log
