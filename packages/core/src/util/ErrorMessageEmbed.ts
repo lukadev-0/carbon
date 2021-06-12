@@ -4,7 +4,7 @@ import { CarbonError } from './CarbonError'
 export class ErrorMessageEmbed extends discord.MessageEmbed {
     constructor(public error: Error) {
         super()
-        
+
         this
             .setTitle(`Error: ${error.name}`)
             .setColor(0xff0000)

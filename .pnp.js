@@ -29,6 +29,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {
         "name": "@carbon-js/interactions",
         "reference": "workspace:packages/interactions"
+      },
+      {
+        "name": "@carbon-js/slash-builder",
+        "reference": "workspace:packages/slash-builder"
       }
     ],
     "enableTopLevelFallback": true,
@@ -36,6 +40,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "fallbackExclusionList": [
       ["@carbon-js/core", ["workspace:packages/core"]],
       ["@carbon-js/interactions", ["workspace:packages/interactions"]],
+      ["@carbon-js/slash-builder", ["workspace:packages/slash-builder"]],
       ["@carbon-js/workspace", ["workspace:."]]
     ],
     "fallbackPool": [
@@ -838,6 +843,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/core/",
           "packageDependencies": [
             ["@carbon-js/core", "workspace:packages/core"],
+            ["@discordjs/voice", "npm:0.3.1"],
             ["@types/jest", "npm:26.0.23"],
             ["chalk", "npm:4.1.1"],
             ["discord.js", "npm:13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930"],
@@ -855,6 +861,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@carbon-js/interactions", "workspace:packages/interactions"],
             ["@carbon-js/core", "workspace:packages/core"],
+            ["@types/jest", "npm:26.0.23"],
+            ["typescript", "patch:typescript@npm%3A4.3.2#builtin<compat/typescript>::version=4.3.2&hash=ddfc1b"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@carbon-js/slash-builder", [
+        ["workspace:packages/slash-builder", {
+          "packageLocation": "./packages/slash-builder/",
+          "packageDependencies": [
+            ["@carbon-js/slash-builder", "workspace:packages/slash-builder"],
             ["@types/jest", "npm:26.0.23"],
             ["typescript", "patch:typescript@npm%3A4.3.2#builtin<compat/typescript>::version=4.3.2&hash=ddfc1b"]
           ],
@@ -1101,6 +1118,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["asynckit", "npm:0.4.0"],
             ["combined-stream", "npm:1.0.8"],
             ["mime-types", "npm:2.1.31"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@discordjs/voice", [
+        ["npm:0.3.1", {
+          "packageLocation": "./.yarn/cache/@discordjs-voice-npm-0.3.1-da23a77537-687be8ec2e.zip/node_modules/@discordjs/voice/",
+          "packageDependencies": [
+            ["@discordjs/voice", "npm:0.3.1"],
+            ["@types/ws", "npm:7.4.4"],
+            ["discord-api-types", "npm:0.18.1"],
+            ["prism-media", "virtual:da23a77537a83c0193ca716e2560708cb8060cd408127f446f6ab93d558133fb63be5777b6459cb75a16f92f72adea22148983a8070164bcbde749d98d3c699b#npm:1.2.9"],
+            ["tiny-typed-emitter", "npm:2.0.3"],
+            ["ws", "virtual:198c144d41cbcd2b6bb3ceaefa83d545067f9216d63e709afc15e02bdc948bb226ae3ca92d70551276aa6e56ab75995f6aaecc55b48bb698d0dafb0b343ce094#npm:7.4.6"]
           ],
           "linkType": "HARD",
         }]
@@ -3135,7 +3166,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["abort-controller", "npm:3.0.0"],
             ["discord-api-types", "npm:0.18.1"],
             ["node-fetch", "npm:2.6.1"],
-            ["prism-media", "virtual:4ac44806531c4ec282cb74e73645c9ef37de47b18484437281f8e64a3f122a7125e62fcf49626a39d0b8aec6123715fffb7c56a68588e886337ca2c7d7c01a16#npm:1.2.9"],
+            ["prism-media", "virtual:da23a77537a83c0193ca716e2560708cb8060cd408127f446f6ab93d558133fb63be5777b6459cb75a16f92f72adea22148983a8070164bcbde749d98d3c699b#npm:1.2.9"],
             ["tweetnacl", "npm:1.0.3"],
             ["ws", "virtual:198c144d41cbcd2b6bb3ceaefa83d545067f9216d63e709afc15e02bdc948bb226ae3ca92d70551276aa6e56ab75995f6aaecc55b48bb698d0dafb0b343ce094#npm:7.4.6"]
           ],
@@ -6045,10 +6076,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:4ac44806531c4ec282cb74e73645c9ef37de47b18484437281f8e64a3f122a7125e62fcf49626a39d0b8aec6123715fffb7c56a68588e886337ca2c7d7c01a16#npm:1.2.9", {
-          "packageLocation": "./.yarn/$$virtual/prism-media-virtual-b410c78627/0/cache/prism-media-npm-1.2.9-e620e4cb2d-e266159ead.zip/node_modules/prism-media/",
+        ["virtual:da23a77537a83c0193ca716e2560708cb8060cd408127f446f6ab93d558133fb63be5777b6459cb75a16f92f72adea22148983a8070164bcbde749d98d3c699b#npm:1.2.9", {
+          "packageLocation": "./.yarn/$$virtual/prism-media-virtual-7d157ab5a7/0/cache/prism-media-npm-1.2.9-e620e4cb2d-e266159ead.zip/node_modules/prism-media/",
           "packageDependencies": [
-            ["prism-media", "virtual:4ac44806531c4ec282cb74e73645c9ef37de47b18484437281f8e64a3f122a7125e62fcf49626a39d0b8aec6123715fffb7c56a68588e886337ca2c7d7c01a16#npm:1.2.9"],
+            ["prism-media", "virtual:da23a77537a83c0193ca716e2560708cb8060cd408127f446f6ab93d558133fb63be5777b6459cb75a16f92f72adea22148983a8070164bcbde749d98d3c699b#npm:1.2.9"],
             ["@discordjs/opus", null],
             ["@types/discordjs__opus", null],
             ["@types/ffmpeg-static", null],
@@ -6938,6 +6969,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["through2", "npm:4.0.2"],
             ["readable-stream", "npm:3.6.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["tiny-typed-emitter", [
+        ["npm:2.0.3", {
+          "packageLocation": "./.yarn/cache/tiny-typed-emitter-npm-2.0.3-2833f7d0a4-03245fe966.zip/node_modules/tiny-typed-emitter/",
+          "packageDependencies": [
+            ["tiny-typed-emitter", "npm:2.0.3"]
           ],
           "linkType": "HARD",
         }]

@@ -6,14 +6,11 @@
   "typescript.tsdk": ".yarn/sdks/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "prettier.enable": false,
-  "emeraldwalk.runonsave": {
-    "commands": [
-      {
-        "match": "\\.ts$",
-        "cmd": "yarn lint:fix"
-      }
-    ]
+  "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
+  "eslint.packageManager": "yarn",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
   },
-  "eslint.nodePath": ".yarn/sdks",
-  "prettier.prettierPath": ".yarn/sdks/prettier/index.js"
+  "eslint.validate": ["typescript"],
+  "eslint.nodePath": ".yarn/sdks"
 }

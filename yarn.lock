@@ -414,6 +414,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@carbon-js/core@workspace:packages/core"
   dependencies:
+    "@discordjs/voice": ^0.3.1
     "@types/jest": ^26.0.23
     chalk: ^4.1.1
     discord.js: dev
@@ -431,6 +432,17 @@ __metadata:
     "@carbon-js/core": "workspace:packages/core"
     "@types/jest": ^26.0.23
     typescript: ^4.3.2
+  languageName: unknown
+  linkType: soft
+
+"@carbon-js/slash-builder@workspace:packages/slash-builder":
+  version: 0.0.0-use.local
+  resolution: "@carbon-js/slash-builder@workspace:packages/slash-builder"
+  dependencies:
+    "@types/jest": ^26.0.23
+    typescript: ^4.3.2
+  peerDependencies:
+    discord.js: "*"
   languageName: unknown
   linkType: soft
 
@@ -652,6 +664,19 @@ __metadata:
     combined-stream: ^1.0.8
     mime-types: ^2.1.12
   checksum: 2ddf4c9bba170ea325cabae28d8d4f3e2e132a4eded64d242dbaafb514d0109c338a18bd0cab4d3464dca8f2da1c6ddc870ef96b89d7b5ed16f155cd171bf1a4
+  languageName: node
+  linkType: hard
+
+"@discordjs/voice@npm:^0.3.1":
+  version: 0.3.1
+  resolution: "@discordjs/voice@npm:0.3.1"
+  dependencies:
+    "@types/ws": ^7.4.4
+    discord-api-types: ^0.18.1
+    prism-media: ^1.2.9
+    tiny-typed-emitter: ^2.0.3
+    ws: ^7.4.4
+  checksum: 687be8ec2ed5d07acdf8ee419aa58255552b0e531dd6700794de074106dab5891440b39be923281db59e7789fae1ca0216779b07f8e939644ca79e82632b7fc2
   languageName: node
   linkType: hard
 
@@ -5679,6 +5704,13 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
+"tiny-typed-emitter@npm:^2.0.3":
+  version: 2.0.3
+  resolution: "tiny-typed-emitter@npm:2.0.3"
+  checksum: 03245fe966ccee4b73efcd35a6c8fd39e591e6c7d347e046d2b1f2092006acd13d3db911889195b85fef6e9c0bfac08c996d7af274b1b98f1de9ed932920cd7b
+  languageName: node
+  linkType: hard
+
 "tmpl@npm:1.0.x":
   version: 1.0.4
   resolution: "tmpl@npm:1.0.4"
@@ -6144,7 +6176,7 @@ typescript@^4.3.2:
   languageName: node
   linkType: hard
 
-"ws@npm:^7.4.5, ws@npm:^7.4.6":
+"ws@npm:^7.4.4, ws@npm:^7.4.5, ws@npm:^7.4.6":
   version: 7.4.6
   resolution: "ws@npm:7.4.6"
   peerDependencies:
