@@ -1,0 +1,667 @@
+{
+	"id": 0,
+	"name": "@carbon-js/workspace",
+	"kind": 1,
+	"kindString": "project",
+	"children": [
+		{
+			"id": 1,
+			"name": "core/src/client",
+			"kind": 2,
+			"kindString": "module",
+			"children": [
+				{
+					"id": 2,
+					"name": "Client",
+					"kind": 128,
+					"kindString": "class",
+					"children": [],
+					"signatures": [],
+					"constructSignatures": [],
+					"typeParameters": [],
+					"implementedTypes": [],
+					"extendedType": {
+						"kind": 1024,
+						"kindString": "reference",
+						"name": "Client",
+						"typeArguments": []
+					},
+					"sources": [
+						{
+							"fileName": "core/src/client.ts",
+							"line": 5,
+							"character": 19,
+							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/client.ts#L5"
+						}
+					]
+				},
+				{
+					"id": 3,
+					"name": "client",
+					"kind": 32,
+					"kindString": "variable",
+					"type": {
+						"kind": 1024,
+						"kindString": "reference",
+						"name": "Client",
+						"typeArguments": [],
+						"target": 2
+					},
+					"defaultValue": "new Client({\n    intents: [ discord.Intents.ALL ], //temporary\n})",
+					"sources": [
+						{
+							"fileName": "core/src/client.ts",
+							"line": 24,
+							"character": 19,
+							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/client.ts#L24"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 4,
+			"name": "core/src/handlers/__tests__/interaction",
+			"kind": 2,
+			"kindString": "module",
+			"children": []
+		},
+		{
+			"id": 5,
+			"name": "core/src/handlers/interaction/command",
+			"kind": 2,
+			"kindString": "module",
+			"children": [
+				{
+					"id": 6,
+					"name": "handleCommandInteraction",
+					"kind": 64,
+					"kindString": "function",
+					"children": [
+						{
+							"id": 8,
+							"name": "handleCommandInteraction",
+							"kind": 8192,
+							"kindString": "signature",
+							"parameters": [
+								{
+									"id": 7,
+									"name": "interaction",
+									"kind": 16384,
+									"kindString": "parameter",
+									"type": {
+										"kind": 1024,
+										"kindString": "reference",
+										"name": "CommandInteraction",
+										"typeArguments": []
+									}
+								}
+							],
+							"typeParameters": [],
+							"returnType": {
+								"kind": 32,
+								"kindString": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "core/src/handlers/interaction/command.ts",
+							"line": 4,
+							"character": 40,
+							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/handlers/interaction/command.ts#L4"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 9,
+			"name": "core/src/handlers/interaction/index",
+			"kind": 2,
+			"kindString": "module",
+			"children": [
+				{
+					"id": 10,
+					"name": "handleInteraction",
+					"kind": 64,
+					"kindString": "function",
+					"children": [
+						{
+							"id": 12,
+							"name": "handleInteraction",
+							"kind": 8192,
+							"kindString": "signature",
+							"parameters": [
+								{
+									"id": 11,
+									"name": "interaction",
+									"kind": 16384,
+									"kindString": "parameter",
+									"type": {
+										"kind": 1024,
+										"kindString": "reference",
+										"name": "Interaction",
+										"typeArguments": []
+									}
+								}
+							],
+							"typeParameters": [],
+							"returnType": {
+								"kind": 32,
+								"kindString": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "core/src/handlers/interaction/index.ts",
+							"line": 4,
+							"character": 33,
+							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/handlers/interaction/index.ts#L4"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 13,
+			"name": "core/src/index",
+			"kind": 2,
+			"kindString": "module",
+			"children": [
+				{
+					"id": 14,
+					"name": "hi",
+					"kind": 64,
+					"kindString": "function",
+					"children": [
+						{
+							"id": 15,
+							"name": "hi",
+							"kind": 8192,
+							"kindString": "signature",
+							"parameters": [],
+							"typeParameters": [],
+							"returnType": {
+								"kind": 32,
+								"kindString": "intrinsic",
+								"name": "string"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "core/src/index.ts",
+							"line": 1,
+							"character": 18,
+							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/index.ts#L1"
+						}
+					]
+				},
+				{
+					"id": 16,
+					"name": "lol",
+					"kind": 64,
+					"kindString": "function",
+					"children": [
+						{
+							"id": 18,
+							"name": "lol",
+							"kind": 8192,
+							"kindString": "signature",
+							"parameters": [
+								{
+									"id": 17,
+									"name": "arg",
+									"kind": 16384,
+									"kindString": "parameter",
+									"type": {
+										"kind": 1024,
+										"kindString": "reference",
+										"name": "T",
+										"typeArguments": []
+									}
+								}
+							],
+							"typeParameters": [
+								{
+									"kind": 131072,
+									"kindString": "typeParameter",
+									"name": "T"
+								}
+							],
+							"returnType": {
+								"kind": 1024,
+								"kindString": "reference",
+								"name": "T",
+								"typeArguments": []
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "core/src/index.ts",
+							"line": 5,
+							"character": 19,
+							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/index.ts#L5"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 19,
+			"name": "core/src/logger/index",
+			"kind": 2,
+			"kindString": "module",
+			"children": [
+				{
+					"id": 20,
+					"name": "logger",
+					"kind": 32,
+					"kindString": "variable",
+					"type": {
+						"kind": 1024,
+						"kindString": "reference",
+						"name": "Logger",
+						"typeArguments": []
+					},
+					"defaultValue": "createLogger({\n    transports: [\n        new transports.Console({\n            level: 'info',\n        }),\n        new transports.File({ filename: 'log' }),\n    ],\n    format: format.printf(log => `${errorColors[log.level as keyof typeof errorColors](`[${log.level.toUpperCase()}]`)} - ${log.message}`),\n    levels: customLevels,\n})",
+					"sources": [
+						{
+							"fileName": "core/src/logger/index.ts",
+							"line": 14,
+							"character": 19,
+							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/logger/index.ts#L14"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 21,
+			"name": "core/src/structures/Command",
+			"kind": 2,
+			"kindString": "module",
+			"children": [
+				{
+					"id": 22,
+					"name": "Command",
+					"kind": 128,
+					"kindString": "class",
+					"children": [
+						{
+							"id": 23,
+							"name": "run",
+							"kind": 1024,
+							"kindString": "property",
+							"type": {
+								"kind": 2048,
+								"kindString": "signature",
+								"typeParameters": [],
+								"parameters": [
+									{
+										"kind": 8192,
+										"kindString": "signatureParameter",
+										"name": "interaction",
+										"isOptional": false,
+										"isRest": false,
+										"parameterType": {
+											"kind": 1024,
+											"kindString": "reference",
+											"name": "CommandInteraction",
+											"typeArguments": []
+										}
+									}
+								],
+								"returnType": {
+									"kind": 32,
+									"kindString": "intrinsic",
+									"name": "void"
+								}
+							},
+							"visibility": "public",
+							"isReadonly": false,
+							"sources": [
+								{
+									"fileName": "core/src/structures/Command.ts",
+									"line": 22,
+									"character": 7,
+									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/structures/Command.ts#L22"
+								}
+							]
+						}
+					],
+					"signatures": [],
+					"constructSignatures": [],
+					"typeParameters": [],
+					"implementedTypes": [],
+					"sources": [
+						{
+							"fileName": "core/src/structures/Command.ts",
+							"line": 7,
+							"character": 20,
+							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/structures/Command.ts#L7"
+						},
+						{
+							"fileName": "core/src/structures/Command.ts",
+							"line": 21,
+							"character": 24,
+							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/structures/Command.ts#L21"
+						},
+						{
+							"fileName": "core/src/structures/Command.ts",
+							"line": 26,
+							"character": 24,
+							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/structures/Command.ts#L26"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 24,
+			"name": "core/src/util/CarbonError",
+			"kind": 2,
+			"kindString": "module",
+			"children": [
+				{
+					"id": 25,
+					"name": "CarbonErrorType",
+					"kind": 8,
+					"kindString": "enum",
+					"children": [
+						{
+							"id": 27,
+							"name": "CommandError",
+							"kind": 16,
+							"kindString": "enumMember",
+							"value": "COMMAND_ERROR",
+							"sources": [
+								{
+									"fileName": "core/src/util/CarbonError.ts",
+									"line": 5,
+									"character": 16,
+									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L5"
+								}
+							]
+						},
+						{
+							"id": 26,
+							"name": "CommandNotFound",
+							"kind": 16,
+							"kindString": "enumMember",
+							"value": "COMMAND_NOT_FOUND",
+							"sources": [
+								{
+									"fileName": "core/src/util/CarbonError.ts",
+									"line": 4,
+									"character": 19,
+									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L4"
+								}
+							]
+						},
+						{
+							"id": 29,
+							"name": "InvalidPermission",
+							"kind": 16,
+							"kindString": "enumMember",
+							"value": "INVALID_PERMISSION",
+							"sources": [
+								{
+									"fileName": "core/src/util/CarbonError.ts",
+									"line": 7,
+									"character": 21,
+									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L7"
+								}
+							]
+						},
+						{
+							"id": 28,
+							"name": "ModuleNotEnabled",
+							"kind": 16,
+							"kindString": "enumMember",
+							"value": "MODULE_NOT_ENABLED",
+							"sources": [
+								{
+									"fileName": "core/src/util/CarbonError.ts",
+									"line": 6,
+									"character": 20,
+									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L6"
+								}
+							]
+						}
+					],
+					"isConst": false,
+					"sources": [
+						{
+							"fileName": "core/src/util/CarbonError.ts",
+							"line": 3,
+							"character": 27,
+							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L3"
+						}
+					]
+				},
+				{
+					"id": 30,
+					"name": "CarbonError",
+					"kind": 128,
+					"kindString": "class",
+					"children": [
+						{
+							"id": 32,
+							"name": "code",
+							"kind": 1024,
+							"kindString": "property",
+							"type": {
+								"kind": 1024,
+								"kindString": "reference",
+								"name": "CarbonErrorType",
+								"typeArguments": [],
+								"target": 25
+							},
+							"visibility": "public",
+							"isReadonly": false,
+							"sources": [
+								{
+									"fileName": "core/src/util/CarbonError.ts",
+									"line": 13,
+									"character": 27,
+									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L13"
+								}
+							]
+						},
+						{
+							"id": 33,
+							"name": "message",
+							"kind": 1024,
+							"kindString": "property",
+							"type": {
+								"kind": 32,
+								"kindString": "intrinsic",
+								"name": "string"
+							},
+							"visibility": "public",
+							"isReadonly": false,
+							"sources": [
+								{
+									"fileName": "core/src/util/CarbonError.ts",
+									"line": 13,
+									"character": 60,
+									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L13"
+								}
+							]
+						},
+						{
+							"id": 31,
+							"name": "name",
+							"kind": 1024,
+							"kindString": "property",
+							"type": {
+								"kind": 32,
+								"kindString": "intrinsic",
+								"name": "string"
+							},
+							"visibility": "public",
+							"isReadonly": false,
+							"sources": [
+								{
+									"fileName": "core/src/util/CarbonError.ts",
+									"line": 11,
+									"character": 8,
+									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L11"
+								}
+							]
+						},
+						{
+							"id": 34,
+							"name": "embed",
+							"kind": 4096,
+							"kindString": "method",
+							"children": [
+								{
+									"id": 35,
+									"name": "embed",
+									"kind": 8192,
+									"kindString": "signature",
+									"parameters": [],
+									"typeParameters": [],
+									"returnType": {
+										"kind": 1024,
+										"kindString": "reference",
+										"name": "ErrorMessageEmbed",
+										"typeArguments": [],
+										"target": 37
+									}
+								}
+							],
+							"visibility": "public",
+							"sources": [
+								{
+									"fileName": "core/src/util/CarbonError.ts",
+									"line": 17,
+									"character": 9,
+									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L17"
+								}
+							]
+						}
+					],
+					"signatures": [],
+					"constructSignatures": [],
+					"typeParameters": [],
+					"implementedTypes": [],
+					"extendedType": {
+						"kind": 1024,
+						"kindString": "reference",
+						"name": "Error",
+						"typeArguments": []
+					},
+					"sources": [
+						{
+							"fileName": "core/src/util/CarbonError.ts",
+							"line": 10,
+							"character": 24,
+							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L10"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 36,
+			"name": "core/src/util/ErrorMessageEmbed",
+			"kind": 2,
+			"kindString": "module",
+			"children": [
+				{
+					"id": 37,
+					"name": "ErrorMessageEmbed",
+					"kind": 128,
+					"kindString": "class",
+					"children": [
+						{
+							"id": 38,
+							"name": "error",
+							"kind": 1024,
+							"kindString": "property",
+							"type": {
+								"kind": 1024,
+								"kindString": "reference",
+								"name": "Error",
+								"typeArguments": []
+							},
+							"visibility": "public",
+							"isReadonly": false,
+							"sources": [
+								{
+									"fileName": "core/src/util/ErrorMessageEmbed.ts",
+									"line": 5,
+									"character": 28,
+									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/ErrorMessageEmbed.ts#L5"
+								}
+							]
+						}
+					],
+					"signatures": [],
+					"constructSignatures": [],
+					"typeParameters": [],
+					"implementedTypes": [],
+					"extendedType": {
+						"kind": 1024,
+						"kindString": "reference",
+						"name": "MessageEmbed",
+						"typeArguments": []
+					},
+					"sources": [
+						{
+							"fileName": "core/src/util/ErrorMessageEmbed.ts",
+							"line": 4,
+							"character": 30,
+							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/ErrorMessageEmbed.ts#L4"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 39,
+			"name": "interactions/src/index",
+			"kind": 2,
+			"kindString": "module",
+			"children": [
+				{
+					"id": 40,
+					"name": "commands",
+					"kind": 64,
+					"kindString": "function",
+					"children": [
+						{
+							"id": 41,
+							"name": "commands",
+							"kind": 8192,
+							"kindString": "signature",
+							"parameters": [],
+							"typeParameters": [],
+							"returnType": {
+								"kind": 32,
+								"kindString": "intrinsic",
+								"name": "string"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "interactions/src/index.ts",
+							"line": 3,
+							"character": 24,
+							"url": "https://github.com/CO-org/carbon/blob/master/packages/interactions/src/index.ts#L3"
+						}
+					]
+				}
+			]
+		}
+	]
+}
