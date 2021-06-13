@@ -1,5 +1,11 @@
 name: Carbon workflows
-on: [push, pull_request]
+on: 
+  push:
+    paths-ignore:
+      - "docs.json"
+  pull_request:
+    paths-ignore:
+      - "docs.json"
 jobs:
   lint:
     runs-on: ubuntu-latest
