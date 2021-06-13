@@ -263,6 +263,11 @@
 					"name": "logger",
 					"kind": 32,
 					"kindString": "variable",
+					"comment": {
+						"shortText": "Carbon Logger",
+						"text": "",
+						"tags": []
+					},
 					"type": {
 						"kind": 1024,
 						"kindString": "reference",
@@ -273,9 +278,9 @@
 					"sources": [
 						{
 							"fileName": "core/src/logger/index.ts",
-							"line": 14,
+							"line": 17,
 							"character": 19,
-							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/logger/index.ts#L14"
+							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/logger/index.ts#L17"
 						}
 					]
 				}
@@ -292,6 +297,11 @@
 					"name": "Command",
 					"kind": 128,
 					"kindString": "class",
+					"comment": {
+						"shortText": "Represents a Carbon Slash COmmand",
+						"text": "",
+						"tags": []
+					},
 					"children": [
 						{
 							"id": 23,
@@ -328,9 +338,9 @@
 							"sources": [
 								{
 									"fileName": "core/src/structures/Command.ts",
-									"line": 22,
+									"line": 25,
 									"character": 7,
-									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/structures/Command.ts#L22"
+									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/structures/Command.ts#L25"
 								}
 							]
 						}
@@ -342,21 +352,21 @@
 					"sources": [
 						{
 							"fileName": "core/src/structures/Command.ts",
-							"line": 7,
+							"line": 10,
 							"character": 20,
-							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/structures/Command.ts#L7"
+							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/structures/Command.ts#L10"
 						},
 						{
 							"fileName": "core/src/structures/Command.ts",
-							"line": 21,
+							"line": 24,
 							"character": 24,
-							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/structures/Command.ts#L21"
+							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/structures/Command.ts#L24"
 						},
 						{
 							"fileName": "core/src/structures/Command.ts",
-							"line": 26,
+							"line": 29,
 							"character": 24,
-							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/structures/Command.ts#L26"
+							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/structures/Command.ts#L29"
 						}
 					]
 				}
@@ -373,6 +383,11 @@
 					"name": "CarbonErrorType",
 					"kind": 8,
 					"kindString": "enum",
+					"comment": {
+						"shortText": "Carbon Error Types",
+						"text": "",
+						"tags": []
+					},
 					"children": [
 						{
 							"id": 27,
@@ -383,9 +398,9 @@
 							"sources": [
 								{
 									"fileName": "core/src/util/CarbonError.ts",
-									"line": 5,
+									"line": 9,
 									"character": 16,
-									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L5"
+									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L9"
 								}
 							]
 						},
@@ -398,9 +413,9 @@
 							"sources": [
 								{
 									"fileName": "core/src/util/CarbonError.ts",
-									"line": 4,
+									"line": 8,
 									"character": 19,
-									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L4"
+									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L8"
 								}
 							]
 						},
@@ -413,9 +428,9 @@
 							"sources": [
 								{
 									"fileName": "core/src/util/CarbonError.ts",
-									"line": 7,
+									"line": 11,
 									"character": 21,
-									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L7"
+									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L11"
 								}
 							]
 						},
@@ -428,9 +443,9 @@
 							"sources": [
 								{
 									"fileName": "core/src/util/CarbonError.ts",
-									"line": 6,
+									"line": 10,
 									"character": 20,
-									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L6"
+									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L10"
 								}
 							]
 						}
@@ -439,9 +454,9 @@
 					"sources": [
 						{
 							"fileName": "core/src/util/CarbonError.ts",
-							"line": 3,
+							"line": 7,
 							"character": 27,
-							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L3"
+							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L7"
 						}
 					]
 				},
@@ -450,6 +465,11 @@
 					"name": "CarbonError",
 					"kind": 128,
 					"kindString": "class",
+					"comment": {
+						"shortText": "Represents a Carbon Error",
+						"text": "",
+						"tags": []
+					},
 					"children": [
 						{
 							"id": 32,
@@ -468,9 +488,9 @@
 							"sources": [
 								{
 									"fileName": "core/src/util/CarbonError.ts",
-									"line": 13,
+									"line": 20,
 									"character": 27,
-									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L13"
+									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L20"
 								}
 							]
 						},
@@ -489,9 +509,9 @@
 							"sources": [
 								{
 									"fileName": "core/src/util/CarbonError.ts",
-									"line": 13,
+									"line": 20,
 									"character": 60,
-									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L13"
+									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L20"
 								}
 							]
 						},
@@ -510,9 +530,9 @@
 							"sources": [
 								{
 									"fileName": "core/src/util/CarbonError.ts",
-									"line": 11,
+									"line": 18,
 									"character": 8,
-									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L11"
+									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L18"
 								}
 							]
 						},
@@ -521,12 +541,34 @@
 							"name": "embed",
 							"kind": 4096,
 							"kindString": "method",
+							"comment": {
+								"shortText": "",
+								"text": "",
+								"tags": [
+									{
+										"tagName": "returns",
+										"text": "\n",
+										"paramName": "A MessageEmbed representing this error"
+									}
+								]
+							},
 							"children": [
 								{
 									"id": 35,
 									"name": "embed",
 									"kind": 8192,
 									"kindString": "signature",
+									"comment": {
+										"shortText": "",
+										"text": "",
+										"tags": [
+											{
+												"tagName": "returns",
+												"text": "\n",
+												"paramName": "A MessageEmbed representing this error"
+											}
+										]
+									},
 									"parameters": [],
 									"typeParameters": [],
 									"returnType": {
@@ -542,9 +584,9 @@
 							"sources": [
 								{
 									"fileName": "core/src/util/CarbonError.ts",
-									"line": 17,
+									"line": 26,
 									"character": 9,
-									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L17"
+									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L26"
 								}
 							]
 						}
@@ -562,9 +604,9 @@
 					"sources": [
 						{
 							"fileName": "core/src/util/CarbonError.ts",
-							"line": 10,
+							"line": 17,
 							"character": 24,
-							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L10"
+							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L17"
 						}
 					]
 				}
@@ -581,6 +623,11 @@
 					"name": "ErrorMessageEmbed",
 					"kind": 128,
 					"kindString": "class",
+					"comment": {
+						"shortText": "Represents a Carbon Error Message Embed",
+						"text": "",
+						"tags": []
+					},
 					"children": [
 						{
 							"id": 38,
@@ -598,9 +645,9 @@
 							"sources": [
 								{
 									"fileName": "core/src/util/ErrorMessageEmbed.ts",
-									"line": 5,
+									"line": 8,
 									"character": 28,
-									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/ErrorMessageEmbed.ts#L5"
+									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/ErrorMessageEmbed.ts#L8"
 								}
 							]
 						}
@@ -618,9 +665,9 @@
 					"sources": [
 						{
 							"fileName": "core/src/util/ErrorMessageEmbed.ts",
-							"line": 4,
+							"line": 7,
 							"character": 30,
-							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/ErrorMessageEmbed.ts#L4"
+							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/ErrorMessageEmbed.ts#L7"
 						}
 					]
 				}
