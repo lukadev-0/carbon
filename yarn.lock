@@ -454,6 +454,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@carbon-js/docs@workspace:packages/website":
+  version: 0.0.0-use.local
+  resolution: "@carbon-js/docs@workspace:packages/website"
+  dependencies:
+    "@material-ui/core": latest
+    "@types/node": ^15.12.2
+    "@types/prop-types": ^15.7.3
+    "@types/react": ^17.0.11
+    clsx: latest
+    next: latest
+    next-auth: ^3.26.1
+    prop-types: latest
+    react: latest
+    react-dom: latest
+    typescript: ^4.3.2
+  languageName: unknown
+  linkType: soft
+
 "@carbon-js/interactions@workspace:packages/interactions":
   version: 0.0.0-use.local
   resolution: "@carbon-js/interactions@workspace:packages/interactions"
@@ -6259,24 +6277,6 @@ __metadata:
   checksum: e32ff7cc79cb2fb21a2bb954778f582dbb76525e7b5286ddeaeb832e67c631da54c2369f144dd5f30d3e770666667d9c0d5e1ca9699681a2da26db8b628037a2
   languageName: node
   linkType: hard
-
-"nextjs@workspace:packages/website":
-  version: 0.0.0-use.local
-  resolution: "nextjs@workspace:packages/website"
-  dependencies:
-    "@material-ui/core": latest
-    "@types/node": ^15.12.2
-    "@types/prop-types": ^15.7.3
-    "@types/react": ^17.0.11
-    clsx: latest
-    next: latest
-    next-auth: ^3.26.1
-    prop-types: latest
-    react: latest
-    react-dom: latest
-    typescript: ^4.3.2
-  languageName: unknown
-  linkType: soft
 
 "node-fetch@npm:2.6.1, node-fetch@npm:^2.6.1":
   version: 2.6.1
