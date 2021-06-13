@@ -1,6 +1,9 @@
 import * as discord from 'discord.js'
 import { CarbonError } from './CarbonError'
 
+/**
+ * Represents a Carbon Error Message Embed
+ */
 export class ErrorMessageEmbed extends discord.MessageEmbed {
     constructor(public error: Error) {
         super()

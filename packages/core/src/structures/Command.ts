@@ -4,6 +4,9 @@ interface ApplicationCommandData extends discord.ApplicationCommandData {
     module: string
 }
 
+/**
+ * Represents a Carbon Slash COmmand
+ */
 export class Command {
     constructor(data: ApplicationCommandData) {
         this.name = data.name
