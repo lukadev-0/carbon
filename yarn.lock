@@ -443,7 +443,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@carbon-js/core@workspace:packages/core"
   dependencies:
-    "@discordjs/voice": ^0.3.1
+    "@discordjs/voice": ^0.4.0
     "@types/jest": ^26.0.23
     chalk: ^4.1.1
     discord.js: dev
@@ -704,16 +704,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@discordjs/voice@npm:^0.3.1":
-  version: 0.3.1
-  resolution: "@discordjs/voice@npm:0.3.1"
+"@discordjs/voice@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "@discordjs/voice@npm:0.4.0"
   dependencies:
     "@types/ws": ^7.4.4
     discord-api-types: ^0.18.1
-    prism-media: ^1.2.9
+    prism-media: ^1.3.1
     tiny-typed-emitter: ^2.0.3
     ws: ^7.4.4
-  checksum: 687be8ec2ed5d07acdf8ee419aa58255552b0e531dd6700794de074106dab5891440b39be923281db59e7789fae1ca0216779b07f8e939644ca79e82632b7fc2
+  checksum: a1b65c946d33f4314df572274cf6e4373798c186db4987afdfd3c9e79cd02b181433a4b7f319096b28f121c83e5d128549cc428d133abc3308d9d3ab4c9b9126
   languageName: node
   linkType: hard
 
@@ -6949,6 +6949,27 @@ __metadata:
     opusscript:
       optional: true
   checksum: e266159eadac34f9b57b68113d7bc61deb66516d64a0696eb696349552f19321fd5952a8224997bf26f707aa0dbdeaa13e40417b4031239b323e9b13d852566c
+  languageName: node
+  linkType: hard
+
+"prism-media@npm:^1.3.1":
+  version: 1.3.1
+  resolution: "prism-media@npm:1.3.1"
+  peerDependencies:
+    "@discordjs/opus": ^0.5.0
+    ffmpeg-static: ^4.2.7 || ^3.0.0 || ^2.4.0
+    node-opus: ^0.3.3
+    opusscript: ^0.0.8
+  peerDependenciesMeta:
+    "@discordjs/opus":
+      optional: true
+    ffmpeg-static:
+      optional: true
+    node-opus:
+      optional: true
+    opusscript:
+      optional: true
+  checksum: 5d20527179c413b1b8ac8e5036f37641272855ba0d4d49cdd1f9260acb39705cd6dec0dabee0a9c0781919dbf1a301f76e0230ac4913e3a95ca67ae05456b293
   languageName: node
   linkType: hard
 
