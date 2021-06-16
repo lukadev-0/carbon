@@ -4,7 +4,13 @@ interface ApplicationCommandData extends discord.ApplicationCommandData {
     module: string
 }
 
+/**
+ * Represents a Carbon Slash Command
+ */
 export class Command {
+    /**
+     * @param data Raw Slash Command Data
+     */
     constructor(data: ApplicationCommandData) {
         this.name = data.name
         this.description = data.description

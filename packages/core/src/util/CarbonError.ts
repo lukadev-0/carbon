@@ -1,5 +1,9 @@
 import { ErrorMessageEmbed } from './ErrorMessageEmbed'
 
+/**
+ * Carbon Error Types
+ */
+
 export enum CarbonErrorType {
     CommandNotFound = 'COMMAND_NOT_FOUND',
     CommandError = 'COMMAND_ERROR',
@@ -7,13 +11,22 @@ export enum CarbonErrorType {
     InvalidPermission = 'INVALID_PERMISSION'
 }
 
+/**
+ * Represents a Carbon Error
+ */
 export class CarbonError extends Error {
     name = 'CarbonError'
+    /**
+     * @param code The error type
+     * @param message The error message
+     */
 
     constructor(public code: CarbonErrorType, public message: string = code) {
         super()
     }
-
+    /**
+     * @returns A MessageEmbed representing this error
+     */
     embed(): ErrorMessageEmbed {
         return new ErrorMessageEmbed(this)
     }

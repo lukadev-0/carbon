@@ -6,7 +6,7 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from '../src/theme'
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-export default function app(props): JSX.Element {
+export default function MyApp(props) {
     // eslint-disable-next-line @typescript-eslint/naming-convention
     const { Component, pageProps } = props
 
@@ -33,7 +33,7 @@ export default function app(props): JSX.Element {
     )
 }
 
-app.propTypes = {
+MyApp.propTypes = {
     Component: PropTypes.elementType.isRequired,
     pageProps: PropTypes.object.isRequired,
 }

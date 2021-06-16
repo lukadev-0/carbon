@@ -1,37 +1,15 @@
 {
 	"id": 0,
-	"name": "@carbon-js/workspace",
-	"kind": 1,
-	"kindString": "project",
-	"children": [
+	"name": "@carbon-js/interactions",
+	"kind": 0,
+	"kindString": "Project",
+	"flags": {},
+	"originalName": "",
+	"sources": [
 		{
-			"id": 1,
-			"name": "commands",
-			"kind": 64,
-			"kindString": "function",
-			"children": [
-				{
-					"id": 2,
-					"name": "commands",
-					"kind": 8192,
-					"kindString": "signature",
-					"parameters": [],
-					"typeParameters": [],
-					"returnType": {
-						"kind": 32,
-						"kindString": "intrinsic",
-						"name": "string"
-					}
-				}
-			],
-			"sources": [
-				{
-					"fileName": "interactions/src/index.ts",
-					"line": 3,
-					"character": 24,
-					"url": "https://github.com/CO-org/carbon/blob/master/packages/interactions/src/index.ts#L3"
-				}
-			]
+			"fileName": "index.ts",
+			"line": 1,
+			"character": 0
 		}
 	]
 }

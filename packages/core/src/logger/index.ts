@@ -10,6 +10,9 @@ const errorColors = {
 
 const customLevels: config.AbstractConfigSetLevels = { error: 0, warn: 1, debug: 2, info: 3 }
 
+/**
+ * Carbon Logger
+ */
 
 export const logger = createLogger({
     transports: [

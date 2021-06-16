@@ -1,10 +1,10 @@
-import { createMuiTheme } from '@material-ui/core'
-import { purple } from '@material-ui/core/colors'
+import { createMuiTheme as createTheme } from '@material-ui/core'
+import { blue as color } from '@material-ui/core/colors'
 
 
-export default createMuiTheme({
+export default createTheme({
     palette: {
-        primary: purple,
+        primary: color,
         type: 'dark',
         background: {
             default: '#121212',
