@@ -10,7 +10,7 @@ export enum CarbonErrorType {
 export class CarbonError extends Error {
     name = 'CarbonError'
 
-    constructor(public code: CarbonErrorType, public message: string) {
+    constructor(public code: CarbonErrorType, public message: string = code) {
         super()
     }
 

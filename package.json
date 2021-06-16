@@ -5,7 +5,12 @@
 		"packages/*"
 	],
 	"scripts": {
-		"build": "yarn workspaces foreach --topological run build",
+		"g:build": "cd $INIT_CWD && yarn g:build:clean && yarn g:build:compile",
+		"g:build:clean": "rm -rf ${INIT_CWD}/dist",
+		"g:build:compile": "cd $INIT_CWD && tsc -p tsconfig.build.json",
+		"g:docs": "typedoc --json docs/$(basename ${INIT_CWD}).json $INIT_CWD/src",
+		"build": "yarn workspaces foreach --topological run g:build",
+		"docs": "rm -rf docs && mkdir docs && yarn workspaces foreach run docs",
 		"test": "jest",
 		"dev": "jest --watch",
 		"lint": "eslint 'packages/*/src/**/*'",

@@ -9,9 +9,8 @@
     "url": "https://github.com/CO-org/carbon.git"
   },
   "scripts": {
-    "build": "yarn clean && yarn compile",
-    "clean": "rm -rf ./dist",
-    "compile": "tsc -p tsconfig.build.json"
+    "build": "yarn g:build",
+    "docs": "yarn g:docs"
   },
   "bugs": {
     "url": "https://github.com/CO-org/carbon/issues"

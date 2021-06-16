@@ -482,6 +482,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@carbon-js/mocks@workspace:packages/mocks":
+  version: 0.0.0-use.local
+  resolution: "@carbon-js/mocks@workspace:packages/mocks"
+  dependencies:
+    "@carbon-js/core": "workspace:packages/core"
+    "@types/jest": ^26.0.23
+    discord.js: ^12.5.3
+    typescript: ^4.3.2
+  languageName: unknown
+  linkType: soft
+
 "@carbon-js/workspace@workspace:.":
   version: 0.0.0-use.local
   resolution: "@carbon-js/workspace@workspace:."
@@ -3201,6 +3212,22 @@ __metadata:
   version: 0.18.1
   resolution: "discord-api-types@npm:0.18.1"
   checksum: b9ae87cb2d80aaf11ef71d33beeb12d2729d3b3d5ed8bb60413e9c0b0d1a130ee7d1a8f6bc2dd24224794e95ae421306c83cc484c54ae5897a7a5edd37e64a51
+  languageName: node
+  linkType: hard
+
+"discord.js@npm:^12.5.3":
+  version: 12.5.3
+  resolution: "discord.js@npm:12.5.3"
+  dependencies:
+    "@discordjs/collection": ^0.1.6
+    "@discordjs/form-data": ^3.0.1
+    abort-controller: ^3.0.0
+    node-fetch: ^2.6.1
+    prism-media: ^1.2.9
+    setimmediate: ^1.0.5
+    tweetnacl: ^1.0.3
+    ws: ^7.4.4
+  checksum: 365e21b12496c47be80a4e2cd6d81665653908fcd22a5f46a5507ad8771cb20c40fab893ebb192af23e2bdb0db5c1eca8c5228c9f689951d0fd1139c3bcd567f
   languageName: node
   linkType: hard
 
@@ -7500,7 +7527,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"setimmediate@npm:^1.0.4":
+"setimmediate@npm:^1.0.4, setimmediate@npm:^1.0.5":
   version: 1.0.5
   resolution: "setimmediate@npm:1.0.5"
   checksum: 87884d8add4779fe47ccf763396a5bf875640ae34d80a10802da4de5c25d87647c12f6e7748fd5b8c143b57201caf2a5a781631456c228825f166ca305c12f20

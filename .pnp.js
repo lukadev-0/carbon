@@ -31,6 +31,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:packages/interactions"
       },
       {
+        "name": "@carbon-js/mocks",
+        "reference": "workspace:packages/mocks"
+      },
+      {
         "name": "@carbon-js/docs",
         "reference": "workspace:packages/website"
       }
@@ -41,6 +45,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@carbon-js/core", ["workspace:packages/core"]],
       ["@carbon-js/docs", ["workspace:packages/website"]],
       ["@carbon-js/interactions", ["workspace:packages/interactions"]],
+      ["@carbon-js/mocks", ["workspace:packages/mocks"]],
       ["@carbon-js/workspace", ["workspace:."]]
     ],
     "fallbackPool": [
@@ -911,6 +916,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@carbon-js/interactions", "workspace:packages/interactions"],
             ["@carbon-js/core", "workspace:packages/core"],
             ["@types/jest", "npm:26.0.23"],
+            ["typescript", "patch:typescript@npm%3A4.3.2#builtin<compat/typescript>::version=4.3.2&hash=ddfc1b"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@carbon-js/mocks", [
+        ["workspace:packages/mocks", {
+          "packageLocation": "./packages/mocks/",
+          "packageDependencies": [
+            ["@carbon-js/mocks", "workspace:packages/mocks"],
+            ["@carbon-js/core", "workspace:packages/core"],
+            ["@types/jest", "npm:26.0.23"],
+            ["discord.js", "npm:12.5.3"],
             ["typescript", "patch:typescript@npm%3A4.3.2#builtin<compat/typescript>::version=4.3.2&hash=ddfc1b"]
           ],
           "linkType": "SOFT",
@@ -4291,6 +4309,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["discord.js", [
+        ["npm:12.5.3", {
+          "packageLocation": "./.yarn/cache/discord.js-npm-12.5.3-cf56da7683-365e21b124.zip/node_modules/discord.js/",
+          "packageDependencies": [
+            ["discord.js", "npm:12.5.3"],
+            ["@discordjs/collection", "npm:0.1.6"],
+            ["@discordjs/form-data", "npm:3.0.1"],
+            ["abort-controller", "npm:3.0.0"],
+            ["node-fetch", "npm:2.6.1"],
+            ["prism-media", "virtual:da23a77537a83c0193ca716e2560708cb8060cd408127f446f6ab93d558133fb63be5777b6459cb75a16f92f72adea22148983a8070164bcbde749d98d3c699b#npm:1.2.9"],
+            ["setimmediate", "npm:1.0.5"],
+            ["tweetnacl", "npm:1.0.3"],
+            ["ws", "virtual:198c144d41cbcd2b6bb3ceaefa83d545067f9216d63e709afc15e02bdc948bb226ae3ca92d70551276aa6e56ab75995f6aaecc55b48bb698d0dafb0b343ce094#npm:7.4.6"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930", {
           "packageLocation": "./.yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/",
           "packageDependencies": [

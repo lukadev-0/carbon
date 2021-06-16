@@ -108,9 +108,9 @@
 					"sources": [
 						{
 							"fileName": "core/src/handlers/interaction/command.ts",
-							"line": 4,
+							"line": 9,
 							"character": 40,
-							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/handlers/interaction/command.ts#L4"
+							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/handlers/interaction/command.ts#L9"
 						}
 					]
 				}
@@ -621,43 +621,6 @@
 							"line": 4,
 							"character": 30,
 							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/ErrorMessageEmbed.ts#L4"
-						}
-					]
-				}
-			]
-		},
-		{
-			"id": 39,
-			"name": "interactions/src/index",
-			"kind": 2,
-			"kindString": "module",
-			"children": [
-				{
-					"id": 40,
-					"name": "commands",
-					"kind": 64,
-					"kindString": "function",
-					"children": [
-						{
-							"id": 41,
-							"name": "commands",
-							"kind": 8192,
-							"kindString": "signature",
-							"parameters": [],
-							"typeParameters": [],
-							"returnType": {
-								"kind": 32,
-								"kindString": "intrinsic",
-								"name": "string"
-							}
-						}
-					],
-					"sources": [
-						{
-							"fileName": "interactions/src/index.ts",
-							"line": 3,
-							"character": 24,
-							"url": "https://github.com/CO-org/carbon/blob/master/packages/interactions/src/index.ts#L3"
 						}
 					]
 				}
