@@ -26,7 +26,7 @@
 		"prettier": "^2.3.1",
 		"prettier-eslint": "^12.0.0",
 		"ts-jest": "^27.0.2",
-		"typedoc": "dev",
+		"typedoc": "beta",
 		"typescript": "^4.3.2"
 	},
 	"engines": {

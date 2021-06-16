@@ -1,713 +1,7139 @@
 {
 	"id": 0,
 	"name": "@carbon-js/workspace",
-	"kind": 1,
-	"kindString": "project",
+	"kind": 0,
+	"flags": {},
+	"originalName": "",
 	"children": [
+		{
+			"id": 224,
+			"name": "core/src",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 225,
+					"name": "hi",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "packages/core/src/index.ts",
+							"line": 1,
+							"character": 18
+						}
+					],
+					"signatures": [
+						{
+							"id": 226,
+							"name": "hi",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					]
+				},
+				{
+					"id": 227,
+					"name": "lol",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "packages/core/src/index.ts",
+							"line": 5,
+							"character": 19
+						}
+					],
+					"signatures": [
+						{
+							"id": 228,
+							"name": "lol",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"typeParameter": [
+								{
+									"id": 229,
+									"name": "T",
+									"kind": 131072,
+									"kindString": "Type parameter",
+									"flags": {}
+								}
+							],
+							"parameters": [
+								{
+									"id": 230,
+									"name": "arg",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "T"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "T"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						225,
+						227
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "packages/core/src/index.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
 		{
 			"id": 1,
 			"name": "core/src/client",
-			"kind": 2,
-			"kindString": "module",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
 			"children": [
 				{
 					"id": 2,
 					"name": "Client",
 					"kind": 128,
-					"kindString": "class",
-					"children": [],
-					"signatures": [],
-					"constructSignatures": [],
-					"typeParameters": [],
-					"implementedTypes": [],
-					"extendedType": {
-						"kind": 1024,
-						"kindString": "reference",
-						"name": "Client",
-						"typeArguments": []
-					},
-					"sources": [
-						{
-							"fileName": "core/src/client.ts",
-							"line": 5,
-							"character": 19,
-							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/client.ts#L5"
-						}
-					]
-				},
-				{
-					"id": 3,
-					"name": "client",
-					"kind": 32,
-					"kindString": "variable",
-					"type": {
-						"kind": 1024,
-						"kindString": "reference",
-						"name": "Client",
-						"typeArguments": [],
-						"target": 2
-					},
-					"defaultValue": "new Client({\n    intents: [ discord.Intents.ALL ], //temporary\n})",
-					"sources": [
-						{
-							"fileName": "core/src/client.ts",
-							"line": 24,
-							"character": 19,
-							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/client.ts#L24"
-						}
-					]
-				}
-			]
-		},
-		{
-			"id": 4,
-			"name": "core/src/handlers/__tests__/interaction",
-			"kind": 2,
-			"kindString": "module",
-			"children": []
-		},
-		{
-			"id": 5,
-			"name": "core/src/handlers/interaction/command",
-			"kind": 2,
-			"kindString": "module",
-			"children": [
-				{
-					"id": 6,
-					"name": "handleCommandInteraction",
-					"kind": 64,
-					"kindString": "function",
-					"children": [
-						{
-							"id": 8,
-							"name": "handleCommandInteraction",
-							"kind": 8192,
-							"kindString": "signature",
-							"parameters": [
-								{
-									"id": 7,
-									"name": "interaction",
-									"kind": 16384,
-									"kindString": "parameter",
-									"type": {
-										"kind": 1024,
-										"kindString": "reference",
-										"name": "CommandInteraction",
-										"typeArguments": []
-									}
-								}
-							],
-							"typeParameters": [],
-							"returnType": {
-								"kind": 32,
-								"kindString": "intrinsic",
-								"name": "void"
-							}
-						}
-					],
-					"sources": [
-						{
-							"fileName": "core/src/handlers/interaction/command.ts",
-							"line": 4,
-							"character": 40,
-							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/handlers/interaction/command.ts#L4"
-						}
-					]
-				}
-			]
-		},
-		{
-			"id": 9,
-			"name": "core/src/handlers/interaction/index",
-			"kind": 2,
-			"kindString": "module",
-			"children": [
-				{
-					"id": 10,
-					"name": "handleInteraction",
-					"kind": 64,
-					"kindString": "function",
-					"children": [
-						{
-							"id": 12,
-							"name": "handleInteraction",
-							"kind": 8192,
-							"kindString": "signature",
-							"parameters": [
-								{
-									"id": 11,
-									"name": "interaction",
-									"kind": 16384,
-									"kindString": "parameter",
-									"type": {
-										"kind": 1024,
-										"kindString": "reference",
-										"name": "Interaction",
-										"typeArguments": []
-									}
-								}
-							],
-							"typeParameters": [],
-							"returnType": {
-								"kind": 32,
-								"kindString": "intrinsic",
-								"name": "void"
-							}
-						}
-					],
-					"sources": [
-						{
-							"fileName": "core/src/handlers/interaction/index.ts",
-							"line": 4,
-							"character": 33,
-							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/handlers/interaction/index.ts#L4"
-						}
-					]
-				}
-			]
-		},
-		{
-			"id": 13,
-			"name": "core/src/index",
-			"kind": 2,
-			"kindString": "module",
-			"children": [
-				{
-					"id": 14,
-					"name": "hi",
-					"kind": 64,
-					"kindString": "function",
-					"children": [
-						{
-							"id": 15,
-							"name": "hi",
-							"kind": 8192,
-							"kindString": "signature",
-							"parameters": [],
-							"typeParameters": [],
-							"returnType": {
-								"kind": 32,
-								"kindString": "intrinsic",
-								"name": "string"
-							}
-						}
-					],
-					"sources": [
-						{
-							"fileName": "core/src/index.ts",
-							"line": 1,
-							"character": 18,
-							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/index.ts#L1"
-						}
-					]
-				},
-				{
-					"id": 16,
-					"name": "lol",
-					"kind": 64,
-					"kindString": "function",
-					"children": [
-						{
-							"id": 18,
-							"name": "lol",
-							"kind": 8192,
-							"kindString": "signature",
-							"parameters": [
-								{
-									"id": 17,
-									"name": "arg",
-									"kind": 16384,
-									"kindString": "parameter",
-									"type": {
-										"kind": 1024,
-										"kindString": "reference",
-										"name": "T",
-										"typeArguments": []
-									}
-								}
-							],
-							"typeParameters": [
-								{
-									"kind": 131072,
-									"kindString": "typeParameter",
-									"name": "T"
-								}
-							],
-							"returnType": {
-								"kind": 1024,
-								"kindString": "reference",
-								"name": "T",
-								"typeArguments": []
-							}
-						}
-					],
-					"sources": [
-						{
-							"fileName": "core/src/index.ts",
-							"line": 5,
-							"character": 19,
-							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/index.ts#L5"
-						}
-					]
-				}
-			]
-		},
-		{
-			"id": 19,
-			"name": "core/src/logger/index",
-			"kind": 2,
-			"kindString": "module",
-			"children": [
-				{
-					"id": 20,
-					"name": "logger",
-					"kind": 32,
-					"kindString": "variable",
-					"comment": {
-						"shortText": "Carbon Logger",
-						"text": "",
-						"tags": []
-					},
-					"type": {
-						"kind": 1024,
-						"kindString": "reference",
-						"name": "Logger",
-						"typeArguments": []
-					},
-					"defaultValue": "createLogger({\n    transports: [\n        new transports.Console({\n            level: 'info',\n        }),\n        new transports.File({ filename: 'log' }),\n    ],\n    format: format.printf(log => `${errorColors[log.level as keyof typeof errorColors](`[${log.level.toUpperCase()}]`)} - ${log.message}`),\n    levels: customLevels,\n})",
-					"sources": [
-						{
-							"fileName": "core/src/logger/index.ts",
-							"line": 17,
-							"character": 19,
-							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/logger/index.ts#L17"
-						}
-					]
-				}
-			]
-		},
-		{
-			"id": 21,
-			"name": "core/src/structures/Command",
-			"kind": 2,
-			"kindString": "module",
-			"children": [
-				{
-					"id": 22,
-					"name": "Command",
-					"kind": 128,
-					"kindString": "class",
-					"comment": {
-						"shortText": "Represents a Carbon Slash COmmand",
-						"text": "",
-						"tags": []
-					},
-					"children": [
-						{
-							"id": 23,
-							"name": "run",
-							"kind": 1024,
-							"kindString": "property",
-							"type": {
-								"kind": 2048,
-								"kindString": "signature",
-								"typeParameters": [],
-								"parameters": [
-									{
-										"kind": 8192,
-										"kindString": "signatureParameter",
-										"name": "interaction",
-										"isOptional": false,
-										"isRest": false,
-										"parameterType": {
-											"kind": 1024,
-											"kindString": "reference",
-											"name": "CommandInteraction",
-											"typeArguments": []
-										}
-									}
-								],
-								"returnType": {
-									"kind": 32,
-									"kindString": "intrinsic",
-									"name": "void"
-								}
-							},
-							"visibility": "public",
-							"isReadonly": false,
-							"sources": [
-								{
-									"fileName": "core/src/structures/Command.ts",
-									"line": 25,
-									"character": 7,
-									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/structures/Command.ts#L25"
-								}
-							]
-						}
-					],
-					"signatures": [],
-					"constructSignatures": [],
-					"typeParameters": [],
-					"implementedTypes": [],
-					"sources": [
-						{
-							"fileName": "core/src/structures/Command.ts",
-							"line": 10,
-							"character": 20,
-							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/structures/Command.ts#L10"
-						},
-						{
-							"fileName": "core/src/structures/Command.ts",
-							"line": 24,
-							"character": 24,
-							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/structures/Command.ts#L24"
-						},
-						{
-							"fileName": "core/src/structures/Command.ts",
-							"line": 29,
-							"character": 24,
-							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/structures/Command.ts#L29"
-						}
-					]
-				}
-			]
-		},
-		{
-			"id": 24,
-			"name": "core/src/util/CarbonError",
-			"kind": 2,
-			"kindString": "module",
-			"children": [
-				{
-					"id": 25,
-					"name": "CarbonErrorType",
-					"kind": 8,
-					"kindString": "enum",
-					"comment": {
-						"shortText": "Carbon Error Types",
-						"text": "",
-						"tags": []
-					},
-					"children": [
-						{
-							"id": 27,
-							"name": "CommandError",
-							"kind": 16,
-							"kindString": "enumMember",
-							"value": "COMMAND_ERROR",
-							"sources": [
-								{
-									"fileName": "core/src/util/CarbonError.ts",
-									"line": 9,
-									"character": 16,
-									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L9"
-								}
-							]
-						},
-						{
-							"id": 26,
-							"name": "CommandNotFound",
-							"kind": 16,
-							"kindString": "enumMember",
-							"value": "COMMAND_NOT_FOUND",
-							"sources": [
-								{
-									"fileName": "core/src/util/CarbonError.ts",
-									"line": 8,
-									"character": 19,
-									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L8"
-								}
-							]
-						},
-						{
-							"id": 29,
-							"name": "InvalidPermission",
-							"kind": 16,
-							"kindString": "enumMember",
-							"value": "INVALID_PERMISSION",
-							"sources": [
-								{
-									"fileName": "core/src/util/CarbonError.ts",
-									"line": 11,
-									"character": 21,
-									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L11"
-								}
-							]
-						},
-						{
-							"id": 28,
-							"name": "ModuleNotEnabled",
-							"kind": 16,
-							"kindString": "enumMember",
-							"value": "MODULE_NOT_ENABLED",
-							"sources": [
-								{
-									"fileName": "core/src/util/CarbonError.ts",
-									"line": 10,
-									"character": 20,
-									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L10"
-								}
-							]
-						}
-					],
-					"isConst": false,
-					"sources": [
-						{
-							"fileName": "core/src/util/CarbonError.ts",
-							"line": 7,
-							"character": 27,
-							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L7"
-						}
-					]
-				},
-				{
-					"id": 30,
-					"name": "CarbonError",
-					"kind": 128,
-					"kindString": "class",
-					"comment": {
-						"shortText": "Represents a Carbon Error",
-						"text": "",
-						"tags": []
-					},
+					"kindString": "Class",
+					"flags": {},
 					"children": [
 						{
 							"id": 32,
-							"name": "code",
-							"kind": 1024,
-							"kindString": "property",
-							"type": {
-								"kind": 1024,
-								"kindString": "reference",
-								"name": "CarbonErrorType",
-								"typeArguments": [],
-								"target": 25
-							},
-							"visibility": "public",
-							"isReadonly": false,
-							"sources": [
+							"name": "constructor",
+							"kind": 512,
+							"kindString": "Constructor",
+							"flags": {},
+							"signatures": [
 								{
-									"fileName": "core/src/util/CarbonError.ts",
-									"line": 20,
-									"character": 27,
-									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L20"
-								}
-							]
-						},
-						{
-							"id": 33,
-							"name": "message",
-							"kind": 1024,
-							"kindString": "property",
-							"type": {
-								"kind": 32,
-								"kindString": "intrinsic",
-								"name": "string"
-							},
-							"visibility": "public",
-							"isReadonly": false,
-							"sources": [
-								{
-									"fileName": "core/src/util/CarbonError.ts",
-									"line": 20,
-									"character": 60,
-									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L20"
-								}
-							]
-						},
-						{
-							"id": 31,
-							"name": "name",
-							"kind": 1024,
-							"kindString": "property",
-							"type": {
-								"kind": 32,
-								"kindString": "intrinsic",
-								"name": "string"
-							},
-							"visibility": "public",
-							"isReadonly": false,
-							"sources": [
-								{
-									"fileName": "core/src/util/CarbonError.ts",
-									"line": 18,
-									"character": 8,
-									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L18"
-								}
-							]
-						},
-						{
-							"id": 34,
-							"name": "embed",
-							"kind": 4096,
-							"kindString": "method",
-							"comment": {
-								"shortText": "",
-								"text": "",
-								"tags": [
-									{
-										"tagName": "returns",
-										"text": "\n",
-										"paramName": "A MessageEmbed representing this error"
-									}
-								]
-							},
-							"children": [
-								{
-									"id": 35,
-									"name": "embed",
-									"kind": 8192,
-									"kindString": "signature",
-									"comment": {
-										"shortText": "",
-										"text": "",
-										"tags": [
-											{
-												"tagName": "returns",
-												"text": "\n",
-												"paramName": "A MessageEmbed representing this error"
+									"id": 33,
+									"name": "new Client",
+									"kind": 16384,
+									"kindString": "Constructor signature",
+									"flags": {},
+									"parameters": [
+										{
+											"id": 34,
+											"name": "options",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"name": "ClientOptions"
 											}
-										]
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 2,
+										"name": "Client"
 									},
-									"parameters": [],
-									"typeParameters": [],
-									"returnType": {
-										"kind": 1024,
-										"kindString": "reference",
-										"name": "ErrorMessageEmbed",
-										"typeArguments": [],
-										"target": 37
+									"overwrites": {
+										"type": "reference",
+										"name": "discord.Client.constructor"
 									}
 								}
 							],
-							"visibility": "public",
+							"overwrites": {
+								"type": "reference",
+								"name": "discord.Client.constructor"
+							}
+						},
+						{
+							"id": 35,
+							"name": "application",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
 							"sources": [
 								{
-									"fileName": "core/src/util/CarbonError.ts",
-									"line": 26,
-									"character": 9,
-									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L26"
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 345,
+									"character": 22
 								}
-							]
-						}
-					],
-					"signatures": [],
-					"constructSignatures": [],
-					"typeParameters": [],
-					"implementedTypes": [],
-					"extendedType": {
-						"kind": 1024,
-						"kindString": "reference",
-						"name": "Error",
-						"typeArguments": []
-					},
-					"sources": [
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "reference",
+										"name": "ClientApplication"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.application"
+							}
+						},
 						{
-							"fileName": "core/src/util/CarbonError.ts",
-							"line": 17,
-							"character": 24,
-							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/CarbonError.ts#L17"
-						}
-					]
-				}
-			]
-		},
-		{
-			"id": 36,
-			"name": "core/src/util/ErrorMessageEmbed",
-			"kind": 2,
-			"kindString": "module",
-			"children": [
-				{
-					"id": 37,
-					"name": "ErrorMessageEmbed",
-					"kind": 128,
-					"kindString": "class",
-					"comment": {
-						"shortText": "Represents a Carbon Error Message Embed",
-						"text": "",
-						"tags": []
-					},
-					"children": [
+							"id": 36,
+							"name": "channels",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 346,
+									"character": 19
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "ChannelManager"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.channels"
+							}
+						},
+						{
+							"id": 37,
+							"name": "emojis",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true,
+								"isReadonly": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 347,
+									"character": 26
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "BaseGuildEmojiManager"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.emojis"
+							}
+						},
 						{
 							"id": 38,
-							"name": "error",
+							"name": "guilds",
 							"kind": 1024,
-							"kindString": "property",
-							"type": {
-								"kind": 1024,
-								"kindString": "reference",
-								"name": "Error",
-								"typeArguments": []
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
 							},
-							"visibility": "public",
-							"isReadonly": false,
 							"sources": [
 								{
-									"fileName": "core/src/util/ErrorMessageEmbed.ts",
-									"line": 8,
-									"character": 28,
-									"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/ErrorMessageEmbed.ts#L8"
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 348,
+									"character": 17
 								}
-							]
-						}
-					],
-					"signatures": [],
-					"constructSignatures": [],
-					"typeParameters": [],
-					"implementedTypes": [],
-					"extendedType": {
-						"kind": 1024,
-						"kindString": "reference",
-						"name": "MessageEmbed",
-						"typeArguments": []
-					},
-					"sources": [
+							],
+							"type": {
+								"type": "reference",
+								"name": "GuildManager"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.guilds"
+							}
+						},
 						{
-							"fileName": "core/src/util/ErrorMessageEmbed.ts",
-							"line": 7,
-							"character": 30,
-							"url": "https://github.com/CO-org/carbon/blob/master/packages/core/src/util/ErrorMessageEmbed.ts#L7"
-						}
-					]
-				}
-			]
-		},
-		{
-			"id": 39,
-			"name": "interactions/src/index",
-			"kind": 2,
-			"kindString": "module",
-			"children": [
-				{
-					"id": 40,
-					"name": "commands",
-					"kind": 64,
-					"kindString": "function",
-					"children": [
+							"id": 39,
+							"name": "options",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 349,
+									"character": 18
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "ClientOptions"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.options"
+							}
+						},
+						{
+							"id": 40,
+							"name": "readyAt",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 350,
+									"character": 18
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "reference",
+										"name": "Date"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.readyAt"
+							}
+						},
 						{
 							"id": 41,
-							"name": "commands",
-							"kind": 8192,
-							"kindString": "signature",
-							"parameters": [],
-							"typeParameters": [],
-							"returnType": {
-								"kind": 32,
-								"kindString": "intrinsic",
-								"name": "string"
+							"name": "readyTimestamp",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true,
+								"isReadonly": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 351,
+									"character": 34
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.readyTimestamp"
+							}
+						},
+						{
+							"id": 42,
+							"name": "shard",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 352,
+									"character": 16
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "reference",
+										"name": "ShardClientUtil"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.shard"
+							}
+						},
+						{
+							"id": 43,
+							"name": "token",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 353,
+									"character": 16
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.token"
+							}
+						},
+						{
+							"id": 44,
+							"name": "uptime",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true,
+								"isReadonly": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 354,
+									"character": 26
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.uptime"
+							}
+						},
+						{
+							"id": 45,
+							"name": "user",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 355,
+									"character": 15
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "reference",
+										"name": "ClientUser"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.user"
+							}
+						},
+						{
+							"id": 46,
+							"name": "users",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 356,
+									"character": 16
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "UserManager"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.users"
+							}
+						},
+						{
+							"id": 47,
+							"name": "voice",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 357,
+									"character": 16
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "ClientVoiceManager"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.voice"
+							}
+						},
+						{
+							"id": 48,
+							"name": "ws",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 358,
+									"character": 13
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "WebSocketManager"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.ws"
+							}
+						},
+						{
+							"id": 29,
+							"name": "captureRejectionSymbol",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isStatic": true,
+								"isExternal": true,
+								"isReadonly": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/@types-node-npm-15.12.1-149da5b459-8a111dc992.zip/node_modules/@types/node/events.d.ts",
+									"line": 46,
+									"character": 46
+								}
+							],
+							"type": {
+								"type": "query",
+								"queryType": {
+									"type": "reference",
+									"id": 29,
+									"name": "captureRejectionSymbol"
+								}
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.captureRejectionSymbol"
+							}
+						},
+						{
+							"id": 30,
+							"name": "captureRejections",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isStatic": true,
+								"isExternal": true
+							},
+							"comment": {
+								"shortText": "Sets or gets the default captureRejection value for all emitters."
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/@types-node-npm-15.12.1-149da5b459-8a111dc992.zip/node_modules/@types/node/events.d.ts",
+									"line": 52,
+									"character": 32
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.captureRejections"
+							}
+						},
+						{
+							"id": 31,
+							"name": "defaultMaxListeners",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isStatic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/@types-node-npm-15.12.1-149da5b459-8a111dc992.zip/node_modules/@types/node/events.d.ts",
+									"line": 53,
+									"character": 34
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.defaultMaxListeners"
+							}
+						},
+						{
+							"id": 28,
+							"name": "errorMonitor",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isStatic": true,
+								"isExternal": true,
+								"isReadonly": true
+							},
+							"comment": {
+								"shortText": "This symbol shall be used to install a listener for only monitoring `'error'`\nevents. Listeners installed using this symbol are called before the regular\n`'error'` listeners are called.",
+								"text": "Installing a listener using this symbol does not change the behavior once an\n`'error'` event is emitted, therefore the process will still crash if no\nregular `'error'` listener is installed.\n"
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/@types-node-npm-15.12.1-149da5b459-8a111dc992.zip/node_modules/@types/node/events.d.ts",
+									"line": 45,
+									"character": 36
+								}
+							],
+							"type": {
+								"type": "query",
+								"queryType": {
+									"type": "reference",
+									"id": 28,
+									"name": "errorMonitor"
+								}
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.errorMonitor"
+							}
+						},
+						{
+							"id": 170,
+							"name": "addListener",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExternal": true
+							},
+							"signatures": [
+								{
+									"id": 171,
+									"name": "addListener",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 172,
+											"name": "event",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													},
+													{
+														"type": "intrinsic",
+														"name": "symbol"
+													}
+												]
+											}
+										},
+										{
+											"id": 173,
+											"name": "listener",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 174,
+													"name": "__type",
+													"kind": 65536,
+													"kindString": "Type literal",
+													"flags": {
+														"isExternal": true
+													},
+													"signatures": [
+														{
+															"id": 175,
+															"name": "__type",
+															"kind": 4096,
+															"kindString": "Call signature",
+															"flags": {
+																"isExternal": true
+															},
+															"parameters": [
+																{
+																	"id": 176,
+																	"name": "args",
+																	"kind": 32768,
+																	"kindString": "Parameter",
+																	"flags": {
+																		"isExternal": true,
+																		"isRest": true
+																	},
+																	"type": {
+																		"type": "array",
+																		"elementType": {
+																			"type": "intrinsic",
+																			"name": "any"
+																		}
+																	}
+																}
+															],
+															"type": {
+																"type": "intrinsic",
+																"name": "void"
+															}
+														}
+													]
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 2,
+										"name": "Client"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.addListener"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.addListener"
+							}
+						},
+						{
+							"id": 144,
+							"name": "clearImmediate",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 240,
+									"character": 25
+								}
+							],
+							"signatures": [
+								{
+									"id": 145,
+									"name": "clearImmediate",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 146,
+											"name": "timeout",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "Immediate"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.clearImmediate"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.clearImmediate"
+							}
+						},
+						{
+							"id": 138,
+							"name": "clearInterval",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 238,
+									"character": 24
+								}
+							],
+							"signatures": [
+								{
+									"id": 139,
+									"name": "clearInterval",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 140,
+											"name": "interval",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "Timeout"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.clearInterval"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.clearInterval"
+							}
+						},
+						{
+							"id": 141,
+							"name": "clearTimeout",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 239,
+									"character": 23
+								}
+							],
+							"signatures": [
+								{
+									"id": 142,
+									"name": "clearTimeout",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 143,
+											"name": "timeout",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "Timeout"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.clearTimeout"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.clearTimeout"
+							}
+						},
+						{
+							"id": 49,
+							"name": "destroy",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 359,
+									"character": 18
+								}
+							],
+							"signatures": [
+								{
+									"id": 50,
+									"name": "destroy",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.destroy"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.destroy"
+							}
+						},
+						{
+							"id": 107,
+							"name": "emit",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 382,
+									"character": 15
+								}
+							],
+							"signatures": [
+								{
+									"id": 108,
+									"name": "emit",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"typeParameter": [
+										{
+											"id": 109,
+											"name": "K",
+											"kind": 131072,
+											"kindString": "Type parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "typeOperator",
+												"operator": "keyof",
+												"target": {
+													"type": "reference",
+													"name": "ClientEvents"
+												}
+											}
+										}
+									],
+									"parameters": [
+										{
+											"id": 110,
+											"name": "event",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "K"
+											}
+										},
+										{
+											"id": 111,
+											"name": "args",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isRest": true
+											},
+											"type": {
+												"type": "indexedAccess",
+												"indexType": {
+													"type": "reference",
+													"name": "K"
+												},
+												"objectType": {
+													"type": "reference",
+													"name": "ClientEvents"
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.emit"
+									}
+								},
+								{
+									"id": 112,
+									"name": "emit",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"typeParameter": [
+										{
+											"id": 113,
+											"name": "S",
+											"kind": 131072,
+											"kindString": "Type parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													},
+													{
+														"type": "intrinsic",
+														"name": "symbol"
+													}
+												]
+											}
+										}
+									],
+									"parameters": [
+										{
+											"id": 114,
+											"name": "event",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "reference",
+												"typeArguments": [
+													{
+														"type": "reference",
+														"name": "S"
+													},
+													{
+														"type": "typeOperator",
+														"operator": "keyof",
+														"target": {
+															"type": "reference",
+															"name": "ClientEvents"
+														}
+													}
+												],
+												"name": "Exclude"
+											}
+										},
+										{
+											"id": 115,
+											"name": "args",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isRest": true
+											},
+											"type": {
+												"type": "array",
+												"elementType": {
+													"type": "intrinsic",
+													"name": "any"
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.emit"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.emit"
+							}
+						},
+						{
+							"id": 212,
+							"name": "eventNames",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExternal": true
+							},
+							"signatures": [
+								{
+									"id": 213,
+									"name": "eventNames",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "union",
+											"types": [
+												{
+													"type": "intrinsic",
+													"name": "string"
+												},
+												{
+													"type": "intrinsic",
+													"name": "symbol"
+												}
+											]
+										}
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.eventNames"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.eventNames"
+							}
+						},
+						{
+							"id": 51,
+							"name": "fetchGuildPreview",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 360,
+									"character": 28
+								}
+							],
+							"signatures": [
+								{
+									"id": 52,
+									"name": "fetchGuildPreview",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 53,
+											"name": "guild",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "GuildResolvable"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"typeArguments": [
+											{
+												"type": "reference",
+												"name": "GuildPreview"
+											}
+										],
+										"name": "Promise"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.fetchGuildPreview"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.fetchGuildPreview"
+							}
+						},
+						{
+							"id": 57,
+							"name": "fetchGuildTemplate",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 362,
+									"character": 29
+								}
+							],
+							"signatures": [
+								{
+									"id": 58,
+									"name": "fetchGuildTemplate",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 59,
+											"name": "template",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"typeArguments": [
+											{
+												"type": "reference",
+												"name": "GuildTemplate"
+											}
+										],
+										"name": "Promise"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.fetchGuildTemplate"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.fetchGuildTemplate"
+							}
+						},
+						{
+							"id": 54,
+							"name": "fetchInvite",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 361,
+									"character": 22
+								}
+							],
+							"signatures": [
+								{
+									"id": 55,
+									"name": "fetchInvite",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 56,
+											"name": "invite",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"typeArguments": [
+											{
+												"type": "reference",
+												"name": "Invite"
+											}
+										],
+										"name": "Promise"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.fetchInvite"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.fetchInvite"
+							}
+						},
+						{
+							"id": 60,
+							"name": "fetchVoiceRegions",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 363,
+									"character": 28
+								}
+							],
+							"signatures": [
+								{
+									"id": 61,
+									"name": "fetchVoiceRegions",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"type": {
+										"type": "reference",
+										"typeArguments": [
+											{
+												"type": "reference",
+												"typeArguments": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													},
+													{
+														"type": "reference",
+														"name": "VoiceRegion"
+													}
+												],
+												"name": "Collection"
+											}
+										],
+										"name": "Promise"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.fetchVoiceRegions"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.fetchVoiceRegions"
+							}
+						},
+						{
+							"id": 62,
+							"name": "fetchWebhook",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 364,
+									"character": 23
+								}
+							],
+							"signatures": [
+								{
+									"id": 63,
+									"name": "fetchWebhook",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 64,
+											"name": "id",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "template-literal",
+												"head": "",
+												"tail": [
+													[
+														{
+															"type": "intrinsic",
+															"name": "bigint"
+														},
+														""
+													]
+												]
+											}
+										},
+										{
+											"id": 65,
+											"name": "token",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"typeArguments": [
+											{
+												"type": "reference",
+												"name": "Webhook"
+											}
+										],
+										"name": "Promise"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.fetchWebhook"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.fetchWebhook"
+							}
+						},
+						{
+							"id": 66,
+							"name": "generateInvite",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 365,
+									"character": 25
+								}
+							],
+							"signatures": [
+								{
+									"id": 67,
+									"name": "generateInvite",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 68,
+											"name": "options",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "InviteGenerationOptions"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.generateInvite"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.generateInvite"
+							}
+						},
+						{
+							"id": 187,
+							"name": "getMaxListeners",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExternal": true
+							},
+							"signatures": [
+								{
+									"id": 188,
+									"name": "getMaxListeners",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.getMaxListeners"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.getMaxListeners"
+							}
+						},
+						{
+							"id": 195,
+							"name": "listenerCount",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExternal": true
+							},
+							"signatures": [
+								{
+									"id": 196,
+									"name": "listenerCount",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 197,
+											"name": "event",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													},
+													{
+														"type": "intrinsic",
+														"name": "symbol"
+													}
+												]
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.listenerCount"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.listenerCount"
+							}
+						},
+						{
+							"id": 189,
+							"name": "listeners",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExternal": true
+							},
+							"signatures": [
+								{
+									"id": 190,
+									"name": "listeners",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 191,
+											"name": "event",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													},
+													{
+														"type": "intrinsic",
+														"name": "symbol"
+													}
+												]
+											}
+										}
+									],
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"name": "Function"
+										}
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.listeners"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.listeners"
+							}
+						},
+						{
+							"id": 69,
+							"name": "login",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 366,
+									"character": 16
+								}
+							],
+							"signatures": [
+								{
+									"id": 70,
+									"name": "login",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 71,
+											"name": "token",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "string"
+											}
+										],
+										"name": "Promise"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.login"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.login"
+							}
+						},
+						{
+							"id": 116,
+							"name": "off",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 385,
+									"character": 14
+								}
+							],
+							"signatures": [
+								{
+									"id": 117,
+									"name": "off",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"typeParameter": [
+										{
+											"id": 118,
+											"name": "K",
+											"kind": 131072,
+											"kindString": "Type parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "typeOperator",
+												"operator": "keyof",
+												"target": {
+													"type": "reference",
+													"name": "ClientEvents"
+												}
+											}
+										}
+									],
+									"parameters": [
+										{
+											"id": 119,
+											"name": "event",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "K"
+											}
+										},
+										{
+											"id": 120,
+											"name": "listener",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 121,
+													"name": "__type",
+													"kind": 65536,
+													"kindString": "Type literal",
+													"flags": {
+														"isExternal": true
+													},
+													"signatures": [
+														{
+															"id": 122,
+															"name": "__type",
+															"kind": 4096,
+															"kindString": "Call signature",
+															"flags": {
+																"isExternal": true
+															},
+															"parameters": [
+																{
+																	"id": 123,
+																	"name": "args",
+																	"kind": 32768,
+																	"kindString": "Parameter",
+																	"flags": {
+																		"isExternal": true,
+																		"isRest": true
+																	},
+																	"type": {
+																		"type": "indexedAccess",
+																		"indexType": {
+																			"type": "reference",
+																			"name": "K"
+																		},
+																		"objectType": {
+																			"type": "reference",
+																			"name": "ClientEvents"
+																		}
+																	}
+																}
+															],
+															"type": {
+																"type": "reference",
+																"typeArguments": [
+																	{
+																		"type": "intrinsic",
+																		"name": "void"
+																	}
+																],
+																"name": "Awaited"
+															}
+														}
+													]
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 2,
+										"name": "Client"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.off"
+									}
+								},
+								{
+									"id": 124,
+									"name": "off",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"typeParameter": [
+										{
+											"id": 125,
+											"name": "S",
+											"kind": 131072,
+											"kindString": "Type parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													},
+													{
+														"type": "intrinsic",
+														"name": "symbol"
+													}
+												]
+											}
+										}
+									],
+									"parameters": [
+										{
+											"id": 126,
+											"name": "event",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "reference",
+												"typeArguments": [
+													{
+														"type": "reference",
+														"name": "S"
+													},
+													{
+														"type": "typeOperator",
+														"operator": "keyof",
+														"target": {
+															"type": "reference",
+															"name": "ClientEvents"
+														}
+													}
+												],
+												"name": "Exclude"
+											}
+										},
+										{
+											"id": 127,
+											"name": "listener",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 128,
+													"name": "__type",
+													"kind": 65536,
+													"kindString": "Type literal",
+													"flags": {
+														"isExternal": true
+													},
+													"signatures": [
+														{
+															"id": 129,
+															"name": "__type",
+															"kind": 4096,
+															"kindString": "Call signature",
+															"flags": {
+																"isExternal": true
+															},
+															"parameters": [
+																{
+																	"id": 130,
+																	"name": "args",
+																	"kind": 32768,
+																	"kindString": "Parameter",
+																	"flags": {
+																		"isExternal": true,
+																		"isRest": true
+																	},
+																	"type": {
+																		"type": "array",
+																		"elementType": {
+																			"type": "intrinsic",
+																			"name": "any"
+																		}
+																	}
+																}
+															],
+															"type": {
+																"type": "reference",
+																"typeArguments": [
+																	{
+																		"type": "intrinsic",
+																		"name": "void"
+																	}
+																],
+																"name": "Awaited"
+															}
+														}
+													]
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 2,
+										"name": "Client"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.off"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.off"
+							}
+						},
+						{
+							"id": 77,
+							"name": "on",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 370,
+									"character": 13
+								}
+							],
+							"signatures": [
+								{
+									"id": 78,
+									"name": "on",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"typeParameter": [
+										{
+											"id": 79,
+											"name": "K",
+											"kind": 131072,
+											"kindString": "Type parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "typeOperator",
+												"operator": "keyof",
+												"target": {
+													"type": "reference",
+													"name": "ClientEvents"
+												}
+											}
+										}
+									],
+									"parameters": [
+										{
+											"id": 80,
+											"name": "event",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "K"
+											}
+										},
+										{
+											"id": 81,
+											"name": "listener",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 82,
+													"name": "__type",
+													"kind": 65536,
+													"kindString": "Type literal",
+													"flags": {
+														"isExternal": true
+													},
+													"signatures": [
+														{
+															"id": 83,
+															"name": "__type",
+															"kind": 4096,
+															"kindString": "Call signature",
+															"flags": {
+																"isExternal": true
+															},
+															"parameters": [
+																{
+																	"id": 84,
+																	"name": "args",
+																	"kind": 32768,
+																	"kindString": "Parameter",
+																	"flags": {
+																		"isExternal": true,
+																		"isRest": true
+																	},
+																	"type": {
+																		"type": "indexedAccess",
+																		"indexType": {
+																			"type": "reference",
+																			"name": "K"
+																		},
+																		"objectType": {
+																			"type": "reference",
+																			"name": "ClientEvents"
+																		}
+																	}
+																}
+															],
+															"type": {
+																"type": "reference",
+																"typeArguments": [
+																	{
+																		"type": "intrinsic",
+																		"name": "void"
+																	}
+																],
+																"name": "Awaited"
+															}
+														}
+													]
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 2,
+										"name": "Client"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.on"
+									}
+								},
+								{
+									"id": 85,
+									"name": "on",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"typeParameter": [
+										{
+											"id": 86,
+											"name": "S",
+											"kind": 131072,
+											"kindString": "Type parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													},
+													{
+														"type": "intrinsic",
+														"name": "symbol"
+													}
+												]
+											}
+										}
+									],
+									"parameters": [
+										{
+											"id": 87,
+											"name": "event",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "reference",
+												"typeArguments": [
+													{
+														"type": "reference",
+														"name": "S"
+													},
+													{
+														"type": "typeOperator",
+														"operator": "keyof",
+														"target": {
+															"type": "reference",
+															"name": "ClientEvents"
+														}
+													}
+												],
+												"name": "Exclude"
+											}
+										},
+										{
+											"id": 88,
+											"name": "listener",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 89,
+													"name": "__type",
+													"kind": 65536,
+													"kindString": "Type literal",
+													"flags": {
+														"isExternal": true
+													},
+													"signatures": [
+														{
+															"id": 90,
+															"name": "__type",
+															"kind": 4096,
+															"kindString": "Call signature",
+															"flags": {
+																"isExternal": true
+															},
+															"parameters": [
+																{
+																	"id": 91,
+																	"name": "args",
+																	"kind": 32768,
+																	"kindString": "Parameter",
+																	"flags": {
+																		"isExternal": true,
+																		"isRest": true
+																	},
+																	"type": {
+																		"type": "array",
+																		"elementType": {
+																			"type": "intrinsic",
+																			"name": "any"
+																		}
+																	}
+																}
+															],
+															"type": {
+																"type": "reference",
+																"typeArguments": [
+																	{
+																		"type": "intrinsic",
+																		"name": "void"
+																	}
+																],
+																"name": "Awaited"
+															}
+														}
+													]
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 2,
+										"name": "Client"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.on"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.on"
+							}
+						},
+						{
+							"id": 92,
+							"name": "once",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 376,
+									"character": 15
+								}
+							],
+							"signatures": [
+								{
+									"id": 93,
+									"name": "once",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"typeParameter": [
+										{
+											"id": 94,
+											"name": "K",
+											"kind": 131072,
+											"kindString": "Type parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "typeOperator",
+												"operator": "keyof",
+												"target": {
+													"type": "reference",
+													"name": "ClientEvents"
+												}
+											}
+										}
+									],
+									"parameters": [
+										{
+											"id": 95,
+											"name": "event",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "K"
+											}
+										},
+										{
+											"id": 96,
+											"name": "listener",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 97,
+													"name": "__type",
+													"kind": 65536,
+													"kindString": "Type literal",
+													"flags": {
+														"isExternal": true
+													},
+													"signatures": [
+														{
+															"id": 98,
+															"name": "__type",
+															"kind": 4096,
+															"kindString": "Call signature",
+															"flags": {
+																"isExternal": true
+															},
+															"parameters": [
+																{
+																	"id": 99,
+																	"name": "args",
+																	"kind": 32768,
+																	"kindString": "Parameter",
+																	"flags": {
+																		"isExternal": true,
+																		"isRest": true
+																	},
+																	"type": {
+																		"type": "indexedAccess",
+																		"indexType": {
+																			"type": "reference",
+																			"name": "K"
+																		},
+																		"objectType": {
+																			"type": "reference",
+																			"name": "ClientEvents"
+																		}
+																	}
+																}
+															],
+															"type": {
+																"type": "reference",
+																"typeArguments": [
+																	{
+																		"type": "intrinsic",
+																		"name": "void"
+																	}
+																],
+																"name": "Awaited"
+															}
+														}
+													]
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 2,
+										"name": "Client"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.once"
+									}
+								},
+								{
+									"id": 100,
+									"name": "once",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"typeParameter": [
+										{
+											"id": 101,
+											"name": "S",
+											"kind": 131072,
+											"kindString": "Type parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													},
+													{
+														"type": "intrinsic",
+														"name": "symbol"
+													}
+												]
+											}
+										}
+									],
+									"parameters": [
+										{
+											"id": 102,
+											"name": "event",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "reference",
+												"typeArguments": [
+													{
+														"type": "reference",
+														"name": "S"
+													},
+													{
+														"type": "typeOperator",
+														"operator": "keyof",
+														"target": {
+															"type": "reference",
+															"name": "ClientEvents"
+														}
+													}
+												],
+												"name": "Exclude"
+											}
+										},
+										{
+											"id": 103,
+											"name": "listener",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 104,
+													"name": "__type",
+													"kind": 65536,
+													"kindString": "Type literal",
+													"flags": {
+														"isExternal": true
+													},
+													"signatures": [
+														{
+															"id": 105,
+															"name": "__type",
+															"kind": 4096,
+															"kindString": "Call signature",
+															"flags": {
+																"isExternal": true
+															},
+															"parameters": [
+																{
+																	"id": 106,
+																	"name": "args",
+																	"kind": 32768,
+																	"kindString": "Parameter",
+																	"flags": {
+																		"isExternal": true,
+																		"isRest": true
+																	},
+																	"type": {
+																		"type": "array",
+																		"elementType": {
+																			"type": "intrinsic",
+																			"name": "any"
+																		}
+																	}
+																}
+															],
+															"type": {
+																"type": "reference",
+																"typeArguments": [
+																	{
+																		"type": "intrinsic",
+																		"name": "void"
+																	}
+																],
+																"name": "Awaited"
+															}
+														}
+													]
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 2,
+										"name": "Client"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.once"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.once"
+							}
+						},
+						{
+							"id": 198,
+							"name": "prependListener",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExternal": true
+							},
+							"signatures": [
+								{
+									"id": 199,
+									"name": "prependListener",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 200,
+											"name": "event",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													},
+													{
+														"type": "intrinsic",
+														"name": "symbol"
+													}
+												]
+											}
+										},
+										{
+											"id": 201,
+											"name": "listener",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 202,
+													"name": "__type",
+													"kind": 65536,
+													"kindString": "Type literal",
+													"flags": {
+														"isExternal": true
+													},
+													"signatures": [
+														{
+															"id": 203,
+															"name": "__type",
+															"kind": 4096,
+															"kindString": "Call signature",
+															"flags": {
+																"isExternal": true
+															},
+															"parameters": [
+																{
+																	"id": 204,
+																	"name": "args",
+																	"kind": 32768,
+																	"kindString": "Parameter",
+																	"flags": {
+																		"isExternal": true,
+																		"isRest": true
+																	},
+																	"type": {
+																		"type": "array",
+																		"elementType": {
+																			"type": "intrinsic",
+																			"name": "any"
+																		}
+																	}
+																}
+															],
+															"type": {
+																"type": "intrinsic",
+																"name": "void"
+															}
+														}
+													]
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 2,
+										"name": "Client"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.prependListener"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.prependListener"
+							}
+						},
+						{
+							"id": 205,
+							"name": "prependOnceListener",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExternal": true
+							},
+							"signatures": [
+								{
+									"id": 206,
+									"name": "prependOnceListener",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 207,
+											"name": "event",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													},
+													{
+														"type": "intrinsic",
+														"name": "symbol"
+													}
+												]
+											}
+										},
+										{
+											"id": 208,
+											"name": "listener",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 209,
+													"name": "__type",
+													"kind": 65536,
+													"kindString": "Type literal",
+													"flags": {
+														"isExternal": true
+													},
+													"signatures": [
+														{
+															"id": 210,
+															"name": "__type",
+															"kind": 4096,
+															"kindString": "Call signature",
+															"flags": {
+																"isExternal": true
+															},
+															"parameters": [
+																{
+																	"id": 211,
+																	"name": "args",
+																	"kind": 32768,
+																	"kindString": "Parameter",
+																	"flags": {
+																		"isExternal": true,
+																		"isRest": true
+																	},
+																	"type": {
+																		"type": "array",
+																		"elementType": {
+																			"type": "intrinsic",
+																			"name": "any"
+																		}
+																	}
+																}
+															],
+															"type": {
+																"type": "intrinsic",
+																"name": "void"
+															}
+														}
+													]
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 2,
+										"name": "Client"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.prependOnceListener"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.prependOnceListener"
+							}
+						},
+						{
+							"id": 192,
+							"name": "rawListeners",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExternal": true
+							},
+							"signatures": [
+								{
+									"id": 193,
+									"name": "rawListeners",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 194,
+											"name": "event",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													},
+													{
+														"type": "intrinsic",
+														"name": "symbol"
+													}
+												]
+											}
+										}
+									],
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"name": "Function"
+										}
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.rawListeners"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.rawListeners"
+							}
+						},
+						{
+							"id": 131,
+							"name": "removeAllListeners",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 391,
+									"character": 29
+								}
+							],
+							"signatures": [
+								{
+									"id": 132,
+									"name": "removeAllListeners",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"typeParameter": [
+										{
+											"id": 133,
+											"name": "K",
+											"kind": 131072,
+											"kindString": "Type parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "typeOperator",
+												"operator": "keyof",
+												"target": {
+													"type": "reference",
+													"name": "ClientEvents"
+												}
+											}
+										}
+									],
+									"parameters": [
+										{
+											"id": 134,
+											"name": "event",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "K"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 2,
+										"name": "Client"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.removeAllListeners"
+									}
+								},
+								{
+									"id": 135,
+									"name": "removeAllListeners",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"typeParameter": [
+										{
+											"id": 136,
+											"name": "S",
+											"kind": 131072,
+											"kindString": "Type parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													},
+													{
+														"type": "intrinsic",
+														"name": "symbol"
+													}
+												]
+											}
+										}
+									],
+									"parameters": [
+										{
+											"id": 137,
+											"name": "event",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "reference",
+												"typeArguments": [
+													{
+														"type": "reference",
+														"name": "S"
+													},
+													{
+														"type": "typeOperator",
+														"operator": "keyof",
+														"target": {
+															"type": "reference",
+															"name": "ClientEvents"
+														}
+													}
+												],
+												"name": "Exclude"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 2,
+										"name": "Client"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.removeAllListeners"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.removeAllListeners"
+							}
+						},
+						{
+							"id": 177,
+							"name": "removeListener",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExternal": true
+							},
+							"signatures": [
+								{
+									"id": 178,
+									"name": "removeListener",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 179,
+											"name": "event",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													},
+													{
+														"type": "intrinsic",
+														"name": "symbol"
+													}
+												]
+											}
+										},
+										{
+											"id": 180,
+											"name": "listener",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 181,
+													"name": "__type",
+													"kind": 65536,
+													"kindString": "Type literal",
+													"flags": {
+														"isExternal": true
+													},
+													"signatures": [
+														{
+															"id": 182,
+															"name": "__type",
+															"kind": 4096,
+															"kindString": "Call signature",
+															"flags": {
+																"isExternal": true
+															},
+															"parameters": [
+																{
+																	"id": 183,
+																	"name": "args",
+																	"kind": 32768,
+																	"kindString": "Parameter",
+																	"flags": {
+																		"isExternal": true,
+																		"isRest": true
+																	},
+																	"type": {
+																		"type": "array",
+																		"elementType": {
+																			"type": "intrinsic",
+																			"name": "any"
+																		}
+																	}
+																}
+															],
+															"type": {
+																"type": "intrinsic",
+																"name": "void"
+															}
+														}
+													]
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 2,
+										"name": "Client"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.removeListener"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.removeListener"
+							}
+						},
+						{
+							"id": 163,
+							"name": "setImmediate",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 244,
+									"character": 23
+								}
+							],
+							"signatures": [
+								{
+									"id": 164,
+									"name": "setImmediate",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 165,
+											"name": "fn",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 166,
+													"name": "__type",
+													"kind": 65536,
+													"kindString": "Type literal",
+													"flags": {
+														"isExternal": true
+													},
+													"signatures": [
+														{
+															"id": 167,
+															"name": "__type",
+															"kind": 4096,
+															"kindString": "Call signature",
+															"flags": {
+																"isExternal": true
+															},
+															"parameters": [
+																{
+																	"id": 168,
+																	"name": "args",
+																	"kind": 32768,
+																	"kindString": "Parameter",
+																	"flags": {
+																		"isExternal": true,
+																		"isRest": true
+																	},
+																	"type": {
+																		"type": "array",
+																		"elementType": {
+																			"type": "intrinsic",
+																			"name": "any"
+																		}
+																	}
+																}
+															],
+															"type": {
+																"type": "intrinsic",
+																"name": "void"
+															}
+														}
+													]
+												}
+											}
+										},
+										{
+											"id": 169,
+											"name": "args",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isRest": true
+											},
+											"type": {
+												"type": "array",
+												"elementType": {
+													"type": "intrinsic",
+													"name": "any"
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"name": "Immediate"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.setImmediate"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.setImmediate"
+							}
+						},
+						{
+							"id": 147,
+							"name": "setInterval",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 242,
+									"character": 22
+								}
+							],
+							"signatures": [
+								{
+									"id": 148,
+									"name": "setInterval",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 149,
+											"name": "fn",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 150,
+													"name": "__type",
+													"kind": 65536,
+													"kindString": "Type literal",
+													"flags": {
+														"isExternal": true
+													},
+													"signatures": [
+														{
+															"id": 151,
+															"name": "__type",
+															"kind": 4096,
+															"kindString": "Call signature",
+															"flags": {
+																"isExternal": true
+															},
+															"parameters": [
+																{
+																	"id": 152,
+																	"name": "args",
+																	"kind": 32768,
+																	"kindString": "Parameter",
+																	"flags": {
+																		"isExternal": true,
+																		"isRest": true
+																	},
+																	"type": {
+																		"type": "array",
+																		"elementType": {
+																			"type": "intrinsic",
+																			"name": "any"
+																		}
+																	}
+																}
+															],
+															"type": {
+																"type": "intrinsic",
+																"name": "void"
+															}
+														}
+													]
+												}
+											}
+										},
+										{
+											"id": 153,
+											"name": "delay",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "number"
+											}
+										},
+										{
+											"id": 154,
+											"name": "args",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isRest": true
+											},
+											"type": {
+												"type": "array",
+												"elementType": {
+													"type": "intrinsic",
+													"name": "any"
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"name": "Timeout"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.setInterval"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.setInterval"
+							}
+						},
+						{
+							"id": 184,
+							"name": "setMaxListeners",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExternal": true
+							},
+							"signatures": [
+								{
+									"id": 185,
+									"name": "setMaxListeners",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 186,
+											"name": "n",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "number"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 2,
+										"name": "Client"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.setMaxListeners"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.setMaxListeners"
+							}
+						},
+						{
+							"id": 155,
+							"name": "setTimeout",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 243,
+									"character": 21
+								}
+							],
+							"signatures": [
+								{
+									"id": 156,
+									"name": "setTimeout",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 157,
+											"name": "fn",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 158,
+													"name": "__type",
+													"kind": 65536,
+													"kindString": "Type literal",
+													"flags": {
+														"isExternal": true
+													},
+													"signatures": [
+														{
+															"id": 159,
+															"name": "__type",
+															"kind": 4096,
+															"kindString": "Call signature",
+															"flags": {
+																"isExternal": true
+															},
+															"parameters": [
+																{
+																	"id": 160,
+																	"name": "args",
+																	"kind": 32768,
+																	"kindString": "Parameter",
+																	"flags": {
+																		"isExternal": true,
+																		"isRest": true
+																	},
+																	"type": {
+																		"type": "array",
+																		"elementType": {
+																			"type": "intrinsic",
+																			"name": "any"
+																		}
+																	}
+																}
+															],
+															"type": {
+																"type": "intrinsic",
+																"name": "void"
+															}
+														}
+													]
+												}
+											}
+										},
+										{
+											"id": 161,
+											"name": "delay",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "number"
+											}
+										},
+										{
+											"id": 162,
+											"name": "args",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isRest": true
+											},
+											"type": {
+												"type": "array",
+												"elementType": {
+													"type": "intrinsic",
+													"name": "any"
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"name": "Timeout"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.setTimeout"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.setTimeout"
+							}
+						},
+						{
+							"id": 72,
+							"name": "sweepMessages",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 367,
+									"character": 24
+								}
+							],
+							"signatures": [
+								{
+									"id": 73,
+									"name": "sweepMessages",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 74,
+											"name": "lifetime",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "number"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.sweepMessages"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.sweepMessages"
+							}
+						},
+						{
+							"id": 75,
+							"name": "toJSON",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 368,
+									"character": 17
+								}
+							],
+							"signatures": [
+								{
+									"id": 76,
+									"name": "toJSON",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "unknown"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.toJSON"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.toJSON"
+							}
+						},
+						{
+							"id": 24,
+							"name": "getEventListener",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isStatic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/@types-node-npm-15.12.1-149da5b459-8a111dc992.zip/node_modules/@types/node/events.d.ts",
+									"line": 34,
+									"character": 31
+								}
+							],
+							"signatures": [
+								{
+									"id": 25,
+									"name": "getEventListener",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"comment": {
+										"shortText": "Returns a list listener for a specific emitter event name."
+									},
+									"parameters": [
+										{
+											"id": 26,
+											"name": "emitter",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "reference",
+														"name": "DOMEventTarget"
+													},
+													{
+														"type": "reference",
+														"name": "EventEmitter"
+													}
+												]
+											}
+										},
+										{
+											"id": 27,
+											"name": "name",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													},
+													{
+														"type": "intrinsic",
+														"name": "symbol"
+													}
+												]
+											}
+										}
+									],
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"name": "Function"
+										}
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.getEventListener"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.getEventListener"
+							}
+						},
+						{
+							"id": 20,
+							"name": "listenerCount",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isStatic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/@types-node-npm-15.12.1-149da5b459-8a111dc992.zip/node_modules/@types/node/events.d.ts",
+									"line": 30,
+									"character": 28
+								}
+							],
+							"signatures": [
+								{
+									"id": 21,
+									"name": "listenerCount",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"comment": {
+										"tags": [
+											{
+												"tag": "deprecated",
+												"text": "since v4.0.0"
+											}
+										]
+									},
+									"parameters": [
+										{
+											"id": 22,
+											"name": "emitter",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "EventEmitter"
+											}
+										},
+										{
+											"id": 23,
+											"name": "event",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													},
+													{
+														"type": "intrinsic",
+														"name": "symbol"
+													}
+												]
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.listenerCount"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.listenerCount"
+							}
+						},
+						{
+							"id": 15,
+							"name": "on",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isStatic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/@types-node-npm-15.12.1-149da5b459-8a111dc992.zip/node_modules/@types/node/events.d.ts",
+									"line": 27,
+									"character": 17
+								}
+							],
+							"signatures": [
+								{
+									"id": 16,
+									"name": "on",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 17,
+											"name": "emitter",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "EventEmitter"
+											}
+										},
+										{
+											"id": 18,
+											"name": "event",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 19,
+											"name": "options",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "StaticEventEmitterOptions"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "any"
+											}
+										],
+										"name": "AsyncIterableIterator"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.on"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.on"
+							}
+						},
+						{
+							"id": 6,
+							"name": "once",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isStatic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/@types-node-npm-15.12.1-149da5b459-8a111dc992.zip/node_modules/@types/node/events.d.ts",
+									"line": 25,
+									"character": 19
+								}
+							],
+							"signatures": [
+								{
+									"id": 7,
+									"name": "once",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 8,
+											"name": "emitter",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "NodeEventTarget"
+											}
+										},
+										{
+											"id": 9,
+											"name": "event",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													},
+													{
+														"type": "intrinsic",
+														"name": "symbol"
+													}
+												]
+											}
+										},
+										{
+											"id": 10,
+											"name": "options",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "StaticEventEmitterOptions"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"typeArguments": [
+											{
+												"type": "array",
+												"elementType": {
+													"type": "intrinsic",
+													"name": "any"
+												}
+											}
+										],
+										"name": "Promise"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.once"
+									}
+								},
+								{
+									"id": 11,
+									"name": "once",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 12,
+											"name": "emitter",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "DOMEventTarget"
+											}
+										},
+										{
+											"id": 13,
+											"name": "event",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 14,
+											"name": "options",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "StaticEventEmitterOptions"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"typeArguments": [
+											{
+												"type": "array",
+												"elementType": {
+													"type": "intrinsic",
+													"name": "any"
+												}
+											}
+										],
+										"name": "Promise"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.Client.once"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.Client.once"
 							}
 						}
 					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"kind": 512,
+							"children": [
+								32
+							]
+						},
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								35,
+								36,
+								37,
+								38,
+								39,
+								40,
+								41,
+								42,
+								43,
+								44,
+								45,
+								46,
+								47,
+								48,
+								29,
+								30,
+								31,
+								28
+							]
+						},
+						{
+							"title": "Methods",
+							"kind": 2048,
+							"children": [
+								170,
+								144,
+								138,
+								141,
+								49,
+								107,
+								212,
+								51,
+								57,
+								54,
+								60,
+								62,
+								66,
+								187,
+								195,
+								189,
+								69,
+								116,
+								77,
+								92,
+								198,
+								205,
+								192,
+								131,
+								177,
+								163,
+								147,
+								184,
+								155,
+								72,
+								75,
+								24,
+								20,
+								15,
+								6
+							]
+						}
+					],
 					"sources": [
 						{
-							"fileName": "interactions/src/index.ts",
-							"line": 3,
-							"character": 24,
-							"url": "https://github.com/CO-org/carbon/blob/master/packages/interactions/src/index.ts#L3"
+							"fileName": "packages/core/src/client.ts",
+							"line": 5,
+							"character": 19
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"name": "Client"
+						}
+					]
+				},
+				{
+					"id": 214,
+					"name": "client",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "packages/core/src/client.ts",
+							"line": 24,
+							"character": 19
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 2,
+						"name": "Client"
+					},
+					"defaultValue": "..."
+				}
+			],
+			"groups": [
+				{
+					"title": "Classes",
+					"kind": 128,
+					"children": [
+						2
+					]
+				},
+				{
+					"title": "Variables",
+					"kind": 32,
+					"children": [
+						214
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "packages/core/src/client.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 223,
+			"name": "core/src/handlers/__tests__/interaction",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "packages/core/src/handlers/__tests__/interaction.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 219,
+			"name": "core/src/handlers/interaction",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 220,
+					"name": "handleInteraction",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "packages/core/src/handlers/interaction/index.ts",
+							"line": 4,
+							"character": 33
+						}
+					],
+					"signatures": [
+						{
+							"id": 221,
+							"name": "handleInteraction",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 222,
+									"name": "interaction",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "Interaction"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
 						}
 					]
 				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						220
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "packages/core/src/handlers/interaction/index.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 215,
+			"name": "core/src/handlers/interaction/command",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 216,
+					"name": "handleCommandInteraction",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "packages/core/src/handlers/interaction/command.ts",
+							"line": 4,
+							"character": 40
+						}
+					],
+					"signatures": [
+						{
+							"id": 217,
+							"name": "handleCommandInteraction",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 218,
+									"name": "interaction",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "CommandInteraction"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						216
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "packages/core/src/handlers/interaction/command.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 231,
+			"name": "core/src/logger",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 232,
+					"name": "logger",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "Carbon Logger"
+					},
+					"sources": [
+						{
+							"fileName": "packages/core/src/logger/index.ts",
+							"line": 17,
+							"character": 19
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "Logger"
+					},
+					"defaultValue": "..."
+				}
+			],
+			"groups": [
+				{
+					"title": "Variables",
+					"kind": 32,
+					"children": [
+						232
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "packages/core/src/logger/index.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 233,
+			"name": "core/src/structures/Command",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 234,
+					"name": "Command",
+					"kind": 128,
+					"kindString": "Class",
+					"flags": {},
+					"comment": {
+						"shortText": "Represents a Carbon Slash Command"
+					},
+					"children": [
+						{
+							"id": 235,
+							"name": "constructor",
+							"kind": 512,
+							"kindString": "Constructor",
+							"flags": {},
+							"signatures": [
+								{
+									"id": 236,
+									"name": "new Command",
+									"kind": 16384,
+									"kindString": "Constructor signature",
+									"flags": {},
+									"comment": {},
+									"parameters": [
+										{
+											"id": 237,
+											"name": "data",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"comment": {
+												"text": "Raw Slash Command Data\n"
+											},
+											"type": {
+												"type": "reference",
+												"name": "ApplicationCommandData"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 234,
+										"name": "Command"
+									}
+								}
+							]
+						},
+						{
+							"id": 246,
+							"name": "defaultPermission",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 2676,
+									"character": 21
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						},
+						{
+							"id": 244,
+							"name": "description",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 2674,
+									"character": 15
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 242,
+							"name": "module",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "packages/core/src/structures/Command.ts",
+									"line": 4,
+									"character": 10
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 243,
+							"name": "name",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 2673,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 245,
+							"name": "options",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 2675,
+									"character": 11
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"name": "ApplicationCommandOptionData"
+								}
+							}
+						},
+						{
+							"id": 238,
+							"name": "run",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "packages/core/src/structures/Command.ts",
+									"line": 28,
+									"character": 7
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 239,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 240,
+											"name": "__type",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 241,
+													"name": "interaction",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "reference",
+														"name": "CommandInteraction"
+													}
+												}
+											],
+											"type": {
+												"type": "intrinsic",
+												"name": "void"
+											}
+										}
+									]
+								}
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"kind": 512,
+							"children": [
+								235
+							]
+						},
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								246,
+								244,
+								242,
+								243,
+								245,
+								238
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "packages/core/src/structures/Command.ts",
+							"line": 10,
+							"character": 20
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"name": "ApplicationCommandData"
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Classes",
+					"kind": 128,
+					"children": [
+						234
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "packages/core/src/structures/Command.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 247,
+			"name": "core/src/util/CarbonError",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 248,
+					"name": "CarbonErrorType",
+					"kind": 4,
+					"kindString": "Enumeration",
+					"flags": {},
+					"comment": {
+						"shortText": "Carbon Error Types"
+					},
+					"children": [
+						{
+							"id": 250,
+							"name": "CommandError",
+							"kind": 16,
+							"kindString": "Enumeration member",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "packages/core/src/util/CarbonError.ts",
+									"line": 9,
+									"character": 16
+								}
+							],
+							"defaultValue": "\"COMMAND_ERROR\""
+						},
+						{
+							"id": 249,
+							"name": "CommandNotFound",
+							"kind": 16,
+							"kindString": "Enumeration member",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "packages/core/src/util/CarbonError.ts",
+									"line": 8,
+									"character": 19
+								}
+							],
+							"defaultValue": "\"COMMAND_NOT_FOUND\""
+						},
+						{
+							"id": 252,
+							"name": "InvalidPermission",
+							"kind": 16,
+							"kindString": "Enumeration member",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "packages/core/src/util/CarbonError.ts",
+									"line": 11,
+									"character": 21
+								}
+							],
+							"defaultValue": "\"INVALID_PERMISSION\""
+						},
+						{
+							"id": 251,
+							"name": "ModuleNotEnabled",
+							"kind": 16,
+							"kindString": "Enumeration member",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "packages/core/src/util/CarbonError.ts",
+									"line": 10,
+									"character": 20
+								}
+							],
+							"defaultValue": "\"MODULE_NOT_ENABLED\""
+						}
+					],
+					"groups": [
+						{
+							"title": "Enumeration members",
+							"kind": 16,
+							"children": [
+								250,
+								249,
+								252,
+								251
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "packages/core/src/util/CarbonError.ts",
+							"line": 7,
+							"character": 27
+						}
+					]
+				},
+				{
+					"id": 253,
+					"name": "CarbonError",
+					"kind": 128,
+					"kindString": "Class",
+					"flags": {},
+					"comment": {
+						"shortText": "Represents a Carbon Error"
+					},
+					"children": [
+						{
+							"id": 264,
+							"name": "constructor",
+							"kind": 512,
+							"kindString": "Constructor",
+							"flags": {},
+							"signatures": [
+								{
+									"id": 265,
+									"name": "new CarbonError",
+									"kind": 16384,
+									"kindString": "Constructor signature",
+									"flags": {},
+									"comment": {},
+									"parameters": [
+										{
+											"id": 266,
+											"name": "code",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"comment": {
+												"text": "The error type"
+											},
+											"type": {
+												"type": "reference",
+												"id": 248,
+												"name": "CarbonErrorType"
+											}
+										},
+										{
+											"id": 267,
+											"name": "message",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"comment": {
+												"text": "The error message\n"
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 253,
+										"name": "CarbonError"
+									},
+									"overwrites": {
+										"type": "reference",
+										"name": "Error.constructor"
+									}
+								}
+							],
+							"overwrites": {
+								"type": "reference",
+								"name": "Error.constructor"
+							}
+						},
+						{
+							"id": 269,
+							"name": "code",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true
+							},
+							"type": {
+								"type": "reference",
+								"id": 248,
+								"name": "CarbonErrorType"
+							}
+						},
+						{
+							"id": 270,
+							"name": "message",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true
+							},
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "Error.message"
+							}
+						},
+						{
+							"id": 268,
+							"name": "name",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "packages/core/src/util/CarbonError.ts",
+									"line": 18,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"defaultValue": "'CarbonError'",
+							"overwrites": {
+								"type": "reference",
+								"name": "Error.name"
+							}
+						},
+						{
+							"id": 273,
+							"name": "stack",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/typescript-patch-4490d00053-68d48dc86d.zip/node_modules/typescript/lib/lib.es5.d.ts",
+									"line": 975,
+									"character": 9
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "Error.stack"
+							}
+						},
+						{
+							"id": 258,
+							"name": "prepareStackTrace",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isStatic": true,
+								"isExternal": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "Optional override for formatting stack traces",
+								"tags": [
+									{
+										"tag": "see",
+										"text": "https://v8.dev/docs/stack-trace-api#customizing-stack-traces\n"
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/@types-node-npm-15.12.1-149da5b459-8a111dc992.zip/node_modules/@types/node/globals.d.ts",
+									"line": 11,
+									"character": 21
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 259,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 260,
+											"name": "__type",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 261,
+													"name": "err",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "reference",
+														"name": "Error"
+													}
+												},
+												{
+													"id": 262,
+													"name": "stackTraces",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "array",
+														"elementType": {
+															"type": "reference",
+															"name": "CallSite"
+														}
+													}
+												}
+											],
+											"type": {
+												"type": "intrinsic",
+												"name": "any"
+											}
+										}
+									]
+								}
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "Error.prepareStackTrace"
+							}
+						},
+						{
+							"id": 263,
+							"name": "stackTraceLimit",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isStatic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/@types-node-npm-15.12.1-149da5b459-8a111dc992.zip/node_modules/@types/node/globals.d.ts",
+									"line": 13,
+									"character": 19
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "Error.stackTraceLimit"
+							}
+						},
+						{
+							"id": 271,
+							"name": "embed",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "packages/core/src/util/CarbonError.ts",
+									"line": 30,
+									"character": 9
+								}
+							],
+							"signatures": [
+								{
+									"id": 272,
+									"name": "embed",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"returns": "A MessageEmbed representing this error\n"
+									},
+									"type": {
+										"type": "reference",
+										"id": 275,
+										"name": "ErrorMessageEmbed"
+									}
+								}
+							]
+						},
+						{
+							"id": 254,
+							"name": "captureStackTrace",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isStatic": true,
+								"isExternal": true
+							},
+							"signatures": [
+								{
+									"id": 255,
+									"name": "captureStackTrace",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"comment": {
+										"shortText": "Create .stack property on a target object"
+									},
+									"parameters": [
+										{
+											"id": 256,
+											"name": "targetObject",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "object"
+											}
+										},
+										{
+											"id": 257,
+											"name": "constructorOpt",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "Function"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "Error.captureStackTrace"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "Error.captureStackTrace"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"kind": 512,
+							"children": [
+								264
+							]
+						},
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								269,
+								270,
+								268,
+								273,
+								258,
+								263
+							]
+						},
+						{
+							"title": "Methods",
+							"kind": 2048,
+							"children": [
+								271,
+								254
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "packages/core/src/util/CarbonError.ts",
+							"line": 17,
+							"character": 24
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"name": "Error"
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Enumerations",
+					"kind": 4,
+					"children": [
+						248
+					]
+				},
+				{
+					"title": "Classes",
+					"kind": 128,
+					"children": [
+						253
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "packages/core/src/util/CarbonError.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 274,
+			"name": "core/src/util/ErrorMessageEmbed",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 275,
+					"name": "ErrorMessageEmbed",
+					"kind": 128,
+					"kindString": "Class",
+					"flags": {},
+					"comment": {
+						"shortText": "Represents a Carbon Error Message Embed"
+					},
+					"children": [
+						{
+							"id": 284,
+							"name": "constructor",
+							"kind": 512,
+							"kindString": "Constructor",
+							"flags": {},
+							"signatures": [
+								{
+									"id": 285,
+									"name": "new ErrorMessageEmbed",
+									"kind": 16384,
+									"kindString": "Constructor signature",
+									"flags": {},
+									"parameters": [
+										{
+											"id": 286,
+											"name": "error",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"name": "Error"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 275,
+										"name": "ErrorMessageEmbed"
+									},
+									"overwrites": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.constructor"
+									}
+								}
+							],
+							"overwrites": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.constructor"
+							}
+						},
+						{
+							"id": 288,
+							"name": "author",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1425,
+									"character": 17
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "reference",
+										"name": "MessageEmbedAuthor"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.author"
+							}
+						},
+						{
+							"id": 289,
+							"name": "color",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1426,
+									"character": 16
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.color"
+							}
+						},
+						{
+							"id": 290,
+							"name": "createdAt",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true,
+								"isReadonly": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1427,
+									"character": 29
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "reference",
+										"name": "Date"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.createdAt"
+							}
+						},
+						{
+							"id": 291,
+							"name": "description",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1428,
+									"character": 22
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.description"
+							}
+						},
+						{
+							"id": 287,
+							"name": "error",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true
+							},
+							"type": {
+								"type": "reference",
+								"name": "Error"
+							}
+						},
+						{
+							"id": 292,
+							"name": "fields",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1429,
+									"character": 17
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"name": "EmbedField"
+								}
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.fields"
+							}
+						},
+						{
+							"id": 293,
+							"name": "files",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1430,
+									"character": 16
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "union",
+									"types": [
+										{
+											"type": "intrinsic",
+											"name": "string"
+										},
+										{
+											"type": "reference",
+											"name": "MessageAttachment"
+										},
+										{
+											"type": "reference",
+											"name": "FileOptions"
+										}
+									]
+								}
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.files"
+							}
+						},
+						{
+							"id": 294,
+							"name": "footer",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1431,
+									"character": 17
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "reference",
+										"name": "MessageEmbedFooter"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.footer"
+							}
+						},
+						{
+							"id": 295,
+							"name": "hexColor",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true,
+								"isReadonly": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1432,
+									"character": 28
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.hexColor"
+							}
+						},
+						{
+							"id": 296,
+							"name": "image",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1433,
+									"character": 16
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "reference",
+										"name": "MessageEmbedImage"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.image"
+							}
+						},
+						{
+							"id": 297,
+							"name": "length",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true,
+								"isReadonly": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1434,
+									"character": 26
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.length"
+							}
+						},
+						{
+							"id": 298,
+							"name": "provider",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1435,
+									"character": 19
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "reference",
+										"name": "MessageEmbedProvider"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.provider"
+							}
+						},
+						{
+							"id": 299,
+							"name": "thumbnail",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1436,
+									"character": 20
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "reference",
+										"name": "MessageEmbedThumbnail"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.thumbnail"
+							}
+						},
+						{
+							"id": 300,
+							"name": "timestamp",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1437,
+									"character": 20
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.timestamp"
+							}
+						},
+						{
+							"id": 301,
+							"name": "title",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1438,
+									"character": 16
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.title"
+							}
+						},
+						{
+							"id": 302,
+							"name": "type",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1439,
+									"character": 15
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.type"
+							}
+						},
+						{
+							"id": 303,
+							"name": "url",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1440,
+									"character": 14
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.url"
+							}
+						},
+						{
+							"id": 304,
+							"name": "video",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true,
+								"isReadonly": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1441,
+									"character": 25
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "reference",
+										"name": "MessageEmbedVideo"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.video"
+							}
+						},
+						{
+							"id": 305,
+							"name": "addField",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1442,
+									"character": 19
+								}
+							],
+							"signatures": [
+								{
+									"id": 306,
+									"name": "addField",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 307,
+											"name": "name",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 308,
+											"name": "value",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 309,
+											"name": "inline",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "boolean"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 275,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.addField"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.addField"
+							}
+						},
+						{
+							"id": 310,
+							"name": "addFields",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1443,
+									"character": 20
+								}
+							],
+							"signatures": [
+								{
+									"id": 311,
+									"name": "addFields",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 312,
+											"name": "fields",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isRest": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "array",
+														"elementType": {
+															"type": "reference",
+															"name": "EmbedFieldData"
+														}
+													},
+													{
+														"type": "array",
+														"elementType": {
+															"type": "array",
+															"elementType": {
+																"type": "reference",
+																"name": "EmbedFieldData"
+															}
+														}
+													}
+												]
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 275,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.addFields"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.addFields"
+							}
+						},
+						{
+							"id": 313,
+							"name": "attachFiles",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1444,
+									"character": 22
+								}
+							],
+							"signatures": [
+								{
+									"id": 314,
+									"name": "attachFiles",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 315,
+											"name": "file",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "array",
+												"elementType": {
+													"type": "union",
+													"types": [
+														{
+															"type": "intrinsic",
+															"name": "string"
+														},
+														{
+															"type": "reference",
+															"name": "MessageAttachment"
+														},
+														{
+															"type": "reference",
+															"name": "FileOptions"
+														}
+													]
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 275,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.attachFiles"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.attachFiles"
+							}
+						},
+						{
+							"id": 316,
+							"name": "setAuthor",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1445,
+									"character": 20
+								}
+							],
+							"signatures": [
+								{
+									"id": 317,
+									"name": "setAuthor",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 318,
+											"name": "name",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 319,
+											"name": "iconURL",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 320,
+											"name": "url",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 275,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.setAuthor"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.setAuthor"
+							}
+						},
+						{
+							"id": 321,
+							"name": "setColor",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1446,
+									"character": 19
+								}
+							],
+							"signatures": [
+								{
+									"id": 322,
+									"name": "setColor",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 323,
+											"name": "color",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "ColorResolvable"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 275,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.setColor"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.setColor"
+							}
+						},
+						{
+							"id": 324,
+							"name": "setDescription",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1447,
+									"character": 25
+								}
+							],
+							"signatures": [
+								{
+									"id": 325,
+									"name": "setDescription",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 326,
+											"name": "description",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 275,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.setDescription"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.setDescription"
+							}
+						},
+						{
+							"id": 327,
+							"name": "setFooter",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1448,
+									"character": 20
+								}
+							],
+							"signatures": [
+								{
+									"id": 328,
+									"name": "setFooter",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 329,
+											"name": "text",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 330,
+											"name": "iconURL",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 275,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.setFooter"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.setFooter"
+							}
+						},
+						{
+							"id": 331,
+							"name": "setImage",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1449,
+									"character": 19
+								}
+							],
+							"signatures": [
+								{
+									"id": 332,
+									"name": "setImage",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 333,
+											"name": "url",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 275,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.setImage"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.setImage"
+							}
+						},
+						{
+							"id": 334,
+							"name": "setThumbnail",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1450,
+									"character": 23
+								}
+							],
+							"signatures": [
+								{
+									"id": 335,
+									"name": "setThumbnail",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 336,
+											"name": "url",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 275,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.setThumbnail"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.setThumbnail"
+							}
+						},
+						{
+							"id": 337,
+							"name": "setTimestamp",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1451,
+									"character": 23
+								}
+							],
+							"signatures": [
+								{
+									"id": 338,
+									"name": "setTimestamp",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 339,
+											"name": "timestamp",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "number"
+													},
+													{
+														"type": "reference",
+														"name": "Date"
+													}
+												]
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 275,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.setTimestamp"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.setTimestamp"
+							}
+						},
+						{
+							"id": 340,
+							"name": "setTitle",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1452,
+									"character": 19
+								}
+							],
+							"signatures": [
+								{
+									"id": 341,
+									"name": "setTitle",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 342,
+											"name": "title",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 275,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.setTitle"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.setTitle"
+							}
+						},
+						{
+							"id": 343,
+							"name": "setURL",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1453,
+									"character": 17
+								}
+							],
+							"signatures": [
+								{
+									"id": 344,
+									"name": "setURL",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 345,
+											"name": "url",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 275,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.setURL"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.setURL"
+							}
+						},
+						{
+							"id": 346,
+							"name": "spliceFields",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1454,
+									"character": 23
+								}
+							],
+							"signatures": [
+								{
+									"id": 347,
+									"name": "spliceFields",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 348,
+											"name": "index",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "number"
+											}
+										},
+										{
+											"id": 349,
+											"name": "deleteCount",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "number"
+											}
+										},
+										{
+											"id": 350,
+											"name": "fields",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isRest": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "array",
+														"elementType": {
+															"type": "reference",
+															"name": "EmbedFieldData"
+														}
+													},
+													{
+														"type": "array",
+														"elementType": {
+															"type": "array",
+															"elementType": {
+																"type": "reference",
+																"name": "EmbedFieldData"
+															}
+														}
+													}
+												]
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 275,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.spliceFields"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.spliceFields"
+							}
+						},
+						{
+							"id": 351,
+							"name": "toJSON",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1455,
+									"character": 17
+								}
+							],
+							"signatures": [
+								{
+									"id": 352,
+									"name": "toJSON",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "unknown"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.toJSON"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.toJSON"
+							}
+						},
+						{
+							"id": 276,
+							"name": "normalizeField",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isStatic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1457,
+									"character": 32
+								}
+							],
+							"signatures": [
+								{
+									"id": 277,
+									"name": "normalizeField",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 278,
+											"name": "name",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 279,
+											"name": "value",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 280,
+											"name": "inline",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "boolean"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"typeArguments": [
+											{
+												"type": "reference",
+												"name": "EmbedFieldData"
+											}
+										],
+										"name": "Required"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.normalizeField"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.normalizeField"
+							}
+						},
+						{
+							"id": 281,
+							"name": "normalizeFields",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isStatic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1458,
+									"character": 33
+								}
+							],
+							"signatures": [
+								{
+									"id": 282,
+									"name": "normalizeFields",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 283,
+											"name": "fields",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isRest": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "array",
+														"elementType": {
+															"type": "reference",
+															"name": "EmbedFieldData"
+														}
+													},
+													{
+														"type": "array",
+														"elementType": {
+															"type": "array",
+															"elementType": {
+																"type": "reference",
+																"name": "EmbedFieldData"
+															}
+														}
+													}
+												]
+											}
+										}
+									],
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"typeArguments": [
+												{
+													"type": "reference",
+													"name": "EmbedFieldData"
+												}
+											],
+											"name": "Required"
+										}
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.normalizeFields"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.normalizeFields"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"kind": 512,
+							"children": [
+								284
+							]
+						},
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								288,
+								289,
+								290,
+								291,
+								287,
+								292,
+								293,
+								294,
+								295,
+								296,
+								297,
+								298,
+								299,
+								300,
+								301,
+								302,
+								303,
+								304
+							]
+						},
+						{
+							"title": "Methods",
+							"kind": 2048,
+							"children": [
+								305,
+								310,
+								313,
+								316,
+								321,
+								324,
+								327,
+								331,
+								334,
+								337,
+								340,
+								343,
+								346,
+								351,
+								276,
+								281
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "packages/core/src/util/ErrorMessageEmbed.ts",
+							"line": 7,
+							"character": 30
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"name": "MessageEmbed"
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Classes",
+					"kind": 128,
+					"children": [
+						275
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "packages/core/src/util/ErrorMessageEmbed.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 353,
+			"name": "interactions/src",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 354,
+					"name": "commands",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "packages/interactions/src/index.ts",
+							"line": 3,
+							"character": 24
+						}
+					],
+					"signatures": [
+						{
+							"id": 355,
+							"name": "commands",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						354
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "packages/interactions/src/index.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Modules",
+			"kind": 1,
+			"children": [
+				224,
+				1,
+				223,
+				219,
+				215,
+				231,
+				233,
+				247,
+				274,
+				353
 			]
 		}
 	]

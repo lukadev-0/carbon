@@ -16,6 +16,10 @@ export enum CarbonErrorType {
  */
 export class CarbonError extends Error {
     name = 'CarbonError'
+    /**
+     * @param code The error type
+     * @param message The error message
+     */
 
     constructor(public code: CarbonErrorType, public message: string) {
         super()
