@@ -555,3 +555,5 @@ export interface RootObject {
     children: Child[];
     groups: Group3[];
 }
+
+export const allowedTypes = [ 'enumeration', 'class' ]

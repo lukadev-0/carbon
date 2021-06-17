@@ -15,6 +15,7 @@ export default function SecondTab(): JSX.Element {
             <Head title='Carbon API docs' name='Carbon API docs' description="Main page of Carbon API docs" />
             <DeveloperHeader>
                 <Typography className={classes.heading} variant="h2">Welcome to the API docs</Typography>
+                <Typography>Every class & enum are documented here.</Typography>
             </DeveloperHeader>
         </div>
     )

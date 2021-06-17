@@ -9,6 +9,7 @@ import DeveloperDocElement from '../../../src/DeveloperDocElement'
 import GetTags from '../../../src/GetTags'
 import { Alert } from '@material-ui/lab'
 import Head from '../../../src/Head'
+import { allowedTypes } from '../../../src/DocsTypes'
 
 export default function DynamicDoc(): JSX.Element {
     const theme = useTheme()
@@ -16,7 +17,6 @@ export default function DynamicDoc(): JSX.Element {
     const { type: name } = router.query
     const possibleDoc = FindDoc().flat()
     const doc = possibleDoc?.find((v) => v.name === name)
-    if (!possibleDoc || possibleDoc.length <= 0 || !doc) return <div>This page doesn't exist.</div>
     const isClass = doc.kindString.toLowerCase() === 'class'
     // START: code string constructing
     const constructorKeyword = isClass ? 'new ' : ''
@@ -65,4 +65,15 @@ export default function DynamicDoc(): JSX.Element {
             </DeveloperHeader>
         </div>
     )
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const getStaticPaths: any = async () => {
+    const paths = FindDoc().flat().filter((v) => allowedTypes.includes(v.kindString.toLowerCase())).map((v) => {
+        return { id: v.name }
+    })
+    return {
+        paths,
+        fallback: false,
+    }
 }

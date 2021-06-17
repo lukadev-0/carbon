@@ -3,6 +3,7 @@ import Header from './Header'
 import { Drawer, makeStyles, Toolbar, List } from '@material-ui/core'
 import DrawerButton from './DeveloperDrawerElement'
 import FindDoc from './FindDoc'
+import { allowedTypes } from './DocsTypes'
 const width = 240
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -19,8 +20,6 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: theme.spacing(2),
     },
 }))
-
-const allowedTypes = [ 'enumeration', 'class' ]
 
 const developerHeader: React.FC = ({ children }) => {
     const classes = useStyles()
