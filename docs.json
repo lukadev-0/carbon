@@ -4268,7 +4268,7 @@
 			]
 		},
 		{
-			"id": 223,
+			"id": 215,
 			"name": "core/src/handlers/__tests__/interaction",
 			"kind": 1,
 			"kindString": "Module",
@@ -4282,14 +4282,14 @@
 			]
 		},
 		{
-			"id": 219,
+			"id": 220,
 			"name": "core/src/handlers/interaction",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 220,
+					"id": 221,
 					"name": "handleInteraction",
 					"kind": 64,
 					"kindString": "Function",
@@ -4303,14 +4303,14 @@
 					],
 					"signatures": [
 						{
-							"id": 221,
+							"id": 222,
 							"name": "handleInteraction",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 222,
+									"id": 223,
 									"name": "interaction",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -4334,7 +4334,7 @@
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						220
+						221
 					]
 				}
 			],
@@ -4347,14 +4347,14 @@
 			]
 		},
 		{
-			"id": 215,
+			"id": 216,
 			"name": "core/src/handlers/interaction/command",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 216,
+					"id": 217,
 					"name": "handleCommandInteraction",
 					"kind": 64,
 					"kindString": "Function",
@@ -4368,14 +4368,14 @@
 					],
 					"signatures": [
 						{
-							"id": 217,
+							"id": 218,
 							"name": "handleCommandInteraction",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 218,
+									"id": 219,
 									"name": "interaction",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -4399,7 +4399,7 @@
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						216
+						217
 					]
 				}
 			],
@@ -7138,9 +7138,9 @@
 			"children": [
 				224,
 				1,
-				223,
-				219,
 				215,
+				220,
+				216,
 				231,
 				233,
 				247,
