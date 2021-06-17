@@ -4,11 +4,13 @@ import CodeColor from 'react-syntax-highlighter/dist/cjs/styles/hljs/vs2015'
 
 interface CodeBlockProps {
     lang?: string
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    style?: any
 }
 
-const codeBlock: React.FC<CodeBlockProps> = ({ children, lang }) =>
+const codeBlock: React.FC<CodeBlockProps> = ({ children, lang, style }) =>
     (
-        <Highlight language={lang ?? 'typescript'} style={CodeColor}>
+        <Highlight language={lang ?? 'typescript'} style={CodeColor} customStyle={style}>
             {children}
         </Highlight>
     )

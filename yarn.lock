@@ -470,6 +470,7 @@ __metadata:
   dependencies:
     "@material-ui/core": ^4.11.4
     "@material-ui/icons": ^4.11.2
+    "@material-ui/lab": ^4.0.0-alpha.58
     "@types/node": ^15.12.2
     "@types/prop-types": ^15.7.3
     "@types/react": ^17.0.11
@@ -1045,6 +1046,27 @@ __metadata:
     "@types/react":
       optional: true
   checksum: 0f5f70d10581e50e96dadf4d7cd5ef2acdc135e460a74eb29fdeecd5fd98fb1caae9692979997438a9606c193b52b6e0186cabf57af1352fa92221b7eb71ea83
+  languageName: node
+  linkType: hard
+
+"@material-ui/lab@npm:^4.0.0-alpha.58":
+  version: 4.0.0-alpha.58
+  resolution: "@material-ui/lab@npm:4.0.0-alpha.58"
+  dependencies:
+    "@babel/runtime": ^7.4.4
+    "@material-ui/utils": ^4.11.2
+    clsx: ^1.0.4
+    prop-types: ^15.7.2
+    react-is: ^16.8.0 || ^17.0.0
+  peerDependencies:
+    "@material-ui/core": ^4.9.10
+    "@types/react": ^16.8.6 || ^17.0.0
+    react: ^16.8.0 || ^17.0.0
+    react-dom: ^16.8.0 || ^17.0.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 4d5f07198fab98bfda88a9f2ae808034cbbb1325438778e0f4d7a1af103e406b474acc145bc7bf9c55551886b5e937c36352c50e8193b6ecc73dca416a316807
   languageName: node
   linkType: hard
 

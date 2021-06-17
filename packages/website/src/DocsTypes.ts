@@ -8,6 +8,12 @@ export interface Flags2 {
 
 export interface Flags3 {
     isConst?: boolean;
+    isPublic: boolean,
+    isExternal: boolean,
+    isReadonly: boolean
+    isStatic: boolean
+    isRest: boolean
+    isPrivate: boolean
 }
 
 export interface Source {
@@ -487,6 +493,11 @@ export interface Type17 {
 
 export interface Comment4 {
     shortText: string;
+    text: string
+    tags: [{
+        tag: string
+        text: string
+    }]
 }
 
 export interface Child2 {
@@ -522,14 +533,11 @@ export interface Child {
     name: string;
     kind: number;
     kindString: string;
-    flags: Flags2;
+    flags: Flags3;
     children: Child2[];
     groups: Group2[];
     sources: Source3[];
-    comment: {
-        text: string
-        shortText: string
-    }
+    comment: Comment4
 }
 
 export interface Group3 {

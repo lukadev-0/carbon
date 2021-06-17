@@ -13,7 +13,7 @@ jobs:
       - name: Run yarn
         run: yarn
       - name: Make docs
-        run: yarn typedoc packages --exclude 'packages/website/**/*' --json docs.json
+        run: yarn doc
       - uses: EndBug/add-and-commit@v7
         with:
           message: 'docs: make docs'

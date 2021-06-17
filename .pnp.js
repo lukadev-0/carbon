@@ -903,6 +903,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@carbon-js/website", "workspace:packages/website"],
             ["@material-ui/core", "virtual:fa402b1d7b63f5a115b11a019e4f199498adf5b34f17226b7a5c0cce8d4992571debefe684744d15616257ce764a94142ad67209a75110e634f7960021165509#npm:4.11.4"],
             ["@material-ui/icons", "virtual:fa402b1d7b63f5a115b11a019e4f199498adf5b34f17226b7a5c0cce8d4992571debefe684744d15616257ce764a94142ad67209a75110e634f7960021165509#npm:4.11.2"],
+            ["@material-ui/lab", "virtual:fa402b1d7b63f5a115b11a019e4f199498adf5b34f17226b7a5c0cce8d4992571debefe684744d15616257ce764a94142ad67209a75110e634f7960021165509#npm:4.0.0-alpha.58"],
             ["@types/node", "npm:15.12.2"],
             ["@types/prop-types", "npm:15.7.3"],
             ["@types/react", "npm:17.0.11"],
@@ -1558,6 +1559,43 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/types__react", null],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:fa402b1d7b63f5a115b11a019e4f199498adf5b34f17226b7a5c0cce8d4992571debefe684744d15616257ce764a94142ad67209a75110e634f7960021165509#npm:17.0.2"]
+          ],
+          "packagePeers": [
+            "@material-ui/core",
+            "@types/material-ui__core",
+            "@types/react-dom",
+            "@types/react",
+            "@types/types__react",
+            "react-dom",
+            "react"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@material-ui/lab", [
+        ["npm:4.0.0-alpha.58", {
+          "packageLocation": "./.yarn/cache/@material-ui-lab-npm-4.0.0-alpha.58-05f1e9da95-4d5f07198f.zip/node_modules/@material-ui/lab/",
+          "packageDependencies": [
+            ["@material-ui/lab", "npm:4.0.0-alpha.58"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:fa402b1d7b63f5a115b11a019e4f199498adf5b34f17226b7a5c0cce8d4992571debefe684744d15616257ce764a94142ad67209a75110e634f7960021165509#npm:4.0.0-alpha.58", {
+          "packageLocation": "./.yarn/$$virtual/@material-ui-lab-virtual-064eb161df/0/cache/@material-ui-lab-npm-4.0.0-alpha.58-05f1e9da95-4d5f07198f.zip/node_modules/@material-ui/lab/",
+          "packageDependencies": [
+            ["@material-ui/lab", "virtual:fa402b1d7b63f5a115b11a019e4f199498adf5b34f17226b7a5c0cce8d4992571debefe684744d15616257ce764a94142ad67209a75110e634f7960021165509#npm:4.0.0-alpha.58"],
+            ["@babel/runtime", "npm:7.14.5"],
+            ["@material-ui/core", "virtual:fa402b1d7b63f5a115b11a019e4f199498adf5b34f17226b7a5c0cce8d4992571debefe684744d15616257ce764a94142ad67209a75110e634f7960021165509#npm:4.11.4"],
+            ["@material-ui/utils", "virtual:ab3b2bdd1dca2b8f18098fc25de9979a6f2f9c4b5df59292b559c9658243ee9728b8a1e878458efc8e6b7503f7be53d771348ee2d107da7687c23775dbc9e581#npm:4.11.2"],
+            ["@types/material-ui__core", null],
+            ["@types/react", "npm:17.0.11"],
+            ["@types/react-dom", null],
+            ["@types/types__react", null],
+            ["clsx", "npm:1.1.1"],
+            ["prop-types", "npm:15.7.2"],
+            ["react", "npm:17.0.2"],
+            ["react-dom", "virtual:fa402b1d7b63f5a115b11a019e4f199498adf5b34f17226b7a5c0cce8d4992571debefe684744d15616257ce764a94142ad67209a75110e634f7960021165509#npm:17.0.2"],
+            ["react-is", "npm:17.0.2"]
           ],
           "packagePeers": [
             "@material-ui/core",

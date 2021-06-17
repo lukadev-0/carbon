@@ -10,7 +10,8 @@
 		"dev": "jest --watch",
 		"lint": "eslint 'packages/*/src/**/*'",
 		"lint:fix": "yarn lint --fix",
-		"postinstall": "husky install"
+		"postinstall": "husky install",
+		"doc": "yarn typedoc packages --json docs.json"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^12.1.4",

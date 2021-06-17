@@ -25,7 +25,6 @@ const allowedTypes = [ 'enumeration', 'class' ]
 const developerHeader: React.FC = ({ children }) => {
     const classes = useStyles()
     const docs = FindDoc().flat()
-    console.log(docs)
     if (!docs || docs.length <= 0) return <div>Couldn't fetch docs.</div>
     return (
         <div className={classes.root}>

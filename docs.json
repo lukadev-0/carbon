@@ -4268,7 +4268,7 @@
 			]
 		},
 		{
-			"id": 215,
+			"id": 223,
 			"name": "core/src/handlers/__tests__/interaction",
 			"kind": 1,
 			"kindString": "Module",
@@ -4282,14 +4282,14 @@
 			]
 		},
 		{
-			"id": 220,
+			"id": 219,
 			"name": "core/src/handlers/interaction",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 221,
+					"id": 220,
 					"name": "handleInteraction",
 					"kind": 64,
 					"kindString": "Function",
@@ -4303,14 +4303,14 @@
 					],
 					"signatures": [
 						{
-							"id": 222,
+							"id": 221,
 							"name": "handleInteraction",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 223,
+									"id": 222,
 									"name": "interaction",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -4334,7 +4334,7 @@
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						221
+						220
 					]
 				}
 			],
@@ -4347,14 +4347,14 @@
 			]
 		},
 		{
-			"id": 216,
+			"id": 215,
 			"name": "core/src/handlers/interaction/command",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 217,
+					"id": 216,
 					"name": "handleCommandInteraction",
 					"kind": 64,
 					"kindString": "Function",
@@ -4368,14 +4368,14 @@
 					],
 					"signatures": [
 						{
-							"id": 218,
+							"id": 217,
 							"name": "handleCommandInteraction",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 219,
+									"id": 218,
 									"name": "interaction",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -4399,7 +4399,7 @@
 					"title": "Functions",
 					"kind": 64,
 					"children": [
-						217
+						216
 					]
 				}
 			],
@@ -4825,9 +4825,21 @@
 					"name": "CarbonError",
 					"kind": 128,
 					"kindString": "Class",
-					"flags": {},
+					"flags": {
+						"isPrivate": true
+					},
 					"comment": {
-						"shortText": "Represents a Carbon Error"
+						"shortText": "Represents a Carbon Error",
+						"tags": [
+							{
+								"tag": "deprecated",
+								"text": ""
+							},
+							{
+								"tag": "readonly",
+								"text": "\n"
+							}
+						]
 					},
 					"children": [
 						{
@@ -4931,7 +4943,7 @@
 							"sources": [
 								{
 									"fileName": "packages/core/src/util/CarbonError.ts",
-									"line": 18,
+									"line": 21,
 									"character": 8
 								}
 							],
@@ -5085,7 +5097,7 @@
 							"sources": [
 								{
 									"fileName": "packages/core/src/util/CarbonError.ts",
-									"line": 30,
+									"line": 33,
 									"character": 9
 								}
 							],
@@ -5205,7 +5217,7 @@
 					"sources": [
 						{
 							"fileName": "packages/core/src/util/CarbonError.ts",
-							"line": 17,
+							"line": 20,
 							"character": 24
 						}
 					],
@@ -7126,9 +7138,9 @@
 			"children": [
 				224,
 				1,
+				223,
+				219,
 				215,
-				220,
-				216,
 				231,
 				233,
 				247,
