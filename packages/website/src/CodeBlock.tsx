@@ -8,11 +8,12 @@ interface CodeBlockProps {
     style?: any
 }
 
-const codeBlock: React.FC<CodeBlockProps> = ({ children, lang, style }) =>
+// eslint-disable-next-line @typescript-eslint/naming-convention
+const CodeBlock: React.FC<CodeBlockProps> = ({ children, lang, style }) =>
     (
         <Highlight language={lang ?? 'typescript'} style={CodeColor} customStyle={style}>
             {children}
         </Highlight>
     )
 
-export default codeBlock
+export default CodeBlock

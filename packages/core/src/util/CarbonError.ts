@@ -13,9 +13,6 @@ export enum CarbonErrorType {
 
 /**
  * Represents a Carbon Error
- * @deprecated
- * @private
- * @readonly
  */
 export class CarbonError extends Error {
     name = 'CarbonError'

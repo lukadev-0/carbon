@@ -23,13 +23,14 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-export default function Header({ val }: { val?: number }): JSX.Element {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default function Header({ val, style }: { val?: number, style?: React.CSSProperties }): JSX.Element {
     const classes = useStyles()
     const [ value, setValue ] = React.useState(val ?? 0)
     const [ session ] = useSession()
     const [ anchorEl, setAnchorEl ] = React.useState(null)
     return (
-        <AppBar color="default" className={classes.appBar}>
+        <AppBar color="default" className={classes.appBar} style={style}>
             <Toolbar variant="dense">
                 <CarbonLogo className={classes.logo} />
                 <Typography variant="h6">

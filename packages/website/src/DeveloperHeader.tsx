@@ -21,9 +21,10 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-const developerHeader: React.FC = ({ children }) => {
+// eslint-disable-next-line @typescript-eslint/naming-convention
+const DeveloperHeader: React.FC = ({ children }) => {
     const classes = useStyles()
-    const docs = FindDoc().flat()
+    const docs = FindDoc()
     if (!docs || docs.length <= 0) return <div>Couldn't fetch docs.</div>
     return (
         <div className={classes.root}>
@@ -52,4 +53,4 @@ const developerHeader: React.FC = ({ children }) => {
     )
 }
 
-export default developerHeader
+export default DeveloperHeader

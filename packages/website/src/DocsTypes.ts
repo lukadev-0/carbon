@@ -556,4 +556,4 @@ export interface RootObject {
     groups: Group3[];
 }
 
-export const allowedTypes = [ 'enumeration', 'class' ]
+export const allowedTypes = [ 'enumeration', 'class', 'function' ]
