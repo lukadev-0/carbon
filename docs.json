@@ -4825,21 +4825,9 @@
 					"name": "CarbonError",
 					"kind": 128,
 					"kindString": "Class",
-					"flags": {
-						"isPrivate": true
-					},
+					"flags": {},
 					"comment": {
-						"shortText": "Represents a Carbon Error",
-						"tags": [
-							{
-								"tag": "deprecated",
-								"text": ""
-							},
-							{
-								"tag": "readonly",
-								"text": "\n"
-							}
-						]
+						"shortText": "Represents a Carbon Error"
 					},
 					"children": [
 						{
@@ -4943,7 +4931,7 @@
 							"sources": [
 								{
 									"fileName": "packages/core/src/util/CarbonError.ts",
-									"line": 21,
+									"line": 18,
 									"character": 8
 								}
 							],
@@ -5097,7 +5085,7 @@
 							"sources": [
 								{
 									"fileName": "packages/core/src/util/CarbonError.ts",
-									"line": 33,
+									"line": 30,
 									"character": 9
 								}
 							],
@@ -5217,7 +5205,7 @@
 					"sources": [
 						{
 							"fileName": "packages/core/src/util/CarbonError.ts",
-							"line": 20,
+							"line": 17,
 							"character": 24
 						}
 					],
