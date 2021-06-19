@@ -1,7 +1,2 @@
-export function hi(): string {
-    return 'lol'
-}
-
-export function lol<T>(arg: T): T {
-    return arg
-}
+export { Client } from './client'
+export { CarbonError, CarbonErrorType } from './util/CarbonError'

@@ -891,6 +891,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@carbon-js/interactions", "workspace:packages/interactions"],
             ["@carbon-js/core", "workspace:packages/core"],
             ["@types/jest", "npm:26.0.23"],
+            ["discord.js", "npm:13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930"],
             ["typescript", "patch:typescript@npm%3A4.3.2#builtin<compat/typescript>::version=4.3.2&hash=ddfc1b"]
           ],
           "linkType": "SOFT",

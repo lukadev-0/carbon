@@ -460,6 +460,7 @@ __metadata:
   dependencies:
     "@carbon-js/core": "workspace:packages/core"
     "@types/jest": ^26.0.23
+    discord.js: dev
     typescript: ^4.3.2
   languageName: unknown
   linkType: soft
