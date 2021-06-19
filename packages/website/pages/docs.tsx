@@ -1,12 +1,12 @@
 import React from 'react'
 import Layout from '../src/Layout'
 
-export default function Index(): JSX.Element {
+export default function Docs(): JSX.Element {
     return (
         <div>
-            home
+            Docs
         </div>
     )
 }
 
-Index.layout = Layout.layout
+Docs.layout = Layout.layout
