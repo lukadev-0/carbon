@@ -481,10 +481,12 @@ __metadata:
   dependencies:
     "@material-ui/core": ^4.11.4
     "@material-ui/icons": ^4.11.2
+    "@material-ui/lab": ^4.0.0-alpha.58
     "@types/node": ^15.12.2
     "@types/prop-types": ^15.7.3
     "@types/react": ^17.0.11
     "@types/react-syntax-highlighter": ^13.5.0
+    "@types/yaml-front-matter": ^4
     clsx: ^1.1.1
     next: ^10.2.3
     next-auth: ^3.26.1
@@ -493,6 +495,7 @@ __metadata:
     react-dom: ^17.0.2
     react-syntax-highlighter: ^15.4.3
     typescript: ^4.3.2
+    yaml-front-matter: ^4.1.1
   languageName: unknown
   linkType: soft
 
@@ -1059,6 +1062,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@material-ui/lab@npm:^4.0.0-alpha.58":
+  version: 4.0.0-alpha.58
+  resolution: "@material-ui/lab@npm:4.0.0-alpha.58"
+  dependencies:
+    "@babel/runtime": ^7.4.4
+    "@material-ui/utils": ^4.11.2
+    clsx: ^1.0.4
+    prop-types: ^15.7.2
+    react-is: ^16.8.0 || ^17.0.0
+  peerDependencies:
+    "@material-ui/core": ^4.9.10
+    "@types/react": ^16.8.6 || ^17.0.0
+    react: ^16.8.0 || ^17.0.0
+    react-dom: ^16.8.0 || ^17.0.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 4d5f07198fab98bfda88a9f2ae808034cbbb1325438778e0f4d7a1af103e406b474acc145bc7bf9c55551886b5e937c36352c50e8193b6ecc73dca416a316807
+  languageName: node
+  linkType: hard
+
 "@material-ui/styles@npm:^4.11.4":
   version: 4.11.4
   resolution: "@material-ui/styles@npm:4.11.4"
@@ -1439,6 +1463,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/js-yaml@npm:*":
+  version: 4.0.1
+  resolution: "@types/js-yaml@npm:4.0.1"
+  checksum: fd8985289c713e3b2a494d6c243139c94bdda856af60346cf0c0da25bd6289e0165d367e623202b8cdfab7cef73a424a183282063beb0c0823d152dbec6d4959
+  languageName: node
+  linkType: hard
+
 "@types/json-schema@npm:*, @types/json-schema@npm:^7.0.3, @types/json-schema@npm:^7.0.7":
   version: 7.0.7
   resolution: "@types/json-schema@npm:7.0.7"
@@ -1551,6 +1582,16 @@ __metadata:
   dependencies:
     "@types/node": "*"
   checksum: 6a02b3164250813510c5e73998a2bbca1fb98dc23428d70c2c6d664dfbac3fde32cd8d4eb34c335a0221f49a6f02d71b09645b236b01de1aea85f80352f67e1f
+  languageName: node
+  linkType: hard
+
+"@types/yaml-front-matter@npm:^4":
+  version: 4.1.0
+  resolution: "@types/yaml-front-matter@npm:4.1.0"
+  dependencies:
+    "@types/js-yaml": "*"
+    "@types/node": "*"
+  checksum: 2e47b302dfdbc2b8165c52e35ebaf88924aa119bff37ff59d2bc591a61b5440181dcc59dc3a62ca0b73b4a0b9f4507bcb997ec18e56e2adc7e4dc9e3066e3b8c
   languageName: node
   linkType: hard
 
@@ -2820,6 +2861,13 @@ __metadata:
   version: 1.0.8
   resolution: "comma-separated-tokens@npm:1.0.8"
   checksum: 31a5a2fa6e0f02764b0634e0aa31913c9be0ef568f4e58b5c1ec85d0a6e4a6c367905eacf2c7e59b57d3d05f40cff166ea3c9b6ee8338625cad060ce43ede9fd
+  languageName: node
+  linkType: hard
+
+"commander@npm:^6.2.0":
+  version: 6.2.1
+  resolution: "commander@npm:6.2.1"
+  checksum: 47856aae6f194404122e359d8463e5e1a18f7cbab26722ce69f1379be8514bd49a160ef81a983d3d2091e3240022643354101d1276c797dcdd0b5bfc3c3f04a3
   languageName: node
   linkType: hard
 
@@ -5506,7 +5554,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"js-yaml@npm:^3.13.1":
+"js-yaml@npm:^3.13.1, js-yaml@npm:^3.14.1":
   version: 3.14.1
   resolution: "js-yaml@npm:3.14.1"
   dependencies:
@@ -9289,6 +9337,18 @@ typescript@^4.3.2:
   version: 4.0.0
   resolution: "yallist@npm:4.0.0"
   checksum: a2960ef879af6ee67a76cae29bac9d8bffeb6e9e366c217dbd21464e7fce071933705544724f47e90ba5209cf9c83c17d5582dd04415d86747a826b2a231efb8
+  languageName: node
+  linkType: hard
+
+"yaml-front-matter@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "yaml-front-matter@npm:4.1.1"
+  dependencies:
+    commander: ^6.2.0
+    js-yaml: ^3.14.1
+  bin:
+    yaml-front-matter: bin/js-yaml-front.js
+  checksum: c4534921d88d89eaf167fc5fe33bc340017d2e13f8b48e248147660fe4d63a7d5b174b74e729945a2de80fee1c6739ecf222e49e0456f04b706f902ca6157839
   languageName: node
   linkType: hard
 

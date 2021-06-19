@@ -921,10 +921,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@carbon-js/website", "workspace:packages/website"],
             ["@material-ui/core", "virtual:fa402b1d7b63f5a115b11a019e4f199498adf5b34f17226b7a5c0cce8d4992571debefe684744d15616257ce764a94142ad67209a75110e634f7960021165509#npm:4.11.4"],
             ["@material-ui/icons", "virtual:fa402b1d7b63f5a115b11a019e4f199498adf5b34f17226b7a5c0cce8d4992571debefe684744d15616257ce764a94142ad67209a75110e634f7960021165509#npm:4.11.2"],
+            ["@material-ui/lab", "virtual:fa402b1d7b63f5a115b11a019e4f199498adf5b34f17226b7a5c0cce8d4992571debefe684744d15616257ce764a94142ad67209a75110e634f7960021165509#npm:4.0.0-alpha.58"],
             ["@types/node", "npm:15.12.2"],
             ["@types/prop-types", "npm:15.7.3"],
             ["@types/react", "npm:17.0.11"],
             ["@types/react-syntax-highlighter", "npm:13.5.0"],
+            ["@types/yaml-front-matter", "npm:4.1.0"],
             ["clsx", "npm:1.1.1"],
             ["next", "virtual:fa402b1d7b63f5a115b11a019e4f199498adf5b34f17226b7a5c0cce8d4992571debefe684744d15616257ce764a94142ad67209a75110e634f7960021165509#npm:10.2.3"],
             ["next-auth", "virtual:fa402b1d7b63f5a115b11a019e4f199498adf5b34f17226b7a5c0cce8d4992571debefe684744d15616257ce764a94142ad67209a75110e634f7960021165509#npm:3.26.1"],
@@ -932,7 +934,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:fa402b1d7b63f5a115b11a019e4f199498adf5b34f17226b7a5c0cce8d4992571debefe684744d15616257ce764a94142ad67209a75110e634f7960021165509#npm:17.0.2"],
             ["react-syntax-highlighter", "virtual:fa402b1d7b63f5a115b11a019e4f199498adf5b34f17226b7a5c0cce8d4992571debefe684744d15616257ce764a94142ad67209a75110e634f7960021165509#npm:15.4.3"],
-            ["typescript", "patch:typescript@npm%3A4.3.2#builtin<compat/typescript>::version=4.3.2&hash=ddfc1b"]
+            ["typescript", "patch:typescript@npm%3A4.3.2#builtin<compat/typescript>::version=4.3.2&hash=ddfc1b"],
+            ["yaml-front-matter", "npm:4.1.1"]
           ],
           "linkType": "SOFT",
         }]
@@ -1589,6 +1592,43 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@material-ui/lab", [
+        ["npm:4.0.0-alpha.58", {
+          "packageLocation": "./.yarn/cache/@material-ui-lab-npm-4.0.0-alpha.58-05f1e9da95-4d5f07198f.zip/node_modules/@material-ui/lab/",
+          "packageDependencies": [
+            ["@material-ui/lab", "npm:4.0.0-alpha.58"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:fa402b1d7b63f5a115b11a019e4f199498adf5b34f17226b7a5c0cce8d4992571debefe684744d15616257ce764a94142ad67209a75110e634f7960021165509#npm:4.0.0-alpha.58", {
+          "packageLocation": "./.yarn/$$virtual/@material-ui-lab-virtual-064eb161df/0/cache/@material-ui-lab-npm-4.0.0-alpha.58-05f1e9da95-4d5f07198f.zip/node_modules/@material-ui/lab/",
+          "packageDependencies": [
+            ["@material-ui/lab", "virtual:fa402b1d7b63f5a115b11a019e4f199498adf5b34f17226b7a5c0cce8d4992571debefe684744d15616257ce764a94142ad67209a75110e634f7960021165509#npm:4.0.0-alpha.58"],
+            ["@babel/runtime", "npm:7.14.5"],
+            ["@material-ui/core", "virtual:fa402b1d7b63f5a115b11a019e4f199498adf5b34f17226b7a5c0cce8d4992571debefe684744d15616257ce764a94142ad67209a75110e634f7960021165509#npm:4.11.4"],
+            ["@material-ui/utils", "virtual:ab3b2bdd1dca2b8f18098fc25de9979a6f2f9c4b5df59292b559c9658243ee9728b8a1e878458efc8e6b7503f7be53d771348ee2d107da7687c23775dbc9e581#npm:4.11.2"],
+            ["@types/material-ui__core", null],
+            ["@types/react", "npm:17.0.11"],
+            ["@types/react-dom", null],
+            ["@types/types__react", null],
+            ["clsx", "npm:1.1.1"],
+            ["prop-types", "npm:15.7.2"],
+            ["react", "npm:17.0.2"],
+            ["react-dom", "virtual:fa402b1d7b63f5a115b11a019e4f199498adf5b34f17226b7a5c0cce8d4992571debefe684744d15616257ce764a94142ad67209a75110e634f7960021165509#npm:17.0.2"],
+            ["react-is", "npm:17.0.2"]
+          ],
+          "packagePeers": [
+            "@material-ui/core",
+            "@types/material-ui__core",
+            "@types/react-dom",
+            "@types/react",
+            "@types/types__react",
+            "react-dom",
+            "react"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@material-ui/styles", [
         ["npm:4.11.4", {
           "packageLocation": "./.yarn/cache/@material-ui-styles-npm-4.11.4-24950251c4-bbca7a43f9.zip/node_modules/@material-ui/styles/",
@@ -2116,6 +2156,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@types/js-yaml", [
+        ["npm:4.0.1", {
+          "packageLocation": "./.yarn/cache/@types-js-yaml-npm-4.0.1-b6801279bc-fd8985289c.zip/node_modules/@types/js-yaml/",
+          "packageDependencies": [
+            ["@types/js-yaml", "npm:4.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@types/json-schema", [
         ["npm:7.0.7", {
           "packageLocation": "./.yarn/cache/@types-json-schema-npm-7.0.7-95fb8178d7-b9d2c509fa.zip/node_modules/@types/json-schema/",
@@ -2250,6 +2299,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-ws-npm-7.4.4-63bcbe5794-6a02b31642.zip/node_modules/@types/ws/",
           "packageDependencies": [
             ["@types/ws", "npm:7.4.4"],
+            ["@types/node", "npm:15.12.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/yaml-front-matter", [
+        ["npm:4.1.0", {
+          "packageLocation": "./.yarn/cache/@types-yaml-front-matter-npm-4.1.0-f70486f5f2-2e47b302df.zip/node_modules/@types/yaml-front-matter/",
+          "packageDependencies": [
+            ["@types/yaml-front-matter", "npm:4.1.0"],
+            ["@types/js-yaml", "npm:4.0.1"],
             ["@types/node", "npm:15.12.1"]
           ],
           "linkType": "HARD",
@@ -3832,6 +3892,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/comma-separated-tokens-npm-1.0.8-00dbbf3418-31a5a2fa6e.zip/node_modules/comma-separated-tokens/",
           "packageDependencies": [
             ["comma-separated-tokens", "npm:1.0.8"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["commander", [
+        ["npm:6.2.1", {
+          "packageLocation": "./.yarn/cache/commander-npm-6.2.1-d5b635f237-47856aae6f.zip/node_modules/commander/",
+          "packageDependencies": [
+            ["commander", "npm:6.2.1"]
           ],
           "linkType": "HARD",
         }]
@@ -11324,6 +11393,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/yaml-npm-1.10.2-0e780aebdf-8d72062ea3.zip/node_modules/yaml/",
           "packageDependencies": [
             ["yaml", "npm:1.10.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["yaml-front-matter", [
+        ["npm:4.1.1", {
+          "packageLocation": "./.yarn/cache/yaml-front-matter-npm-4.1.1-36710f5e28-c4534921d8.zip/node_modules/yaml-front-matter/",
+          "packageDependencies": [
+            ["yaml-front-matter", "npm:4.1.1"],
+            ["commander", "npm:6.2.1"],
+            ["js-yaml", "npm:3.14.1"]
           ],
           "linkType": "HARD",
         }]
