@@ -140,7 +140,7 @@ export default function AppBar(): JSX.Element {
                     <MenuItem button={false}>
                         <ListItemText
                             primary={session.user.name}
-                            secondary={'#' + session.user.discriminator}
+                            secondary={`#${session.user.discriminator}`}
                         />
                         <Avatar src={session.user.image} className={classes.menuAvatar} />
                     </MenuItem>
