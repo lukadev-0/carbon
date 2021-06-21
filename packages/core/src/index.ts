@@ -1,1 +1,2 @@
-export * from './client'
+export { Client } from './client'
+export { CarbonError, CarbonErrorType } from './util/CarbonError'

@@ -49,20 +49,12 @@
 										"type": "reference",
 										"id": 2,
 										"name": "Client"
-									},
-									"overwrites": {
-										"type": "reference",
-										"name": "discord.Client.constructor"
 									}
 								}
-							],
-							"overwrites": {
-								"type": "reference",
-								"name": "discord.Client.constructor"
-							}
+							]
 						},
 						{
-							"id": 35,
+							"id": 36,
 							"name": "application",
 							"kind": 1024,
 							"kindString": "Property",
@@ -89,14 +81,10 @@
 										"name": "ClientApplication"
 									}
 								]
-							},
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.application"
 							}
 						},
 						{
-							"id": 36,
+							"id": 37,
 							"name": "channels",
 							"kind": 1024,
 							"kindString": "Property",
@@ -114,14 +102,10 @@
 							"type": {
 								"type": "reference",
 								"name": "ChannelManager"
-							},
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.channels"
 							}
 						},
 						{
-							"id": 37,
+							"id": 38,
 							"name": "emojis",
 							"kind": 1024,
 							"kindString": "Property",
@@ -140,14 +124,10 @@
 							"type": {
 								"type": "reference",
 								"name": "BaseGuildEmojiManager"
-							},
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.emojis"
 							}
 						},
 						{
-							"id": 38,
+							"id": 39,
 							"name": "guilds",
 							"kind": 1024,
 							"kindString": "Property",
@@ -165,14 +145,32 @@
 							"type": {
 								"type": "reference",
 								"name": "GuildManager"
-							},
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.guilds"
 							}
 						},
 						{
-							"id": 39,
+							"id": 35,
+							"name": "interactions",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "packages/core/src/client.ts",
+									"line": 6,
+									"character": 16
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"id": 327,
+									"name": "Command"
+								}
+							}
+						},
+						{
+							"id": 40,
 							"name": "options",
 							"kind": 1024,
 							"kindString": "Property",
@@ -190,14 +188,10 @@
 							"type": {
 								"type": "reference",
 								"name": "ClientOptions"
-							},
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.options"
 							}
 						},
 						{
-							"id": 40,
+							"id": 41,
 							"name": "readyAt",
 							"kind": 1024,
 							"kindString": "Property",
@@ -224,14 +218,10 @@
 										"name": "Date"
 									}
 								]
-							},
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.readyAt"
 							}
 						},
 						{
-							"id": 41,
+							"id": 42,
 							"name": "readyTimestamp",
 							"kind": 1024,
 							"kindString": "Property",
@@ -259,14 +249,10 @@
 										"name": "number"
 									}
 								]
-							},
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.readyTimestamp"
 							}
 						},
 						{
-							"id": 42,
+							"id": 43,
 							"name": "shard",
 							"kind": 1024,
 							"kindString": "Property",
@@ -293,14 +279,10 @@
 										"name": "ShardClientUtil"
 									}
 								]
-							},
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.shard"
 							}
 						},
 						{
-							"id": 43,
+							"id": 44,
 							"name": "token",
 							"kind": 1024,
 							"kindString": "Property",
@@ -327,14 +309,10 @@
 										"name": "string"
 									}
 								]
-							},
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.token"
 							}
 						},
 						{
-							"id": 44,
+							"id": 45,
 							"name": "uptime",
 							"kind": 1024,
 							"kindString": "Property",
@@ -362,14 +340,10 @@
 										"name": "number"
 									}
 								]
-							},
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.uptime"
 							}
 						},
 						{
-							"id": 45,
+							"id": 46,
 							"name": "user",
 							"kind": 1024,
 							"kindString": "Property",
@@ -396,14 +370,10 @@
 										"name": "ClientUser"
 									}
 								]
-							},
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.user"
 							}
 						},
 						{
-							"id": 46,
+							"id": 47,
 							"name": "users",
 							"kind": 1024,
 							"kindString": "Property",
@@ -421,14 +391,10 @@
 							"type": {
 								"type": "reference",
 								"name": "UserManager"
-							},
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.users"
 							}
 						},
 						{
-							"id": 47,
+							"id": 48,
 							"name": "voice",
 							"kind": 1024,
 							"kindString": "Property",
@@ -446,14 +412,10 @@
 							"type": {
 								"type": "reference",
 								"name": "ClientVoiceManager"
-							},
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.voice"
 							}
 						},
 						{
-							"id": 48,
+							"id": 49,
 							"name": "ws",
 							"kind": 1024,
 							"kindString": "Property",
@@ -471,10 +433,6 @@
 							"type": {
 								"type": "reference",
 								"name": "WebSocketManager"
-							},
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.ws"
 							}
 						},
 						{
@@ -501,10 +459,6 @@
 									"id": 29,
 									"name": "captureRejectionSymbol"
 								}
-							},
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.captureRejectionSymbol"
 							}
 						},
 						{
@@ -529,10 +483,6 @@
 							"type": {
 								"type": "intrinsic",
 								"name": "boolean"
-							},
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.captureRejections"
 							}
 						},
 						{
@@ -554,10 +504,6 @@
 							"type": {
 								"type": "intrinsic",
 								"name": "number"
-							},
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.defaultMaxListeners"
 							}
 						},
 						{
@@ -588,14 +534,10 @@
 									"id": 28,
 									"name": "errorMonitor"
 								}
-							},
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.errorMonitor"
 							}
 						},
 						{
-							"id": 170,
+							"id": 171,
 							"name": "addListener",
 							"kind": 2048,
 							"kindString": "Method",
@@ -604,7 +546,7 @@
 							},
 							"signatures": [
 								{
-									"id": 171,
+									"id": 172,
 									"name": "addListener",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -613,7 +555,7 @@
 									},
 									"parameters": [
 										{
-											"id": 172,
+											"id": 173,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -635,7 +577,7 @@
 											}
 										},
 										{
-											"id": 173,
+											"id": 174,
 											"name": "listener",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -645,7 +587,7 @@
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 174,
+													"id": 175,
 													"name": "__type",
 													"kind": 65536,
 													"kindString": "Type literal",
@@ -654,7 +596,7 @@
 													},
 													"signatures": [
 														{
-															"id": 175,
+															"id": 176,
 															"name": "__type",
 															"kind": 4096,
 															"kindString": "Call signature",
@@ -663,7 +605,7 @@
 															},
 															"parameters": [
 																{
-																	"id": 176,
+																	"id": 177,
 																	"name": "args",
 																	"kind": 32768,
 																	"kindString": "Parameter",
@@ -694,20 +636,12 @@
 										"type": "reference",
 										"id": 2,
 										"name": "Client"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.addListener"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.addListener"
-							}
+							]
 						},
 						{
-							"id": 144,
+							"id": 145,
 							"name": "clearImmediate",
 							"kind": 2048,
 							"kindString": "Method",
@@ -724,7 +658,7 @@
 							],
 							"signatures": [
 								{
-									"id": 145,
+									"id": 146,
 									"name": "clearImmediate",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -733,7 +667,7 @@
 									},
 									"parameters": [
 										{
-											"id": 146,
+											"id": 147,
 											"name": "timeout",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -749,20 +683,12 @@
 									"type": {
 										"type": "intrinsic",
 										"name": "void"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.clearImmediate"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.clearImmediate"
-							}
+							]
 						},
 						{
-							"id": 138,
+							"id": 139,
 							"name": "clearInterval",
 							"kind": 2048,
 							"kindString": "Method",
@@ -779,7 +705,7 @@
 							],
 							"signatures": [
 								{
-									"id": 139,
+									"id": 140,
 									"name": "clearInterval",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -788,7 +714,7 @@
 									},
 									"parameters": [
 										{
-											"id": 140,
+											"id": 141,
 											"name": "interval",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -804,20 +730,12 @@
 									"type": {
 										"type": "intrinsic",
 										"name": "void"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.clearInterval"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.clearInterval"
-							}
+							]
 						},
 						{
-							"id": 141,
+							"id": 142,
 							"name": "clearTimeout",
 							"kind": 2048,
 							"kindString": "Method",
@@ -834,7 +752,7 @@
 							],
 							"signatures": [
 								{
-									"id": 142,
+									"id": 143,
 									"name": "clearTimeout",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -843,7 +761,7 @@
 									},
 									"parameters": [
 										{
-											"id": 143,
+											"id": 144,
 											"name": "timeout",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -859,20 +777,12 @@
 									"type": {
 										"type": "intrinsic",
 										"name": "void"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.clearTimeout"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.clearTimeout"
-							}
+							]
 						},
 						{
-							"id": 49,
+							"id": 50,
 							"name": "destroy",
 							"kind": 2048,
 							"kindString": "Method",
@@ -889,7 +799,7 @@
 							],
 							"signatures": [
 								{
-									"id": 50,
+									"id": 51,
 									"name": "destroy",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -899,20 +809,12 @@
 									"type": {
 										"type": "intrinsic",
 										"name": "void"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.destroy"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.destroy"
-							}
+							]
 						},
 						{
-							"id": 107,
+							"id": 108,
 							"name": "emit",
 							"kind": 2048,
 							"kindString": "Method",
@@ -929,7 +831,7 @@
 							],
 							"signatures": [
 								{
-									"id": 108,
+									"id": 109,
 									"name": "emit",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -938,7 +840,7 @@
 									},
 									"typeParameter": [
 										{
-											"id": 109,
+											"id": 110,
 											"name": "K",
 											"kind": 131072,
 											"kindString": "Type parameter",
@@ -957,7 +859,7 @@
 									],
 									"parameters": [
 										{
-											"id": 110,
+											"id": 111,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -970,7 +872,7 @@
 											}
 										},
 										{
-											"id": 111,
+											"id": 112,
 											"name": "args",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -994,14 +896,10 @@
 									"type": {
 										"type": "intrinsic",
 										"name": "boolean"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.emit"
 									}
 								},
 								{
-									"id": 112,
+									"id": 113,
 									"name": "emit",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1010,7 +908,7 @@
 									},
 									"typeParameter": [
 										{
-											"id": 113,
+											"id": 114,
 											"name": "S",
 											"kind": 131072,
 											"kindString": "Type parameter",
@@ -1034,7 +932,7 @@
 									],
 									"parameters": [
 										{
-											"id": 114,
+											"id": 115,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1061,7 +959,7 @@
 											}
 										},
 										{
-											"id": 115,
+											"id": 116,
 											"name": "args",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1081,20 +979,12 @@
 									"type": {
 										"type": "intrinsic",
 										"name": "boolean"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.emit"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.emit"
-							}
+							]
 						},
 						{
-							"id": 212,
+							"id": 213,
 							"name": "eventNames",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1103,7 +993,7 @@
 							},
 							"signatures": [
 								{
-									"id": 213,
+									"id": 214,
 									"name": "eventNames",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1125,20 +1015,12 @@
 												}
 											]
 										}
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.eventNames"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.eventNames"
-							}
+							]
 						},
 						{
-							"id": 51,
+							"id": 52,
 							"name": "fetchGuildPreview",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1155,7 +1037,7 @@
 							],
 							"signatures": [
 								{
-									"id": 52,
+									"id": 53,
 									"name": "fetchGuildPreview",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1164,7 +1046,7 @@
 									},
 									"parameters": [
 										{
-											"id": 53,
+											"id": 54,
 											"name": "guild",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1186,20 +1068,12 @@
 											}
 										],
 										"name": "Promise"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.fetchGuildPreview"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.fetchGuildPreview"
-							}
+							]
 						},
 						{
-							"id": 57,
+							"id": 58,
 							"name": "fetchGuildTemplate",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1216,7 +1090,7 @@
 							],
 							"signatures": [
 								{
-									"id": 58,
+									"id": 59,
 									"name": "fetchGuildTemplate",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1225,7 +1099,7 @@
 									},
 									"parameters": [
 										{
-											"id": 59,
+											"id": 60,
 											"name": "template",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1247,20 +1121,12 @@
 											}
 										],
 										"name": "Promise"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.fetchGuildTemplate"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.fetchGuildTemplate"
-							}
+							]
 						},
 						{
-							"id": 54,
+							"id": 55,
 							"name": "fetchInvite",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1277,7 +1143,7 @@
 							],
 							"signatures": [
 								{
-									"id": 55,
+									"id": 56,
 									"name": "fetchInvite",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1286,7 +1152,7 @@
 									},
 									"parameters": [
 										{
-											"id": 56,
+											"id": 57,
 											"name": "invite",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1308,20 +1174,12 @@
 											}
 										],
 										"name": "Promise"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.fetchInvite"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.fetchInvite"
-							}
+							]
 						},
 						{
-							"id": 60,
+							"id": 61,
 							"name": "fetchVoiceRegions",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1338,7 +1196,7 @@
 							],
 							"signatures": [
 								{
-									"id": 61,
+									"id": 62,
 									"name": "fetchVoiceRegions",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1364,20 +1222,12 @@
 											}
 										],
 										"name": "Promise"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.fetchVoiceRegions"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.fetchVoiceRegions"
-							}
+							]
 						},
 						{
-							"id": 62,
+							"id": 63,
 							"name": "fetchWebhook",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1394,7 +1244,7 @@
 							],
 							"signatures": [
 								{
-									"id": 63,
+									"id": 64,
 									"name": "fetchWebhook",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1403,7 +1253,7 @@
 									},
 									"parameters": [
 										{
-											"id": 64,
+											"id": 65,
 											"name": "id",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1425,7 +1275,7 @@
 											}
 										},
 										{
-											"id": 65,
+											"id": 66,
 											"name": "token",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1448,20 +1298,12 @@
 											}
 										],
 										"name": "Promise"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.fetchWebhook"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.fetchWebhook"
-							}
+							]
 						},
 						{
-							"id": 66,
+							"id": 67,
 							"name": "generateInvite",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1478,7 +1320,7 @@
 							],
 							"signatures": [
 								{
-									"id": 67,
+									"id": 68,
 									"name": "generateInvite",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1487,7 +1329,7 @@
 									},
 									"parameters": [
 										{
-											"id": 68,
+											"id": 69,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1504,20 +1346,12 @@
 									"type": {
 										"type": "intrinsic",
 										"name": "string"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.generateInvite"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.generateInvite"
-							}
+							]
 						},
 						{
-							"id": 187,
+							"id": 188,
 							"name": "getMaxListeners",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1526,7 +1360,7 @@
 							},
 							"signatures": [
 								{
-									"id": 188,
+									"id": 189,
 									"name": "getMaxListeners",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1536,20 +1370,12 @@
 									"type": {
 										"type": "intrinsic",
 										"name": "number"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.getMaxListeners"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.getMaxListeners"
-							}
+							]
 						},
 						{
-							"id": 195,
+							"id": 196,
 							"name": "listenerCount",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1558,7 +1384,7 @@
 							},
 							"signatures": [
 								{
-									"id": 196,
+									"id": 197,
 									"name": "listenerCount",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1567,7 +1393,7 @@
 									},
 									"parameters": [
 										{
-											"id": 197,
+											"id": 198,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1592,20 +1418,12 @@
 									"type": {
 										"type": "intrinsic",
 										"name": "number"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.listenerCount"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.listenerCount"
-							}
+							]
 						},
 						{
-							"id": 189,
+							"id": 190,
 							"name": "listeners",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1614,7 +1432,7 @@
 							},
 							"signatures": [
 								{
-									"id": 190,
+									"id": 191,
 									"name": "listeners",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1623,7 +1441,7 @@
 									},
 									"parameters": [
 										{
-											"id": 191,
+											"id": 192,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1651,20 +1469,12 @@
 											"type": "reference",
 											"name": "Function"
 										}
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.listeners"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.listeners"
-							}
+							]
 						},
 						{
-							"id": 69,
+							"id": 70,
 							"name": "login",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1681,7 +1491,7 @@
 							],
 							"signatures": [
 								{
-									"id": 70,
+									"id": 71,
 									"name": "login",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1690,7 +1500,7 @@
 									},
 									"parameters": [
 										{
-											"id": 71,
+											"id": 72,
 											"name": "token",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1713,20 +1523,12 @@
 											}
 										],
 										"name": "Promise"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.login"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.login"
-							}
+							]
 						},
 						{
-							"id": 116,
+							"id": 117,
 							"name": "off",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1743,7 +1545,7 @@
 							],
 							"signatures": [
 								{
-									"id": 117,
+									"id": 118,
 									"name": "off",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1752,7 +1554,7 @@
 									},
 									"typeParameter": [
 										{
-											"id": 118,
+											"id": 119,
 											"name": "K",
 											"kind": 131072,
 											"kindString": "Type parameter",
@@ -1771,7 +1573,7 @@
 									],
 									"parameters": [
 										{
-											"id": 119,
+											"id": 120,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1784,7 +1586,7 @@
 											}
 										},
 										{
-											"id": 120,
+											"id": 121,
 											"name": "listener",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1794,7 +1596,7 @@
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 121,
+													"id": 122,
 													"name": "__type",
 													"kind": 65536,
 													"kindString": "Type literal",
@@ -1803,7 +1605,7 @@
 													},
 													"signatures": [
 														{
-															"id": 122,
+															"id": 123,
 															"name": "__type",
 															"kind": 4096,
 															"kindString": "Call signature",
@@ -1812,7 +1614,7 @@
 															},
 															"parameters": [
 																{
-																	"id": 123,
+																	"id": 124,
 																	"name": "args",
 																	"kind": 32768,
 																	"kindString": "Parameter",
@@ -1853,14 +1655,10 @@
 										"type": "reference",
 										"id": 2,
 										"name": "Client"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.off"
 									}
 								},
 								{
-									"id": 124,
+									"id": 125,
 									"name": "off",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1869,7 +1667,7 @@
 									},
 									"typeParameter": [
 										{
-											"id": 125,
+											"id": 126,
 											"name": "S",
 											"kind": 131072,
 											"kindString": "Type parameter",
@@ -1893,7 +1691,7 @@
 									],
 									"parameters": [
 										{
-											"id": 126,
+											"id": 127,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1920,7 +1718,7 @@
 											}
 										},
 										{
-											"id": 127,
+											"id": 128,
 											"name": "listener",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1930,7 +1728,7 @@
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 128,
+													"id": 129,
 													"name": "__type",
 													"kind": 65536,
 													"kindString": "Type literal",
@@ -1939,7 +1737,7 @@
 													},
 													"signatures": [
 														{
-															"id": 129,
+															"id": 130,
 															"name": "__type",
 															"kind": 4096,
 															"kindString": "Call signature",
@@ -1948,7 +1746,7 @@
 															},
 															"parameters": [
 																{
-																	"id": 130,
+																	"id": 131,
 																	"name": "args",
 																	"kind": 32768,
 																	"kindString": "Parameter",
@@ -1985,20 +1783,12 @@
 										"type": "reference",
 										"id": 2,
 										"name": "Client"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.off"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.off"
-							}
+							]
 						},
 						{
-							"id": 77,
+							"id": 78,
 							"name": "on",
 							"kind": 2048,
 							"kindString": "Method",
@@ -2015,7 +1805,7 @@
 							],
 							"signatures": [
 								{
-									"id": 78,
+									"id": 79,
 									"name": "on",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -2024,7 +1814,7 @@
 									},
 									"typeParameter": [
 										{
-											"id": 79,
+											"id": 80,
 											"name": "K",
 											"kind": 131072,
 											"kindString": "Type parameter",
@@ -2043,7 +1833,7 @@
 									],
 									"parameters": [
 										{
-											"id": 80,
+											"id": 81,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2056,7 +1846,7 @@
 											}
 										},
 										{
-											"id": 81,
+											"id": 82,
 											"name": "listener",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2066,7 +1856,7 @@
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 82,
+													"id": 83,
 													"name": "__type",
 													"kind": 65536,
 													"kindString": "Type literal",
@@ -2075,7 +1865,7 @@
 													},
 													"signatures": [
 														{
-															"id": 83,
+															"id": 84,
 															"name": "__type",
 															"kind": 4096,
 															"kindString": "Call signature",
@@ -2084,7 +1874,7 @@
 															},
 															"parameters": [
 																{
-																	"id": 84,
+																	"id": 85,
 																	"name": "args",
 																	"kind": 32768,
 																	"kindString": "Parameter",
@@ -2125,14 +1915,10 @@
 										"type": "reference",
 										"id": 2,
 										"name": "Client"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.on"
 									}
 								},
 								{
-									"id": 85,
+									"id": 86,
 									"name": "on",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -2141,7 +1927,7 @@
 									},
 									"typeParameter": [
 										{
-											"id": 86,
+											"id": 87,
 											"name": "S",
 											"kind": 131072,
 											"kindString": "Type parameter",
@@ -2165,7 +1951,7 @@
 									],
 									"parameters": [
 										{
-											"id": 87,
+											"id": 88,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2192,7 +1978,7 @@
 											}
 										},
 										{
-											"id": 88,
+											"id": 89,
 											"name": "listener",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2202,7 +1988,7 @@
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 89,
+													"id": 90,
 													"name": "__type",
 													"kind": 65536,
 													"kindString": "Type literal",
@@ -2211,7 +1997,7 @@
 													},
 													"signatures": [
 														{
-															"id": 90,
+															"id": 91,
 															"name": "__type",
 															"kind": 4096,
 															"kindString": "Call signature",
@@ -2220,7 +2006,7 @@
 															},
 															"parameters": [
 																{
-																	"id": 91,
+																	"id": 92,
 																	"name": "args",
 																	"kind": 32768,
 																	"kindString": "Parameter",
@@ -2257,20 +2043,12 @@
 										"type": "reference",
 										"id": 2,
 										"name": "Client"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.on"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.on"
-							}
+							]
 						},
 						{
-							"id": 92,
+							"id": 93,
 							"name": "once",
 							"kind": 2048,
 							"kindString": "Method",
@@ -2287,7 +2065,7 @@
 							],
 							"signatures": [
 								{
-									"id": 93,
+									"id": 94,
 									"name": "once",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -2296,7 +2074,7 @@
 									},
 									"typeParameter": [
 										{
-											"id": 94,
+											"id": 95,
 											"name": "K",
 											"kind": 131072,
 											"kindString": "Type parameter",
@@ -2315,7 +2093,7 @@
 									],
 									"parameters": [
 										{
-											"id": 95,
+											"id": 96,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2328,7 +2106,7 @@
 											}
 										},
 										{
-											"id": 96,
+											"id": 97,
 											"name": "listener",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2338,7 +2116,7 @@
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 97,
+													"id": 98,
 													"name": "__type",
 													"kind": 65536,
 													"kindString": "Type literal",
@@ -2347,7 +2125,7 @@
 													},
 													"signatures": [
 														{
-															"id": 98,
+															"id": 99,
 															"name": "__type",
 															"kind": 4096,
 															"kindString": "Call signature",
@@ -2356,7 +2134,7 @@
 															},
 															"parameters": [
 																{
-																	"id": 99,
+																	"id": 100,
 																	"name": "args",
 																	"kind": 32768,
 																	"kindString": "Parameter",
@@ -2397,14 +2175,10 @@
 										"type": "reference",
 										"id": 2,
 										"name": "Client"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.once"
 									}
 								},
 								{
-									"id": 100,
+									"id": 101,
 									"name": "once",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -2413,7 +2187,7 @@
 									},
 									"typeParameter": [
 										{
-											"id": 101,
+											"id": 102,
 											"name": "S",
 											"kind": 131072,
 											"kindString": "Type parameter",
@@ -2437,7 +2211,7 @@
 									],
 									"parameters": [
 										{
-											"id": 102,
+											"id": 103,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2464,7 +2238,7 @@
 											}
 										},
 										{
-											"id": 103,
+											"id": 104,
 											"name": "listener",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2474,7 +2248,7 @@
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 104,
+													"id": 105,
 													"name": "__type",
 													"kind": 65536,
 													"kindString": "Type literal",
@@ -2483,7 +2257,7 @@
 													},
 													"signatures": [
 														{
-															"id": 105,
+															"id": 106,
 															"name": "__type",
 															"kind": 4096,
 															"kindString": "Call signature",
@@ -2492,7 +2266,7 @@
 															},
 															"parameters": [
 																{
-																	"id": 106,
+																	"id": 107,
 																	"name": "args",
 																	"kind": 32768,
 																	"kindString": "Parameter",
@@ -2529,20 +2303,12 @@
 										"type": "reference",
 										"id": 2,
 										"name": "Client"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.once"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.once"
-							}
+							]
 						},
 						{
-							"id": 198,
+							"id": 199,
 							"name": "prependListener",
 							"kind": 2048,
 							"kindString": "Method",
@@ -2551,7 +2317,7 @@
 							},
 							"signatures": [
 								{
-									"id": 199,
+									"id": 200,
 									"name": "prependListener",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -2560,7 +2326,7 @@
 									},
 									"parameters": [
 										{
-											"id": 200,
+											"id": 201,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2582,7 +2348,7 @@
 											}
 										},
 										{
-											"id": 201,
+											"id": 202,
 											"name": "listener",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2592,7 +2358,7 @@
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 202,
+													"id": 203,
 													"name": "__type",
 													"kind": 65536,
 													"kindString": "Type literal",
@@ -2601,7 +2367,7 @@
 													},
 													"signatures": [
 														{
-															"id": 203,
+															"id": 204,
 															"name": "__type",
 															"kind": 4096,
 															"kindString": "Call signature",
@@ -2610,7 +2376,7 @@
 															},
 															"parameters": [
 																{
-																	"id": 204,
+																	"id": 205,
 																	"name": "args",
 																	"kind": 32768,
 																	"kindString": "Parameter",
@@ -2641,20 +2407,12 @@
 										"type": "reference",
 										"id": 2,
 										"name": "Client"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.prependListener"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.prependListener"
-							}
+							]
 						},
 						{
-							"id": 205,
+							"id": 206,
 							"name": "prependOnceListener",
 							"kind": 2048,
 							"kindString": "Method",
@@ -2663,7 +2421,7 @@
 							},
 							"signatures": [
 								{
-									"id": 206,
+									"id": 207,
 									"name": "prependOnceListener",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -2672,7 +2430,7 @@
 									},
 									"parameters": [
 										{
-											"id": 207,
+											"id": 208,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2694,7 +2452,7 @@
 											}
 										},
 										{
-											"id": 208,
+											"id": 209,
 											"name": "listener",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2704,7 +2462,7 @@
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 209,
+													"id": 210,
 													"name": "__type",
 													"kind": 65536,
 													"kindString": "Type literal",
@@ -2713,7 +2471,7 @@
 													},
 													"signatures": [
 														{
-															"id": 210,
+															"id": 211,
 															"name": "__type",
 															"kind": 4096,
 															"kindString": "Call signature",
@@ -2722,7 +2480,7 @@
 															},
 															"parameters": [
 																{
-																	"id": 211,
+																	"id": 212,
 																	"name": "args",
 																	"kind": 32768,
 																	"kindString": "Parameter",
@@ -2753,20 +2511,12 @@
 										"type": "reference",
 										"id": 2,
 										"name": "Client"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.prependOnceListener"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.prependOnceListener"
-							}
+							]
 						},
 						{
-							"id": 192,
+							"id": 193,
 							"name": "rawListeners",
 							"kind": 2048,
 							"kindString": "Method",
@@ -2775,7 +2525,7 @@
 							},
 							"signatures": [
 								{
-									"id": 193,
+									"id": 194,
 									"name": "rawListeners",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -2784,7 +2534,7 @@
 									},
 									"parameters": [
 										{
-											"id": 194,
+											"id": 195,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2812,20 +2562,12 @@
 											"type": "reference",
 											"name": "Function"
 										}
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.rawListeners"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.rawListeners"
-							}
+							]
 						},
 						{
-							"id": 131,
+							"id": 132,
 							"name": "removeAllListeners",
 							"kind": 2048,
 							"kindString": "Method",
@@ -2842,7 +2584,7 @@
 							],
 							"signatures": [
 								{
-									"id": 132,
+									"id": 133,
 									"name": "removeAllListeners",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -2851,7 +2593,7 @@
 									},
 									"typeParameter": [
 										{
-											"id": 133,
+											"id": 134,
 											"name": "K",
 											"kind": 131072,
 											"kindString": "Type parameter",
@@ -2870,7 +2612,7 @@
 									],
 									"parameters": [
 										{
-											"id": 134,
+											"id": 135,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2888,14 +2630,10 @@
 										"type": "reference",
 										"id": 2,
 										"name": "Client"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.removeAllListeners"
 									}
 								},
 								{
-									"id": 135,
+									"id": 136,
 									"name": "removeAllListeners",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -2904,7 +2642,7 @@
 									},
 									"typeParameter": [
 										{
-											"id": 136,
+											"id": 137,
 											"name": "S",
 											"kind": 131072,
 											"kindString": "Type parameter",
@@ -2928,7 +2666,7 @@
 									],
 									"parameters": [
 										{
-											"id": 137,
+											"id": 138,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2960,20 +2698,12 @@
 										"type": "reference",
 										"id": 2,
 										"name": "Client"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.removeAllListeners"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.removeAllListeners"
-							}
+							]
 						},
 						{
-							"id": 177,
+							"id": 178,
 							"name": "removeListener",
 							"kind": 2048,
 							"kindString": "Method",
@@ -2982,7 +2712,7 @@
 							},
 							"signatures": [
 								{
-									"id": 178,
+									"id": 179,
 									"name": "removeListener",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -2991,7 +2721,7 @@
 									},
 									"parameters": [
 										{
-											"id": 179,
+											"id": 180,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -3013,7 +2743,7 @@
 											}
 										},
 										{
-											"id": 180,
+											"id": 181,
 											"name": "listener",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -3023,7 +2753,7 @@
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 181,
+													"id": 182,
 													"name": "__type",
 													"kind": 65536,
 													"kindString": "Type literal",
@@ -3032,7 +2762,7 @@
 													},
 													"signatures": [
 														{
-															"id": 182,
+															"id": 183,
 															"name": "__type",
 															"kind": 4096,
 															"kindString": "Call signature",
@@ -3041,7 +2771,7 @@
 															},
 															"parameters": [
 																{
-																	"id": 183,
+																	"id": 184,
 																	"name": "args",
 																	"kind": 32768,
 																	"kindString": "Parameter",
@@ -3072,20 +2802,12 @@
 										"type": "reference",
 										"id": 2,
 										"name": "Client"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.removeListener"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.removeListener"
-							}
+							]
 						},
 						{
-							"id": 163,
+							"id": 164,
 							"name": "setImmediate",
 							"kind": 2048,
 							"kindString": "Method",
@@ -3102,7 +2824,7 @@
 							],
 							"signatures": [
 								{
-									"id": 164,
+									"id": 165,
 									"name": "setImmediate",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -3111,7 +2833,7 @@
 									},
 									"parameters": [
 										{
-											"id": 165,
+											"id": 166,
 											"name": "fn",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -3121,7 +2843,7 @@
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 166,
+													"id": 167,
 													"name": "__type",
 													"kind": 65536,
 													"kindString": "Type literal",
@@ -3130,7 +2852,7 @@
 													},
 													"signatures": [
 														{
-															"id": 167,
+															"id": 168,
 															"name": "__type",
 															"kind": 4096,
 															"kindString": "Call signature",
@@ -3139,7 +2861,7 @@
 															},
 															"parameters": [
 																{
-																	"id": 168,
+																	"id": 169,
 																	"name": "args",
 																	"kind": 32768,
 																	"kindString": "Parameter",
@@ -3166,7 +2888,7 @@
 											}
 										},
 										{
-											"id": 169,
+											"id": 170,
 											"name": "args",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -3186,20 +2908,12 @@
 									"type": {
 										"type": "reference",
 										"name": "Immediate"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.setImmediate"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.setImmediate"
-							}
+							]
 						},
 						{
-							"id": 147,
+							"id": 148,
 							"name": "setInterval",
 							"kind": 2048,
 							"kindString": "Method",
@@ -3216,7 +2930,7 @@
 							],
 							"signatures": [
 								{
-									"id": 148,
+									"id": 149,
 									"name": "setInterval",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -3225,7 +2939,7 @@
 									},
 									"parameters": [
 										{
-											"id": 149,
+											"id": 150,
 											"name": "fn",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -3235,7 +2949,7 @@
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 150,
+													"id": 151,
 													"name": "__type",
 													"kind": 65536,
 													"kindString": "Type literal",
@@ -3244,7 +2958,7 @@
 													},
 													"signatures": [
 														{
-															"id": 151,
+															"id": 152,
 															"name": "__type",
 															"kind": 4096,
 															"kindString": "Call signature",
@@ -3253,7 +2967,7 @@
 															},
 															"parameters": [
 																{
-																	"id": 152,
+																	"id": 153,
 																	"name": "args",
 																	"kind": 32768,
 																	"kindString": "Parameter",
@@ -3280,7 +2994,7 @@
 											}
 										},
 										{
-											"id": 153,
+											"id": 154,
 											"name": "delay",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -3293,7 +3007,7 @@
 											}
 										},
 										{
-											"id": 154,
+											"id": 155,
 											"name": "args",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -3313,20 +3027,12 @@
 									"type": {
 										"type": "reference",
 										"name": "Timeout"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.setInterval"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.setInterval"
-							}
+							]
 						},
 						{
-							"id": 184,
+							"id": 185,
 							"name": "setMaxListeners",
 							"kind": 2048,
 							"kindString": "Method",
@@ -3335,7 +3041,7 @@
 							},
 							"signatures": [
 								{
-									"id": 185,
+									"id": 186,
 									"name": "setMaxListeners",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -3344,7 +3050,7 @@
 									},
 									"parameters": [
 										{
-											"id": 186,
+											"id": 187,
 											"name": "n",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -3361,20 +3067,12 @@
 										"type": "reference",
 										"id": 2,
 										"name": "Client"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.setMaxListeners"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.setMaxListeners"
-							}
+							]
 						},
 						{
-							"id": 155,
+							"id": 156,
 							"name": "setTimeout",
 							"kind": 2048,
 							"kindString": "Method",
@@ -3391,7 +3089,7 @@
 							],
 							"signatures": [
 								{
-									"id": 156,
+									"id": 157,
 									"name": "setTimeout",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -3400,7 +3098,7 @@
 									},
 									"parameters": [
 										{
-											"id": 157,
+											"id": 158,
 											"name": "fn",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -3410,7 +3108,7 @@
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 158,
+													"id": 159,
 													"name": "__type",
 													"kind": 65536,
 													"kindString": "Type literal",
@@ -3419,7 +3117,7 @@
 													},
 													"signatures": [
 														{
-															"id": 159,
+															"id": 160,
 															"name": "__type",
 															"kind": 4096,
 															"kindString": "Call signature",
@@ -3428,7 +3126,7 @@
 															},
 															"parameters": [
 																{
-																	"id": 160,
+																	"id": 161,
 																	"name": "args",
 																	"kind": 32768,
 																	"kindString": "Parameter",
@@ -3455,7 +3153,7 @@
 											}
 										},
 										{
-											"id": 161,
+											"id": 162,
 											"name": "delay",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -3468,7 +3166,7 @@
 											}
 										},
 										{
-											"id": 162,
+											"id": 163,
 											"name": "args",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -3488,20 +3186,12 @@
 									"type": {
 										"type": "reference",
 										"name": "Timeout"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.setTimeout"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.setTimeout"
-							}
+							]
 						},
 						{
-							"id": 72,
+							"id": 73,
 							"name": "sweepMessages",
 							"kind": 2048,
 							"kindString": "Method",
@@ -3518,7 +3208,7 @@
 							],
 							"signatures": [
 								{
-									"id": 73,
+									"id": 74,
 									"name": "sweepMessages",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -3527,7 +3217,7 @@
 									},
 									"parameters": [
 										{
-											"id": 74,
+											"id": 75,
 											"name": "lifetime",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -3544,20 +3234,12 @@
 									"type": {
 										"type": "intrinsic",
 										"name": "number"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.sweepMessages"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.sweepMessages"
-							}
+							]
 						},
 						{
-							"id": 75,
+							"id": 76,
 							"name": "toJSON",
 							"kind": 2048,
 							"kindString": "Method",
@@ -3574,7 +3256,7 @@
 							],
 							"signatures": [
 								{
-									"id": 76,
+									"id": 77,
 									"name": "toJSON",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -3584,17 +3266,9 @@
 									"type": {
 										"type": "intrinsic",
 										"name": "unknown"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.toJSON"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.toJSON"
-							}
+							]
 						},
 						{
 							"id": 24,
@@ -3676,17 +3350,9 @@
 											"type": "reference",
 											"name": "Function"
 										}
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.getEventListener"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.getEventListener"
-							}
+							]
 						},
 						{
 							"id": 20,
@@ -3761,17 +3427,9 @@
 									"type": {
 										"type": "intrinsic",
 										"name": "number"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.listenerCount"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.listenerCount"
-							}
+							]
 						},
 						{
 							"id": 15,
@@ -3849,17 +3507,9 @@
 											}
 										],
 										"name": "AsyncIterableIterator"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.on"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.on"
-							}
+							]
 						},
 						{
 							"id": 6,
@@ -3949,10 +3599,6 @@
 											}
 										],
 										"name": "Promise"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.once"
 									}
 								},
 								{
@@ -4017,17 +3663,9 @@
 											}
 										],
 										"name": "Promise"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.Client.once"
 									}
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.Client.once"
-							}
+							]
 						}
 					],
 					"groups": [
@@ -4042,11 +3680,11 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								35,
 								36,
 								37,
 								38,
 								39,
+								35,
 								40,
 								41,
 								42,
@@ -4056,6 +3694,7 @@
 								46,
 								47,
 								48,
+								49,
 								29,
 								30,
 								31,
@@ -4066,37 +3705,37 @@
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								170,
-								144,
-								138,
-								141,
-								49,
-								107,
-								212,
-								51,
-								57,
-								54,
-								60,
-								62,
-								66,
-								187,
-								195,
-								189,
-								69,
-								116,
-								77,
-								92,
-								198,
-								205,
-								192,
-								131,
-								177,
-								163,
-								147,
-								184,
-								155,
-								72,
-								75,
+								171,
+								145,
+								139,
+								142,
+								50,
+								108,
+								213,
+								52,
+								58,
+								55,
+								61,
+								63,
+								67,
+								188,
+								196,
+								190,
+								70,
+								117,
+								78,
+								93,
+								199,
+								206,
+								193,
+								132,
+								178,
+								164,
+								148,
+								185,
+								156,
+								73,
+								76,
 								24,
 								20,
 								15,
@@ -4107,7 +3746,7 @@
 					"sources": [
 						{
 							"fileName": "packages/core/src/client.ts",
-							"line": 5,
+							"line": 9,
 							"character": 19
 						}
 					],
@@ -4119,7 +3758,7 @@
 					]
 				},
 				{
-					"id": 214,
+					"id": 215,
 					"name": "client",
 					"kind": 32,
 					"kindString": "Variable",
@@ -4129,7 +3768,7 @@
 					"sources": [
 						{
 							"fileName": "packages/core/src/client.ts",
-							"line": 24,
+							"line": 26,
 							"character": 19
 						}
 					],
@@ -4153,7 +3792,7 @@
 					"title": "Variables",
 					"kind": 32,
 					"children": [
-						214
+						215
 					]
 				}
 			],
@@ -4414,7 +4053,7 @@
 					"kindString": "Class",
 					"flags": {},
 					"comment": {
-						"shortText": "Represents a Carbon Slash Command"
+						"shortText": "Represents a Carbon Error"
 					},
 					"children": [
 						{
@@ -4439,11 +4078,26 @@
 											"kindString": "Parameter",
 											"flags": {},
 											"comment": {
-												"text": "Raw Slash Command Data\n"
+												"text": "The error type"
 											},
 											"type": {
 												"type": "reference",
-												"name": "ApplicationCommandData"
+												"id": 220,
+												"name": "CarbonErrorType"
+											}
+										},
+										{
+											"id": 239,
+											"name": "message",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"comment": {
+												"text": "The error message\n"
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
 											}
 										}
 									],
@@ -4453,7 +4107,11 @@
 										"name": "Command"
 									}
 								}
-							]
+							],
+							"overwrites": {
+								"type": "reference",
+								"name": "Error.constructor"
+							}
 						},
 						{
 							"id": 240,
@@ -4461,19 +4119,12 @@
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {
-								"isExternal": true,
-								"isOptional": true
+								"isPublic": true
 							},
-							"sources": [
-								{
-									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
-									"line": 2676,
-									"character": 21
-								}
-							],
 							"type": {
-								"type": "intrinsic",
-								"name": "boolean"
+								"type": "reference",
+								"id": 220,
+								"name": "CarbonErrorType"
 							}
 						},
 						{
@@ -4482,18 +4133,15 @@
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {
-								"isExternal": true
+								"isPublic": true
 							},
-							"sources": [
-								{
-									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
-									"line": 2674,
-									"character": 15
-								}
-							],
 							"type": {
 								"type": "intrinsic",
 								"name": "string"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "Error.message"
 							}
 						},
 						{
@@ -4504,14 +4152,19 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "packages/core/src/structures/Command.ts",
-									"line": 4,
-									"character": 10
+									"fileName": "packages/core/src/util/CarbonError.ts",
+									"line": 18,
+									"character": 8
 								}
 							],
 							"type": {
 								"type": "intrinsic",
 								"name": "string"
+							},
+							"defaultValue": "'CarbonError'",
+							"overwrites": {
+								"type": "reference",
+								"name": "Error.name"
 							}
 						},
 						{
@@ -4520,18 +4173,23 @@
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {
-								"isExternal": true
+								"isExternal": true,
+								"isOptional": true
 							},
 							"sources": [
 								{
-									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
-									"line": 2673,
-									"character": 8
+									"fileName": ".yarn/cache/typescript-patch-4490d00053-68d48dc86d.zip/node_modules/typescript/lib/lib.es5.d.ts",
+									"line": 975,
+									"character": 9
 								}
 							],
 							"type": {
 								"type": "intrinsic",
 								"name": "string"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "Error.stack"
 							}
 						},
 						{
@@ -4540,8 +4198,18 @@
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {
+								"isStatic": true,
 								"isExternal": true,
 								"isOptional": true
+							},
+							"comment": {
+								"shortText": "Optional override for formatting stack traces",
+								"tags": [
+									{
+										"tag": "see",
+										"text": "https://v8.dev/docs/stack-trace-api#customizing-stack-traces\n"
+									}
+								]
 							},
 							"sources": [
 								{
@@ -4595,17 +4263,155 @@
 													"flags": {},
 													"type": {
 														"type": "reference",
-														"name": "CommandInteraction"
+														"name": "Error"
+													}
+												},
+												{
+													"id": 234,
+													"name": "stackTraces",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "array",
+														"elementType": {
+															"type": "reference",
+															"name": "CallSite"
+														}
 													}
 												}
 											],
 											"type": {
 												"type": "intrinsic",
-												"name": "void"
+												"name": "any"
 											}
 										}
 									]
 								}
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "Error.prepareStackTrace"
+							}
+						},
+						{
+							"id": 235,
+							"name": "stackTraceLimit",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isStatic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/@types-node-npm-15.12.1-149da5b459-8a111dc992.zip/node_modules/@types/node/globals.d.ts",
+									"line": 13,
+									"character": 19
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "Error.stackTraceLimit"
+							}
+						},
+						{
+							"id": 243,
+							"name": "embed",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "packages/core/src/util/CarbonError.ts",
+									"line": 30,
+									"character": 9
+								}
+							],
+							"signatures": [
+								{
+									"id": 244,
+									"name": "embed",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"returns": "A MessageEmbed representing this error\n"
+									},
+									"type": {
+										"type": "reference",
+										"name": "ErrorMessageEmbed"
+									}
+								}
+							]
+						},
+						{
+							"id": 226,
+							"name": "captureStackTrace",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isStatic": true,
+								"isExternal": true
+							},
+							"signatures": [
+								{
+									"id": 227,
+									"name": "captureStackTrace",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"comment": {
+										"shortText": "Create .stack property on a target object"
+									},
+									"parameters": [
+										{
+											"id": 228,
+											"name": "targetObject",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "object"
+											}
+										},
+										{
+											"id": 229,
+											"name": "constructorOpt",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "Function"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "Error.captureStackTrace"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "Error.captureStackTrace"
 							}
 						}
 					],
@@ -4632,20 +4438,27 @@
 					],
 					"sources": [
 						{
-							"fileName": "packages/core/src/structures/Command.ts",
-							"line": 10,
-							"character": 20
+							"fileName": "packages/core/src/util/CarbonError.ts",
+							"line": 17,
+							"character": 24
 						}
 					],
 					"extendedTypes": [
 						{
 							"type": "reference",
-							"name": "ApplicationCommandData"
+							"name": "Error"
 						}
 					]
 				}
 			],
 			"groups": [
+				{
+					"title": "Enumerations",
+					"kind": 4,
+					"children": [
+						220
+					]
+				},
 				{
 					"title": "Classes",
 					"kind": 128,
@@ -4656,7 +4469,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "packages/core/src/structures/Command.ts",
+					"fileName": "packages/core/src/util/CarbonError.ts",
 					"line": 1,
 					"character": 0
 				}
@@ -4668,7 +4481,7 @@
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {},
-			"children": [
+			"sources": [
 				{
 					"id": 242,
 					"name": "CarbonErrorType",
@@ -4740,7 +4553,15 @@
 							"defaultValue": "\"MODULE_NOT_ENABLED\""
 						}
 					],
-					"groups": [
+					"target": 327
+				},
+				{
+					"id": 363,
+					"name": "defaults",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {},
+					"sources": [
 						{
 							"title": "Enumeration members",
 							"kind": 16,
@@ -4752,14 +4573,36 @@
 							]
 						}
 					],
+					"target": 355
+				},
+				{
+					"id": 364,
+					"name": "interactionHandler",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {},
 					"sources": [
 						{
-							"fileName": "packages/core/src/util/CarbonError.ts",
-							"line": 7,
+							"fileName": "packages/interactions/src/index.ts",
+							"line": 3,
 							"character": 27
 						}
+					],
+					"target": 351
+				}
+			],
+			"groups": [
+				{
+					"title": "References",
+					"kind": 16777216,
+					"children": [
+						362,
+						363,
+						364
 					]
-				},
+				}
+			],
+			"sources": [
 				{
 					"id": 247,
 					"name": "CarbonError",
@@ -4767,7 +4610,7 @@
 					"kindString": "Class",
 					"flags": {},
 					"comment": {
-						"shortText": "Represents a Carbon Error"
+						"shortText": "Represents a Carbon Slash Command"
 					},
 					"children": [
 						{
@@ -4792,7 +4635,7 @@
 											"kindString": "Parameter",
 											"flags": {},
 											"comment": {
-												"text": "The error type"
+												"text": "Raw Slash Command Data\n"
 											},
 											"type": {
 												"type": "reference",
@@ -4826,11 +4669,7 @@
 										"name": "Error.constructor"
 									}
 								}
-							],
-							"overwrites": {
-								"type": "reference",
-								"name": "Error.constructor"
-							}
+							]
 						},
 						{
 							"id": 263,
@@ -4838,9 +4677,21 @@
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {
-								"isPublic": true
+								"isExternal": true,
+								"isOptional": true
 							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 2676,
+									"character": 21
+								}
+							],
 							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							},
+							"inheritedFrom": {
 								"type": "reference",
 								"id": 242,
 								"name": "CarbonErrorType"
@@ -4852,8 +4703,15 @@
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {
-								"isPublic": true
+								"isExternal": true
 							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 2674,
+									"character": 15
+								}
+							],
 							"type": {
 								"type": "intrinsic",
 								"name": "string"
@@ -4861,7 +4719,8 @@
 							"defaultValue": "...",
 							"inheritedFrom": {
 								"type": "reference",
-								"name": "Error.message"
+								"id": 347,
+								"name": "ApplicationCommandData.description"
 							}
 						},
 						{
@@ -4872,35 +4731,9 @@
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "packages/core/src/util/CarbonError.ts",
-									"line": 18,
-									"character": 8
-								}
-							],
-							"type": {
-								"type": "intrinsic",
-								"name": "string"
-							},
-							"defaultValue": "'CarbonError'",
-							"overwrites": {
-								"type": "reference",
-								"name": "Error.name"
-							}
-						},
-						{
-							"id": 267,
-							"name": "stack",
-							"kind": 1024,
-							"kindString": "Property",
-							"flags": {
-								"isExternal": true,
-								"isOptional": true
-							},
-							"sources": [
-								{
-									"fileName": ".yarn/cache/typescript-patch-4490d00053-68d48dc86d.zip/node_modules/typescript/lib/lib.es5.d.ts",
-									"line": 975,
-									"character": 9
+									"fileName": "packages/interactions/src/Command.ts",
+									"line": 27,
+									"character": 10
 								}
 							],
 							"type": {
@@ -4909,7 +4742,33 @@
 							},
 							"inheritedFrom": {
 								"type": "reference",
-								"name": "Error.stack"
+								"id": 345,
+								"name": "ApplicationCommandData.module"
+							}
+						},
+						{
+							"id": 267,
+							"name": "stack",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 2673,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"id": 346,
+								"name": "ApplicationCommandData.name"
 							}
 						},
 						{
@@ -4918,24 +4777,40 @@
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {
-								"isStatic": true,
 								"isExternal": true,
 								"isOptional": true
 							},
-							"comment": {
-								"shortText": "Optional override for formatting stack traces",
-								"tags": [
-									{
-										"tag": "see",
-										"text": "https://v8.dev/docs/stack-trace-api#customizing-stack-traces\n"
-									}
-								]
-							},
 							"sources": [
 								{
-									"fileName": ".yarn/cache/@types-node-npm-15.12.1-149da5b459-8a111dc992.zip/node_modules/@types/node/globals.d.ts",
-									"line": 11,
-									"character": 21
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 2675,
+									"character": 11
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"name": "ApplicationCommandOptionData"
+								}
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"id": 348,
+								"name": "ApplicationCommandData.options"
+							}
+						},
+						{
+							"id": 331,
+							"name": "run",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "packages/interactions/src/Command.ts",
+									"line": 26,
+									"character": 7
 								}
 							],
 							"type": {
@@ -4982,7 +4857,7 @@
 											],
 											"type": {
 												"type": "intrinsic",
-												"name": "any"
+												"name": "void"
 											}
 										}
 									]
@@ -5146,15 +5021,16 @@
 					],
 					"sources": [
 						{
-							"fileName": "packages/core/src/util/CarbonError.ts",
-							"line": 17,
-							"character": 24
+							"fileName": "packages/interactions/src/Command.ts",
+							"line": 6,
+							"character": 20
 						}
 					],
 					"extendedTypes": [
 						{
 							"type": "reference",
-							"name": "Error"
+							"id": 340,
+							"name": "ApplicationCommandData"
 						}
 					]
 				}
@@ -5196,9 +5072,6 @@
 					"kind": 128,
 					"kindString": "Class",
 					"flags": {},
-					"comment": {
-						"shortText": "Represents a Carbon Error Message Embed"
-					},
 					"children": [
 						{
 							"id": 278,
@@ -5248,32 +5121,23 @@
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {
-								"isPublic": true,
-								"isExternal": true
+								"isExternal": true,
+								"isOptional": true
 							},
 							"sources": [
 								{
 									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
-									"line": 1425,
-									"character": 17
+									"line": 2676,
+									"character": 21
 								}
 							],
 							"type": {
-								"type": "union",
-								"types": [
-									{
-										"type": "literal",
-										"value": null
-									},
-									{
-										"type": "reference",
-										"name": "MessageEmbedAuthor"
-									}
-								]
+								"type": "intrinsic",
+								"name": "boolean"
 							},
 							"inheritedFrom": {
 								"type": "reference",
-								"name": "discord.MessageEmbed.author"
+								"name": "discord.ApplicationCommandData.defaultPermission"
 							}
 						},
 						{
@@ -5282,7 +5146,6 @@
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {
-								"isPublic": true,
 								"isExternal": true
 							},
 							"sources": [
@@ -6831,9 +6694,13 @@
 									}
 								}
 							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
 							"inheritedFrom": {
 								"type": "reference",
-								"name": "discord.MessageEmbed.normalizeField"
+								"name": "discord.ApplicationCommandData.description"
 							}
 						},
 						{
@@ -6842,18 +6709,34 @@
 							"kind": 2048,
 							"kindString": "Method",
 							"flags": {
-								"isPublic": true,
-								"isStatic": true,
 								"isExternal": true
 							},
 							"sources": [
 								{
 									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
-									"line": 1458,
-									"character": 33
+									"line": 2673,
+									"character": 8
 								}
 							],
-							"signatures": [
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.ApplicationCommandData.name"
+							}
+						},
+						{
+							"id": 348,
+							"name": "options",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true,
+								"isOptional": true
+							},
+							"sources": [
 								{
 									"id": 276,
 									"name": "normalizeFields",
@@ -6902,22 +6785,24 @@
 											"type": "reference",
 											"typeArguments": [
 												{
-													"type": "reference",
-													"name": "EmbedFieldData"
+													"id": 344,
+													"name": "interaction",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "reference",
+														"name": "CommandInteraction"
+													}
 												}
 											],
-											"name": "Required"
+											"type": {
+												"type": "intrinsic",
+												"name": "void"
+											}
 										}
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.MessageEmbed.normalizeFields"
-									}
+									]
 								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.MessageEmbed.normalizeFields"
 							}
 						}
 					],
@@ -6978,15 +6863,22 @@
 					],
 					"sources": [
 						{
-							"fileName": "packages/core/src/util/ErrorMessageEmbed.ts",
-							"line": 7,
-							"character": 30
+							"fileName": "packages/interactions/src/Command.ts",
+							"line": 25,
+							"character": 39
 						}
 					],
 					"extendedTypes": [
 						{
 							"type": "reference",
-							"name": "MessageEmbed"
+							"name": "ApplicationCommandData"
+						}
+					],
+					"extendedBy": [
+						{
+							"type": "reference",
+							"id": 327,
+							"name": "Command"
 						}
 					]
 				}
@@ -7002,7 +6894,7 @@
 			],
 			"sources": [
 				{
-					"fileName": "packages/core/src/util/ErrorMessageEmbed.ts",
+					"fileName": "packages/interactions/src/Command.ts",
 					"line": 1,
 					"character": 0
 				}

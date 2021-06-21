@@ -19,7 +19,8 @@
     "dist"
   ],
   "dependencies": {
-    "@carbon-js/core": "workspace:packages/core"
+    "@carbon-js/core": "workspace:packages/core",
+    "discord.js": "dev"
   },
   "devDependencies": {
     "@types/jest": "^26.0.23",

@@ -3,6 +3,7 @@ import { CarbonError } from './CarbonError'
 
 /**
  * Represents a Carbon Error Message Embed
+ * @internal
  */
 export class ErrorMessageEmbed extends discord.MessageEmbed {
     constructor(public error: Error) {

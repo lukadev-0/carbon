@@ -1,12 +1,14 @@
 import * as discord from 'discord.js'
-import { handleInteraction } from './handlers/interaction'
 import { logger } from './logger'
+import { Command } from '@carbon-js/interactions'
+
+export interface Client {
+    interactions: Command[]
+}
 
 export class Client extends discord.Client {
     constructor(options: discord.ClientOptions) {
         super(options)
-
-        this.on('interaction', handleInteraction)
     }
 
     /**
