@@ -667,7 +667,7 @@
 			"flags": {},
 			"children": [
 				{
-					"id": 34,
+					"id": 141,
 					"name": "Command",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -682,7 +682,7 @@
 					"target": 2
 				},
 				{
-					"id": 35,
+					"id": 142,
 					"name": "defaults",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -697,7 +697,7 @@
 					"target": 30
 				},
 				{
-					"id": 36,
+					"id": 143,
 					"name": "interactionHandler",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -717,15 +717,565 @@
 					"title": "References",
 					"kind": 16777216,
 					"children": [
-						34,
-						35,
-						36
+						141,
+						142,
+						143
 					]
 				}
 			],
 			"sources": [
 				{
 					"fileName": "packages/interactions/src/index.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 34,
+			"name": "util/CarbonError",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 35,
+					"name": "CarbonErrorType",
+					"kind": 4,
+					"kindString": "Enumeration",
+					"flags": {},
+					"comment": {
+						"shortText": "Carbon Error Types"
+					},
+					"children": [
+						{
+							"id": 37,
+							"name": "CommandError",
+							"kind": 16,
+							"kindString": "Enumeration member",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "packages/interactions/src/util/CarbonError.ts",
+									"line": 9,
+									"character": 16
+								}
+							],
+							"defaultValue": "\"COMMAND_ERROR\""
+						},
+						{
+							"id": 36,
+							"name": "CommandNotFound",
+							"kind": 16,
+							"kindString": "Enumeration member",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "packages/interactions/src/util/CarbonError.ts",
+									"line": 8,
+									"character": 19
+								}
+							],
+							"defaultValue": "\"COMMAND_NOT_FOUND\""
+						},
+						{
+							"id": 38,
+							"name": "InvalidPermission",
+							"kind": 16,
+							"kindString": "Enumeration member",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "packages/interactions/src/util/CarbonError.ts",
+									"line": 10,
+									"character": 21
+								}
+							],
+							"defaultValue": "\"INVALID_PERMISSION\""
+						},
+						{
+							"id": 40,
+							"name": "MissingInstance",
+							"kind": 16,
+							"kindString": "Enumeration member",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "packages/interactions/src/util/CarbonError.ts",
+									"line": 12,
+									"character": 19
+								}
+							],
+							"defaultValue": "\"MISSING_INSTANCE\""
+						},
+						{
+							"id": 39,
+							"name": "MissingParam",
+							"kind": 16,
+							"kindString": "Enumeration member",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "packages/interactions/src/util/CarbonError.ts",
+									"line": 11,
+									"character": 16
+								}
+							],
+							"defaultValue": "\"MISSING_PARAMETER\""
+						}
+					],
+					"groups": [
+						{
+							"title": "Enumeration members",
+							"kind": 16,
+							"children": [
+								37,
+								36,
+								38,
+								40,
+								39
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "packages/interactions/src/util/CarbonError.ts",
+							"line": 7,
+							"character": 27
+						}
+					]
+				},
+				{
+					"id": 41,
+					"name": "CarbonError",
+					"kind": 128,
+					"kindString": "Class",
+					"flags": {},
+					"comment": {
+						"shortText": "Represents a Carbon Interactions Error"
+					},
+					"children": [
+						{
+							"id": 52,
+							"name": "constructor",
+							"kind": 512,
+							"kindString": "Constructor",
+							"flags": {},
+							"signatures": [
+								{
+									"id": 53,
+									"name": "new CarbonError",
+									"kind": 16384,
+									"kindString": "Constructor signature",
+									"flags": {},
+									"comment": {},
+									"parameters": [
+										{
+											"id": 54,
+											"name": "code",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"comment": {
+												"text": "The error type"
+											},
+											"type": {
+												"type": "reference",
+												"id": 35,
+												"name": "CarbonErrorType"
+											}
+										},
+										{
+											"id": 55,
+											"name": "message",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"comment": {
+												"text": "The error message\n"
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											},
+											"defaultValue": "..."
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 41,
+										"name": "CarbonError"
+									},
+									"overwrites": {
+										"type": "reference",
+										"name": "Error.constructor"
+									}
+								}
+							],
+							"overwrites": {
+								"type": "reference",
+								"name": "Error.constructor"
+							}
+						},
+						{
+							"id": 57,
+							"name": "code",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true
+							},
+							"type": {
+								"type": "reference",
+								"id": 35,
+								"name": "CarbonErrorType"
+							}
+						},
+						{
+							"id": 58,
+							"name": "message",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true
+							},
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"defaultValue": "...",
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "Error.message"
+							}
+						},
+						{
+							"id": 56,
+							"name": "name",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "packages/interactions/src/util/CarbonError.ts",
+									"line": 19,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"defaultValue": "'CarbonInteractionsError'",
+							"overwrites": {
+								"type": "reference",
+								"name": "Error.name"
+							}
+						},
+						{
+							"id": 61,
+							"name": "stack",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/typescript-patch-4490d00053-68d48dc86d.zip/node_modules/typescript/lib/lib.es5.d.ts",
+									"line": 975,
+									"character": 9
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "Error.stack"
+							}
+						},
+						{
+							"id": 46,
+							"name": "prepareStackTrace",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isStatic": true,
+								"isExternal": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "Optional override for formatting stack traces",
+								"tags": [
+									{
+										"tag": "see",
+										"text": "https://v8.dev/docs/stack-trace-api#customizing-stack-traces\n"
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/@types-node-npm-15.12.1-149da5b459-8a111dc992.zip/node_modules/@types/node/globals.d.ts",
+									"line": 11,
+									"character": 21
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 47,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 48,
+											"name": "__type",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 49,
+													"name": "err",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "reference",
+														"name": "Error"
+													}
+												},
+												{
+													"id": 50,
+													"name": "stackTraces",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "array",
+														"elementType": {
+															"type": "reference",
+															"name": "CallSite"
+														}
+													}
+												}
+											],
+											"type": {
+												"type": "intrinsic",
+												"name": "any"
+											}
+										}
+									]
+								}
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "Error.prepareStackTrace"
+							}
+						},
+						{
+							"id": 51,
+							"name": "stackTraceLimit",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isStatic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/@types-node-npm-15.12.1-149da5b459-8a111dc992.zip/node_modules/@types/node/globals.d.ts",
+									"line": 13,
+									"character": 19
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "Error.stackTraceLimit"
+							}
+						},
+						{
+							"id": 59,
+							"name": "embed",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "packages/interactions/src/util/CarbonError.ts",
+									"line": 31,
+									"character": 9
+								}
+							],
+							"signatures": [
+								{
+									"id": 60,
+									"name": "embed",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"returns": "A MessageEmbed representing this error\n"
+									},
+									"type": {
+										"type": "reference",
+										"name": "ErrorMessageEmbed"
+									}
+								}
+							]
+						},
+						{
+							"id": 42,
+							"name": "captureStackTrace",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isStatic": true,
+								"isExternal": true
+							},
+							"signatures": [
+								{
+									"id": 43,
+									"name": "captureStackTrace",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"comment": {
+										"shortText": "Create .stack property on a target object"
+									},
+									"parameters": [
+										{
+											"id": 44,
+											"name": "targetObject",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "object"
+											}
+										},
+										{
+											"id": 45,
+											"name": "constructorOpt",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "Function"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "Error.captureStackTrace"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "Error.captureStackTrace"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"kind": 512,
+							"children": [
+								52
+							]
+						},
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								57,
+								58,
+								56,
+								61,
+								46,
+								51
+							]
+						},
+						{
+							"title": "Methods",
+							"kind": 2048,
+							"children": [
+								59,
+								42
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "packages/interactions/src/util/CarbonError.ts",
+							"line": 18,
+							"character": 24
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"name": "Error"
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Enumerations",
+					"kind": 4,
+					"children": [
+						35
+					]
+				},
+				{
+					"title": "Classes",
+					"kind": 128,
+					"children": [
+						41
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "packages/interactions/src/util/CarbonError.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 62,
+			"name": "util/ErrorMessageEmbed",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "packages/interactions/src/util/ErrorMessageEmbed.ts",
 					"line": 1,
 					"character": 0
 				}
@@ -740,7 +1290,9 @@
 				1,
 				25,
 				29,
-				33
+				33,
+				34,
+				62
 			]
 		}
 	]
