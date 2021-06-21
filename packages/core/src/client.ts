@@ -1,6 +1,6 @@
 import * as discord from 'discord.js'
 import { logger } from './logger'
-import { Command } from '../../interactions/dist'
+import { Command } from '@carbon-js/interactions'
 import { CarbonError, CarbonErrorType } from './util/CarbonError'
 
 export interface Client {
