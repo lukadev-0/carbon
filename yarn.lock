@@ -443,7 +443,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@carbon-js/core@workspace:packages/core"
   dependencies:
-    "@discordjs/voice": ^0.4.0
     "@types/jest": ^26.0.23
     chalk: ^4.1.1
     discord.js: dev
@@ -459,20 +458,11 @@ __metadata:
   resolution: "@carbon-js/interactions@workspace:packages/interactions"
   dependencies:
     "@carbon-js/core": "workspace:packages/core"
+    "@discordjs/voice": ^0.5.0
     "@types/jest": ^26.0.23
     discord.js: dev
     typescript: ^4.3.2
-  languageName: unknown
-  linkType: soft
-
-"@carbon-js/mocks@workspace:packages/mocks":
-  version: 0.0.0-use.local
-  resolution: "@carbon-js/mocks@workspace:packages/mocks"
-  dependencies:
-    "@carbon-js/core": "workspace:packages/core"
-    "@types/jest": ^26.0.23
-    discord.js: ^12.5.3
-    typescript: ^4.3.2
+    ytdl-core-discord: ^1.3.1
   languageName: unknown
   linkType: soft
 
@@ -513,11 +503,13 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^4.26.0
     "@typescript-eslint/parser": ^4.26.0
     eslint: ^7.28.0
+    global: ^4.4.0
     husky: ^6.0.0
     jest: ^27.0.4
     prettier: ^2.3.1
     prettier-eslint: ^12.0.0
     ts-jest: ^27.0.2
+    ts-node: ^10.0.0
     typedoc: beta
     typescript: ^4.3.2
   languageName: unknown
@@ -723,16 +715,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@discordjs/voice@npm:^0.4.0":
-  version: 0.4.0
-  resolution: "@discordjs/voice@npm:0.4.0"
+"@discordjs/voice@npm:^0.5.0":
+  version: 0.5.0
+  resolution: "@discordjs/voice@npm:0.5.0"
   dependencies:
     "@types/ws": ^7.4.4
     discord-api-types: ^0.18.1
     prism-media: ^1.3.1
     tiny-typed-emitter: ^2.0.3
     ws: ^7.4.4
-  checksum: a1b65c946d33f4314df572274cf6e4373798c186db4987afdfd3c9e79cd02b181433a4b7f319096b28f121c83e5d128549cc428d133abc3308d9d3ab4c9b9126
+  checksum: fb3e4647f0946d9afff4967ffd2e8cef7a3c3664727fddbf557763fc6f2227d3c32435729ebd168249aa74bd6147100265baeef6bd02f5474d34e3f36f9d3673
   languageName: node
   linkType: hard
 
@@ -1344,6 +1336,34 @@ __metadata:
   version: 1.1.2
   resolution: "@tootallnate/once@npm:1.1.2"
   checksum: d030f3fb14e0373dbf5005d8f696ff34fda87bf56744bea611fc737449bfc0687ebcb28ee8ba4c6624877f51b18d701c0d417d793f406006a192f4721911d048
+  languageName: node
+  linkType: hard
+
+"@tsconfig/node10@npm:^1.0.7":
+  version: 1.0.8
+  resolution: "@tsconfig/node10@npm:1.0.8"
+  checksum: 0336493b89fb7c06409a1247a3fb00fac2755f21f3f8ae4b9dd2457859abfc5e8ca42b6d9ca5a279fe81bc70fe1f3450eef61e5dd5a63a7b4a6946ff31874816
+  languageName: node
+  linkType: hard
+
+"@tsconfig/node12@npm:^1.0.7":
+  version: 1.0.9
+  resolution: "@tsconfig/node12@npm:1.0.9"
+  checksum: 5532bfb5df47ed3a507da533c731a2fb80ee2e886edadbf20e664dcd3172d5c159577a281d15733b8d0c30bfa4e6b48496bef0704192c085520bc76bb9938068
+  languageName: node
+  linkType: hard
+
+"@tsconfig/node14@npm:^1.0.0":
+  version: 1.0.1
+  resolution: "@tsconfig/node14@npm:1.0.1"
+  checksum: d0068287dba46dc98e7d49c229b0fee034fbac2bb4bc2efe12cc67227a1c68ec0728ca1e535dff7f033f7455de6c67e9b8f9d90f4fc3bb07c0d9ac08186fe65c
+  languageName: node
+  linkType: hard
+
+"@tsconfig/node16@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@tsconfig/node16@npm:1.0.1"
+  checksum: c389a4a81c291a27b96705de7fbe46d29aa4eb771450a41dfc075d89e1fdd63141898043a0d9f627460a1c409d06635a044dc4b3a4516173769a7d0a1558c51d
   languageName: node
   linkType: hard
 
@@ -2044,6 +2064,13 @@ __metadata:
     delegates: ^1.0.0
     readable-stream: ^2.0.6
   checksum: 2d6fdb0ddde9b8cb120b6851b42c75f6b6db78b540b579a00d144ad38cb9e1bdf1248e5454049fcf5b47ef61d1a6f2ea433a8e38984158afd441bc1e0db7a625
+  languageName: node
+  linkType: hard
+
+"arg@npm:^4.1.0":
+  version: 4.1.3
+  resolution: "arg@npm:4.1.3"
+  checksum: 81b3b40b1529c4fbf75b12f7c3e6fb2dcce9e78072063babc169de9b4f40777788f3d2b04380f659ef676a756e03ccfbfe78adf4477353bda906295fa69dab89
   languageName: node
   linkType: hard
 
@@ -3029,6 +3056,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"create-require@npm:^1.1.0":
+  version: 1.1.1
+  resolution: "create-require@npm:1.1.1"
+  checksum: babd307893abfb26d77ae11cb9d6b6cfa6d18c9cee435cf70b5a3fb44aa8d90c9ec26ea89cbb16e0a94b8d34f5fcaee164b90ed526cdd3158955673ab9652d01
+  languageName: node
+  linkType: hard
+
 "cross-spawn@npm:^7.0.2, cross-spawn@npm:^7.0.3":
   version: 7.0.3
   resolution: "cross-spawn@npm:7.0.3"
@@ -3301,6 +3335,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"diff@npm:^4.0.1":
+  version: 4.0.2
+  resolution: "diff@npm:4.0.2"
+  checksum: 81b5cd7ddde6f0ba2a532d434cfdca365aedd6cc62bb133e851e66e071d40382a30924a07c1034bd3d5a2e332146f64514b73c06fe2ebc0490a67f0c98da79fb
+  languageName: node
+  linkType: hard
+
 "diffie-hellman@npm:^5.0.0":
   version: 5.0.3
   resolution: "diffie-hellman@npm:5.0.3"
@@ -3325,22 +3366,6 @@ __metadata:
   version: 0.18.1
   resolution: "discord-api-types@npm:0.18.1"
   checksum: b9ae87cb2d80aaf11ef71d33beeb12d2729d3b3d5ed8bb60413e9c0b0d1a130ee7d1a8f6bc2dd24224794e95ae421306c83cc484c54ae5897a7a5edd37e64a51
-  languageName: node
-  linkType: hard
-
-"discord.js@npm:^12.5.3":
-  version: 12.5.3
-  resolution: "discord.js@npm:12.5.3"
-  dependencies:
-    "@discordjs/collection": ^0.1.6
-    "@discordjs/form-data": ^3.0.1
-    abort-controller: ^3.0.0
-    node-fetch: ^2.6.1
-    prism-media: ^1.2.9
-    setimmediate: ^1.0.5
-    tweetnacl: ^1.0.3
-    ws: ^7.4.4
-  checksum: 365e21b12496c47be80a4e2cd6d81665653908fcd22a5f46a5507ad8771cb20c40fab893ebb192af23e2bdb0db5c1eca8c5228c9f689951d0fd1139c3bcd567f
   languageName: node
   linkType: hard
 
@@ -3385,6 +3410,13 @@ __metadata:
     "@babel/runtime": ^7.8.7
     csstype: ^3.0.2
   checksum: 4bbdac8dfd37ad689921af2c4d0027870108c673d458a0fc65b4350900c6195df2f872dd75c357755d197208b228e90c55619f75f9a9d337910e5050e83832af
+  languageName: node
+  linkType: hard
+
+"dom-walk@npm:^0.1.0":
+  version: 0.1.2
+  resolution: "dom-walk@npm:0.1.2"
+  checksum: 948c7527f3798cae9d7039cc0e5dc9f013ebd701d7d99478bac79d7d9eb8b81e7b6e836526e21ed9b156466b268e30ea0f2d5b72df955fabec3ce2aa7dc0086e
   languageName: node
   linkType: hard
 
@@ -4213,6 +4245,16 @@ __metadata:
   dependencies:
     ini: ^1.3.4
   checksum: 0d46e90b45e35fef757ef468fd497ea249787dafb20b76597ac0a1c129d8e8d7f09db4640a2f7ed12d1057159197af94ef4eea74c0be9c7c1c2c3bec5f0a6834
+  languageName: node
+  linkType: hard
+
+"global@npm:^4.4.0":
+  version: 4.4.0
+  resolution: "global@npm:4.4.0"
+  dependencies:
+    min-document: ^2.19.0
+    process: ^0.11.10
+  checksum: da0cf92ef034b63cf4d0fe5e14cb71bc4c748b8c1bbeabe4061443562ba8e9027774f8074e66543fa98f0d965da6d11e0861e3bf8c628b7ab19220e8ee18cc71
   languageName: node
   linkType: hard
 
@@ -6075,6 +6117,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"m3u8stream@npm:^0.8.3":
+  version: 0.8.4
+  resolution: "m3u8stream@npm:0.8.4"
+  dependencies:
+    miniget: ^4.0.0
+    sax: ^1.2.4
+  checksum: 39017b0653ee4e6e44eae71f061ecb1016b92235c3abe4351a187e9b1ff179e8d92218f6e42bceda5ac0118c98e1d0391947f5ee0c50c87e7c8b6a1aa5a3e596
+  languageName: node
+  linkType: hard
+
 "make-dir@npm:^3.0.0, make-dir@npm:^3.0.2":
   version: 3.1.0
   resolution: "make-dir@npm:3.1.0"
@@ -6084,7 +6136,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"make-error@npm:1.x":
+"make-error@npm:1.x, make-error@npm:^1.1.1":
   version: 1.3.6
   resolution: "make-error@npm:1.3.6"
   checksum: 2c780bab8409b865e8ee86697c599a2bf2765ec64d21eb67ccda27050e039f983feacad05a0d43aba3c966ea03d305d2612e94fec45474bcbc61181f57c5bb88
@@ -6235,10 +6287,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"min-document@npm:^2.19.0":
+  version: 2.19.0
+  resolution: "min-document@npm:2.19.0"
+  dependencies:
+    dom-walk: ^0.1.0
+  checksum: 8da883996e00a53729e867dad45a358c6d8b3b55f2473a20768c1a2b4642d0983bc61827cf29eb98c53d7290c2a1a74a5cba60873857da416bdfae09bf73bb21
+  languageName: node
+  linkType: hard
+
 "min-indent@npm:^1.0.0":
   version: 1.0.1
   resolution: "min-indent@npm:1.0.1"
   checksum: c3aeea46bc432e6ce69b86717e98fbb544e338abb5e3c93cfa196c427e3d5a4a6ee4f76e6931a9e424fb53e83451b90fc417ce7db04440a92d68369704ad11d1
+  languageName: node
+  linkType: hard
+
+"miniget@npm:^4.0.0":
+  version: 4.2.1
+  resolution: "miniget@npm:4.2.1"
+  checksum: cd9304bfaeff761b1ad533fbdbbf810fff3fe3bc0545510181ac3c70fc2a72ab485c7119a02a6b45732307c25032e0370ec1697d2e9162e8a6ed6c1d29545a0c
   languageName: node
   linkType: hard
 
@@ -7755,7 +7823,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sax@npm:>=0.6.0":
+"sax@npm:>=0.6.0, sax@npm:^1.1.3, sax@npm:^1.2.4":
   version: 1.2.4
   resolution: "sax@npm:1.2.4"
   checksum: 9d7668d69105e89e2c1a4b2fdc12c72e1a2f78b825f7b4a8a2ea5cdfebf70920bd17715bed55264c3b3959616a0695f8ad2d098bf6944fbd0953ee9c695dceef
@@ -7824,7 +7892,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"setimmediate@npm:^1.0.4, setimmediate@npm:^1.0.5":
+"setimmediate@npm:^1.0.4":
   version: 1.0.5
   resolution: "setimmediate@npm:1.0.5"
   checksum: 87884d8add4779fe47ccf763396a5bf875640ae34d80a10802da4de5c25d87647c12f6e7748fd5b8c143b57201caf2a5a781631456c228825f166ca305c12f20
@@ -7953,7 +8021,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map-support@npm:^0.5.6":
+"source-map-support@npm:^0.5.17, source-map-support@npm:^0.5.6":
   version: 0.5.19
   resolution: "source-map-support@npm:0.5.19"
   dependencies:
@@ -8640,6 +8708,40 @@ __metadata:
   bin:
     ts-jest: cli.js
   checksum: 21fa05cdd3d43a94514f0526e9956d78e494e247dbda33dc4cab4660b5311c0ef4c14cc58c8f5c8804c55f583c94048f45e4b0d5063f3be1ed4f87d916f3ecbf
+  languageName: node
+  linkType: hard
+
+"ts-node@npm:^10.0.0":
+  version: 10.0.0
+  resolution: "ts-node@npm:10.0.0"
+  dependencies:
+    "@tsconfig/node10": ^1.0.7
+    "@tsconfig/node12": ^1.0.7
+    "@tsconfig/node14": ^1.0.0
+    "@tsconfig/node16": ^1.0.1
+    arg: ^4.1.0
+    create-require: ^1.1.0
+    diff: ^4.0.1
+    make-error: ^1.1.1
+    source-map-support: ^0.5.17
+    yn: 3.1.1
+  peerDependencies:
+    "@swc/core": ">=1.2.45"
+    "@swc/wasm": ">=1.2.45"
+    "@types/node": "*"
+    typescript: ">=2.7"
+  peerDependenciesMeta:
+    "@swc/core":
+      optional: true
+    "@swc/wasm":
+      optional: true
+  bin:
+    ts-node: dist/bin.js
+    ts-node-cwd: dist/bin-cwd.js
+    ts-node-script: dist/bin-script.js
+    ts-node-transpile-only: dist/bin-transpile.js
+    ts-script: dist/bin-script-deprecated.js
+  checksum: dc461e2b9b931b00ff065530a0247f86da1d035e72a7ef6d7ed072dd8e6b236d1879f113dcc73a354d240c81b6b845445c3d32b16eeb68022ed27ab6d130c049
   languageName: node
   linkType: hard
 
@@ -9412,10 +9514,39 @@ typescript@^4.3.2:
   languageName: node
   linkType: hard
 
+"yn@npm:3.1.1":
+  version: 3.1.1
+  resolution: "yn@npm:3.1.1"
+  checksum: bff63b80568d80c711670935427494dde47cdf97e8b04196b140ce0af519c81c5ee857eddad0caa8b422dd65aea0157bbfaacbb1546bebba623f0f383d5d9ae5
+  languageName: node
+  linkType: hard
+
 "yocto-queue@npm:^0.1.0":
   version: 0.1.0
   resolution: "yocto-queue@npm:0.1.0"
   checksum: 096c3b40beb2804659539be1605a35c58eb0c85285f94b77b3e924f42ee265c1a40bf9f4153770039517146b469a964d51742395f35ca8135fc9f7e4982b785d
+  languageName: node
+  linkType: hard
+
+"ytdl-core-discord@npm:^1.3.1":
+  version: 1.3.1
+  resolution: "ytdl-core-discord@npm:1.3.1"
+  dependencies:
+    "@types/node": ^15.12.2
+    prism-media: ^1.3.1
+    ytdl-core: ^4.8.2
+  checksum: 27cb829e337a492680a4f205aa8ebfd1e29bcc63abad8cccfbc9c9130de3d06fb62057ffff4023a4502354f84a8c7789bc27b12eac8b237e5d400dcd3df50cd2
+  languageName: node
+  linkType: hard
+
+"ytdl-core@npm:^4.8.2":
+  version: 4.8.2
+  resolution: "ytdl-core@npm:4.8.2"
+  dependencies:
+    m3u8stream: ^0.8.3
+    miniget: ^4.0.0
+    sax: ^1.1.3
+  checksum: ecd5490e4eab314023121a68b39f731d1338476d37448d5ad3689c33e639b4e4d0e7a88af4665758a2c4640484f18c4bc8b207b07c8202250d9368fbc84ef172
   languageName: node
   linkType: hard
 

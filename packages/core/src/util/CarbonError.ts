@@ -8,7 +8,9 @@ export enum CarbonErrorType {
     CommandNotFound = 'COMMAND_NOT_FOUND',
     CommandError = 'COMMAND_ERROR',
     ModuleNotEnabled = 'MODULE_NOT_ENABLED',
-    InvalidPermission = 'INVALID_PERMISSION'
+    InvalidPermission = 'INVALID_PERMISSION',
+    MissingParam = 'MISSING_PARAMETER',
+    MissingInstance = 'MISSING_INSTANCE'
 }
 
 /**

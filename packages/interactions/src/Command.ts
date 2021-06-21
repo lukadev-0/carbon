@@ -14,9 +14,9 @@ export class Command {
         this.defaultPermission = data.defaultPermission
         this.module = data.module
 
-        this.run = () => {
+        this.run = data.run ?? (() => {
             throw new Error(`Command '${this.name}' does not have a 'run' method`)
-        }
+        })
     }
 }
 // eslint-disable-next-line @typescript-eslint/no-empty-interface

@@ -17,7 +17,7 @@ export function defaults(ephemeral = true): Command[] {
                 },
             ],
             run: async (int) => {
-                int.defer({
+                await int.defer({
                     ephemeral,
                 })
                 const user = int.options.get('user')?.user || int.member?.user
@@ -28,6 +28,37 @@ export function defaults(ephemeral = true): Command[] {
                     format: 'png',
                     size: 4096,
                 }))
+            },
+        }),
+        new Command({
+            name: 'music',
+            description: 'Music commands',
+            module: 'misc',
+            options: [
+                {
+                    name: 'play',
+                    description: 'Play music',
+                    type: 'SUB_COMMAND',
+                    options: [
+                        {
+                            name: 'song',
+                            description: 'Name of the song to play',
+                            required: true,
+                            type: 'STRING',
+                        },
+                    ],
+                },
+                {
+                    name: 'options',
+                    description: 'Get the music options',
+                    type: 'SUB_COMMAND',
+                },
+            ],
+            run: async (int) => {
+                await int.defer({
+                    ephemeral,
+                })
+                console.log(int.options)
             },
         }),
     ]
