@@ -1,4 +1,4 @@
-import { CarbonError, CarbonErrorType } from '@carbon-js/core'
+import { CarbonError, CarbonErrorType } from './util/CarbonError'
 import { User } from 'discord.js'
 import { Command } from '.'
 

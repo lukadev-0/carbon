@@ -443,6 +443,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@carbon-js/core@workspace:packages/core"
   dependencies:
+    "@carbon-js/interactions": "workspace:packages/interactions"
     "@types/jest": ^26.0.23
     chalk: ^4.1.1
     discord.js: dev
@@ -457,7 +458,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@carbon-js/interactions@workspace:packages/interactions"
   dependencies:
-    "@carbon-js/core": "workspace:packages/core"
     "@discordjs/voice": ^0.5.0
     "@types/jest": ^26.0.23
     discord.js: dev

@@ -31,6 +31,7 @@
     "yarn": "2.x"
   },
   "dependencies": {
+    "@carbon-js/interactions": "workspace:packages/interactions",
     "discord.js": "dev"
   }
 }

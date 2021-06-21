@@ -874,6 +874,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/core/",
           "packageDependencies": [
             ["@carbon-js/core", "workspace:packages/core"],
+            ["@carbon-js/interactions", "workspace:packages/interactions"],
             ["@types/jest", "npm:26.0.23"],
             ["chalk", "npm:4.1.1"],
             ["discord.js", "npm:13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930"],
@@ -890,7 +891,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/interactions/",
           "packageDependencies": [
             ["@carbon-js/interactions", "workspace:packages/interactions"],
-            ["@carbon-js/core", "workspace:packages/core"],
             ["@discordjs/voice", "npm:0.5.0"],
             ["@types/jest", "npm:26.0.23"],
             ["discord.js", "npm:13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930"],
