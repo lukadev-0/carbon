@@ -2,14 +2,746 @@
 	"id": 0,
 	"name": "@carbon-js/interactions",
 	"kind": 0,
-	"kindString": "Project",
 	"flags": {},
 	"originalName": "",
-	"sources": [
+	"children": [
 		{
-			"fileName": "index.ts",
-			"line": 1,
-			"character": 0
+			"id": 1,
+			"name": "Command",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 2,
+					"name": "Command",
+					"kind": 128,
+					"kindString": "Class",
+					"flags": {},
+					"comment": {
+						"shortText": "Represents a Carbon Slash Command"
+					},
+					"children": [
+						{
+							"id": 3,
+							"name": "constructor",
+							"kind": 512,
+							"kindString": "Constructor",
+							"flags": {},
+							"signatures": [
+								{
+									"id": 4,
+									"name": "new Command",
+									"kind": 16384,
+									"kindString": "Constructor signature",
+									"flags": {},
+									"comment": {},
+									"parameters": [
+										{
+											"id": 5,
+											"name": "data",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"comment": {
+												"text": "Raw Slash Command Data\n"
+											},
+											"type": {
+												"type": "reference",
+												"id": 15,
+												"name": "ApplicationCommandData"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 2,
+										"name": "Command"
+									}
+								}
+							]
+						},
+						{
+							"id": 14,
+							"name": "defaultPermission",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 2676,
+									"character": 21
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"id": 24,
+								"name": "ApplicationCommandData.defaultPermission"
+							}
+						},
+						{
+							"id": 12,
+							"name": "description",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 2674,
+									"character": 15
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"id": 22,
+								"name": "ApplicationCommandData.description"
+							}
+						},
+						{
+							"id": 10,
+							"name": "module",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "packages/interactions/src/Command.ts",
+									"line": 27,
+									"character": 10
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"id": 20,
+								"name": "ApplicationCommandData.module"
+							}
+						},
+						{
+							"id": 11,
+							"name": "name",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 2673,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"id": 21,
+								"name": "ApplicationCommandData.name"
+							}
+						},
+						{
+							"id": 13,
+							"name": "options",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 2675,
+									"character": 11
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"name": "ApplicationCommandOptionData"
+								}
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"id": 23,
+								"name": "ApplicationCommandData.options"
+							}
+						},
+						{
+							"id": 6,
+							"name": "run",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "packages/interactions/src/Command.ts",
+									"line": 26,
+									"character": 7
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 7,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 8,
+											"name": "__type",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 9,
+													"name": "interaction",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "reference",
+														"name": "CommandInteraction"
+													}
+												}
+											],
+											"type": {
+												"type": "intrinsic",
+												"name": "void"
+											}
+										}
+									]
+								}
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"id": 16,
+								"name": "ApplicationCommandData.run"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"kind": 512,
+							"children": [
+								3
+							]
+						},
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								14,
+								12,
+								10,
+								11,
+								13,
+								6
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "packages/interactions/src/Command.ts",
+							"line": 6,
+							"character": 20
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"id": 15,
+							"name": "ApplicationCommandData"
+						}
+					]
+				},
+				{
+					"id": 15,
+					"name": "ApplicationCommandData",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 24,
+							"name": "defaultPermission",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 2676,
+									"character": 21
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.ApplicationCommandData.defaultPermission"
+							}
+						},
+						{
+							"id": 22,
+							"name": "description",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 2674,
+									"character": 15
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.ApplicationCommandData.description"
+							}
+						},
+						{
+							"id": 20,
+							"name": "module",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "packages/interactions/src/Command.ts",
+									"line": 27,
+									"character": 10
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 21,
+							"name": "name",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 2673,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.ApplicationCommandData.name"
+							}
+						},
+						{
+							"id": 23,
+							"name": "options",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExternal": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 2675,
+									"character": 11
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"name": "ApplicationCommandOptionData"
+								}
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.ApplicationCommandData.options"
+							}
+						},
+						{
+							"id": 16,
+							"name": "run",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "packages/interactions/src/Command.ts",
+									"line": 26,
+									"character": 7
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 17,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"signatures": [
+										{
+											"id": 18,
+											"name": "__type",
+											"kind": 4096,
+											"kindString": "Call signature",
+											"flags": {},
+											"parameters": [
+												{
+													"id": 19,
+													"name": "interaction",
+													"kind": 32768,
+													"kindString": "Parameter",
+													"flags": {},
+													"type": {
+														"type": "reference",
+														"name": "CommandInteraction"
+													}
+												}
+											],
+											"type": {
+												"type": "intrinsic",
+												"name": "void"
+											}
+										}
+									]
+								}
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								24,
+								22,
+								20,
+								21,
+								23,
+								16
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "packages/interactions/src/Command.ts",
+							"line": 25,
+							"character": 39
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"name": "ApplicationCommandData"
+						}
+					],
+					"extendedBy": [
+						{
+							"type": "reference",
+							"id": 2,
+							"name": "Command"
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Classes",
+					"kind": 128,
+					"children": [
+						2
+					]
+				},
+				{
+					"title": "Interfaces",
+					"kind": 256,
+					"children": [
+						15
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "packages/interactions/src/Command.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 25,
+			"name": "InteractionsHandler",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 26,
+					"name": "interactionHandler",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "packages/interactions/src/InteractionsHandler.ts",
+							"line": 4,
+							"character": 40
+						}
+					],
+					"signatures": [
+						{
+							"id": 27,
+							"name": "interactionHandler",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 28,
+									"name": "int",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "Interaction"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "void"
+									}
+								],
+								"name": "Promise"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						26
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "packages/interactions/src/InteractionsHandler.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 29,
+			"name": "defaults",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 30,
+					"name": "defaults",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "packages/interactions/src/defaults.ts",
+							"line": 5,
+							"character": 24
+						}
+					],
+					"signatures": [
+						{
+							"id": 31,
+							"name": "defaults",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 32,
+									"name": "ephemeral",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									},
+									"defaultValue": "true"
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"id": 2,
+									"name": "Command"
+								}
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						30
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "packages/interactions/src/defaults.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 33,
+			"name": "index",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 34,
+					"name": "Command",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "packages/interactions/src/index.ts",
+							"line": 1,
+							"character": 16
+						}
+					],
+					"target": 2
+				},
+				{
+					"id": 35,
+					"name": "defaults",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "packages/interactions/src/index.ts",
+							"line": 2,
+							"character": 17
+						}
+					],
+					"target": 30
+				},
+				{
+					"id": 36,
+					"name": "interactionHandler",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "packages/interactions/src/index.ts",
+							"line": 3,
+							"character": 27
+						}
+					],
+					"target": 26
+				}
+			],
+			"groups": [
+				{
+					"title": "References",
+					"kind": 16777216,
+					"children": [
+						34,
+						35,
+						36
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "packages/interactions/src/index.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Modules",
+			"kind": 1,
+			"children": [
+				1,
+				25,
+				29,
+				33
+			]
 		}
 	]
 }
