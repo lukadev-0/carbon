@@ -18,7 +18,7 @@ export default function Index(): JSX.Element {
                     Carbon
                 </Typography>
                 <Typography paragraph>
-                    Carbon is a discord bot, with many features like moderation, trust issues, and robuks.
+                    Carbon is a discord bot, with many features like moderation, customizability & more.
                 </Typography>
                 <Button variant="contained" color="primary" href="/dashboard">
                     Get started
