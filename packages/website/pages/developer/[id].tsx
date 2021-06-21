@@ -1,6 +1,6 @@
 import React from 'react'
-import { GetStaticPropsResult, GetStaticPropsContext, GetStaticPathsResult } from 'next'
-import { getDoc, getDocs } from '../../util/developerDocs'
+//import { GetStaticPropsResult, GetStaticPropsContext, GetStaticPathsResult } from 'next'
+//import { getDoc, getDocs } from '../../util/developerDocs'
 
 interface Props {
     content: string
@@ -12,7 +12,7 @@ export default function DeveloperDoc({ content }: Props): JSX.Element {
     )
 }
 
-export async function getStaticProps(
+/*export async function getStaticProps(
     context: GetStaticPropsContext,
 ): Promise<GetStaticPropsResult<Props>> {
     console.log('getStaticProps')
@@ -43,4 +43,4 @@ export async function getStaticPaths(): Promise<GetStaticPathsResult> {
         })),
         fallback: false,
     }
-}
+}*/
