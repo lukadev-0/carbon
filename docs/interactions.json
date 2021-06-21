@@ -534,7 +534,7 @@
 					"sources": [
 						{
 							"fileName": "packages/interactions/src/InteractionsHandler.ts",
-							"line": 4,
+							"line": 9,
 							"character": 40
 						}
 					],
