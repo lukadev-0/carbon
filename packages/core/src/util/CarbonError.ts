@@ -21,7 +21,7 @@ export class CarbonError extends Error {
      * @param message The error message
      */
 
-    constructor(public code: CarbonErrorType, public message: string) {
+    constructor(public code: CarbonErrorType, public message: string = code) {
         super()
     }
     /**

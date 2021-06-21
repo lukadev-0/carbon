@@ -1,5 +1,5 @@
 {
-  "name": "@carbon-js/interactions",
+  "name": "@carbon-js/mocks",
   "version": "0.0.0",
   "license": "MIT",
   "main": "dist/index",
@@ -20,7 +20,7 @@
   ],
   "dependencies": {
     "@carbon-js/core": "workspace:packages/core",
-    "discord.js": "dev"
+    "discord.js": "^12.5.3"
   },
   "devDependencies": {
     "@types/jest": "^26.0.23",

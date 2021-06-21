@@ -1,0 +1,15 @@
+{
+	"id": 0,
+	"name": "@carbon-js/interactions",
+	"kind": 0,
+	"kindString": "Project",
+	"flags": {},
+	"originalName": "",
+	"sources": [
+		{
+			"fileName": "index.ts",
+			"line": 1,
+			"character": 0
+		}
+	]
+}
