@@ -12,6 +12,9 @@
 		"plugin:@typescript-eslint/eslint-recommended",
 		"plugin:@typescript-eslint/recommended"
 	],
+	"plugins": [
+		"react-hooks"
+	],
 	"rules": {
 		"semi": ["error", "never"],
 		"space-before-function-paren": [
@@ -56,6 +59,8 @@
 		"comma-spacing": ["error", { "before": false, "after": true }],
 		"eol-last": ["error", "never"],
 		"no-trailing-spaces": ["error", { "ignoreComments": true }],
-		"space-infix-ops": "error"
+		"space-infix-ops": "error",
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": "warn"
 	}
 }

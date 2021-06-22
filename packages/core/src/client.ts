@@ -9,6 +9,7 @@ export interface Client {
 
 export class Client extends discord.Client {
     public interactions: Command[] = []
+    public APIUrl = ''
     constructor(options: discord.ClientOptions) {
         super(options)
     }

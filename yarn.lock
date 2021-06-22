@@ -481,6 +481,7 @@ __metadata:
     clsx: ^1.1.1
     next: ^10.2.3
     next-auth: ^3.26.1
+    node-fetch-retry: ^1.1.1
     prop-types: ^15.7.2
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -503,6 +504,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^4.26.0
     "@typescript-eslint/parser": ^4.26.0
     eslint: ^7.28.0
+    eslint-plugin-react-hooks: ^4.2.0
     global: ^4.4.0
     husky: ^6.0.0
     jest: ^27.0.4
@@ -3648,6 +3650,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eslint-plugin-react-hooks@npm:^4.2.0":
+  version: 4.2.0
+  resolution: "eslint-plugin-react-hooks@npm:4.2.0"
+  peerDependencies:
+    eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
+  checksum: 5378d16b5a56431a7a77b56d61464dbbfa343e8607da87b851a6caee44b96e08847147321f5f38de30d20668418691d859f69d9c5262dfb5308856382252096c
+  languageName: node
+  linkType: hard
+
 "eslint-scope@npm:^5.0.0, eslint-scope@npm:^5.1.1":
   version: 5.1.1
   resolution: "eslint-scope@npm:5.1.1"
@@ -6587,6 +6598,15 @@ __metadata:
   bin:
     next: dist/bin/next
   checksum: e32ff7cc79cb2fb21a2bb954778f582dbb76525e7b5286ddeaeb832e67c631da54c2369f144dd5f30d3e770666667d9c0d5e1ca9699681a2da26db8b628037a2
+  languageName: node
+  linkType: hard
+
+"node-fetch-retry@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "node-fetch-retry@npm:1.1.1"
+  dependencies:
+    node-fetch: ^2.6.1
+  checksum: fa4334135decefb54858670f99f31fb75f8fd3b5916d70dab2d197cc96b02988704006ae887dee22661d019fc69a89ddfc59d93075fd807bbe91cad624e56ce4
   languageName: node
   linkType: hard
 

@@ -7,6 +7,7 @@ declare module 'next-auth' {
             discriminator: string,
             name: string,
             image: string,
+            id: string
         },
         accessToken: string
     }
@@ -34,6 +35,7 @@ export default NextAuth({
         },
         async session(session, token) {
             session.user.discriminator = token.discriminator as string
+            session.user.id = token.sub as string
             session.accessToken = token.accessToken as string
 
             return session

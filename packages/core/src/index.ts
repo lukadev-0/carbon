@@ -7,4 +7,4 @@ client.on('interaction', interactionHandler)
 
 client.registerCommands({ commands: defaults() })
 
-client.login('')
+client.login('ODI1NDgwMjY0NzkxNzUyNzA0.YF-iZw.jVvDaKpMSerwRC5B6pN_sVFnaEk')

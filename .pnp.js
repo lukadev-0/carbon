@@ -60,6 +60,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/eslint-plugin", "virtual:d7dc930c3b33cf53f185045b2fe39efc8ab7dd551363ddbf07758299d0bddb875ff804b6cae3e09247aecafe85c8dd50b71e47a8f7636cc4607186da1a4fdc94#npm:4.26.0"],
             ["@typescript-eslint/parser", "virtual:d7dc930c3b33cf53f185045b2fe39efc8ab7dd551363ddbf07758299d0bddb875ff804b6cae3e09247aecafe85c8dd50b71e47a8f7636cc4607186da1a4fdc94#npm:4.26.0"],
             ["eslint", "npm:7.28.0"],
+            ["eslint-plugin-react-hooks", "virtual:d7dc930c3b33cf53f185045b2fe39efc8ab7dd551363ddbf07758299d0bddb875ff804b6cae3e09247aecafe85c8dd50b71e47a8f7636cc4607186da1a4fdc94#npm:4.2.0"],
             ["global", "npm:4.4.0"],
             ["husky", "npm:6.0.0"],
             ["jest", "virtual:d7dc930c3b33cf53f185045b2fe39efc8ab7dd551363ddbf07758299d0bddb875ff804b6cae3e09247aecafe85c8dd50b71e47a8f7636cc4607186da1a4fdc94#npm:27.0.4"],
@@ -916,6 +917,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["clsx", "npm:1.1.1"],
             ["next", "virtual:fa402b1d7b63f5a115b11a019e4f199498adf5b34f17226b7a5c0cce8d4992571debefe684744d15616257ce764a94142ad67209a75110e634f7960021165509#npm:10.2.3"],
             ["next-auth", "virtual:fa402b1d7b63f5a115b11a019e4f199498adf5b34f17226b7a5c0cce8d4992571debefe684744d15616257ce764a94142ad67209a75110e634f7960021165509#npm:3.26.1"],
+            ["node-fetch-retry", "npm:1.1.1"],
             ["prop-types", "npm:15.7.2"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:fa402b1d7b63f5a115b11a019e4f199498adf5b34f17226b7a5c0cce8d4992571debefe684744d15616257ce764a94142ad67209a75110e634f7960021165509#npm:17.0.2"],
@@ -940,6 +942,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/eslint-plugin", "virtual:d7dc930c3b33cf53f185045b2fe39efc8ab7dd551363ddbf07758299d0bddb875ff804b6cae3e09247aecafe85c8dd50b71e47a8f7636cc4607186da1a4fdc94#npm:4.26.0"],
             ["@typescript-eslint/parser", "virtual:d7dc930c3b33cf53f185045b2fe39efc8ab7dd551363ddbf07758299d0bddb875ff804b6cae3e09247aecafe85c8dd50b71e47a8f7636cc4607186da1a4fdc94#npm:4.26.0"],
             ["eslint", "npm:7.28.0"],
+            ["eslint-plugin-react-hooks", "virtual:d7dc930c3b33cf53f185045b2fe39efc8ab7dd551363ddbf07758299d0bddb875ff804b6cae3e09247aecafe85c8dd50b71e47a8f7636cc4607186da1a4fdc94#npm:4.2.0"],
             ["global", "npm:4.4.0"],
             ["husky", "npm:6.0.0"],
             ["jest", "virtual:d7dc930c3b33cf53f185045b2fe39efc8ab7dd551363ddbf07758299d0bddb875ff804b6cae3e09247aecafe85c8dd50b71e47a8f7636cc4607186da1a4fdc94#npm:27.0.4"],
@@ -4884,6 +4887,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["eslint-plugin-react-hooks", [
+        ["npm:4.2.0", {
+          "packageLocation": "./.yarn/cache/eslint-plugin-react-hooks-npm-4.2.0-e09b1ea4ce-5378d16b5a.zip/node_modules/eslint-plugin-react-hooks/",
+          "packageDependencies": [
+            ["eslint-plugin-react-hooks", "npm:4.2.0"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:d7dc930c3b33cf53f185045b2fe39efc8ab7dd551363ddbf07758299d0bddb875ff804b6cae3e09247aecafe85c8dd50b71e47a8f7636cc4607186da1a4fdc94#npm:4.2.0", {
+          "packageLocation": "./.yarn/$$virtual/eslint-plugin-react-hooks-virtual-82243eaa5b/0/cache/eslint-plugin-react-hooks-npm-4.2.0-e09b1ea4ce-5378d16b5a.zip/node_modules/eslint-plugin-react-hooks/",
+          "packageDependencies": [
+            ["eslint-plugin-react-hooks", "virtual:d7dc930c3b33cf53f185045b2fe39efc8ab7dd551363ddbf07758299d0bddb875ff804b6cae3e09247aecafe85c8dd50b71e47a8f7636cc4607186da1a4fdc94#npm:4.2.0"],
+            ["@types/eslint", "npm:7.2.13"],
+            ["eslint", "npm:7.28.0"]
+          ],
+          "packagePeers": [
+            "@types/eslint",
+            "eslint"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["eslint-scope", [
         ["npm:5.1.1", {
           "packageLocation": "./.yarn/cache/eslint-scope-npm-5.1.1-71fe59b18a-79465cf508.zip/node_modules/eslint-scope/",
@@ -8168,6 +8193,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:2.6.1", {
           "packageLocation": "./.yarn/cache/node-fetch-npm-2.6.1-46c670dbc1-cbb171635e.zip/node_modules/node-fetch/",
           "packageDependencies": [
+            ["node-fetch", "npm:2.6.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["node-fetch-retry", [
+        ["npm:1.1.1", {
+          "packageLocation": "./.yarn/cache/node-fetch-retry-npm-1.1.1-cc3afac0f6-fa4334135d.zip/node_modules/node-fetch-retry/",
+          "packageDependencies": [
+            ["node-fetch-retry", "npm:1.1.1"],
             ["node-fetch", "npm:2.6.1"]
           ],
           "linkType": "HARD",
