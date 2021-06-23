@@ -8,7 +8,6 @@ export interface Client {
 }
 
 export class Client extends discord.Client {
-    public interactions: Command[] = []
     constructor(options: discord.ClientOptions) {
         super(options)
     }
@@ -59,11 +58,13 @@ export class Client extends discord.Client {
         if (!this.application?.commands) await this.application?.fetch()
         const location = guildId ? (await this.guilds.fetch(guildId)).commands : this.application?.commands
         if (!location) throw new CarbonError(CarbonErrorType.MissingInstance, 'The CommandManager couldn\'t be found.')
-        names ? names?.map((n) => {
-            const cmd = location.cache.find((v) => v.name === n)
-            if (!cmd) return logger.warn(`Command ${n} couldn't be find in the cache`)
-            this.application?.commands.delete(cmd)
-        }) : this.application?.commands.set([])
+        names ? names?.map(async (n) => {
+            let cmd = location.cache.find((v) => v.name === n)
+            if (!cmd) logger.warn(`Command ${n} couldn't be find in the cache, trying to fetch...`)
+            cmd = (await location.fetch()).find((v) => v.name === n)
+            if (!cmd) return logger.warn(`Command ${n} couldn't be fetcher or found in the cache. Aborting.`)
+            location.delete(cmd)
+        }) : location.set([])
     }
 }
 
