@@ -1,8 +1,9 @@
 import React from 'react'
 import useSWR from 'swr'
-import { Grid, Paper, CircularProgress, makeStyles, Button, Typography, List, ListItem, Avatar } from '@material-ui/core'
+import { Grid, Paper, CircularProgress, makeStyles, Button, Typography, List, ListItem } from '@material-ui/core'
 import Layout from '../../src/Layout'
 import { fetcher, options } from '../../src/swrSettings'
+import ServerIcon from '../../src/ServerIcon'
 const flex = {
     display: 'flex',
     alignItems: 'center',
@@ -33,13 +34,8 @@ const useStyles = makeStyles((theme) => ({
     rightButton: {
         marginLeft: 'auto',
     },
-    avatar: {
-        marginRight: theme.spacing(1),
-    },
-    displayAvatar: {
-        background: '#36393f',
-        color: '#dcddde',
-        fontSize: theme.spacing(2),
+    iconMargin: {
+        marginLeft: theme.spacing(0.75),
     },
 }))
 
@@ -60,8 +56,8 @@ export default function Dashboard(): JSX.Element {
             </Typography>
             <List className={classes.content}>
                 {data?.filter((v) => (v.permissions & 1 << 5) === 1 << 5).map((v, i) => <ListItem key={i}>
-                    <Avatar className={`${classes.avatar} ${v.icon ? '' : classes.displayAvatar}`} src={v.icon && `https://cdn.discordapp.com/icons/${v.id}/${v.icon}.${v.icon.startsWith('a_') ? 'gif' : 'png'}`} >{v.name.split(/ +/).map((v) => v.charAt(0))}</Avatar>
-                    <Typography>
+                    <ServerIcon v={v} />
+                    <Typography className={classes.iconMargin}>
                         {v.name}
                     </Typography>
                     <Button className={classes.rightButton} color="primary" variant="outlined" href={`/dashboard/${v.id}`}>Manage</Button>

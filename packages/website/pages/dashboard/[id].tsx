@@ -6,6 +6,7 @@ import Layout from '../../src/Layout'
 import { makeStyles, Grid, CircularProgress, Collapse, List, ListItem, ListItemText, Typography, Button } from '@material-ui/core'
 import { ExpandMoreRounded, ExpandLessRounded } from '@material-ui/icons'
 import { fetcher, options } from '../../src/swrSettings'
+import ServerIcon from '../../src/ServerIcon'
 const useStyles = makeStyles((theme) => ({
     flex: {
         display: 'flex',
@@ -56,6 +57,7 @@ export default function DashboardGuild(): JSX.Element {
     error = error1
     const router = useRouter()
     const { id } = router.query
+    const guild = data?.find((v) => v.id === id)
     const { data: isInGuild, error: error2 }: { data?: boolean, error?: Error } = useSWR(`/api/isInGuild?guildId=${id}`, fetcher, options)
     console.log(isInGuild)
     error = error2
@@ -63,9 +65,13 @@ export default function DashboardGuild(): JSX.Element {
 
     return (
         <Grid item xs className={classes.flex}>
-            <div>
-                {isInGuild ? <Typography>Im in guild</Typography> : <Button color="primary" variant="contained" href={process.env.NEXT_PUBLIC_BOT_INVITE_URL}>Add bot</Button>}
-            </div>
+            {guild && <ServerIcon v={guild} />}
+            {
+                error ? <Typography>An error has occured. Maybe try refreshing the page?<br />Error: {error.message}</Typography> :
+                    <div>
+                        {isInGuild ? <Typography>Im in guild</Typography> : <Button color="primary" variant="contained" href={process.env.NEXT_PUBLIC_BOT_INVITE_URL}>Add bot</Button>}
+                    </div>
+            }
         </Grid>
     )
 }

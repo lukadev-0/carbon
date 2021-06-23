@@ -5,7 +5,7 @@ export default createTheme({
     palette: {
         primary: {
             light: color[100],
-            main: color[200],
+            main: '#BB86FC',
             dark: color[300],
         },
         type: 'dark',

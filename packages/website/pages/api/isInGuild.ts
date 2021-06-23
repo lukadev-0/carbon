@@ -30,5 +30,5 @@ export default async (req: NextApiRequest, res: NextApiResponse): Promise<void> 
 
     const guilds: Guild[] = await response.json()
     const isIn = guilds.find((v) => v.id === guildId)
-    res.send(Boolean(isIn))
+    res.send(isIn ? true : false)
 }

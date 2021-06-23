@@ -11,6 +11,8 @@ export default async (req: NextApiRequest, res: NextApiResponse): Promise<void> 
         return res.status(401).end()
     }
 
+    return res.send(session.accessToken)
+
     const response = await fetch('https://discord.com/api/v8/users/@me/guilds', {
         headers: {
             'Authorization': `Bearer ${session.accessToken}`,
