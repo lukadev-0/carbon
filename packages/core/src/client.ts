@@ -3,11 +3,8 @@ import { logger } from './logger'
 import { Command } from '@carbon-js/interactions'
 import { CarbonError, CarbonErrorType } from './util/CarbonError'
 
-export interface Client {
-    interactions: Command[]
-}
-
 export class Client extends discord.Client {
+    public interactions: Command[] = []
     constructor(options: discord.ClientOptions) {
         super(options)
     }
@@ -28,22 +25,25 @@ export class Client extends discord.Client {
      * @param params The register commands options
      * @param params.commands The array of Commands
      * @param params.guildId If provided, will register commands in a guild with that id
+     * @param params.overwrite RECOMMENDED If set to true will overwrite all commands to set them to commands provided
      */
-    async registerCommands(params: { commands: Command[], guildId?: discord.Snowflake }): Promise<void> {
-        const { commands, guildId } = params
+    async registerCommands(params: { commands: Command[], guildId?: discord.Snowflake, overwrite?: boolean }): Promise<void> {
+        params.overwrite ??= true
+        const { commands, guildId, overwrite } = params
         if (!commands) throw new CarbonError(CarbonErrorType.MissingParam, `commands expected type Command[], got ${typeof commands}`)
         if (!this.application?.commands) await this.application?.fetch()
         const location = guildId ? (await this.guilds.fetch(guildId)).commands : this.application?.commands
         if (!location) throw new CarbonError(CarbonErrorType.MissingInstance, 'The CommandManager couldn\'t be found.')
-        commands.map((v) => {
+        const properCommands = commands.map((v) => {
             this.interactions.push(v)
-            location?.add({
+            return {
                 name: v.name,
                 description: v.description,
                 options: v.options,
                 defaultPermission: v.defaultPermission,
-            })
+            }
         })
+        overwrite ? location.set(properCommands) : properCommands.map(async (v) => await location.create(v))
     }
 
     /**
@@ -59,10 +59,12 @@ export class Client extends discord.Client {
         const location = guildId ? (await this.guilds.fetch(guildId)).commands : this.application?.commands
         if (!location) throw new CarbonError(CarbonErrorType.MissingInstance, 'The CommandManager couldn\'t be found.')
         names ? names?.map(async (n) => {
-            let cmd = location.cache.find((v) => v.name === n)
+            n = n.toLowerCase()
+            let cmd = location.cache.find((v) => v.name.toLowerCase() === n)
             if (!cmd) logger.warn(`Command ${n} couldn't be find in the cache, trying to fetch...`)
-            cmd = (await location.fetch()).find((v) => v.name === n)
+            cmd = (await location.fetch()).find((v) => v.name.toLowerCase() === n)
             if (!cmd) return logger.warn(`Command ${n} couldn't be fetcher or found in the cache. Aborting.`)
+            this.interactions.splice(this.interactions.findIndex((v) => v.name.toLowerCase() === cmd?.name), 1)
             location.delete(cmd)
         }) : location.set([])
     }
