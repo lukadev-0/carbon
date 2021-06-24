@@ -527,7 +527,7 @@
 			"children": [
 				{
 					"id": 26,
-					"name": "interactionHandler",
+					"name": "InteractionHandler",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
@@ -541,7 +541,7 @@
 					"signatures": [
 						{
 							"id": 27,
-							"name": "interactionHandler",
+							"name": "InteractionHandler",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
@@ -682,6 +682,21 @@
 					"target": 2
 				},
 				{
+					"id": 143,
+					"name": "InteractionHandler",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "packages/interactions/src/index.ts",
+							"line": 3,
+							"character": 27
+						}
+					],
+					"target": 26
+				},
+				{
 					"id": 142,
 					"name": "defaults",
 					"kind": 16777216,
@@ -695,21 +710,6 @@
 						}
 					],
 					"target": 30
-				},
-				{
-					"id": 143,
-					"name": "interactionHandler",
-					"kind": 16777216,
-					"kindString": "Reference",
-					"flags": {},
-					"sources": [
-						{
-							"fileName": "packages/interactions/src/index.ts",
-							"line": 3,
-							"character": 27
-						}
-					],
-					"target": 26
 				}
 			],
 			"groups": [
@@ -718,8 +718,8 @@
 					"kind": 16777216,
 					"children": [
 						141,
-						142,
-						143
+						143,
+						142
 					]
 				}
 			],
@@ -1128,6 +1128,7 @@
 									},
 									"type": {
 										"type": "reference",
+										"id": 63,
 										"name": "ErrorMessageEmbed"
 									}
 								}
@@ -1273,6 +1274,1819 @@
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {},
+			"children": [
+				{
+					"id": 63,
+					"name": "ErrorMessageEmbed",
+					"kind": 128,
+					"kindString": "Class",
+					"flags": {
+						"isPrivate": true
+					},
+					"comment": {
+						"shortText": "Represents a Carbon Error Message Embed"
+					},
+					"children": [
+						{
+							"id": 72,
+							"name": "constructor",
+							"kind": 512,
+							"kindString": "Constructor",
+							"flags": {},
+							"signatures": [
+								{
+									"id": 73,
+									"name": "new ErrorMessageEmbed",
+									"kind": 16384,
+									"kindString": "Constructor signature",
+									"flags": {},
+									"parameters": [
+										{
+											"id": 74,
+											"name": "error",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"name": "Error"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 63,
+										"name": "ErrorMessageEmbed"
+									},
+									"overwrites": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.constructor"
+									}
+								}
+							],
+							"overwrites": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.constructor"
+							}
+						},
+						{
+							"id": 76,
+							"name": "author",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1425,
+									"character": 17
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "reference",
+										"name": "MessageEmbedAuthor"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.author"
+							}
+						},
+						{
+							"id": 77,
+							"name": "color",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1426,
+									"character": 16
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.color"
+							}
+						},
+						{
+							"id": 78,
+							"name": "createdAt",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true,
+								"isReadonly": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1427,
+									"character": 29
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "reference",
+										"name": "Date"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.createdAt"
+							}
+						},
+						{
+							"id": 79,
+							"name": "description",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1428,
+									"character": 22
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.description"
+							}
+						},
+						{
+							"id": 75,
+							"name": "error",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true
+							},
+							"type": {
+								"type": "reference",
+								"name": "Error"
+							}
+						},
+						{
+							"id": 80,
+							"name": "fields",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1429,
+									"character": 17
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"name": "EmbedField"
+								}
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.fields"
+							}
+						},
+						{
+							"id": 81,
+							"name": "files",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1430,
+									"character": 16
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "union",
+									"types": [
+										{
+											"type": "intrinsic",
+											"name": "string"
+										},
+										{
+											"type": "reference",
+											"name": "MessageAttachment"
+										},
+										{
+											"type": "reference",
+											"name": "FileOptions"
+										}
+									]
+								}
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.files"
+							}
+						},
+						{
+							"id": 82,
+							"name": "footer",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1431,
+									"character": 17
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "reference",
+										"name": "MessageEmbedFooter"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.footer"
+							}
+						},
+						{
+							"id": 83,
+							"name": "hexColor",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true,
+								"isReadonly": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1432,
+									"character": 28
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.hexColor"
+							}
+						},
+						{
+							"id": 84,
+							"name": "image",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1433,
+									"character": 16
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "reference",
+										"name": "MessageEmbedImage"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.image"
+							}
+						},
+						{
+							"id": 85,
+							"name": "length",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true,
+								"isReadonly": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1434,
+									"character": 26
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.length"
+							}
+						},
+						{
+							"id": 86,
+							"name": "provider",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1435,
+									"character": 19
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "reference",
+										"name": "MessageEmbedProvider"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.provider"
+							}
+						},
+						{
+							"id": 87,
+							"name": "thumbnail",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1436,
+									"character": 20
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "reference",
+										"name": "MessageEmbedThumbnail"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.thumbnail"
+							}
+						},
+						{
+							"id": 88,
+							"name": "timestamp",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1437,
+									"character": 20
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.timestamp"
+							}
+						},
+						{
+							"id": 89,
+							"name": "title",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1438,
+									"character": 16
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.title"
+							}
+						},
+						{
+							"id": 90,
+							"name": "type",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1439,
+									"character": 15
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.type"
+							}
+						},
+						{
+							"id": 91,
+							"name": "url",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1440,
+									"character": 14
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.url"
+							}
+						},
+						{
+							"id": 92,
+							"name": "video",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true,
+								"isReadonly": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1441,
+									"character": 25
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "reference",
+										"name": "MessageEmbedVideo"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.video"
+							}
+						},
+						{
+							"id": 93,
+							"name": "addField",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1442,
+									"character": 19
+								}
+							],
+							"signatures": [
+								{
+									"id": 94,
+									"name": "addField",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 95,
+											"name": "name",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 96,
+											"name": "value",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 97,
+											"name": "inline",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "boolean"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 63,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.addField"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.addField"
+							}
+						},
+						{
+							"id": 98,
+							"name": "addFields",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1443,
+									"character": 20
+								}
+							],
+							"signatures": [
+								{
+									"id": 99,
+									"name": "addFields",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 100,
+											"name": "fields",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isRest": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "array",
+														"elementType": {
+															"type": "reference",
+															"name": "EmbedFieldData"
+														}
+													},
+													{
+														"type": "array",
+														"elementType": {
+															"type": "array",
+															"elementType": {
+																"type": "reference",
+																"name": "EmbedFieldData"
+															}
+														}
+													}
+												]
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 63,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.addFields"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.addFields"
+							}
+						},
+						{
+							"id": 101,
+							"name": "attachFiles",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1444,
+									"character": 22
+								}
+							],
+							"signatures": [
+								{
+									"id": 102,
+									"name": "attachFiles",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 103,
+											"name": "file",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "array",
+												"elementType": {
+													"type": "union",
+													"types": [
+														{
+															"type": "intrinsic",
+															"name": "string"
+														},
+														{
+															"type": "reference",
+															"name": "MessageAttachment"
+														},
+														{
+															"type": "reference",
+															"name": "FileOptions"
+														}
+													]
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 63,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.attachFiles"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.attachFiles"
+							}
+						},
+						{
+							"id": 104,
+							"name": "setAuthor",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1445,
+									"character": 20
+								}
+							],
+							"signatures": [
+								{
+									"id": 105,
+									"name": "setAuthor",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 106,
+											"name": "name",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 107,
+											"name": "iconURL",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 108,
+											"name": "url",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 63,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.setAuthor"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.setAuthor"
+							}
+						},
+						{
+							"id": 109,
+							"name": "setColor",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1446,
+									"character": 19
+								}
+							],
+							"signatures": [
+								{
+									"id": 110,
+									"name": "setColor",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 111,
+											"name": "color",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "ColorResolvable"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 63,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.setColor"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.setColor"
+							}
+						},
+						{
+							"id": 112,
+							"name": "setDescription",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1447,
+									"character": 25
+								}
+							],
+							"signatures": [
+								{
+									"id": 113,
+									"name": "setDescription",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 114,
+											"name": "description",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 63,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.setDescription"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.setDescription"
+							}
+						},
+						{
+							"id": 115,
+							"name": "setFooter",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1448,
+									"character": 20
+								}
+							],
+							"signatures": [
+								{
+									"id": 116,
+									"name": "setFooter",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 117,
+											"name": "text",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 118,
+											"name": "iconURL",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 63,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.setFooter"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.setFooter"
+							}
+						},
+						{
+							"id": 119,
+							"name": "setImage",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1449,
+									"character": 19
+								}
+							],
+							"signatures": [
+								{
+									"id": 120,
+									"name": "setImage",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 121,
+											"name": "url",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 63,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.setImage"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.setImage"
+							}
+						},
+						{
+							"id": 122,
+							"name": "setThumbnail",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1450,
+									"character": 23
+								}
+							],
+							"signatures": [
+								{
+									"id": 123,
+									"name": "setThumbnail",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 124,
+											"name": "url",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 63,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.setThumbnail"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.setThumbnail"
+							}
+						},
+						{
+							"id": 125,
+							"name": "setTimestamp",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1451,
+									"character": 23
+								}
+							],
+							"signatures": [
+								{
+									"id": 126,
+									"name": "setTimestamp",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 127,
+											"name": "timestamp",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "number"
+													},
+													{
+														"type": "reference",
+														"name": "Date"
+													}
+												]
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 63,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.setTimestamp"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.setTimestamp"
+							}
+						},
+						{
+							"id": 128,
+							"name": "setTitle",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1452,
+									"character": 19
+								}
+							],
+							"signatures": [
+								{
+									"id": 129,
+									"name": "setTitle",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 130,
+											"name": "title",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 63,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.setTitle"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.setTitle"
+							}
+						},
+						{
+							"id": 131,
+							"name": "setURL",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1453,
+									"character": 17
+								}
+							],
+							"signatures": [
+								{
+									"id": 132,
+									"name": "setURL",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 133,
+											"name": "url",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 63,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.setURL"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.setURL"
+							}
+						},
+						{
+							"id": 134,
+							"name": "spliceFields",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1454,
+									"character": 23
+								}
+							],
+							"signatures": [
+								{
+									"id": 135,
+									"name": "spliceFields",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 136,
+											"name": "index",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "number"
+											}
+										},
+										{
+											"id": 137,
+											"name": "deleteCount",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "number"
+											}
+										},
+										{
+											"id": 138,
+											"name": "fields",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isRest": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "array",
+														"elementType": {
+															"type": "reference",
+															"name": "EmbedFieldData"
+														}
+													},
+													{
+														"type": "array",
+														"elementType": {
+															"type": "array",
+															"elementType": {
+																"type": "reference",
+																"name": "EmbedFieldData"
+															}
+														}
+													}
+												]
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 63,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.spliceFields"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.spliceFields"
+							}
+						},
+						{
+							"id": 139,
+							"name": "toJSON",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1455,
+									"character": 17
+								}
+							],
+							"signatures": [
+								{
+									"id": 140,
+									"name": "toJSON",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "unknown"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.toJSON"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.toJSON"
+							}
+						},
+						{
+							"id": 64,
+							"name": "normalizeField",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isStatic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1457,
+									"character": 32
+								}
+							],
+							"signatures": [
+								{
+									"id": 65,
+									"name": "normalizeField",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 66,
+											"name": "name",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 67,
+											"name": "value",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 68,
+											"name": "inline",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "boolean"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"typeArguments": [
+											{
+												"type": "reference",
+												"name": "EmbedFieldData"
+											}
+										],
+										"name": "Required"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.normalizeField"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.normalizeField"
+							}
+						},
+						{
+							"id": 69,
+							"name": "normalizeFields",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isStatic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1458,
+									"character": 33
+								}
+							],
+							"signatures": [
+								{
+									"id": 70,
+									"name": "normalizeFields",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 71,
+											"name": "fields",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isRest": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "array",
+														"elementType": {
+															"type": "reference",
+															"name": "EmbedFieldData"
+														}
+													},
+													{
+														"type": "array",
+														"elementType": {
+															"type": "array",
+															"elementType": {
+																"type": "reference",
+																"name": "EmbedFieldData"
+															}
+														}
+													}
+												]
+											}
+										}
+									],
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"typeArguments": [
+												{
+													"type": "reference",
+													"name": "EmbedFieldData"
+												}
+											],
+											"name": "Required"
+										}
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.normalizeFields"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.normalizeFields"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"kind": 512,
+							"children": [
+								72
+							]
+						},
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								76,
+								77,
+								78,
+								79,
+								75,
+								80,
+								81,
+								82,
+								83,
+								84,
+								85,
+								86,
+								87,
+								88,
+								89,
+								90,
+								91,
+								92
+							]
+						},
+						{
+							"title": "Methods",
+							"kind": 2048,
+							"children": [
+								93,
+								98,
+								101,
+								104,
+								109,
+								112,
+								115,
+								119,
+								122,
+								125,
+								128,
+								131,
+								134,
+								139,
+								64,
+								69
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "packages/interactions/src/util/ErrorMessageEmbed.ts",
+							"line": 8,
+							"character": 30
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"name": "MessageEmbed"
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Classes",
+					"kind": 128,
+					"children": [
+						63
+					]
+				}
+			],
 			"sources": [
 				{
 					"fileName": "packages/interactions/src/util/ErrorMessageEmbed.ts",

@@ -62,7 +62,7 @@
 							}
 						},
 						{
-							"id": 49,
+							"id": 59,
 							"name": "application",
 							"kind": 1024,
 							"kindString": "Property",
@@ -96,7 +96,7 @@
 							}
 						},
 						{
-							"id": 50,
+							"id": 60,
 							"name": "channels",
 							"kind": 1024,
 							"kindString": "Property",
@@ -121,7 +121,7 @@
 							}
 						},
 						{
-							"id": 51,
+							"id": 61,
 							"name": "emojis",
 							"kind": 1024,
 							"kindString": "Property",
@@ -147,7 +147,7 @@
 							}
 						},
 						{
-							"id": 52,
+							"id": 62,
 							"name": "guilds",
 							"kind": 1024,
 							"kindString": "Property",
@@ -182,7 +182,7 @@
 							"sources": [
 								{
 									"fileName": "packages/core/src/client.ts",
-									"line": 7,
+									"line": 8,
 									"character": 23
 								}
 							],
@@ -196,7 +196,7 @@
 							"defaultValue": "[]"
 						},
 						{
-							"id": 53,
+							"id": 63,
 							"name": "options",
 							"kind": 1024,
 							"kindString": "Property",
@@ -221,7 +221,7 @@
 							}
 						},
 						{
-							"id": 54,
+							"id": 64,
 							"name": "readyAt",
 							"kind": 1024,
 							"kindString": "Property",
@@ -255,7 +255,7 @@
 							}
 						},
 						{
-							"id": 55,
+							"id": 65,
 							"name": "readyTimestamp",
 							"kind": 1024,
 							"kindString": "Property",
@@ -290,7 +290,7 @@
 							}
 						},
 						{
-							"id": 56,
+							"id": 66,
 							"name": "shard",
 							"kind": 1024,
 							"kindString": "Property",
@@ -324,7 +324,7 @@
 							}
 						},
 						{
-							"id": 57,
+							"id": 67,
 							"name": "token",
 							"kind": 1024,
 							"kindString": "Property",
@@ -358,7 +358,7 @@
 							}
 						},
 						{
-							"id": 58,
+							"id": 68,
 							"name": "uptime",
 							"kind": 1024,
 							"kindString": "Property",
@@ -393,7 +393,7 @@
 							}
 						},
 						{
-							"id": 59,
+							"id": 69,
 							"name": "user",
 							"kind": 1024,
 							"kindString": "Property",
@@ -427,7 +427,7 @@
 							}
 						},
 						{
-							"id": 60,
+							"id": 70,
 							"name": "users",
 							"kind": 1024,
 							"kindString": "Property",
@@ -452,7 +452,7 @@
 							}
 						},
 						{
-							"id": 61,
+							"id": 71,
 							"name": "voice",
 							"kind": 1024,
 							"kindString": "Property",
@@ -477,7 +477,7 @@
 							}
 						},
 						{
-							"id": 62,
+							"id": 72,
 							"name": "ws",
 							"kind": 1024,
 							"kindString": "Property",
@@ -619,7 +619,7 @@
 							}
 						},
 						{
-							"id": 184,
+							"id": 194,
 							"name": "addListener",
 							"kind": 2048,
 							"kindString": "Method",
@@ -628,7 +628,7 @@
 							},
 							"signatures": [
 								{
-									"id": 185,
+									"id": 195,
 									"name": "addListener",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -637,7 +637,7 @@
 									},
 									"parameters": [
 										{
-											"id": 186,
+											"id": 196,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -659,7 +659,7 @@
 											}
 										},
 										{
-											"id": 187,
+											"id": 197,
 											"name": "listener",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -669,7 +669,7 @@
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 188,
+													"id": 198,
 													"name": "__type",
 													"kind": 65536,
 													"kindString": "Type literal",
@@ -678,7 +678,7 @@
 													},
 													"signatures": [
 														{
-															"id": 189,
+															"id": 199,
 															"name": "__type",
 															"kind": 4096,
 															"kindString": "Call signature",
@@ -687,7 +687,7 @@
 															},
 															"parameters": [
 																{
-																	"id": 190,
+																	"id": 200,
 																	"name": "args",
 																	"kind": 32768,
 																	"kindString": "Parameter",
@@ -731,7 +731,108 @@
 							}
 						},
 						{
-							"id": 158,
+							"id": 43,
+							"name": "cacheCommands",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPrivate": true
+							},
+							"sources": [
+								{
+									"fileName": "packages/core/src/client.ts",
+									"line": 63,
+									"character": 17
+								}
+							],
+							"signatures": [
+								{
+									"id": 44,
+									"name": "cacheCommands",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isPrivate": true
+									},
+									"comment": {
+										"shortText": "Allows you to cache your commands for Carbon's usage and not send a request to the Discord API."
+									},
+									"parameters": [
+										{
+											"id": 45,
+											"name": "params",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"comment": {
+												"text": "The cache options"
+											},
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 46,
+													"name": "__type",
+													"kind": 65536,
+													"kindString": "Type literal",
+													"flags": {},
+													"children": [
+														{
+															"id": 47,
+															"name": "commands",
+															"kind": 1024,
+															"kindString": "Property",
+															"flags": {},
+															"comment": {
+																"text": "The commands to cache"
+															},
+															"sources": [
+																{
+																	"fileName": "packages/core/src/client.ts",
+																	"line": 63,
+																	"character": 36
+																}
+															],
+															"type": {
+																"type": "union",
+																"types": [
+																	{
+																		"type": "reference",
+																		"name": "Command"
+																	},
+																	{
+																		"type": "array",
+																		"elementType": {
+																			"type": "reference",
+																			"name": "Command"
+																		}
+																	}
+																]
+															}
+														}
+													],
+													"groups": [
+														{
+															"title": "Properties",
+															"kind": 1024,
+															"children": [
+																47
+															]
+														}
+													]
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 2,
+										"name": "Client"
+									}
+								}
+							]
+						},
+						{
+							"id": 168,
 							"name": "clearImmediate",
 							"kind": 2048,
 							"kindString": "Method",
@@ -748,7 +849,7 @@
 							],
 							"signatures": [
 								{
-									"id": 159,
+									"id": 169,
 									"name": "clearImmediate",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -757,7 +858,7 @@
 									},
 									"parameters": [
 										{
-											"id": 160,
+											"id": 170,
 											"name": "timeout",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -786,7 +887,7 @@
 							}
 						},
 						{
-							"id": 152,
+							"id": 162,
 							"name": "clearInterval",
 							"kind": 2048,
 							"kindString": "Method",
@@ -803,7 +904,7 @@
 							],
 							"signatures": [
 								{
-									"id": 153,
+									"id": 163,
 									"name": "clearInterval",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -812,7 +913,7 @@
 									},
 									"parameters": [
 										{
-											"id": 154,
+											"id": 164,
 											"name": "interval",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -841,7 +942,7 @@
 							}
 						},
 						{
-							"id": 155,
+							"id": 165,
 							"name": "clearTimeout",
 							"kind": 2048,
 							"kindString": "Method",
@@ -858,7 +959,7 @@
 							],
 							"signatures": [
 								{
-									"id": 156,
+									"id": 166,
 									"name": "clearTimeout",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -867,7 +968,7 @@
 									},
 									"parameters": [
 										{
-											"id": 157,
+											"id": 167,
 											"name": "timeout",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -896,7 +997,7 @@
 							}
 						},
 						{
-							"id": 63,
+							"id": 73,
 							"name": "destroy",
 							"kind": 2048,
 							"kindString": "Method",
@@ -913,7 +1014,7 @@
 							],
 							"signatures": [
 								{
-									"id": 64,
+									"id": 74,
 									"name": "destroy",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -936,7 +1037,7 @@
 							}
 						},
 						{
-							"id": 121,
+							"id": 131,
 							"name": "emit",
 							"kind": 2048,
 							"kindString": "Method",
@@ -953,7 +1054,7 @@
 							],
 							"signatures": [
 								{
-									"id": 122,
+									"id": 132,
 									"name": "emit",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -962,7 +1063,7 @@
 									},
 									"typeParameter": [
 										{
-											"id": 123,
+											"id": 133,
 											"name": "K",
 											"kind": 131072,
 											"kindString": "Type parameter",
@@ -981,7 +1082,7 @@
 									],
 									"parameters": [
 										{
-											"id": 124,
+											"id": 134,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -994,7 +1095,7 @@
 											}
 										},
 										{
-											"id": 125,
+											"id": 135,
 											"name": "args",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1025,7 +1126,7 @@
 									}
 								},
 								{
-									"id": 126,
+									"id": 136,
 									"name": "emit",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1034,7 +1135,7 @@
 									},
 									"typeParameter": [
 										{
-											"id": 127,
+											"id": 137,
 											"name": "S",
 											"kind": 131072,
 											"kindString": "Type parameter",
@@ -1058,7 +1159,7 @@
 									],
 									"parameters": [
 										{
-											"id": 128,
+											"id": 138,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1085,7 +1186,7 @@
 											}
 										},
 										{
-											"id": 129,
+											"id": 139,
 											"name": "args",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1118,7 +1219,7 @@
 							}
 						},
 						{
-							"id": 226,
+							"id": 236,
 							"name": "eventNames",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1127,7 +1228,7 @@
 							},
 							"signatures": [
 								{
-									"id": 227,
+									"id": 237,
 									"name": "eventNames",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1162,7 +1263,7 @@
 							}
 						},
 						{
-							"id": 65,
+							"id": 75,
 							"name": "fetchGuildPreview",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1179,7 +1280,7 @@
 							],
 							"signatures": [
 								{
-									"id": 66,
+									"id": 76,
 									"name": "fetchGuildPreview",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1188,7 +1289,7 @@
 									},
 									"parameters": [
 										{
-											"id": 67,
+											"id": 77,
 											"name": "guild",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1223,7 +1324,7 @@
 							}
 						},
 						{
-							"id": 71,
+							"id": 81,
 							"name": "fetchGuildTemplate",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1240,7 +1341,7 @@
 							],
 							"signatures": [
 								{
-									"id": 72,
+									"id": 82,
 									"name": "fetchGuildTemplate",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1249,7 +1350,7 @@
 									},
 									"parameters": [
 										{
-											"id": 73,
+											"id": 83,
 											"name": "template",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1284,7 +1385,7 @@
 							}
 						},
 						{
-							"id": 68,
+							"id": 78,
 							"name": "fetchInvite",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1301,7 +1402,7 @@
 							],
 							"signatures": [
 								{
-									"id": 69,
+									"id": 79,
 									"name": "fetchInvite",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1310,7 +1411,7 @@
 									},
 									"parameters": [
 										{
-											"id": 70,
+											"id": 80,
 											"name": "invite",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1345,7 +1446,7 @@
 							}
 						},
 						{
-							"id": 74,
+							"id": 84,
 							"name": "fetchVoiceRegions",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1362,7 +1463,7 @@
 							],
 							"signatures": [
 								{
-									"id": 75,
+									"id": 85,
 									"name": "fetchVoiceRegions",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1401,7 +1502,7 @@
 							}
 						},
 						{
-							"id": 76,
+							"id": 86,
 							"name": "fetchWebhook",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1418,7 +1519,7 @@
 							],
 							"signatures": [
 								{
-									"id": 77,
+									"id": 87,
 									"name": "fetchWebhook",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1427,7 +1528,7 @@
 									},
 									"parameters": [
 										{
-											"id": 78,
+											"id": 88,
 											"name": "id",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1449,7 +1550,7 @@
 											}
 										},
 										{
-											"id": 79,
+											"id": 89,
 											"name": "token",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1485,7 +1586,7 @@
 							}
 						},
 						{
-							"id": 80,
+							"id": 90,
 							"name": "generateInvite",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1502,7 +1603,7 @@
 							],
 							"signatures": [
 								{
-									"id": 81,
+									"id": 91,
 									"name": "generateInvite",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1511,7 +1612,7 @@
 									},
 									"parameters": [
 										{
-											"id": 82,
+											"id": 92,
 											"name": "options",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1541,7 +1642,7 @@
 							}
 						},
 						{
-							"id": 201,
+							"id": 211,
 							"name": "getMaxListeners",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1550,7 +1651,7 @@
 							},
 							"signatures": [
 								{
-									"id": 202,
+									"id": 212,
 									"name": "getMaxListeners",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1573,7 +1674,7 @@
 							}
 						},
 						{
-							"id": 209,
+							"id": 219,
 							"name": "listenerCount",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1582,7 +1683,7 @@
 							},
 							"signatures": [
 								{
-									"id": 210,
+									"id": 220,
 									"name": "listenerCount",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1591,7 +1692,7 @@
 									},
 									"parameters": [
 										{
-											"id": 211,
+											"id": 221,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1629,7 +1730,7 @@
 							}
 						},
 						{
-							"id": 203,
+							"id": 213,
 							"name": "listeners",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1638,7 +1739,7 @@
 							},
 							"signatures": [
 								{
-									"id": 204,
+									"id": 214,
 									"name": "listeners",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1647,7 +1748,7 @@
 									},
 									"parameters": [
 										{
-											"id": 205,
+											"id": 215,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1688,7 +1789,7 @@
 							}
 						},
 						{
-							"id": 83,
+							"id": 93,
 							"name": "login",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1705,7 +1806,7 @@
 							],
 							"signatures": [
 								{
-									"id": 84,
+									"id": 94,
 									"name": "login",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1714,7 +1815,7 @@
 									},
 									"parameters": [
 										{
-											"id": 85,
+											"id": 95,
 											"name": "token",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1750,7 +1851,7 @@
 							}
 						},
 						{
-							"id": 130,
+							"id": 140,
 							"name": "off",
 							"kind": 2048,
 							"kindString": "Method",
@@ -1767,7 +1868,7 @@
 							],
 							"signatures": [
 								{
-									"id": 131,
+									"id": 141,
 									"name": "off",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1776,7 +1877,7 @@
 									},
 									"typeParameter": [
 										{
-											"id": 132,
+											"id": 142,
 											"name": "K",
 											"kind": 131072,
 											"kindString": "Type parameter",
@@ -1795,7 +1896,7 @@
 									],
 									"parameters": [
 										{
-											"id": 133,
+											"id": 143,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1808,7 +1909,7 @@
 											}
 										},
 										{
-											"id": 134,
+											"id": 144,
 											"name": "listener",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1818,7 +1919,7 @@
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 135,
+													"id": 145,
 													"name": "__type",
 													"kind": 65536,
 													"kindString": "Type literal",
@@ -1827,7 +1928,7 @@
 													},
 													"signatures": [
 														{
-															"id": 136,
+															"id": 146,
 															"name": "__type",
 															"kind": 4096,
 															"kindString": "Call signature",
@@ -1836,7 +1937,7 @@
 															},
 															"parameters": [
 																{
-																	"id": 137,
+																	"id": 147,
 																	"name": "args",
 																	"kind": 32768,
 																	"kindString": "Parameter",
@@ -1884,7 +1985,7 @@
 									}
 								},
 								{
-									"id": 138,
+									"id": 148,
 									"name": "off",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -1893,7 +1994,7 @@
 									},
 									"typeParameter": [
 										{
-											"id": 139,
+											"id": 149,
 											"name": "S",
 											"kind": 131072,
 											"kindString": "Type parameter",
@@ -1917,7 +2018,7 @@
 									],
 									"parameters": [
 										{
-											"id": 140,
+											"id": 150,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1944,7 +2045,7 @@
 											}
 										},
 										{
-											"id": 141,
+											"id": 151,
 											"name": "listener",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -1954,7 +2055,7 @@
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 142,
+													"id": 152,
 													"name": "__type",
 													"kind": 65536,
 													"kindString": "Type literal",
@@ -1963,7 +2064,7 @@
 													},
 													"signatures": [
 														{
-															"id": 143,
+															"id": 153,
 															"name": "__type",
 															"kind": 4096,
 															"kindString": "Call signature",
@@ -1972,7 +2073,7 @@
 															},
 															"parameters": [
 																{
-																	"id": 144,
+																	"id": 154,
 																	"name": "args",
 																	"kind": 32768,
 																	"kindString": "Parameter",
@@ -2022,7 +2123,7 @@
 							}
 						},
 						{
-							"id": 91,
+							"id": 101,
 							"name": "on",
 							"kind": 2048,
 							"kindString": "Method",
@@ -2039,7 +2140,7 @@
 							],
 							"signatures": [
 								{
-									"id": 92,
+									"id": 102,
 									"name": "on",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -2048,7 +2149,7 @@
 									},
 									"typeParameter": [
 										{
-											"id": 93,
+											"id": 103,
 											"name": "K",
 											"kind": 131072,
 											"kindString": "Type parameter",
@@ -2067,7 +2168,7 @@
 									],
 									"parameters": [
 										{
-											"id": 94,
+											"id": 104,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2080,7 +2181,7 @@
 											}
 										},
 										{
-											"id": 95,
+											"id": 105,
 											"name": "listener",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2090,7 +2191,7 @@
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 96,
+													"id": 106,
 													"name": "__type",
 													"kind": 65536,
 													"kindString": "Type literal",
@@ -2099,7 +2200,7 @@
 													},
 													"signatures": [
 														{
-															"id": 97,
+															"id": 107,
 															"name": "__type",
 															"kind": 4096,
 															"kindString": "Call signature",
@@ -2108,7 +2209,7 @@
 															},
 															"parameters": [
 																{
-																	"id": 98,
+																	"id": 108,
 																	"name": "args",
 																	"kind": 32768,
 																	"kindString": "Parameter",
@@ -2156,7 +2257,7 @@
 									}
 								},
 								{
-									"id": 99,
+									"id": 109,
 									"name": "on",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -2165,7 +2266,7 @@
 									},
 									"typeParameter": [
 										{
-											"id": 100,
+											"id": 110,
 											"name": "S",
 											"kind": 131072,
 											"kindString": "Type parameter",
@@ -2189,7 +2290,7 @@
 									],
 									"parameters": [
 										{
-											"id": 101,
+											"id": 111,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2216,7 +2317,7 @@
 											}
 										},
 										{
-											"id": 102,
+											"id": 112,
 											"name": "listener",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2226,7 +2327,7 @@
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 103,
+													"id": 113,
 													"name": "__type",
 													"kind": 65536,
 													"kindString": "Type literal",
@@ -2235,7 +2336,7 @@
 													},
 													"signatures": [
 														{
-															"id": 104,
+															"id": 114,
 															"name": "__type",
 															"kind": 4096,
 															"kindString": "Call signature",
@@ -2244,7 +2345,7 @@
 															},
 															"parameters": [
 																{
-																	"id": 105,
+																	"id": 115,
 																	"name": "args",
 																	"kind": 32768,
 																	"kindString": "Parameter",
@@ -2294,7 +2395,7 @@
 							}
 						},
 						{
-							"id": 106,
+							"id": 116,
 							"name": "once",
 							"kind": 2048,
 							"kindString": "Method",
@@ -2311,7 +2412,7 @@
 							],
 							"signatures": [
 								{
-									"id": 107,
+									"id": 117,
 									"name": "once",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -2320,7 +2421,7 @@
 									},
 									"typeParameter": [
 										{
-											"id": 108,
+											"id": 118,
 											"name": "K",
 											"kind": 131072,
 											"kindString": "Type parameter",
@@ -2339,7 +2440,7 @@
 									],
 									"parameters": [
 										{
-											"id": 109,
+											"id": 119,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2352,7 +2453,7 @@
 											}
 										},
 										{
-											"id": 110,
+											"id": 120,
 											"name": "listener",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2362,7 +2463,7 @@
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 111,
+													"id": 121,
 													"name": "__type",
 													"kind": 65536,
 													"kindString": "Type literal",
@@ -2371,7 +2472,7 @@
 													},
 													"signatures": [
 														{
-															"id": 112,
+															"id": 122,
 															"name": "__type",
 															"kind": 4096,
 															"kindString": "Call signature",
@@ -2380,7 +2481,7 @@
 															},
 															"parameters": [
 																{
-																	"id": 113,
+																	"id": 123,
 																	"name": "args",
 																	"kind": 32768,
 																	"kindString": "Parameter",
@@ -2428,7 +2529,7 @@
 									}
 								},
 								{
-									"id": 114,
+									"id": 124,
 									"name": "once",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -2437,7 +2538,7 @@
 									},
 									"typeParameter": [
 										{
-											"id": 115,
+											"id": 125,
 											"name": "S",
 											"kind": 131072,
 											"kindString": "Type parameter",
@@ -2461,7 +2562,7 @@
 									],
 									"parameters": [
 										{
-											"id": 116,
+											"id": 126,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2488,7 +2589,7 @@
 											}
 										},
 										{
-											"id": 117,
+											"id": 127,
 											"name": "listener",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2498,7 +2599,7 @@
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 118,
+													"id": 128,
 													"name": "__type",
 													"kind": 65536,
 													"kindString": "Type literal",
@@ -2507,7 +2608,7 @@
 													},
 													"signatures": [
 														{
-															"id": 119,
+															"id": 129,
 															"name": "__type",
 															"kind": 4096,
 															"kindString": "Call signature",
@@ -2516,7 +2617,7 @@
 															},
 															"parameters": [
 																{
-																	"id": 120,
+																	"id": 130,
 																	"name": "args",
 																	"kind": 32768,
 																	"kindString": "Parameter",
@@ -2566,7 +2667,7 @@
 							}
 						},
 						{
-							"id": 212,
+							"id": 222,
 							"name": "prependListener",
 							"kind": 2048,
 							"kindString": "Method",
@@ -2575,7 +2676,7 @@
 							},
 							"signatures": [
 								{
-									"id": 213,
+									"id": 223,
 									"name": "prependListener",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -2584,7 +2685,7 @@
 									},
 									"parameters": [
 										{
-											"id": 214,
+											"id": 224,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2606,7 +2707,7 @@
 											}
 										},
 										{
-											"id": 215,
+											"id": 225,
 											"name": "listener",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2616,7 +2717,7 @@
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 216,
+													"id": 226,
 													"name": "__type",
 													"kind": 65536,
 													"kindString": "Type literal",
@@ -2625,7 +2726,7 @@
 													},
 													"signatures": [
 														{
-															"id": 217,
+															"id": 227,
 															"name": "__type",
 															"kind": 4096,
 															"kindString": "Call signature",
@@ -2634,7 +2735,7 @@
 															},
 															"parameters": [
 																{
-																	"id": 218,
+																	"id": 228,
 																	"name": "args",
 																	"kind": 32768,
 																	"kindString": "Parameter",
@@ -2678,7 +2779,7 @@
 							}
 						},
 						{
-							"id": 219,
+							"id": 229,
 							"name": "prependOnceListener",
 							"kind": 2048,
 							"kindString": "Method",
@@ -2687,7 +2788,7 @@
 							},
 							"signatures": [
 								{
-									"id": 220,
+									"id": 230,
 									"name": "prependOnceListener",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -2696,7 +2797,7 @@
 									},
 									"parameters": [
 										{
-											"id": 221,
+											"id": 231,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2718,7 +2819,7 @@
 											}
 										},
 										{
-											"id": 222,
+											"id": 232,
 											"name": "listener",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2728,7 +2829,7 @@
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 223,
+													"id": 233,
 													"name": "__type",
 													"kind": 65536,
 													"kindString": "Type literal",
@@ -2737,7 +2838,7 @@
 													},
 													"signatures": [
 														{
-															"id": 224,
+															"id": 234,
 															"name": "__type",
 															"kind": 4096,
 															"kindString": "Call signature",
@@ -2746,7 +2847,7 @@
 															},
 															"parameters": [
 																{
-																	"id": 225,
+																	"id": 235,
 																	"name": "args",
 																	"kind": 32768,
 																	"kindString": "Parameter",
@@ -2790,7 +2891,7 @@
 							}
 						},
 						{
-							"id": 206,
+							"id": 216,
 							"name": "rawListeners",
 							"kind": 2048,
 							"kindString": "Method",
@@ -2799,7 +2900,7 @@
 							},
 							"signatures": [
 								{
-									"id": 207,
+									"id": 217,
 									"name": "rawListeners",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -2808,7 +2909,7 @@
 									},
 									"parameters": [
 										{
-											"id": 208,
+											"id": 218,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -2857,7 +2958,7 @@
 							"sources": [
 								{
 									"fileName": "packages/core/src/client.ts",
-									"line": 30,
+									"line": 31,
 									"character": 26
 								}
 							],
@@ -2902,7 +3003,7 @@
 															"sources": [
 																{
 																	"fileName": "packages/core/src/client.ts",
-																	"line": 30,
+																	"line": 31,
 																	"character": 45
 																}
 															],
@@ -2928,7 +3029,7 @@
 															"sources": [
 																{
 																	"fileName": "packages/core/src/client.ts",
-																	"line": 30,
+																	"line": 31,
 																	"character": 65
 																}
 															],
@@ -2960,7 +3061,7 @@
 															"sources": [
 																{
 																	"fileName": "packages/core/src/client.ts",
-																	"line": 30,
+																	"line": 31,
 																	"character": 96
 																}
 															],
@@ -2989,8 +3090,9 @@
 										"type": "reference",
 										"typeArguments": [
 											{
-												"type": "intrinsic",
-												"name": "void"
+												"type": "reference",
+												"id": 2,
+												"name": "Client"
 											}
 										],
 										"name": "Promise"
@@ -2999,7 +3101,7 @@
 							]
 						},
 						{
-							"id": 145,
+							"id": 155,
 							"name": "removeAllListeners",
 							"kind": 2048,
 							"kindString": "Method",
@@ -3016,7 +3118,7 @@
 							],
 							"signatures": [
 								{
-									"id": 146,
+									"id": 156,
 									"name": "removeAllListeners",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -3025,7 +3127,7 @@
 									},
 									"typeParameter": [
 										{
-											"id": 147,
+											"id": 157,
 											"name": "K",
 											"kind": 131072,
 											"kindString": "Type parameter",
@@ -3044,7 +3146,7 @@
 									],
 									"parameters": [
 										{
-											"id": 148,
+											"id": 158,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -3069,7 +3171,7 @@
 									}
 								},
 								{
-									"id": 149,
+									"id": 159,
 									"name": "removeAllListeners",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -3078,7 +3180,7 @@
 									},
 									"typeParameter": [
 										{
-											"id": 150,
+											"id": 160,
 											"name": "S",
 											"kind": 131072,
 											"kindString": "Type parameter",
@@ -3102,7 +3204,7 @@
 									],
 									"parameters": [
 										{
-											"id": 151,
+											"id": 161,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -3147,7 +3249,7 @@
 							}
 						},
 						{
-							"id": 43,
+							"id": 53,
 							"name": "removeCommands",
 							"kind": 2048,
 							"kindString": "Method",
@@ -3155,13 +3257,13 @@
 							"sources": [
 								{
 									"fileName": "packages/core/src/client.ts",
-									"line": 55,
+									"line": 102,
 									"character": 24
 								}
 							],
 							"signatures": [
 								{
-									"id": 44,
+									"id": 54,
 									"name": "removeCommands",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -3171,7 +3273,7 @@
 									},
 									"parameters": [
 										{
-											"id": 45,
+											"id": 55,
 											"name": "params",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -3184,14 +3286,14 @@
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 46,
+													"id": 56,
 													"name": "__type",
 													"kind": 65536,
 													"kindString": "Type literal",
 													"flags": {},
 													"children": [
 														{
-															"id": 48,
+															"id": 58,
 															"name": "guildId",
 															"kind": 1024,
 															"kindString": "Property",
@@ -3204,7 +3306,7 @@
 															"sources": [
 																{
 																	"fileName": "packages/core/src/client.ts",
-																	"line": 55,
+																	"line": 102,
 																	"character": 61
 																}
 															],
@@ -3223,7 +3325,7 @@
 															}
 														},
 														{
-															"id": 47,
+															"id": 57,
 															"name": "names",
 															"kind": 1024,
 															"kindString": "Property",
@@ -3236,7 +3338,7 @@
 															"sources": [
 																{
 																	"fileName": "packages/core/src/client.ts",
-																	"line": 55,
+																	"line": 102,
 																	"character": 41
 																}
 															],
@@ -3254,8 +3356,8 @@
 															"title": "Properties",
 															"kind": 1024,
 															"children": [
-																48,
-																47
+																58,
+																57
 															]
 														}
 													]
@@ -3267,8 +3369,9 @@
 										"type": "reference",
 										"typeArguments": [
 											{
-												"type": "intrinsic",
-												"name": "void"
+												"type": "reference",
+												"id": 2,
+												"name": "Client"
 											}
 										],
 										"name": "Promise"
@@ -3277,7 +3380,7 @@
 							]
 						},
 						{
-							"id": 191,
+							"id": 201,
 							"name": "removeListener",
 							"kind": 2048,
 							"kindString": "Method",
@@ -3286,7 +3389,7 @@
 							},
 							"signatures": [
 								{
-									"id": 192,
+									"id": 202,
 									"name": "removeListener",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -3295,7 +3398,7 @@
 									},
 									"parameters": [
 										{
-											"id": 193,
+											"id": 203,
 											"name": "event",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -3317,7 +3420,7 @@
 											}
 										},
 										{
-											"id": 194,
+											"id": 204,
 											"name": "listener",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -3327,7 +3430,7 @@
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 195,
+													"id": 205,
 													"name": "__type",
 													"kind": 65536,
 													"kindString": "Type literal",
@@ -3336,7 +3439,7 @@
 													},
 													"signatures": [
 														{
-															"id": 196,
+															"id": 206,
 															"name": "__type",
 															"kind": 4096,
 															"kindString": "Call signature",
@@ -3345,7 +3448,7 @@
 															},
 															"parameters": [
 																{
-																	"id": 197,
+																	"id": 207,
 																	"name": "args",
 																	"kind": 32768,
 																	"kindString": "Parameter",
@@ -3389,7 +3492,7 @@
 							}
 						},
 						{
-							"id": 177,
+							"id": 187,
 							"name": "setImmediate",
 							"kind": 2048,
 							"kindString": "Method",
@@ -3406,7 +3509,7 @@
 							],
 							"signatures": [
 								{
-									"id": 178,
+									"id": 188,
 									"name": "setImmediate",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -3415,7 +3518,7 @@
 									},
 									"parameters": [
 										{
-											"id": 179,
+											"id": 189,
 											"name": "fn",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -3425,7 +3528,7 @@
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 180,
+													"id": 190,
 													"name": "__type",
 													"kind": 65536,
 													"kindString": "Type literal",
@@ -3434,7 +3537,7 @@
 													},
 													"signatures": [
 														{
-															"id": 181,
+															"id": 191,
 															"name": "__type",
 															"kind": 4096,
 															"kindString": "Call signature",
@@ -3443,7 +3546,7 @@
 															},
 															"parameters": [
 																{
-																	"id": 182,
+																	"id": 192,
 																	"name": "args",
 																	"kind": 32768,
 																	"kindString": "Parameter",
@@ -3470,7 +3573,7 @@
 											}
 										},
 										{
-											"id": 183,
+											"id": 193,
 											"name": "args",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -3503,7 +3606,7 @@
 							}
 						},
 						{
-							"id": 161,
+							"id": 171,
 							"name": "setInterval",
 							"kind": 2048,
 							"kindString": "Method",
@@ -3520,7 +3623,7 @@
 							],
 							"signatures": [
 								{
-									"id": 162,
+									"id": 172,
 									"name": "setInterval",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -3529,7 +3632,7 @@
 									},
 									"parameters": [
 										{
-											"id": 163,
+											"id": 173,
 											"name": "fn",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -3539,7 +3642,7 @@
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 164,
+													"id": 174,
 													"name": "__type",
 													"kind": 65536,
 													"kindString": "Type literal",
@@ -3548,7 +3651,7 @@
 													},
 													"signatures": [
 														{
-															"id": 165,
+															"id": 175,
 															"name": "__type",
 															"kind": 4096,
 															"kindString": "Call signature",
@@ -3557,7 +3660,7 @@
 															},
 															"parameters": [
 																{
-																	"id": 166,
+																	"id": 176,
 																	"name": "args",
 																	"kind": 32768,
 																	"kindString": "Parameter",
@@ -3584,7 +3687,7 @@
 											}
 										},
 										{
-											"id": 167,
+											"id": 177,
 											"name": "delay",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -3597,7 +3700,7 @@
 											}
 										},
 										{
-											"id": 168,
+											"id": 178,
 											"name": "args",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -3630,7 +3733,7 @@
 							}
 						},
 						{
-							"id": 198,
+							"id": 208,
 							"name": "setMaxListeners",
 							"kind": 2048,
 							"kindString": "Method",
@@ -3639,7 +3742,7 @@
 							},
 							"signatures": [
 								{
-									"id": 199,
+									"id": 209,
 									"name": "setMaxListeners",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -3648,7 +3751,7 @@
 									},
 									"parameters": [
 										{
-											"id": 200,
+											"id": 210,
 											"name": "n",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -3678,7 +3781,7 @@
 							}
 						},
 						{
-							"id": 169,
+							"id": 179,
 							"name": "setTimeout",
 							"kind": 2048,
 							"kindString": "Method",
@@ -3695,7 +3798,7 @@
 							],
 							"signatures": [
 								{
-									"id": 170,
+									"id": 180,
 									"name": "setTimeout",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -3704,7 +3807,7 @@
 									},
 									"parameters": [
 										{
-											"id": 171,
+											"id": 181,
 											"name": "fn",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -3714,7 +3817,7 @@
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 172,
+													"id": 182,
 													"name": "__type",
 													"kind": 65536,
 													"kindString": "Type literal",
@@ -3723,7 +3826,7 @@
 													},
 													"signatures": [
 														{
-															"id": 173,
+															"id": 183,
 															"name": "__type",
 															"kind": 4096,
 															"kindString": "Call signature",
@@ -3732,7 +3835,7 @@
 															},
 															"parameters": [
 																{
-																	"id": 174,
+																	"id": 184,
 																	"name": "args",
 																	"kind": 32768,
 																	"kindString": "Parameter",
@@ -3759,7 +3862,7 @@
 											}
 										},
 										{
-											"id": 175,
+											"id": 185,
 											"name": "delay",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -3772,7 +3875,7 @@
 											}
 										},
 										{
-											"id": 176,
+											"id": 186,
 											"name": "args",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -3805,7 +3908,7 @@
 							}
 						},
 						{
-							"id": 86,
+							"id": 96,
 							"name": "sweepMessages",
 							"kind": 2048,
 							"kindString": "Method",
@@ -3822,7 +3925,7 @@
 							],
 							"signatures": [
 								{
-									"id": 87,
+									"id": 97,
 									"name": "sweepMessages",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -3831,7 +3934,7 @@
 									},
 									"parameters": [
 										{
-											"id": 88,
+											"id": 98,
 											"name": "lifetime",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -3861,7 +3964,7 @@
 							}
 						},
 						{
-							"id": 89,
+							"id": 99,
 							"name": "toJSON",
 							"kind": 2048,
 							"kindString": "Method",
@@ -3878,7 +3981,7 @@
 							],
 							"signatures": [
 								{
-									"id": 90,
+									"id": 100,
 									"name": "toJSON",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -3899,6 +4002,172 @@
 								"type": "reference",
 								"name": "discord.Client.toJSON"
 							}
+						},
+						{
+							"id": 48,
+							"name": "uncacheCommand",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPrivate": true
+							},
+							"sources": [
+								{
+									"fileName": "packages/core/src/client.ts",
+									"line": 84,
+									"character": 18
+								}
+							],
+							"signatures": [
+								{
+									"id": 49,
+									"name": "uncacheCommand",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isPrivate": true
+									},
+									"comment": {
+										"shortText": "Allows you to uncache commands from Carbon's usage."
+									},
+									"parameters": [
+										{
+											"id": 50,
+											"name": "params",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"comment": {
+												"text": "The uncacheCommand params"
+											},
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 51,
+													"name": "__type",
+													"kind": 65536,
+													"kindString": "Type literal",
+													"flags": {},
+													"children": [
+														{
+															"id": 52,
+															"name": "commands",
+															"kind": 1024,
+															"kindString": "Property",
+															"flags": {},
+															"sources": [
+																{
+																	"fileName": "packages/core/src/client.ts",
+																	"line": 84,
+																	"character": 37
+																}
+															],
+															"type": {
+																"type": "union",
+																"types": [
+																	{
+																		"type": "reference",
+																		"name": "Command"
+																	},
+																	{
+																		"type": "array",
+																		"elementType": {
+																			"type": "reference",
+																			"name": "Command"
+																		}
+																	},
+																	{
+																		"type": "reference",
+																		"name": "ApplicationCommand"
+																	},
+																	{
+																		"type": "array",
+																		"elementType": {
+																			"type": "reference",
+																			"name": "ApplicationCommand"
+																		}
+																	}
+																]
+															}
+														}
+													],
+													"groups": [
+														{
+															"title": "Properties",
+															"kind": 1024,
+															"children": [
+																52
+															]
+														}
+													]
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 2,
+										"name": "Client"
+									}
+								}
+							]
+						},
+						{
+							"id": 3,
+							"name": "_mock",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPrivate": true,
+								"isStatic": true
+							},
+							"sources": [
+								{
+									"fileName": "packages/core/src/client.ts",
+									"line": 17,
+									"character": 16
+								}
+							],
+							"signatures": [
+								{
+									"id": 4,
+									"name": "_mock",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isPrivate": true
+									},
+									"comment": {
+										"shortText": "Creates a mock client"
+									},
+									"parameters": [
+										{
+											"id": 5,
+											"name": "options",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isOptional": true
+											},
+											"type": {
+												"type": "reference",
+												"typeArguments": [
+													{
+														"type": "reference",
+														"name": "ClientOptions"
+													}
+												],
+												"name": "Partial"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 2,
+										"name": "Client"
+									}
+								}
+							]
 						},
 						{
 							"id": 24,
@@ -4346,21 +4615,21 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								49,
-								50,
-								51,
-								52,
-								35,
-								53,
-								54,
-								55,
-								56,
-								57,
-								58,
 								59,
 								60,
 								61,
 								62,
+								35,
+								63,
+								64,
+								65,
+								66,
+								67,
+								68,
+								69,
+								70,
+								71,
+								72,
 								29,
 								30,
 								31,
@@ -4371,39 +4640,42 @@
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								184,
-								158,
-								152,
-								155,
-								63,
-								121,
-								226,
-								65,
-								71,
-								68,
-								74,
-								76,
-								80,
-								201,
-								209,
-								203,
-								83,
-								130,
-								91,
-								106,
-								212,
-								219,
-								206,
-								36,
-								145,
+								194,
 								43,
-								191,
-								177,
-								161,
-								198,
-								169,
+								168,
+								162,
+								165,
+								73,
+								131,
+								236,
+								75,
+								81,
+								78,
+								84,
 								86,
-								89,
+								90,
+								211,
+								219,
+								213,
+								93,
+								140,
+								101,
+								116,
+								222,
+								229,
+								216,
+								36,
+								155,
+								53,
+								201,
+								187,
+								171,
+								208,
+								179,
+								96,
+								99,
+								48,
+								3,
 								24,
 								20,
 								15,
@@ -4414,7 +4686,7 @@
 					"sources": [
 						{
 							"fileName": "packages/core/src/client.ts",
-							"line": 6,
+							"line": 7,
 							"character": 19
 						}
 					],
@@ -4426,7 +4698,7 @@
 					]
 				},
 				{
-					"id": 228,
+					"id": 238,
 					"name": "client",
 					"kind": 32,
 					"kindString": "Variable",
@@ -4436,7 +4708,7 @@
 					"sources": [
 						{
 							"fileName": "packages/core/src/client.ts",
-							"line": 73,
+							"line": 123,
 							"character": 19
 						}
 					],
@@ -4460,7 +4732,7 @@
 					"title": "Variables",
 					"kind": 32,
 					"children": [
-						228
+						238
 					]
 				}
 			],
@@ -4473,14 +4745,14 @@
 			]
 		},
 		{
-			"id": 229,
+			"id": 239,
 			"name": "index",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 341,
+					"id": 351,
 					"name": "CarbonError",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -4492,10 +4764,10 @@
 							"character": 20
 						}
 					],
-					"target": 240
+					"target": 250
 				},
 				{
-					"id": 342,
+					"id": 352,
 					"name": "CarbonErrorType",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -4507,10 +4779,10 @@
 							"character": 37
 						}
 					],
-					"target": 233
+					"target": 243
 				},
 				{
-					"id": 340,
+					"id": 350,
 					"name": "Client",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -4530,9 +4802,9 @@
 					"title": "References",
 					"kind": 16777216,
 					"children": [
-						341,
-						342,
-						340
+						351,
+						352,
+						350
 					]
 				}
 			],
@@ -4545,14 +4817,14 @@
 			]
 		},
 		{
-			"id": 230,
+			"id": 240,
 			"name": "logger",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 231,
+					"id": 241,
 					"name": "logger",
 					"kind": 32,
 					"kindString": "Variable",
@@ -4581,7 +4853,7 @@
 					"title": "Variables",
 					"kind": 32,
 					"children": [
-						231
+						241
 					]
 				}
 			],
@@ -4594,14 +4866,14 @@
 			]
 		},
 		{
-			"id": 232,
+			"id": 242,
 			"name": "util/CarbonError",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 233,
+					"id": 243,
 					"name": "CarbonErrorType",
 					"kind": 4,
 					"kindString": "Enumeration",
@@ -4611,7 +4883,7 @@
 					},
 					"children": [
 						{
-							"id": 235,
+							"id": 245,
 							"name": "CommandError",
 							"kind": 16,
 							"kindString": "Enumeration member",
@@ -4626,7 +4898,7 @@
 							"defaultValue": "\"COMMAND_ERROR\""
 						},
 						{
-							"id": 234,
+							"id": 244,
 							"name": "CommandNotFound",
 							"kind": 16,
 							"kindString": "Enumeration member",
@@ -4641,7 +4913,7 @@
 							"defaultValue": "\"COMMAND_NOT_FOUND\""
 						},
 						{
-							"id": 237,
+							"id": 247,
 							"name": "InvalidPermission",
 							"kind": 16,
 							"kindString": "Enumeration member",
@@ -4656,7 +4928,7 @@
 							"defaultValue": "\"INVALID_PERMISSION\""
 						},
 						{
-							"id": 239,
+							"id": 249,
 							"name": "MissingInstance",
 							"kind": 16,
 							"kindString": "Enumeration member",
@@ -4671,7 +4943,7 @@
 							"defaultValue": "\"MISSING_INSTANCE\""
 						},
 						{
-							"id": 238,
+							"id": 248,
 							"name": "MissingParam",
 							"kind": 16,
 							"kindString": "Enumeration member",
@@ -4686,7 +4958,7 @@
 							"defaultValue": "\"MISSING_PARAMETER\""
 						},
 						{
-							"id": 236,
+							"id": 246,
 							"name": "ModuleNotEnabled",
 							"kind": 16,
 							"kindString": "Enumeration member",
@@ -4706,12 +4978,12 @@
 							"title": "Enumeration members",
 							"kind": 16,
 							"children": [
-								235,
-								234,
-								237,
-								239,
-								238,
-								236
+								245,
+								244,
+								247,
+								249,
+								248,
+								246
 							]
 						}
 					],
@@ -4724,7 +4996,7 @@
 					]
 				},
 				{
-					"id": 240,
+					"id": 250,
 					"name": "CarbonError",
 					"kind": 128,
 					"kindString": "Class",
@@ -4734,14 +5006,14 @@
 					},
 					"children": [
 						{
-							"id": 251,
+							"id": 261,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
 							"flags": {},
 							"signatures": [
 								{
-									"id": 252,
+									"id": 262,
 									"name": "new CarbonError",
 									"kind": 16384,
 									"kindString": "Constructor signature",
@@ -4749,7 +5021,7 @@
 									"comment": {},
 									"parameters": [
 										{
-											"id": 253,
+											"id": 263,
 											"name": "code",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -4759,12 +5031,12 @@
 											},
 											"type": {
 												"type": "reference",
-												"id": 233,
+												"id": 243,
 												"name": "CarbonErrorType"
 											}
 										},
 										{
-											"id": 254,
+											"id": 264,
 											"name": "message",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -4781,7 +5053,7 @@
 									],
 									"type": {
 										"type": "reference",
-										"id": 240,
+										"id": 250,
 										"name": "CarbonError"
 									},
 									"overwrites": {
@@ -4796,7 +5068,7 @@
 							}
 						},
 						{
-							"id": 256,
+							"id": 266,
 							"name": "code",
 							"kind": 1024,
 							"kindString": "Property",
@@ -4805,12 +5077,12 @@
 							},
 							"type": {
 								"type": "reference",
-								"id": 233,
+								"id": 243,
 								"name": "CarbonErrorType"
 							}
 						},
 						{
-							"id": 257,
+							"id": 267,
 							"name": "message",
 							"kind": 1024,
 							"kindString": "Property",
@@ -4828,7 +5100,7 @@
 							}
 						},
 						{
-							"id": 255,
+							"id": 265,
 							"name": "name",
 							"kind": 1024,
 							"kindString": "Property",
@@ -4851,7 +5123,7 @@
 							}
 						},
 						{
-							"id": 260,
+							"id": 270,
 							"name": "stack",
 							"kind": 1024,
 							"kindString": "Property",
@@ -4876,7 +5148,7 @@
 							}
 						},
 						{
-							"id": 245,
+							"id": 255,
 							"name": "prepareStackTrace",
 							"kind": 1024,
 							"kindString": "Property",
@@ -4904,21 +5176,21 @@
 							"type": {
 								"type": "reflection",
 								"declaration": {
-									"id": 246,
+									"id": 256,
 									"name": "__type",
 									"kind": 65536,
 									"kindString": "Type literal",
 									"flags": {},
 									"signatures": [
 										{
-											"id": 247,
+											"id": 257,
 											"name": "__type",
 											"kind": 4096,
 											"kindString": "Call signature",
 											"flags": {},
 											"parameters": [
 												{
-													"id": 248,
+													"id": 258,
 													"name": "err",
 													"kind": 32768,
 													"kindString": "Parameter",
@@ -4929,7 +5201,7 @@
 													}
 												},
 												{
-													"id": 249,
+													"id": 259,
 													"name": "stackTraces",
 													"kind": 32768,
 													"kindString": "Parameter",
@@ -4957,7 +5229,7 @@
 							}
 						},
 						{
-							"id": 250,
+							"id": 260,
 							"name": "stackTraceLimit",
 							"kind": 1024,
 							"kindString": "Property",
@@ -4982,7 +5254,7 @@
 							}
 						},
 						{
-							"id": 258,
+							"id": 268,
 							"name": "embed",
 							"kind": 2048,
 							"kindString": "Method",
@@ -4996,7 +5268,7 @@
 							],
 							"signatures": [
 								{
-									"id": 259,
+									"id": 269,
 									"name": "embed",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -5006,13 +5278,14 @@
 									},
 									"type": {
 										"type": "reference",
+										"id": 272,
 										"name": "ErrorMessageEmbed"
 									}
 								}
 							]
 						},
 						{
-							"id": 241,
+							"id": 251,
 							"name": "captureStackTrace",
 							"kind": 2048,
 							"kindString": "Method",
@@ -5022,7 +5295,7 @@
 							},
 							"signatures": [
 								{
-									"id": 242,
+									"id": 252,
 									"name": "captureStackTrace",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -5034,7 +5307,7 @@
 									},
 									"parameters": [
 										{
-											"id": 243,
+											"id": 253,
 											"name": "targetObject",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -5047,7 +5320,7 @@
 											}
 										},
 										{
-											"id": 244,
+											"id": 254,
 											"name": "constructorOpt",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -5082,27 +5355,27 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								251
+								261
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								256,
-								257,
+								266,
+								267,
+								265,
+								270,
 								255,
-								260,
-								245,
-								250
+								260
 							]
 						},
 						{
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								258,
-								241
+								268,
+								251
 							]
 						}
 					],
@@ -5126,14 +5399,14 @@
 					"title": "Enumerations",
 					"kind": 4,
 					"children": [
-						233
+						243
 					]
 				},
 				{
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						240
+						250
 					]
 				}
 			],
@@ -5146,11 +5419,1824 @@
 			]
 		},
 		{
-			"id": 261,
+			"id": 271,
 			"name": "util/ErrorMessageEmbed",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {},
+			"children": [
+				{
+					"id": 272,
+					"name": "ErrorMessageEmbed",
+					"kind": 128,
+					"kindString": "Class",
+					"flags": {
+						"isPrivate": true
+					},
+					"comment": {
+						"shortText": "Represents a Carbon Error Message Embed"
+					},
+					"children": [
+						{
+							"id": 281,
+							"name": "constructor",
+							"kind": 512,
+							"kindString": "Constructor",
+							"flags": {},
+							"signatures": [
+								{
+									"id": 282,
+									"name": "new ErrorMessageEmbed",
+									"kind": 16384,
+									"kindString": "Constructor signature",
+									"flags": {},
+									"parameters": [
+										{
+											"id": 283,
+											"name": "error",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"name": "Error"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 272,
+										"name": "ErrorMessageEmbed"
+									},
+									"overwrites": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.constructor"
+									}
+								}
+							],
+							"overwrites": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.constructor"
+							}
+						},
+						{
+							"id": 285,
+							"name": "author",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1425,
+									"character": 17
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "reference",
+										"name": "MessageEmbedAuthor"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.author"
+							}
+						},
+						{
+							"id": 286,
+							"name": "color",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1426,
+									"character": 16
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.color"
+							}
+						},
+						{
+							"id": 287,
+							"name": "createdAt",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true,
+								"isReadonly": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1427,
+									"character": 29
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "reference",
+										"name": "Date"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.createdAt"
+							}
+						},
+						{
+							"id": 288,
+							"name": "description",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1428,
+									"character": 22
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.description"
+							}
+						},
+						{
+							"id": 284,
+							"name": "error",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true
+							},
+							"type": {
+								"type": "reference",
+								"name": "Error"
+							}
+						},
+						{
+							"id": 289,
+							"name": "fields",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1429,
+									"character": 17
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"name": "EmbedField"
+								}
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.fields"
+							}
+						},
+						{
+							"id": 290,
+							"name": "files",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1430,
+									"character": 16
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "union",
+									"types": [
+										{
+											"type": "intrinsic",
+											"name": "string"
+										},
+										{
+											"type": "reference",
+											"name": "MessageAttachment"
+										},
+										{
+											"type": "reference",
+											"name": "FileOptions"
+										}
+									]
+								}
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.files"
+							}
+						},
+						{
+							"id": 291,
+							"name": "footer",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1431,
+									"character": 17
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "reference",
+										"name": "MessageEmbedFooter"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.footer"
+							}
+						},
+						{
+							"id": 292,
+							"name": "hexColor",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true,
+								"isReadonly": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1432,
+									"character": 28
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.hexColor"
+							}
+						},
+						{
+							"id": 293,
+							"name": "image",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1433,
+									"character": 16
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "reference",
+										"name": "MessageEmbedImage"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.image"
+							}
+						},
+						{
+							"id": 294,
+							"name": "length",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true,
+								"isReadonly": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1434,
+									"character": 26
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.length"
+							}
+						},
+						{
+							"id": 295,
+							"name": "provider",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1435,
+									"character": 19
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "reference",
+										"name": "MessageEmbedProvider"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.provider"
+							}
+						},
+						{
+							"id": 296,
+							"name": "thumbnail",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1436,
+									"character": 20
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "reference",
+										"name": "MessageEmbedThumbnail"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.thumbnail"
+							}
+						},
+						{
+							"id": 297,
+							"name": "timestamp",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1437,
+									"character": 20
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.timestamp"
+							}
+						},
+						{
+							"id": 298,
+							"name": "title",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1438,
+									"character": 16
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.title"
+							}
+						},
+						{
+							"id": 299,
+							"name": "type",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1439,
+									"character": 15
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.type"
+							}
+						},
+						{
+							"id": 300,
+							"name": "url",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1440,
+									"character": 14
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.url"
+							}
+						},
+						{
+							"id": 301,
+							"name": "video",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true,
+								"isReadonly": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1441,
+									"character": 25
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": null
+									},
+									{
+										"type": "reference",
+										"name": "MessageEmbedVideo"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.video"
+							}
+						},
+						{
+							"id": 302,
+							"name": "addField",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1442,
+									"character": 19
+								}
+							],
+							"signatures": [
+								{
+									"id": 303,
+									"name": "addField",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 304,
+											"name": "name",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 305,
+											"name": "value",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 306,
+											"name": "inline",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "boolean"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 272,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.addField"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.addField"
+							}
+						},
+						{
+							"id": 307,
+							"name": "addFields",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1443,
+									"character": 20
+								}
+							],
+							"signatures": [
+								{
+									"id": 308,
+									"name": "addFields",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 309,
+											"name": "fields",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isRest": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "array",
+														"elementType": {
+															"type": "reference",
+															"name": "EmbedFieldData"
+														}
+													},
+													{
+														"type": "array",
+														"elementType": {
+															"type": "array",
+															"elementType": {
+																"type": "reference",
+																"name": "EmbedFieldData"
+															}
+														}
+													}
+												]
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 272,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.addFields"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.addFields"
+							}
+						},
+						{
+							"id": 310,
+							"name": "attachFiles",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1444,
+									"character": 22
+								}
+							],
+							"signatures": [
+								{
+									"id": 311,
+									"name": "attachFiles",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 312,
+											"name": "file",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "array",
+												"elementType": {
+													"type": "union",
+													"types": [
+														{
+															"type": "intrinsic",
+															"name": "string"
+														},
+														{
+															"type": "reference",
+															"name": "MessageAttachment"
+														},
+														{
+															"type": "reference",
+															"name": "FileOptions"
+														}
+													]
+												}
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 272,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.attachFiles"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.attachFiles"
+							}
+						},
+						{
+							"id": 313,
+							"name": "setAuthor",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1445,
+									"character": 20
+								}
+							],
+							"signatures": [
+								{
+									"id": 314,
+									"name": "setAuthor",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 315,
+											"name": "name",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 316,
+											"name": "iconURL",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 317,
+											"name": "url",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 272,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.setAuthor"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.setAuthor"
+							}
+						},
+						{
+							"id": 318,
+							"name": "setColor",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1446,
+									"character": 19
+								}
+							],
+							"signatures": [
+								{
+									"id": 319,
+									"name": "setColor",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 320,
+											"name": "color",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "ColorResolvable"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 272,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.setColor"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.setColor"
+							}
+						},
+						{
+							"id": 321,
+							"name": "setDescription",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1447,
+									"character": 25
+								}
+							],
+							"signatures": [
+								{
+									"id": 322,
+									"name": "setDescription",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 323,
+											"name": "description",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 272,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.setDescription"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.setDescription"
+							}
+						},
+						{
+							"id": 324,
+							"name": "setFooter",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1448,
+									"character": 20
+								}
+							],
+							"signatures": [
+								{
+									"id": 325,
+									"name": "setFooter",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 326,
+											"name": "text",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 327,
+											"name": "iconURL",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 272,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.setFooter"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.setFooter"
+							}
+						},
+						{
+							"id": 328,
+							"name": "setImage",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1449,
+									"character": 19
+								}
+							],
+							"signatures": [
+								{
+									"id": 329,
+									"name": "setImage",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 330,
+											"name": "url",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 272,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.setImage"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.setImage"
+							}
+						},
+						{
+							"id": 331,
+							"name": "setThumbnail",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1450,
+									"character": 23
+								}
+							],
+							"signatures": [
+								{
+									"id": 332,
+									"name": "setThumbnail",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 333,
+											"name": "url",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 272,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.setThumbnail"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.setThumbnail"
+							}
+						},
+						{
+							"id": 334,
+							"name": "setTimestamp",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1451,
+									"character": 23
+								}
+							],
+							"signatures": [
+								{
+									"id": 335,
+									"name": "setTimestamp",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 336,
+											"name": "timestamp",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "intrinsic",
+														"name": "number"
+													},
+													{
+														"type": "reference",
+														"name": "Date"
+													}
+												]
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 272,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.setTimestamp"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.setTimestamp"
+							}
+						},
+						{
+							"id": 337,
+							"name": "setTitle",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1452,
+									"character": 19
+								}
+							],
+							"signatures": [
+								{
+									"id": 338,
+									"name": "setTitle",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 339,
+											"name": "title",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 272,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.setTitle"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.setTitle"
+							}
+						},
+						{
+							"id": 340,
+							"name": "setURL",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1453,
+									"character": 17
+								}
+							],
+							"signatures": [
+								{
+									"id": 341,
+									"name": "setURL",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 342,
+											"name": "url",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 272,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.setURL"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.setURL"
+							}
+						},
+						{
+							"id": 343,
+							"name": "spliceFields",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1454,
+									"character": 23
+								}
+							],
+							"signatures": [
+								{
+									"id": 344,
+									"name": "spliceFields",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 345,
+											"name": "index",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "number"
+											}
+										},
+										{
+											"id": 346,
+											"name": "deleteCount",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "number"
+											}
+										},
+										{
+											"id": 347,
+											"name": "fields",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isRest": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "array",
+														"elementType": {
+															"type": "reference",
+															"name": "EmbedFieldData"
+														}
+													},
+													{
+														"type": "array",
+														"elementType": {
+															"type": "array",
+															"elementType": {
+																"type": "reference",
+																"name": "EmbedFieldData"
+															}
+														}
+													}
+												]
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 272,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.spliceFields"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.spliceFields"
+							}
+						},
+						{
+							"id": 348,
+							"name": "toJSON",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1455,
+									"character": 17
+								}
+							],
+							"signatures": [
+								{
+									"id": 349,
+									"name": "toJSON",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "unknown"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.toJSON"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.toJSON"
+							}
+						},
+						{
+							"id": 273,
+							"name": "normalizeField",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isStatic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1457,
+									"character": 32
+								}
+							],
+							"signatures": [
+								{
+									"id": 274,
+									"name": "normalizeField",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 275,
+											"name": "name",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 276,
+											"name": "value",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 277,
+											"name": "inline",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isOptional": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "boolean"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"typeArguments": [
+											{
+												"type": "reference",
+												"name": "EmbedFieldData"
+											}
+										],
+										"name": "Required"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.normalizeField"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.normalizeField"
+							}
+						},
+						{
+							"id": 278,
+							"name": "normalizeFields",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isStatic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1458,
+									"character": 33
+								}
+							],
+							"signatures": [
+								{
+									"id": 279,
+									"name": "normalizeFields",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 280,
+											"name": "fields",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true,
+												"isRest": true
+											},
+											"type": {
+												"type": "union",
+												"types": [
+													{
+														"type": "array",
+														"elementType": {
+															"type": "reference",
+															"name": "EmbedFieldData"
+														}
+													},
+													{
+														"type": "array",
+														"elementType": {
+															"type": "array",
+															"elementType": {
+																"type": "reference",
+																"name": "EmbedFieldData"
+															}
+														}
+													}
+												]
+											}
+										}
+									],
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"typeArguments": [
+												{
+													"type": "reference",
+													"name": "EmbedFieldData"
+												}
+											],
+											"name": "Required"
+										}
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.normalizeFields"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.normalizeFields"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"kind": 512,
+							"children": [
+								281
+							]
+						},
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								285,
+								286,
+								287,
+								288,
+								284,
+								289,
+								290,
+								291,
+								292,
+								293,
+								294,
+								295,
+								296,
+								297,
+								298,
+								299,
+								300,
+								301
+							]
+						},
+						{
+							"title": "Methods",
+							"kind": 2048,
+							"children": [
+								302,
+								307,
+								310,
+								313,
+								318,
+								321,
+								324,
+								328,
+								331,
+								334,
+								337,
+								340,
+								343,
+								348,
+								273,
+								278
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "packages/core/src/util/ErrorMessageEmbed.ts",
+							"line": 8,
+							"character": 30
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"name": "MessageEmbed"
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Classes",
+					"kind": 128,
+					"children": [
+						272
+					]
+				}
+			],
 			"sources": [
 				{
 					"fileName": "packages/core/src/util/ErrorMessageEmbed.ts",
@@ -5166,10 +7252,10 @@
 			"kind": 1,
 			"children": [
 				1,
-				229,
-				230,
-				232,
-				261
+				239,
+				240,
+				242,
+				271
 			]
 		}
 	]
