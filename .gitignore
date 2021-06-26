@@ -8,4 +8,5 @@
 log
 
 packages/*/dist
+packages/*/lib
 packages/*/log

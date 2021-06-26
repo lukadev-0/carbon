@@ -591,7 +591,7 @@
         {
           "kind": "Class",
           "canonicalReference": "@carbon-js/core!Client:class",
-          "docComment": "",
+          "docComment": "/**\n * An extended client\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -611,69 +611,9 @@
           "name": "Client",
           "members": [
             {
-              "kind": "Method",
-              "canonicalReference": "@carbon-js/core!Client._mock:member(1)",
-              "docComment": "/**\n * Creates a mock client  @private\n */\n",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "static _mock(options?: "
-                },
-                {
-                  "kind": "Reference",
-                  "text": "Partial",
-                  "canonicalReference": "!Partial:type"
-                },
-                {
-                  "kind": "Content",
-                  "text": "<"
-                },
-                {
-                  "kind": "Reference",
-                  "text": "discord.ClientOptions",
-                  "canonicalReference": "!\"\\\"discord.js\\\"\".ClientOptions:interface"
-                },
-                {
-                  "kind": "Content",
-                  "text": ">"
-                },
-                {
-                  "kind": "Content",
-                  "text": "): "
-                },
-                {
-                  "kind": "Reference",
-                  "text": "Client",
-                  "canonicalReference": "@carbon-js/core!Client:class"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isOptional": false,
-              "isStatic": true,
-              "returnTypeTokenRange": {
-                "startIndex": 6,
-                "endIndex": 7
-              },
-              "releaseTag": "Public",
-              "overloadIndex": 1,
-              "parameters": [
-                {
-                  "parameterName": "options",
-                  "parameterTypeTokenRange": {
-                    "startIndex": 1,
-                    "endIndex": 5
-                  }
-                }
-              ],
-              "name": "_mock"
-            },
-            {
               "kind": "Constructor",
               "canonicalReference": "@carbon-js/core!Client:constructor(1)",
-              "docComment": "/**\n * Constructs a new instance of the `Client` class\n */\n",
+              "docComment": "/**\n * Constructs a new instance of the `Client` class\n *\n * @param options - options for the client\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -702,17 +642,22 @@
               ]
             },
             {
-              "kind": "Method",
-              "canonicalReference": "@carbon-js/core!Client#cacheCommands:member(1)",
-              "docComment": "/**\n * Allows you to cache your commands for Carbon's usage and not send a request to the Discord API.\n *\n * @param params - The cache options\n *\n * @param  - params.commands The commands to cache  @private Only used for caching commands, which can be done with registerCommands\n */\n",
+              "kind": "Property",
+              "canonicalReference": "@carbon-js/core!Client#commands:member",
+              "docComment": "/**\n * collection of registered commands\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
-                  "text": "cacheCommands(params: "
+                  "text": "commands: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "discord.Collection",
+                  "canonicalReference": "!\"\\\"discord.js\\\"\".Collection:class"
                 },
                 {
                   "kind": "Content",
-                  "text": "{\n        commands: "
+                  "text": "<`${bigint}`, "
                 },
                 {
                   "kind": "Reference",
@@ -721,24 +666,7 @@
                 },
                 {
                   "kind": "Content",
-                  "text": "[] | "
-                },
-                {
-                  "kind": "Reference",
-                  "text": "Command",
-                  "canonicalReference": "@carbon-js/core!Command:class"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";\n    }"
-                },
-                {
-                  "kind": "Content",
-                  "text": "): "
-                },
-                {
-                  "kind": "Content",
-                  "text": "this"
+                  "text": ">"
                 },
                 {
                   "kind": "Content",
@@ -746,32 +674,22 @@
                 }
               ],
               "isOptional": false,
-              "isStatic": false,
-              "returnTypeTokenRange": {
-                "startIndex": 7,
-                "endIndex": 8
-              },
               "releaseTag": "Public",
-              "overloadIndex": 1,
-              "parameters": [
-                {
-                  "parameterName": "params",
-                  "parameterTypeTokenRange": {
-                    "startIndex": 1,
-                    "endIndex": 6
-                  }
-                }
-              ],
-              "name": "cacheCommands"
+              "name": "commands",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 5
+              },
+              "isStatic": false
             },
             {
-              "kind": "Property",
-              "canonicalReference": "@carbon-js/core!Client#interactions:member",
-              "docComment": "",
+              "kind": "Method",
+              "canonicalReference": "@carbon-js/core!Client#overwriteCommands:member(1)",
+              "docComment": "/**\n * overwrites all commands with the `commands` array\n *\n * @remarks\n *\n * If `guild` is omitted, global commands will be overwritten instead.\n *\n * This is equivalent to\n * ```js\n * client.registerCommand({\n *   command: commands,\n *   guild,\n *   overwrite: true,\n * })\n * ```\n *\n * @param commands - an array of commands\n *\n * @param guild - guild to overwrite\n *\n * @example\n *\n * Simple example:\n * ```js\n * const myCoolCommand = new Command({\n *   name: 'cool-command',\n *   description: 'This command is very cool',\n *   module: 'cool-module'\n * })\n *\n * myCoolCommand.run = (interaction) => {\n *   interaction.editReply('yes its cool')\n * }\n *\n * client.overwriteCommands([ myCoolCommand ])\n * ```\n *\n * @example\n *\n * Delete all commands:\n * ```js\n * client.overwriteCommands([])\n * ```\n *\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
-                  "text": "interactions: "
+                  "text": "overwriteCommands(commands: "
                 },
                 {
                   "kind": "Reference",
@@ -784,48 +702,12 @@
                 },
                 {
                   "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isOptional": false,
-              "releaseTag": "Public",
-              "name": "interactions",
-              "propertyTypeTokenRange": {
-                "startIndex": 1,
-                "endIndex": 3
-              },
-              "isStatic": false
-            },
-            {
-              "kind": "Method",
-              "canonicalReference": "@carbon-js/core!Client#registerCommands:member(1)",
-              "docComment": "/**\n * The function that allows you to register commands\n *\n * @param params - The register commands options\n *\n * @param  - params.commands The array of Commands\n *\n * @param  - params.guildId If provided, will register commands in a guild with that id\n *\n * @param  - params.overwrite RECOMMENDED If set to true will overwrite all commands to set them to commands provided\n */\n",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "registerCommands(params: "
-                },
-                {
-                  "kind": "Content",
-                  "text": "{\n        commands: "
+                  "text": ", guild?: "
                 },
                 {
                   "kind": "Reference",
-                  "text": "Command",
-                  "canonicalReference": "@carbon-js/core!Command:class"
-                },
-                {
-                  "kind": "Content",
-                  "text": "[];\n        guildId?: "
-                },
-                {
-                  "kind": "Reference",
-                  "text": "discord.Snowflake",
-                  "canonicalReference": "!\"\\\"discord.js\\\"\".Snowflake:type"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";\n        overwrite?: boolean;\n    }"
+                  "text": "discord.GuildResolvable",
+                  "canonicalReference": "!\"\\\"discord.js\\\"\".GuildResolvable:type"
                 },
                 {
                   "kind": "Content",
@@ -838,7 +720,7 @@
                 },
                 {
                   "kind": "Content",
-                  "text": "<this>"
+                  "text": "<void>"
                 },
                 {
                   "kind": "Content",
@@ -848,43 +730,64 @@
               "isOptional": false,
               "isStatic": false,
               "returnTypeTokenRange": {
-                "startIndex": 7,
-                "endIndex": 9
+                "startIndex": 6,
+                "endIndex": 8
               },
               "releaseTag": "Public",
               "overloadIndex": 1,
               "parameters": [
                 {
-                  "parameterName": "params",
+                  "parameterName": "commands",
                   "parameterTypeTokenRange": {
                     "startIndex": 1,
-                    "endIndex": 6
+                    "endIndex": 3
+                  }
+                },
+                {
+                  "parameterName": "guild",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 4,
+                    "endIndex": 5
                   }
                 }
               ],
-              "name": "registerCommands"
+              "name": "overwriteCommands"
             },
             {
               "kind": "Method",
-              "canonicalReference": "@carbon-js/core!Client#removeCommands:member(1)",
-              "docComment": "/**\n * The function that allows you to remove commands\n *\n * @param params - The remove commands options\n *\n * @param  - params.names If provided, will only remove commands with the specified name\n *\n * @param  - params.guildId If provided, will delete commands from guild with the id provided\n */\n",
+              "canonicalReference": "@carbon-js/core!Client#registerCommand:member(1)",
+              "docComment": "/**\n * register/create one or multiple commands\n *\n * @remarks\n *\n * If `guild` is omitted, the command will be registered as a global command. If `command` is an array, {@link RegisterCommandOptions.overwrite | `overwrite`} will be false.\n *\n * @param command - command(s) to register\n *\n * @param guild - guild to register this command in\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
-                  "text": "removeCommands(params?: "
-                },
-                {
-                  "kind": "Content",
-                  "text": "{\n        names?: string[];\n        guildId?: "
+                  "text": "registerCommand(command: "
                 },
                 {
                   "kind": "Reference",
-                  "text": "discord.Snowflake",
-                  "canonicalReference": "!\"\\\"discord.js\\\"\".Snowflake:type"
+                  "text": "Command",
+                  "canonicalReference": "@carbon-js/core!Command:class"
                 },
                 {
                   "kind": "Content",
-                  "text": ";\n    }"
+                  "text": " | "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Command",
+                  "canonicalReference": "@carbon-js/core!Command:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": "[]"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", guild?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "discord.GuildResolvable",
+                  "canonicalReference": "!\"\\\"discord.js\\\"\".GuildResolvable:type"
                 },
                 {
                   "kind": "Content",
@@ -897,7 +800,7 @@
                 },
                 {
                   "kind": "Content",
-                  "text": "<this>"
+                  "text": "<void>"
                 },
                 {
                   "kind": "Content",
@@ -907,78 +810,55 @@
               "isOptional": false,
               "isStatic": false,
               "returnTypeTokenRange": {
-                "startIndex": 5,
-                "endIndex": 7
+                "startIndex": 8,
+                "endIndex": 10
               },
               "releaseTag": "Public",
               "overloadIndex": 1,
               "parameters": [
                 {
-                  "parameterName": "params",
+                  "parameterName": "command",
                   "parameterTypeTokenRange": {
                     "startIndex": 1,
-                    "endIndex": 4
+                    "endIndex": 5
+                  }
+                },
+                {
+                  "parameterName": "guild",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 6,
+                    "endIndex": 7
                   }
                 }
               ],
-              "name": "removeCommands"
+              "name": "registerCommand"
             },
             {
               "kind": "Method",
-              "canonicalReference": "@carbon-js/core!Client#uncacheCommand:member(1)",
-              "docComment": "/**\n * Allows you to uncache commands from Carbon's usage.\n *\n * @param params - The uncacheCommand params\n *\n * @param  - params.command The command to uncache  @private Only used for uncaching deleted commands, which can be done with removeCommands\n */\n",
+              "canonicalReference": "@carbon-js/core!Client#registerCommand:member(2)",
+              "docComment": "/**\n * register/create one or multiple commands using an options object\n *\n * @param options - options\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
-                  "text": "uncacheCommand(params: "
-                },
-                {
-                  "kind": "Content",
-                  "text": "{\n        commands: "
+                  "text": "registerCommand(options: "
                 },
                 {
                   "kind": "Reference",
-                  "text": "discord.ApplicationCommand",
-                  "canonicalReference": "!\"\\\"discord.js\\\"\".ApplicationCommand:class"
-                },
-                {
-                  "kind": "Content",
-                  "text": " | "
-                },
-                {
-                  "kind": "Reference",
-                  "text": "Command",
-                  "canonicalReference": "@carbon-js/core!Command:class"
-                },
-                {
-                  "kind": "Content",
-                  "text": " | "
-                },
-                {
-                  "kind": "Reference",
-                  "text": "discord.ApplicationCommand",
-                  "canonicalReference": "!\"\\\"discord.js\\\"\".ApplicationCommand:class"
-                },
-                {
-                  "kind": "Content",
-                  "text": "[] | "
-                },
-                {
-                  "kind": "Reference",
-                  "text": "Command",
-                  "canonicalReference": "@carbon-js/core!Command:class"
-                },
-                {
-                  "kind": "Content",
-                  "text": "[];\n    }"
+                  "text": "RegisterCommandOptions",
+                  "canonicalReference": "@carbon-js/core!RegisterCommandOptions:interface"
                 },
                 {
                   "kind": "Content",
                   "text": "): "
                 },
                 {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
                   "kind": "Content",
-                  "text": "this"
+                  "text": "<void>"
                 },
                 {
                   "kind": "Content",
@@ -988,21 +868,101 @@
               "isOptional": false,
               "isStatic": false,
               "returnTypeTokenRange": {
-                "startIndex": 11,
-                "endIndex": 12
+                "startIndex": 3,
+                "endIndex": 5
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 2,
+              "parameters": [
+                {
+                  "parameterName": "options",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                }
+              ],
+              "name": "registerCommand"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@carbon-js/core!Client#unregisterCommand:member(1)",
+              "docComment": "/**\n * unregister/delete one or multiple commands\n *\n * @remarks\n *\n * This will delete each command one by one.\n *\n * If you need to delete all commands in one API request, see {@link Client.overwriteCommands | `overwriteCommands`}.\n *\n * @param command - command(s) to unregister\n *\n * @param guild - guild to unregister this command from\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "unregisterCommand(command: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "discord.ApplicationCommandResolvable",
+                  "canonicalReference": "!\"\\\"discord.js\\\"\".ApplicationCommandResolvable:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": " | "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "discord.ApplicationCommandResolvable",
+                  "canonicalReference": "!\"\\\"discord.js\\\"\".ApplicationCommandResolvable:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "[]"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", guild?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "discord.GuildResolvable",
+                  "canonicalReference": "!\"\\\"discord.js\\\"\".GuildResolvable:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<void>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 8,
+                "endIndex": 10
               },
               "releaseTag": "Public",
               "overloadIndex": 1,
               "parameters": [
                 {
-                  "parameterName": "params",
+                  "parameterName": "command",
                   "parameterTypeTokenRange": {
                     "startIndex": 1,
-                    "endIndex": 10
+                    "endIndex": 5
+                  }
+                },
+                {
+                  "parameterName": "guild",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 6,
+                    "endIndex": 7
                   }
                 }
               ],
-              "name": "uncacheCommand"
+              "name": "unregisterCommand"
             }
           ],
           "extendsTokenRange": {
@@ -1086,6 +1046,115 @@
               "endIndex": 3
             }
           ]
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@carbon-js/core!RegisterCommandOptions:interface",
+          "docComment": "/**\n * options for {@link Client.registerCommand}\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface RegisterCommandOptions "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "RegisterCommandOptions",
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@carbon-js/core!RegisterCommandOptions#command:member",
+              "docComment": "/**\n * command(s) to register\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "command: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Command",
+                  "canonicalReference": "@carbon-js/core!Command:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": " | "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Command",
+                  "canonicalReference": "@carbon-js/core!Command:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": "[]"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "command",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 5
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@carbon-js/core!RegisterCommandOptions#guild:member",
+              "docComment": "/**\n * guild to register this command in, if omitted, a global command will be created instead.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "guild?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "discord.GuildResolvable",
+                  "canonicalReference": "!\"\\\"discord.js\\\"\".GuildResolvable:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "guild",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@carbon-js/core!RegisterCommandOptions#overwrite:member",
+              "docComment": "/**\n * If true, all existing commands will be overwritten with the new commands. If not, it will loop trough the array, and register the commands one by one.\n *\n * If {@link RegisterCommandOptions.command | `command`} is not an array, this will be ignored.\n *\n * This is `false` by default.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "overwrite?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "overwrite",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
         }
       ]
     }

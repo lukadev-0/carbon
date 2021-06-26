@@ -3,13 +3,13 @@
   "version": "0.0.0",
   "license": "MIT",
   "main": "lib/index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/core.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/CO-org/carbon.git"
   },
   "scripts": {
-    "build": "yarn g:build",
+    "build": "yarn g:build && yarn ae",
     "ae": "yarn g:ae"
   },
   "bugs": {

@@ -45,27 +45,14 @@ export enum CarbonErrorType {
     ModuleNotEnabled = "MODULE_NOT_ENABLED"
 }
 
-// @public (undocumented)
+// @public
 export class Client extends discord.Client {
     constructor(options: discord.ClientOptions);
-    cacheCommands(params: {
-        commands: Command[] | Command;
-    }): this;
-    // (undocumented)
-    interactions: Command[];
-    static _mock(options?: Partial<discord.ClientOptions>): Client;
-    registerCommands(params: {
-        commands: Command[];
-        guildId?: discord.Snowflake;
-        overwrite?: boolean;
-    }): Promise<this>;
-    removeCommands(params?: {
-        names?: string[];
-        guildId?: discord.Snowflake;
-    }): Promise<this>;
-    uncacheCommand(params: {
-        commands: discord.ApplicationCommand | Command | discord.ApplicationCommand[] | Command[];
-    }): this;
+    commands: discord.Collection<`${bigint}`, Command>;
+    overwriteCommands(commands: Command[], guild?: discord.GuildResolvable): Promise<void>;
+    registerCommand(command: Command | Command[], guild?: discord.GuildResolvable): Promise<void>;
+    registerCommand(options: RegisterCommandOptions): Promise<void>;
+    unregisterCommand(command: discord.ApplicationCommandResolvable | discord.ApplicationCommandResolvable[], guild?: discord.GuildResolvable): Promise<void>;
 }
 
 // @public
@@ -75,6 +62,13 @@ export class Command {
 
 // @public (undocumented)
 export interface Command extends ApplicationCommandData {
+}
+
+// @public
+export interface RegisterCommandOptions {
+    command: Command | Command[];
+    guild?: discord.GuildResolvable;
+    overwrite?: boolean;
 }
 
 
