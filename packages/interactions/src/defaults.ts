@@ -2,6 +2,12 @@
 // import { User } from 'discord.js'
 import { Command } from '@carbon-js/core'
 
+/**
+ * The default commands for Carbon
+ * @returns The commands
+ * @public
+ */
+
 export function defaults(/* ephemeral = true */): Command[] {
     return [
         // new Command({

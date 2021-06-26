@@ -7,10 +7,10 @@
 import { Command } from '@carbon-js/core';
 import { Interaction } from 'discord.js';
 
-// @public (undocumented)
+// @public
 export function defaults(): Command[];
 
-// @public (undocumented)
+// @public
 export function InteractionHandler(int: Interaction): Promise<void>;
 
 

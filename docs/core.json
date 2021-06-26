@@ -172,7 +172,7 @@
         {
           "kind": "Interface",
           "canonicalReference": "@carbon-js/core!ApplicationCommandData:interface",
-          "docComment": "",
+          "docComment": "/**\n * The command data\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -263,7 +263,7 @@
         {
           "kind": "Class",
           "canonicalReference": "@carbon-js/core!CarbonError:class",
-          "docComment": "/**\n * Represents a Carbon Error\n */\n",
+          "docComment": "/**\n * Represents a Carbon Error\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -450,7 +450,7 @@
         {
           "kind": "Enum",
           "canonicalReference": "@carbon-js/core!CarbonErrorType:enum",
-          "docComment": "/**\n * Carbon Error Types\n */\n",
+          "docComment": "/**\n * Carbon Error Types\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -760,7 +760,7 @@
               "excerptTokens": [
                 {
                   "kind": "Content",
-                  "text": "registerCommand(command: "
+                  "text": "registerCommand(commandOrOptions: "
                 },
                 {
                   "kind": "Reference",
@@ -778,7 +778,12 @@
                 },
                 {
                   "kind": "Content",
-                  "text": "[]"
+                  "text": "[] | "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RegisterCommandOptions",
+                  "canonicalReference": "@carbon-js/core!RegisterCommandOptions:interface"
                 },
                 {
                   "kind": "Content",
@@ -810,75 +815,24 @@
               "isOptional": false,
               "isStatic": false,
               "returnTypeTokenRange": {
-                "startIndex": 8,
-                "endIndex": 10
+                "startIndex": 9,
+                "endIndex": 11
               },
               "releaseTag": "Public",
               "overloadIndex": 1,
               "parameters": [
                 {
-                  "parameterName": "command",
+                  "parameterName": "commandOrOptions",
                   "parameterTypeTokenRange": {
                     "startIndex": 1,
-                    "endIndex": 5
+                    "endIndex": 6
                   }
                 },
                 {
                   "parameterName": "guild",
                   "parameterTypeTokenRange": {
-                    "startIndex": 6,
-                    "endIndex": 7
-                  }
-                }
-              ],
-              "name": "registerCommand"
-            },
-            {
-              "kind": "Method",
-              "canonicalReference": "@carbon-js/core!Client#registerCommand:member(2)",
-              "docComment": "/**\n * register/create one or multiple commands using an options object\n *\n * @param options - options\n */\n",
-              "excerptTokens": [
-                {
-                  "kind": "Content",
-                  "text": "registerCommand(options: "
-                },
-                {
-                  "kind": "Reference",
-                  "text": "RegisterCommandOptions",
-                  "canonicalReference": "@carbon-js/core!RegisterCommandOptions:interface"
-                },
-                {
-                  "kind": "Content",
-                  "text": "): "
-                },
-                {
-                  "kind": "Reference",
-                  "text": "Promise",
-                  "canonicalReference": "!Promise:interface"
-                },
-                {
-                  "kind": "Content",
-                  "text": "<void>"
-                },
-                {
-                  "kind": "Content",
-                  "text": ";"
-                }
-              ],
-              "isOptional": false,
-              "isStatic": false,
-              "returnTypeTokenRange": {
-                "startIndex": 3,
-                "endIndex": 5
-              },
-              "releaseTag": "Public",
-              "overloadIndex": 2,
-              "parameters": [
-                {
-                  "parameterName": "options",
-                  "parameterTypeTokenRange": {
-                    "startIndex": 1,
-                    "endIndex": 2
+                    "startIndex": 7,
+                    "endIndex": 8
                   }
                 }
               ],
@@ -974,7 +928,7 @@
         {
           "kind": "Class",
           "canonicalReference": "@carbon-js/core!Command:class",
-          "docComment": "/**\n * Represents a Carbon Slash Command\n */\n",
+          "docComment": "/**\n * Represents a Carbon Slash Command\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -1021,7 +975,7 @@
         {
           "kind": "Interface",
           "canonicalReference": "@carbon-js/core!Command:interface",
-          "docComment": "",
+          "docComment": "/**\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -1050,7 +1004,7 @@
         {
           "kind": "Interface",
           "canonicalReference": "@carbon-js/core!RegisterCommandOptions:interface",
-          "docComment": "/**\n * options for {@link Client.registerCommand}\n *\n * @public\n */\n",
+          "docComment": "/**\n * options for {@link Client.registerCommand | `registerCommand`}\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",

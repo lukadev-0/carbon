@@ -172,7 +172,7 @@
         {
           "kind": "Function",
           "canonicalReference": "@carbon-js/interactions!defaults:function(1)",
-          "docComment": "",
+          "docComment": "/**\n * The default commands for Carbon\n *\n * @returns The commands\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -204,7 +204,7 @@
         {
           "kind": "Function",
           "canonicalReference": "@carbon-js/interactions!InteractionHandler:function(1)",
-          "docComment": "",
+          "docComment": "/**\n * The default command handler for Carbon\n *\n * @param int - The interaction to handle\n *\n * @public\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",

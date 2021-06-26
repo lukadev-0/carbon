@@ -2,7 +2,7 @@ import * as discord from 'discord.js'
 import { Command } from './Command'
 
 /**
- * options for {@link Client.registerCommand}
+ * options for {@link Client.registerCommand | `registerCommand`}
  * @public
  */
 export interface RegisterCommandOptions {
@@ -53,19 +53,6 @@ export class Client extends discord.Client {
      * If `guild` is omitted, the command will be registered as a global command.
      * If `command` is an array, {@link RegisterCommandOptions.overwrite | `overwrite`} will be false.
      */
-    registerCommand(
-        command: Command | Command[],
-        guild?: discord.GuildResolvable,
-    ): Promise<void>
-
-    /**
-     * register/create one or multiple commands using an options object
-     * 
-     * @param options - options
-     */
-    registerCommand(
-        options: RegisterCommandOptions,
-    ): Promise<void>
 
     async registerCommand(
         commandOrOptions: Command | Command[] | RegisterCommandOptions,

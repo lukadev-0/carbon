@@ -2,6 +2,7 @@ import { ErrorMessageEmbed } from './ErrorMessageEmbed'
 
 /**
  * Carbon Error Types
+ * @public
  */
 
 export enum CarbonErrorType {
@@ -15,12 +16,13 @@ export enum CarbonErrorType {
 
 /**
  * Represents a Carbon Error
+ * @public
  */
 export class CarbonError extends Error {
     name = 'CarbonError'
     /**
-     * @param code The error type
-     * @param message The error message
+     * @param code - The error type
+     * @param message - The error message
      */
 
     constructor(public code: CarbonErrorType, public message: string = code) {

@@ -6,7 +6,7 @@
 
 import * as discord from 'discord.js';
 
-// @public (undocumented)
+// @public
 export interface ApplicationCommandData extends discord.ApplicationCommandData {
     // (undocumented)
     module: string;
@@ -50,8 +50,7 @@ export class Client extends discord.Client {
     constructor(options: discord.ClientOptions);
     commands: discord.Collection<`${bigint}`, Command>;
     overwriteCommands(commands: Command[], guild?: discord.GuildResolvable): Promise<void>;
-    registerCommand(command: Command | Command[], guild?: discord.GuildResolvable): Promise<void>;
-    registerCommand(options: RegisterCommandOptions): Promise<void>;
+    registerCommand(commandOrOptions: Command | Command[] | RegisterCommandOptions, guild?: discord.GuildResolvable): Promise<void>;
     unregisterCommand(command: discord.ApplicationCommandResolvable | discord.ApplicationCommandResolvable[], guild?: discord.GuildResolvable): Promise<void>;
 }
 

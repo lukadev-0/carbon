@@ -5,6 +5,12 @@ interface CarbonClient extends Client {
     interactions: Command[]
 }
 
+/**
+ * The default command handler for Carbon
+ * @param int - The interaction to handle
+ * @public
+ */
+
 export async function InteractionHandler(int: Interaction): Promise<void> {
     if (!int.isCommand()) return
     const command = (int.client as CarbonClient).interactions.find((v) => v.name === int.commandName)
