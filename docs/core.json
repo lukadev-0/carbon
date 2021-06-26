@@ -182,7 +182,7 @@
 							"sources": [
 								{
 									"fileName": "packages/core/src/client.ts",
-									"line": 8,
+									"line": 7,
 									"character": 23
 								}
 							],
@@ -741,7 +741,7 @@
 							"sources": [
 								{
 									"fileName": "packages/core/src/client.ts",
-									"line": 63,
+									"line": 62,
 									"character": 17
 								}
 							],
@@ -788,7 +788,7 @@
 															"sources": [
 																{
 																	"fileName": "packages/core/src/client.ts",
-																	"line": 63,
+																	"line": 62,
 																	"character": 36
 																}
 															],
@@ -2958,7 +2958,7 @@
 							"sources": [
 								{
 									"fileName": "packages/core/src/client.ts",
-									"line": 31,
+									"line": 30,
 									"character": 26
 								}
 							],
@@ -3003,7 +3003,7 @@
 															"sources": [
 																{
 																	"fileName": "packages/core/src/client.ts",
-																	"line": 31,
+																	"line": 30,
 																	"character": 45
 																}
 															],
@@ -3029,7 +3029,7 @@
 															"sources": [
 																{
 																	"fileName": "packages/core/src/client.ts",
-																	"line": 31,
+																	"line": 30,
 																	"character": 65
 																}
 															],
@@ -3061,7 +3061,7 @@
 															"sources": [
 																{
 																	"fileName": "packages/core/src/client.ts",
-																	"line": 31,
+																	"line": 30,
 																	"character": 96
 																}
 															],
@@ -3257,7 +3257,7 @@
 							"sources": [
 								{
 									"fileName": "packages/core/src/client.ts",
-									"line": 102,
+									"line": 101,
 									"character": 24
 								}
 							],
@@ -3306,7 +3306,7 @@
 															"sources": [
 																{
 																	"fileName": "packages/core/src/client.ts",
-																	"line": 102,
+																	"line": 101,
 																	"character": 61
 																}
 															],
@@ -3338,7 +3338,7 @@
 															"sources": [
 																{
 																	"fileName": "packages/core/src/client.ts",
-																	"line": 102,
+																	"line": 101,
 																	"character": 41
 																}
 															],
@@ -4014,7 +4014,7 @@
 							"sources": [
 								{
 									"fileName": "packages/core/src/client.ts",
-									"line": 84,
+									"line": 83,
 									"character": 18
 								}
 							],
@@ -4058,7 +4058,7 @@
 															"sources": [
 																{
 																	"fileName": "packages/core/src/client.ts",
-																	"line": 84,
+																	"line": 83,
 																	"character": 37
 																}
 															],
@@ -4124,7 +4124,7 @@
 							"sources": [
 								{
 									"fileName": "packages/core/src/client.ts",
-									"line": 17,
+									"line": 16,
 									"character": 16
 								}
 							],
@@ -4686,7 +4686,7 @@
 					"sources": [
 						{
 							"fileName": "packages/core/src/client.ts",
-							"line": 7,
+							"line": 6,
 							"character": 19
 						}
 					],
@@ -4696,28 +4696,6 @@
 							"name": "Client"
 						}
 					]
-				},
-				{
-					"id": 238,
-					"name": "client",
-					"kind": 32,
-					"kindString": "Variable",
-					"flags": {
-						"isConst": true
-					},
-					"sources": [
-						{
-							"fileName": "packages/core/src/client.ts",
-							"line": 123,
-							"character": 19
-						}
-					],
-					"type": {
-						"type": "reference",
-						"id": 2,
-						"name": "Client"
-					},
-					"defaultValue": "..."
 				}
 			],
 			"groups": [
@@ -4726,13 +4704,6 @@
 					"kind": 128,
 					"children": [
 						2
-					]
-				},
-				{
-					"title": "Variables",
-					"kind": 32,
-					"children": [
-						238
 					]
 				}
 			],
@@ -4745,14 +4716,14 @@
 			]
 		},
 		{
-			"id": 239,
+			"id": 238,
 			"name": "index",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 351,
+					"id": 348,
 					"name": "CarbonError",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -4764,10 +4735,10 @@
 							"character": 20
 						}
 					],
-					"target": 250
+					"target": 247
 				},
 				{
-					"id": 352,
+					"id": 349,
 					"name": "CarbonErrorType",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -4779,10 +4750,10 @@
 							"character": 37
 						}
 					],
-					"target": 243
+					"target": 240
 				},
 				{
-					"id": 350,
+					"id": 347,
 					"name": "Client",
 					"kind": 16777216,
 					"kindString": "Reference",
@@ -4802,9 +4773,9 @@
 					"title": "References",
 					"kind": 16777216,
 					"children": [
-						351,
-						352,
-						350
+						348,
+						349,
+						347
 					]
 				}
 			],
@@ -4817,63 +4788,14 @@
 			]
 		},
 		{
-			"id": 240,
-			"name": "logger",
-			"kind": 1,
-			"kindString": "Module",
-			"flags": {},
-			"children": [
-				{
-					"id": 241,
-					"name": "logger",
-					"kind": 32,
-					"kindString": "Variable",
-					"flags": {
-						"isConst": true
-					},
-					"comment": {
-						"shortText": "Carbon Logger"
-					},
-					"sources": [
-						{
-							"fileName": "packages/core/src/logger/index.ts",
-							"line": 17,
-							"character": 19
-						}
-					],
-					"type": {
-						"type": "reference",
-						"name": "Logger"
-					},
-					"defaultValue": "..."
-				}
-			],
-			"groups": [
-				{
-					"title": "Variables",
-					"kind": 32,
-					"children": [
-						241
-					]
-				}
-			],
-			"sources": [
-				{
-					"fileName": "packages/core/src/logger/index.ts",
-					"line": 1,
-					"character": 0
-				}
-			]
-		},
-		{
-			"id": 242,
+			"id": 239,
 			"name": "util/CarbonError",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 243,
+					"id": 240,
 					"name": "CarbonErrorType",
 					"kind": 4,
 					"kindString": "Enumeration",
@@ -4883,7 +4805,7 @@
 					},
 					"children": [
 						{
-							"id": 245,
+							"id": 242,
 							"name": "CommandError",
 							"kind": 16,
 							"kindString": "Enumeration member",
@@ -4898,7 +4820,7 @@
 							"defaultValue": "\"COMMAND_ERROR\""
 						},
 						{
-							"id": 244,
+							"id": 241,
 							"name": "CommandNotFound",
 							"kind": 16,
 							"kindString": "Enumeration member",
@@ -4913,7 +4835,7 @@
 							"defaultValue": "\"COMMAND_NOT_FOUND\""
 						},
 						{
-							"id": 247,
+							"id": 244,
 							"name": "InvalidPermission",
 							"kind": 16,
 							"kindString": "Enumeration member",
@@ -4928,7 +4850,7 @@
 							"defaultValue": "\"INVALID_PERMISSION\""
 						},
 						{
-							"id": 249,
+							"id": 246,
 							"name": "MissingInstance",
 							"kind": 16,
 							"kindString": "Enumeration member",
@@ -4943,7 +4865,7 @@
 							"defaultValue": "\"MISSING_INSTANCE\""
 						},
 						{
-							"id": 248,
+							"id": 245,
 							"name": "MissingParam",
 							"kind": 16,
 							"kindString": "Enumeration member",
@@ -4958,7 +4880,7 @@
 							"defaultValue": "\"MISSING_PARAMETER\""
 						},
 						{
-							"id": 246,
+							"id": 243,
 							"name": "ModuleNotEnabled",
 							"kind": 16,
 							"kindString": "Enumeration member",
@@ -4978,12 +4900,12 @@
 							"title": "Enumeration members",
 							"kind": 16,
 							"children": [
-								245,
+								242,
+								241,
 								244,
-								247,
-								249,
-								248,
-								246
+								246,
+								245,
+								243
 							]
 						}
 					],
@@ -4996,7 +4918,7 @@
 					]
 				},
 				{
-					"id": 250,
+					"id": 247,
 					"name": "CarbonError",
 					"kind": 128,
 					"kindString": "Class",
@@ -5006,14 +4928,14 @@
 					},
 					"children": [
 						{
-							"id": 261,
+							"id": 258,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
 							"flags": {},
 							"signatures": [
 								{
-									"id": 262,
+									"id": 259,
 									"name": "new CarbonError",
 									"kind": 16384,
 									"kindString": "Constructor signature",
@@ -5021,7 +4943,7 @@
 									"comment": {},
 									"parameters": [
 										{
-											"id": 263,
+											"id": 260,
 											"name": "code",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -5031,12 +4953,12 @@
 											},
 											"type": {
 												"type": "reference",
-												"id": 243,
+												"id": 240,
 												"name": "CarbonErrorType"
 											}
 										},
 										{
-											"id": 264,
+											"id": 261,
 											"name": "message",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -5053,7 +4975,7 @@
 									],
 									"type": {
 										"type": "reference",
-										"id": 250,
+										"id": 247,
 										"name": "CarbonError"
 									},
 									"overwrites": {
@@ -5068,7 +4990,7 @@
 							}
 						},
 						{
-							"id": 266,
+							"id": 263,
 							"name": "code",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5077,12 +4999,12 @@
 							},
 							"type": {
 								"type": "reference",
-								"id": 243,
+								"id": 240,
 								"name": "CarbonErrorType"
 							}
 						},
 						{
-							"id": 267,
+							"id": 264,
 							"name": "message",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5100,7 +5022,7 @@
 							}
 						},
 						{
-							"id": 265,
+							"id": 262,
 							"name": "name",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5123,7 +5045,7 @@
 							}
 						},
 						{
-							"id": 270,
+							"id": 267,
 							"name": "stack",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5148,7 +5070,7 @@
 							}
 						},
 						{
-							"id": 255,
+							"id": 252,
 							"name": "prepareStackTrace",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5176,21 +5098,21 @@
 							"type": {
 								"type": "reflection",
 								"declaration": {
-									"id": 256,
+									"id": 253,
 									"name": "__type",
 									"kind": 65536,
 									"kindString": "Type literal",
 									"flags": {},
 									"signatures": [
 										{
-											"id": 257,
+											"id": 254,
 											"name": "__type",
 											"kind": 4096,
 											"kindString": "Call signature",
 											"flags": {},
 											"parameters": [
 												{
-													"id": 258,
+													"id": 255,
 													"name": "err",
 													"kind": 32768,
 													"kindString": "Parameter",
@@ -5201,7 +5123,7 @@
 													}
 												},
 												{
-													"id": 259,
+													"id": 256,
 													"name": "stackTraces",
 													"kind": 32768,
 													"kindString": "Parameter",
@@ -5229,7 +5151,7 @@
 							}
 						},
 						{
-							"id": 260,
+							"id": 257,
 							"name": "stackTraceLimit",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5254,7 +5176,7 @@
 							}
 						},
 						{
-							"id": 268,
+							"id": 265,
 							"name": "embed",
 							"kind": 2048,
 							"kindString": "Method",
@@ -5268,7 +5190,7 @@
 							],
 							"signatures": [
 								{
-									"id": 269,
+									"id": 266,
 									"name": "embed",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -5278,14 +5200,14 @@
 									},
 									"type": {
 										"type": "reference",
-										"id": 272,
+										"id": 269,
 										"name": "ErrorMessageEmbed"
 									}
 								}
 							]
 						},
 						{
-							"id": 251,
+							"id": 248,
 							"name": "captureStackTrace",
 							"kind": 2048,
 							"kindString": "Method",
@@ -5295,7 +5217,7 @@
 							},
 							"signatures": [
 								{
-									"id": 252,
+									"id": 249,
 									"name": "captureStackTrace",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -5307,7 +5229,7 @@
 									},
 									"parameters": [
 										{
-											"id": 253,
+											"id": 250,
 											"name": "targetObject",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -5320,7 +5242,7 @@
 											}
 										},
 										{
-											"id": 254,
+											"id": 251,
 											"name": "constructorOpt",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -5355,27 +5277,27 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								261
+								258
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								266,
+								263,
+								264,
+								262,
 								267,
-								265,
-								270,
-								255,
-								260
+								252,
+								257
 							]
 						},
 						{
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								268,
-								251
+								265,
+								248
 							]
 						}
 					],
@@ -5399,14 +5321,14 @@
 					"title": "Enumerations",
 					"kind": 4,
 					"children": [
-						243
+						240
 					]
 				},
 				{
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						250
+						247
 					]
 				}
 			],
@@ -5419,14 +5341,14 @@
 			]
 		},
 		{
-			"id": 271,
+			"id": 268,
 			"name": "util/ErrorMessageEmbed",
 			"kind": 1,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 272,
+					"id": 269,
 					"name": "ErrorMessageEmbed",
 					"kind": 128,
 					"kindString": "Class",
@@ -5438,21 +5360,21 @@
 					},
 					"children": [
 						{
-							"id": 281,
+							"id": 278,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
 							"flags": {},
 							"signatures": [
 								{
-									"id": 282,
+									"id": 279,
 									"name": "new ErrorMessageEmbed",
 									"kind": 16384,
 									"kindString": "Constructor signature",
 									"flags": {},
 									"parameters": [
 										{
-											"id": 283,
+											"id": 280,
 											"name": "error",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -5465,7 +5387,7 @@
 									],
 									"type": {
 										"type": "reference",
-										"id": 272,
+										"id": 269,
 										"name": "ErrorMessageEmbed"
 									},
 									"overwrites": {
@@ -5480,7 +5402,7 @@
 							}
 						},
 						{
-							"id": 285,
+							"id": 282,
 							"name": "author",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5514,7 +5436,7 @@
 							}
 						},
 						{
-							"id": 286,
+							"id": 283,
 							"name": "color",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5548,7 +5470,7 @@
 							}
 						},
 						{
-							"id": 287,
+							"id": 284,
 							"name": "createdAt",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5583,7 +5505,7 @@
 							}
 						},
 						{
-							"id": 288,
+							"id": 285,
 							"name": "description",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5617,7 +5539,7 @@
 							}
 						},
 						{
-							"id": 284,
+							"id": 281,
 							"name": "error",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5630,7 +5552,7 @@
 							}
 						},
 						{
-							"id": 289,
+							"id": 286,
 							"name": "fields",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5658,7 +5580,7 @@
 							}
 						},
 						{
-							"id": 290,
+							"id": 287,
 							"name": "files",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5699,7 +5621,7 @@
 							}
 						},
 						{
-							"id": 291,
+							"id": 288,
 							"name": "footer",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5733,7 +5655,7 @@
 							}
 						},
 						{
-							"id": 292,
+							"id": 289,
 							"name": "hexColor",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5768,7 +5690,7 @@
 							}
 						},
 						{
-							"id": 293,
+							"id": 290,
 							"name": "image",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5802,7 +5724,7 @@
 							}
 						},
 						{
-							"id": 294,
+							"id": 291,
 							"name": "length",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5828,7 +5750,7 @@
 							}
 						},
 						{
-							"id": 295,
+							"id": 292,
 							"name": "provider",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5862,7 +5784,7 @@
 							}
 						},
 						{
-							"id": 296,
+							"id": 293,
 							"name": "thumbnail",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5896,7 +5818,7 @@
 							}
 						},
 						{
-							"id": 297,
+							"id": 294,
 							"name": "timestamp",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5930,7 +5852,7 @@
 							}
 						},
 						{
-							"id": 298,
+							"id": 295,
 							"name": "title",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5964,7 +5886,7 @@
 							}
 						},
 						{
-							"id": 299,
+							"id": 296,
 							"name": "type",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5989,7 +5911,7 @@
 							}
 						},
 						{
-							"id": 300,
+							"id": 297,
 							"name": "url",
 							"kind": 1024,
 							"kindString": "Property",
@@ -6023,7 +5945,7 @@
 							}
 						},
 						{
-							"id": 301,
+							"id": 298,
 							"name": "video",
 							"kind": 1024,
 							"kindString": "Property",
@@ -6058,7 +5980,7 @@
 							}
 						},
 						{
-							"id": 302,
+							"id": 299,
 							"name": "addField",
 							"kind": 2048,
 							"kindString": "Method",
@@ -6075,7 +5997,7 @@
 							],
 							"signatures": [
 								{
-									"id": 303,
+									"id": 300,
 									"name": "addField",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -6084,7 +6006,7 @@
 									},
 									"parameters": [
 										{
-											"id": 304,
+											"id": 301,
 											"name": "name",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -6097,7 +6019,7 @@
 											}
 										},
 										{
-											"id": 305,
+											"id": 302,
 											"name": "value",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -6110,7 +6032,7 @@
 											}
 										},
 										{
-											"id": 306,
+											"id": 303,
 											"name": "inline",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -6126,7 +6048,7 @@
 									],
 									"type": {
 										"type": "reference",
-										"id": 272,
+										"id": 269,
 										"name": "ErrorMessageEmbed"
 									},
 									"inheritedFrom": {
@@ -6141,7 +6063,7 @@
 							}
 						},
 						{
-							"id": 307,
+							"id": 304,
 							"name": "addFields",
 							"kind": 2048,
 							"kindString": "Method",
@@ -6158,7 +6080,7 @@
 							],
 							"signatures": [
 								{
-									"id": 308,
+									"id": 305,
 									"name": "addFields",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -6167,7 +6089,7 @@
 									},
 									"parameters": [
 										{
-											"id": 309,
+											"id": 306,
 											"name": "fields",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -6201,7 +6123,7 @@
 									],
 									"type": {
 										"type": "reference",
-										"id": 272,
+										"id": 269,
 										"name": "ErrorMessageEmbed"
 									},
 									"inheritedFrom": {
@@ -6216,7 +6138,7 @@
 							}
 						},
 						{
-							"id": 310,
+							"id": 307,
 							"name": "attachFiles",
 							"kind": 2048,
 							"kindString": "Method",
@@ -6233,7 +6155,7 @@
 							],
 							"signatures": [
 								{
-									"id": 311,
+									"id": 308,
 									"name": "attachFiles",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -6242,7 +6164,7 @@
 									},
 									"parameters": [
 										{
-											"id": 312,
+											"id": 309,
 											"name": "file",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -6273,7 +6195,7 @@
 									],
 									"type": {
 										"type": "reference",
-										"id": 272,
+										"id": 269,
 										"name": "ErrorMessageEmbed"
 									},
 									"inheritedFrom": {
@@ -6288,7 +6210,7 @@
 							}
 						},
 						{
-							"id": 313,
+							"id": 310,
 							"name": "setAuthor",
 							"kind": 2048,
 							"kindString": "Method",
@@ -6305,7 +6227,7 @@
 							],
 							"signatures": [
 								{
-									"id": 314,
+									"id": 311,
 									"name": "setAuthor",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -6314,7 +6236,7 @@
 									},
 									"parameters": [
 										{
-											"id": 315,
+											"id": 312,
 											"name": "name",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -6327,7 +6249,7 @@
 											}
 										},
 										{
-											"id": 316,
+											"id": 313,
 											"name": "iconURL",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -6341,7 +6263,7 @@
 											}
 										},
 										{
-											"id": 317,
+											"id": 314,
 											"name": "url",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -6357,7 +6279,7 @@
 									],
 									"type": {
 										"type": "reference",
-										"id": 272,
+										"id": 269,
 										"name": "ErrorMessageEmbed"
 									},
 									"inheritedFrom": {
@@ -6372,7 +6294,7 @@
 							}
 						},
 						{
-							"id": 318,
+							"id": 315,
 							"name": "setColor",
 							"kind": 2048,
 							"kindString": "Method",
@@ -6389,7 +6311,7 @@
 							],
 							"signatures": [
 								{
-									"id": 319,
+									"id": 316,
 									"name": "setColor",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -6398,7 +6320,7 @@
 									},
 									"parameters": [
 										{
-											"id": 320,
+											"id": 317,
 											"name": "color",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -6413,7 +6335,7 @@
 									],
 									"type": {
 										"type": "reference",
-										"id": 272,
+										"id": 269,
 										"name": "ErrorMessageEmbed"
 									},
 									"inheritedFrom": {
@@ -6428,7 +6350,7 @@
 							}
 						},
 						{
-							"id": 321,
+							"id": 318,
 							"name": "setDescription",
 							"kind": 2048,
 							"kindString": "Method",
@@ -6445,7 +6367,7 @@
 							],
 							"signatures": [
 								{
-									"id": 322,
+									"id": 319,
 									"name": "setDescription",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -6454,7 +6376,7 @@
 									},
 									"parameters": [
 										{
-											"id": 323,
+											"id": 320,
 											"name": "description",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -6469,7 +6391,7 @@
 									],
 									"type": {
 										"type": "reference",
-										"id": 272,
+										"id": 269,
 										"name": "ErrorMessageEmbed"
 									},
 									"inheritedFrom": {
@@ -6484,7 +6406,7 @@
 							}
 						},
 						{
-							"id": 324,
+							"id": 321,
 							"name": "setFooter",
 							"kind": 2048,
 							"kindString": "Method",
@@ -6501,7 +6423,7 @@
 							],
 							"signatures": [
 								{
-									"id": 325,
+									"id": 322,
 									"name": "setFooter",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -6510,7 +6432,7 @@
 									},
 									"parameters": [
 										{
-											"id": 326,
+											"id": 323,
 											"name": "text",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -6523,7 +6445,7 @@
 											}
 										},
 										{
-											"id": 327,
+											"id": 324,
 											"name": "iconURL",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -6539,7 +6461,7 @@
 									],
 									"type": {
 										"type": "reference",
-										"id": 272,
+										"id": 269,
 										"name": "ErrorMessageEmbed"
 									},
 									"inheritedFrom": {
@@ -6554,7 +6476,7 @@
 							}
 						},
 						{
-							"id": 328,
+							"id": 325,
 							"name": "setImage",
 							"kind": 2048,
 							"kindString": "Method",
@@ -6571,8 +6493,64 @@
 							],
 							"signatures": [
 								{
-									"id": 329,
+									"id": 326,
 									"name": "setImage",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {
+										"isExternal": true
+									},
+									"parameters": [
+										{
+											"id": 327,
+											"name": "url",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExternal": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 269,
+										"name": "ErrorMessageEmbed"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "discord.MessageEmbed.setImage"
+									}
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "discord.MessageEmbed.setImage"
+							}
+						},
+						{
+							"id": 328,
+							"name": "setThumbnail",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExternal": true
+							},
+							"sources": [
+								{
+									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
+									"line": 1450,
+									"character": 23
+								}
+							],
+							"signatures": [
+								{
+									"id": 329,
+									"name": "setThumbnail",
 									"kind": 4096,
 									"kindString": "Call signature",
 									"flags": {
@@ -6595,63 +6573,7 @@
 									],
 									"type": {
 										"type": "reference",
-										"id": 272,
-										"name": "ErrorMessageEmbed"
-									},
-									"inheritedFrom": {
-										"type": "reference",
-										"name": "discord.MessageEmbed.setImage"
-									}
-								}
-							],
-							"inheritedFrom": {
-								"type": "reference",
-								"name": "discord.MessageEmbed.setImage"
-							}
-						},
-						{
-							"id": 331,
-							"name": "setThumbnail",
-							"kind": 2048,
-							"kindString": "Method",
-							"flags": {
-								"isPublic": true,
-								"isExternal": true
-							},
-							"sources": [
-								{
-									"fileName": ".yarn/cache/discord.js-npm-13.0.0-dev.dec191aa1e4f22690285ca06c6eee7e6086b2930-4ac4480653-d029a3822c.zip/node_modules/discord.js/typings/index.d.ts",
-									"line": 1450,
-									"character": 23
-								}
-							],
-							"signatures": [
-								{
-									"id": 332,
-									"name": "setThumbnail",
-									"kind": 4096,
-									"kindString": "Call signature",
-									"flags": {
-										"isExternal": true
-									},
-									"parameters": [
-										{
-											"id": 333,
-											"name": "url",
-											"kind": 32768,
-											"kindString": "Parameter",
-											"flags": {
-												"isExternal": true
-											},
-											"type": {
-												"type": "intrinsic",
-												"name": "string"
-											}
-										}
-									],
-									"type": {
-										"type": "reference",
-										"id": 272,
+										"id": 269,
 										"name": "ErrorMessageEmbed"
 									},
 									"inheritedFrom": {
@@ -6666,7 +6588,7 @@
 							}
 						},
 						{
-							"id": 334,
+							"id": 331,
 							"name": "setTimestamp",
 							"kind": 2048,
 							"kindString": "Method",
@@ -6683,7 +6605,7 @@
 							],
 							"signatures": [
 								{
-									"id": 335,
+									"id": 332,
 									"name": "setTimestamp",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -6692,7 +6614,7 @@
 									},
 									"parameters": [
 										{
-											"id": 336,
+											"id": 333,
 											"name": "timestamp",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -6717,7 +6639,7 @@
 									],
 									"type": {
 										"type": "reference",
-										"id": 272,
+										"id": 269,
 										"name": "ErrorMessageEmbed"
 									},
 									"inheritedFrom": {
@@ -6732,7 +6654,7 @@
 							}
 						},
 						{
-							"id": 337,
+							"id": 334,
 							"name": "setTitle",
 							"kind": 2048,
 							"kindString": "Method",
@@ -6749,7 +6671,7 @@
 							],
 							"signatures": [
 								{
-									"id": 338,
+									"id": 335,
 									"name": "setTitle",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -6758,7 +6680,7 @@
 									},
 									"parameters": [
 										{
-											"id": 339,
+											"id": 336,
 											"name": "title",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -6773,7 +6695,7 @@
 									],
 									"type": {
 										"type": "reference",
-										"id": 272,
+										"id": 269,
 										"name": "ErrorMessageEmbed"
 									},
 									"inheritedFrom": {
@@ -6788,7 +6710,7 @@
 							}
 						},
 						{
-							"id": 340,
+							"id": 337,
 							"name": "setURL",
 							"kind": 2048,
 							"kindString": "Method",
@@ -6805,7 +6727,7 @@
 							],
 							"signatures": [
 								{
-									"id": 341,
+									"id": 338,
 									"name": "setURL",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -6814,7 +6736,7 @@
 									},
 									"parameters": [
 										{
-											"id": 342,
+											"id": 339,
 											"name": "url",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -6829,7 +6751,7 @@
 									],
 									"type": {
 										"type": "reference",
-										"id": 272,
+										"id": 269,
 										"name": "ErrorMessageEmbed"
 									},
 									"inheritedFrom": {
@@ -6844,7 +6766,7 @@
 							}
 						},
 						{
-							"id": 343,
+							"id": 340,
 							"name": "spliceFields",
 							"kind": 2048,
 							"kindString": "Method",
@@ -6861,7 +6783,7 @@
 							],
 							"signatures": [
 								{
-									"id": 344,
+									"id": 341,
 									"name": "spliceFields",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -6870,7 +6792,7 @@
 									},
 									"parameters": [
 										{
-											"id": 345,
+											"id": 342,
 											"name": "index",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -6883,7 +6805,7 @@
 											}
 										},
 										{
-											"id": 346,
+											"id": 343,
 											"name": "deleteCount",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -6896,7 +6818,7 @@
 											}
 										},
 										{
-											"id": 347,
+											"id": 344,
 											"name": "fields",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -6930,7 +6852,7 @@
 									],
 									"type": {
 										"type": "reference",
-										"id": 272,
+										"id": 269,
 										"name": "ErrorMessageEmbed"
 									},
 									"inheritedFrom": {
@@ -6945,7 +6867,7 @@
 							}
 						},
 						{
-							"id": 348,
+							"id": 345,
 							"name": "toJSON",
 							"kind": 2048,
 							"kindString": "Method",
@@ -6962,7 +6884,7 @@
 							],
 							"signatures": [
 								{
-									"id": 349,
+									"id": 346,
 									"name": "toJSON",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -6985,7 +6907,7 @@
 							}
 						},
 						{
-							"id": 273,
+							"id": 270,
 							"name": "normalizeField",
 							"kind": 2048,
 							"kindString": "Method",
@@ -7003,7 +6925,7 @@
 							],
 							"signatures": [
 								{
-									"id": 274,
+									"id": 271,
 									"name": "normalizeField",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -7012,7 +6934,7 @@
 									},
 									"parameters": [
 										{
-											"id": 275,
+											"id": 272,
 											"name": "name",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -7025,7 +6947,7 @@
 											}
 										},
 										{
-											"id": 276,
+											"id": 273,
 											"name": "value",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -7038,7 +6960,7 @@
 											}
 										},
 										{
-											"id": 277,
+											"id": 274,
 											"name": "inline",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -7074,7 +6996,7 @@
 							}
 						},
 						{
-							"id": 278,
+							"id": 275,
 							"name": "normalizeFields",
 							"kind": 2048,
 							"kindString": "Method",
@@ -7092,7 +7014,7 @@
 							],
 							"signatures": [
 								{
-									"id": 279,
+									"id": 276,
 									"name": "normalizeFields",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -7101,7 +7023,7 @@
 									},
 									"parameters": [
 										{
-											"id": 280,
+											"id": 277,
 											"name": "fields",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -7163,18 +7085,21 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								281
+								278
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
+								282,
+								283,
+								284,
 								285,
+								281,
 								286,
 								287,
 								288,
-								284,
 								289,
 								290,
 								291,
@@ -7184,32 +7109,29 @@
 								295,
 								296,
 								297,
-								298,
-								299,
-								300,
-								301
+								298
 							]
 						},
 						{
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								302,
+								299,
+								304,
 								307,
 								310,
-								313,
+								315,
 								318,
 								321,
-								324,
+								325,
 								328,
 								331,
 								334,
 								337,
 								340,
-								343,
-								348,
-								273,
-								278
+								345,
+								270,
+								275
 							]
 						}
 					],
@@ -7233,7 +7155,7 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						272
+						269
 					]
 				}
 			],
@@ -7252,10 +7174,9 @@
 			"kind": 1,
 			"children": [
 				1,
+				238,
 				239,
-				240,
-				242,
-				271
+				268
 			]
 		}
 	]
