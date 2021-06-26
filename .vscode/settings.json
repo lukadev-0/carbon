@@ -12,5 +12,6 @@
     "source.fixAll.eslint": true
   },
   "eslint.validate": ["typescript"],
-  "eslint.nodePath": ".yarn/sdks"
+  "eslint.nodePath": ".yarn/sdks",
+  "files.associations": { "*.json": "jsonc" }
 }

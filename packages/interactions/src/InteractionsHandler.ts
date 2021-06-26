@@ -1,6 +1,5 @@
 import { Client, Interaction } from 'discord.js'
-import { CarbonError, CarbonErrorType } from './util/CarbonError'
-import { Command } from '.'
+import { CarbonError, CarbonErrorType, Command } from '@carbon-js/core'
 
 interface CarbonClient extends Client {
     interactions: Command[]

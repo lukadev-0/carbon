@@ -22,7 +22,7 @@ export interface RegisterCommandOptions {
      * 
      * If {@link RegisterCommandOptions.command | `command`} is not an array, this will be ignored.
      * 
-     * This is `true` by default.
+     * This is `false` by default.
      */
     overwrite?: boolean
 }
@@ -51,7 +51,7 @@ export class Client extends discord.Client {
      * 
      * @remarks
      * If `guild` is omitted, the command will be registered as a global command.
-     * If `command` is an array, {@link RegisterCommandOptions.overwrite | `overwrite`} will be true.
+     * If `command` is an array, {@link RegisterCommandOptions.overwrite | `overwrite`} will be false.
      */
     registerCommand(
         command: Command | Command[],
@@ -91,7 +91,7 @@ export class Client extends discord.Client {
             const {
                 guild,
                 command,
-                overwrite,
+                overwrite = false,
             } = commandOrOptions as RegisterCommandOptions
 
             const guildId = guild && (this.guilds.resolveID(guild) ?? undefined)

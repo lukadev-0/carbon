@@ -2,15 +2,15 @@
   "name": "@carbon-js/core",
   "version": "0.0.0",
   "license": "MIT",
-  "main": "dist/index",
-  "types": "dist/index",
+  "main": "lib/index.js",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/CO-org/carbon.git"
   },
   "scripts": {
     "build": "yarn g:build",
-    "docs": "yarn g:docs"
+    "ae": "yarn g:ae"
   },
   "bugs": {
     "url": "https://github.com/CO-org/carbon/issues"
@@ -29,7 +29,6 @@
     "yarn": "2.x"
   },
   "dependencies": {
-    "@carbon-js/interactions": "workspace:packages/interactions",
     "discord.js": "dev"
   }
 }
