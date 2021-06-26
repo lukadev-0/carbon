@@ -12,8 +12,19 @@ jobs:
           node-version: '14'
       - name: Install yarn
         run: npm i -g yarn
-      - name: Run yarn install
-        run: yarn install --check-cache
+      - name: Check user permission
+        id: check
+        uses: scherermichael-oss/action-has-permission@master
+        with:
+          required-permission: write
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run yarn
+        if: steps.check.outputs.has-permission
+        run: yarn
+      - name: Run yarn with cache check
+        if: "! steps.check.outputs.has-permission"
+        run: yarn --check-cache
   build:
     needs: setup
     runs-on: ubuntu-latest
