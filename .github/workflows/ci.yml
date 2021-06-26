@@ -14,8 +14,6 @@ jobs:
         run: npm i -g yarn
       - name: Run yarn install
         run: yarn install --check-cache
-      - name: Run build
-        run: yarn build
   build:
     needs: setup
     runs-on: ubuntu-latest
