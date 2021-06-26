@@ -1,5 +1,4 @@
 import * as discord from 'discord.js'
-import { logger } from './logger'
 import { Command } from '@carbon-js/interactions'
 import { CarbonError, CarbonErrorType } from './util/CarbonError'
 import { isDeepStrictEqual } from 'util'
@@ -57,7 +56,7 @@ export class Client extends discord.Client {
      * Allows you to cache your commands for Carbon's usage and not send a request to the Discord API.
      * @param params The cache options
      * @param params.commands The commands to cache
-     * @private
+     * @private Only used for caching commands, which can be done with registerCommands
      */
 
     cacheCommands(params: { commands: Command[] | Command }): this {
@@ -109,9 +108,9 @@ export class Client extends discord.Client {
             ? names?.map(async (n) => {
                 n = n.toLowerCase()
                 let cmd = location.cache.find((v) => v.name.toLowerCase() === n)
-                if (!cmd) logger.warn(`Command ${n} couldn't be find in the cache, trying to fetch...`)
+                if (!cmd) console.warn(`Command ${n} couldn't be find in the cache, trying to fetch...`)
                 cmd = (await location.fetch()).find((v) => v.name.toLowerCase() === n)
-                if (!cmd) return logger.warn(`Command ${n} couldn't be fetcher or found in the cache. Aborting.`)
+                if (!cmd) return console.warn(`Command ${n} couldn't be fetcher or found in the cache. Aborting.`)
                 this.uncacheCommand({ commands: cmd })
                 location.delete(cmd)
             })
@@ -119,14 +118,3 @@ export class Client extends discord.Client {
         return this
     }
 }
-
-export const client = new Client({
-    intents: [ discord.Intents.ALL ], //temporary
-})
-
-client.on('ready', () => {
-    console.log(`Logged in as ${client.user?.toString()}`)
-})
-client.on('debug', m => {logger.debug(m)})
-client.on('warn', m => {logger.warn(m)})
-client.on('error', m => {logger.error(m)})
